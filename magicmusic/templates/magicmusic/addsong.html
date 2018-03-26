@@ -1,0 +1,28 @@
+{% extends "magicmusic/base.html" %}
+
+{% block addsong %}
+    <div class="container-fluid" style="background-color:black;">
+      <h1 class="text-center" style="color: white">Web App Magic Music</h1>
+    </div>
+
+    <div class="card bg-light text-dark mx-auto" style="width:400px">
+        <div class="card-header mx-auto">Add New Song</div>
+        <div class="card-body">
+            <form method="post" action="{% url 'addsong' %}">
+                <table class="mx-auto">
+                    {% for field in form.visible_fields %}
+                        <tr>
+                            <td>{{field.label_tag}}</td>
+                            <td>{{field}}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+                <p></p>
+                <button type="submit" class="btn btn-lg btn-primary btn-block" value="addsong">Create</button>
+                <input type="hidden" name="next" value="{{ next }}" />
+                {% csrf_token %}
+            </form>
+            <p></p>
+        </div>
+    </div> 
+{% endblock %}

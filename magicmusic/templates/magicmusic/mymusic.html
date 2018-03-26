@@ -1,0 +1,26 @@
+{% extends "magicmusic/base.html" %}
+
+{% block albums %}
+    <p></p>
+    <div class="card bg-light text-dark mx-auto" style="width:400px">
+        <div class="card-body">
+            <form method="get" action="{% url 'addsong' %}">
+                <button type="submit" class="btn btn-lg btn-primary btn-block" value="addsong">Add New Song</button>
+                {% csrf_token %}
+            </form>
+        </div>
+    </div>
+    <p></p>
+    <div>
+        {% for song in songs %}
+            <div class="card bg-light text-dark mx-auto" style="width:400px">
+                <div class="card-body">
+                    <p>Song <a href="{% url 'workspace' song.id %}">{{song.name}}</p>
+                        </div>
+                    </p>
+                </div>
+            </div>
+            <p></p>
+        {% endfor %}
+    </div>
+{% endblock %}

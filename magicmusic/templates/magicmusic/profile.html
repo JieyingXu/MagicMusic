@@ -1,0 +1,35 @@
+{% extends "magicmusic/base.html" %}
+
+{% block bio %}
+    <h>Bio:</h>
+    {% if bio %}
+        <p>Bio: {{bio}}</p>
+    {% endif %}
+{% endblock %}
+
+{% block picture %}
+    <h>Picture:</h>
+        {% if item %}
+        <div>
+            <p> HERE IS FOR PICTURE </p>
+            {% if item.picture %}
+                <img src="{% url 'photo' item.id %}" alt="{{item.username}}" width="200px">
+                <br>
+            {% endif %}
+            {{item.username}}
+            <span class="details">
+                (username={{item.username}},
+                ip_addr={{item.ip_addr}})
+            </span>
+        </div>
+        <hr>
+    {% endif %}
+{% endblock %}
+
+{% block follow %}
+    <h>{{first_name}} {{last_name}}'s Profle</h>
+    <form method="post" action="{% url 'profile' %}?username={{username}}">
+        <input type="submit" class="border" value="Follow/Unfollow"></input>
+        {% csrf_token %}
+    </form>
+{% endblock %}
