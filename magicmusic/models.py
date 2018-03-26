@@ -55,6 +55,7 @@ class Workspace(models.Model):
 
 class Track(models.Model):
     user          = models.ForeignKey(User)
+    instrument    = models.CharField(max_length=50, blank=True, null=True)
     workspace     = models.ManyToManyField(Workspace)
     update_time   = models.DateTimeField(blank=True, null=True)
 

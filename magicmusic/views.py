@@ -20,7 +20,7 @@ def mymusic(request):
         songs = []
         for e in objects:
             workspace = e.workspace_set.all()[0]
-            print("song name:"+str(e.name))
+            """print("song name:"+str(e.name))"""
             song = {'name': e.name, 'id':workspace.id}
             songs.append(song);
         context = {'songs': songs}
@@ -44,18 +44,43 @@ def addsong(request):
         newworkspace.save()
         newsong.workspace_set.add(newworkspace)
         newsong.save()
-        print("newsong name is:"+str(newsong.name)+"\n")
+        """print("newsong name is:"+str(newsong.name)+"\n")
+        print("newworkspace is:"+str(newworkspace.id))"""
         return redirect(reverse('mymusic'))
 
 @login_required
 def workspace(request, id):
     print("workspace\n")
     if request.method == 'GET':
-        workspace = Workspace.objects.filter(id__exact=id)
-    	print("workspace is:"+str(workspace.id))
-    	return redirect(reverse('mymusic'))
+        objects = Workspace.objects.filter(id__exact=id)
+        workspace = objects.all()[0]
+    	"""print("workspace is:"+str(workspace.id))"""
+        tracks = []
+        objects = Track.objects.filter(user__exact=request.user)
+        for e in objects:
+            track = {'instrument': e.instrument, 'id': e.id}
+            print("track instrument is:"+str(e.id))
+            tracks.append(track);
+        context = {'tracks': tracks, 'workspaceID':id}
+        return render(request, 'magicmusic/workspace.html', context)
     else:
-        return redirect(reverse('mymusic'))
+        objects = Workspace.objects.filter(id__exact=id)
+        workspace = objects.all()[0]
+        newtrack = Track(user=request.user,
+                        instrument=instrument)
+        newtrack.save()
+        workspace.track_set.add(newtrack)
+        workspace.save()
+        print("newtrack instrument is:"+str(newtrack.id)+"\n")
+        print("workspace is:"+str(workspace.id))
+        tracks = []
+        objects = Track.objects.filter(user__exact=request.user)
+        for e in objects:
+            track = {'instrument': e.instrument, 'id': e.id}
+            tracks.append(track);
+        context = {'tracks': tracks}
+        return render(request, 'magicmusic/workspace.html', context)
+
 @login_required
 def follower(request):
     print("follower\n")
