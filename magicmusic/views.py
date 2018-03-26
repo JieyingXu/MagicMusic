@@ -16,7 +16,7 @@ from magicmusic.forms import *
 @login_required
 def mymusic(request):
     if request.method == 'GET':
-        objects = Song.objects.all()
+        objects = Song.objects.filter(user__exact=request.user)
         songs = []
         for e in objects:
             workspace = e.workspace_set.all()[0]
@@ -45,15 +45,17 @@ def addsong(request):
         newsong.workspace_set.add(newworkspace)
         newsong.save()
         print("newsong name is:"+str(newsong.name)+"\n")
-        print("newworkspace is:"+str(newworkspace.id))
         return redirect(reverse('mymusic'))
 
 @login_required
 def workspace(request, id):
-    if request.method == 'POST':
-    	print("workspace\n")
+    print("workspace\n")
+    if request.method == 'GET':
+        workspace = Workspace.objects.filter(id__exact=id)
+    	print("workspace is:"+str(workspace.id))
     	return redirect(reverse('mymusic'))
-
+    else:
+        return redirect(reverse('mymusic'))
 @login_required
 def follower(request):
     print("follower\n")

@@ -15,8 +15,7 @@
         {% for song in songs %}
             <div class="card bg-light text-dark mx-auto" style="width:400px">
                 <div class="card-body">
-                    <p>Song <a href="{% url 'workspace' song.id %}">{{song.name}}</p>
-                        </div>
+                    <p>Song <a href="{% url 'workspace' song.id %}">{{song.name}}</a>
                     </p>
                 </div>
             </div>
