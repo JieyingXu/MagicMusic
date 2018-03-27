@@ -1,39 +1,6 @@
-Track 0: 20th Century Fox
-<meta message track_name name=u'20th Century Fox' time=0>
-<meta message time_signature numerator=2 denominator=4 clocks_per_click=24 notated_32nd_notes_per_beat=8 time=0>
-<meta message set_tempo tempo=480000 time=0>
-<meta message time_signature numerator=4 denominator=4 clocks_per_click=24 notated_32nd_notes_per_beat=8 time=1920>
-<meta message set_tempo tempo=483870 time=9112>
-<meta message set_tempo tempo=487804 time=16>
-<meta message set_tempo tempo=495867 time=8>
-<meta message set_tempo tempo=504201 time=8>
-<meta message set_tempo tempo=508474 time=8>
-<meta message set_tempo tempo=512820 time=16>
-<meta message set_tempo tempo=550458 time=3784>
-<meta message set_tempo tempo=555555 time=8>
-<meta message set_tempo tempo=566037 time=8>
-<meta message set_tempo tempo=571428 time=16>
-<meta message set_tempo tempo=576923 time=16>
-<meta message set_tempo tempo=582524 time=8>
-<meta message set_tempo tempo=588235 time=16>
-<meta message set_tempo tempo=594059 time=32>
-<meta message set_tempo tempo=600000 time=16>
-<meta message set_tempo tempo=606060 time=40>
-<meta message set_tempo tempo=612244 time=16>
-<meta message set_tempo tempo=618556 time=8>
-<meta message set_tempo tempo=625000 time=48>
-<meta message set_tempo tempo=631578 time=56>
-<meta message set_tempo tempo=625000 time=264>
-<meta message set_tempo tempo=666666 time=416>
-<meta message set_tempo tempo=714285 time=480>
-<meta message set_tempo tempo=769230 time=480>
-<meta message set_tempo tempo=983606 time=480>
-<meta message end_of_track time=1920>
-Track 1: Trumpet
-<meta message track_name name=u'Trumpet' time=0>
-<meta message channel_prefix channel=0 time=0>
-<meta message instrument_name name=u'Trumpet' time=0>
-<meta message key_signature key='C' time=0>
+Track 0: 
+<meta message end_of_track time=0>
+Track 1: 
 program_change channel=0 program=56 time=10
 control_change channel=0 control=7 value=100 time=5
 note_on channel=0 note=74 velocity=121 time=5745
@@ -254,12 +221,8 @@ note_on channel=0 note=74 velocity=110 time=0
 note_off channel=0 note=77 velocity=110 time=956
 note_off channel=0 note=70 velocity=110 time=0
 note_off channel=0 note=74 velocity=110 time=0
-<meta message end_of_track time=1924>
-Track 2: Trombone
-<meta message track_name name=u'Trombone' time=0>
-<meta message channel_prefix channel=1 time=0>
-<meta message instrument_name name=u'Trombone' time=0>
-<meta message key_signature key='C' time=0>
+<meta message end_of_track time=0>
+Track 2: 
 program_change channel=1 program=57 time=20
 control_change channel=1 control=7 value=100 time=5
 note_on channel=1 note=62 velocity=118 time=5735
@@ -554,12 +517,8 @@ note_off channel=1 note=53 velocity=110 time=0
 note_off channel=1 note=46 velocity=110 time=0
 note_off channel=1 note=58 velocity=110 time=0
 note_off channel=1 note=65 velocity=110 time=0
-<meta message end_of_track time=1924>
-Track 3: Tuba
-<meta message track_name name=u'Tuba' time=0>
-<meta message channel_prefix channel=2 time=0>
-<meta message instrument_name name=u'Tuba' time=0>
-<meta message key_signature key='C' time=0>
+<meta message end_of_track time=0>
+Track 3: 
 program_change channel=2 program=58 time=30
 control_change channel=2 control=7 value=100 time=5
 note_on channel=2 note=46 velocity=110 time=5725
@@ -636,12 +595,8 @@ note_on channel=2 note=41 velocity=91 time=44
 note_off channel=2 note=41 velocity=91 time=116
 note_on channel=2 note=34 velocity=91 time=44
 note_off channel=2 note=34 velocity=91 time=956
-<meta message end_of_track time=1924>
-Track 4: Strings
-<meta message track_name name=u'Strings' time=0>
-<meta message channel_prefix channel=3 time=0>
-<meta message instrument_name name=u'Strings' time=0>
-<meta message key_signature key='C' time=0>
+<meta message end_of_track time=0>
+Track 4: 
 program_change channel=3 program=48 time=40
 control_change channel=3 control=7 value=100 time=5
 note_on channel=3 note=70 velocity=110 time=10995
@@ -716,12 +671,8 @@ note_on channel=3 note=82 velocity=110 time=0
 note_off channel=3 note=58 velocity=110 time=1916
 note_off channel=3 note=70 velocity=110 time=0
 note_off channel=3 note=82 velocity=110 time=0
-<meta message end_of_track time=1924>
-Track 5: French Horns
-<meta message track_name name=u'French Horns' time=0>
-<meta message channel_prefix channel=4 time=0>
-<meta message instrument_name name=u'French Horns' time=0>
-<meta message key_signature key='C' time=0>
+<meta message end_of_track time=0>
+Track 5: 
 program_change channel=4 program=60 time=50
 control_change channel=4 control=7 value=100 time=5
 note_on channel=4 note=62 velocity=121 time=5705
@@ -944,44 +895,24 @@ note_on channel=4 note=62 velocity=110 time=0
 note_off channel=4 note=65 velocity=110 time=956
 note_off channel=4 note=58 velocity=110 time=0
 note_off channel=4 note=62 velocity=110 time=0
-<meta message end_of_track time=1924>
-Track 6: Trombone
-<meta message track_name name=u'Trombone' time=0>
-<meta message channel_prefix channel=5 time=0>
-<meta message instrument_name name=u'Trombone' time=0>
-<meta message key_signature key='C' time=0>
+<meta message end_of_track time=0>
+Track 6: 
 program_change channel=5 program=57 time=60
 control_change channel=5 control=7 value=100 time=5
-<meta message end_of_track time=19135>
-Track 7: Timpani
-<meta message track_name name=u'Timpani' time=0>
-<meta message channel_prefix channel=6 time=0>
-<meta message instrument_name name=u'Timpani' time=0>
-<meta message key_signature key='C' time=0>
+<meta message end_of_track time=0>
+Track 7: 
 program_change channel=6 program=47 time=70
 control_change channel=6 control=7 value=100 time=5
-<meta message end_of_track time=19125>
-Track 8: Low Strings
-<meta message track_name name=u'Low Strings' time=0>
-<meta message channel_prefix channel=7 time=0>
-<meta message instrument_name name=u'Low Strings' time=0>
-<meta message key_signature key='C' time=0>
+<meta message end_of_track time=0>
+Track 8: 
 program_change channel=7 program=48 time=80
 control_change channel=7 control=7 value=100 time=5
-<meta message end_of_track time=19115>
-Track 9: Piano
-<meta message track_name name=u'Piano' time=0>
-<meta message channel_prefix channel=8 time=0>
-<meta message instrument_name name=u'Piano' time=0>
-<meta message key_signature key='C' time=0>
+<meta message end_of_track time=0>
+Track 9: 
 program_change channel=8 program=0 time=90
 control_change channel=8 control=7 value=100 time=5
-<meta message end_of_track time=19105>
-Track 10: Percussion
-<meta message track_name name=u'Percussion' time=0>
-<meta message channel_prefix channel=9 time=0>
-<meta message instrument_name name=u'Percussion' time=0>
-<meta message key_signature key='C' time=0>
+<meta message end_of_track time=0>
+Track 10: 
 program_change channel=9 program=0 time=100
 control_change channel=9 control=7 value=100 time=5
 note_on channel=9 note=38 velocity=110 time=1635
@@ -1773,20 +1704,12 @@ note_off channel=9 note=35 velocity=91 time=0
 note_off channel=9 note=46 velocity=91 time=0
 note_off channel=9 note=36 velocity=91 time=0
 note_off channel=9 note=40 velocity=91 time=0
-<meta message end_of_track time=1804>
-Track 11: Harp
-<meta message track_name name=u'Harp' time=0>
-<meta message channel_prefix channel=10 time=0>
-<meta message instrument_name name=u'Harp' time=0>
-<meta message key_signature key='C' time=0>
+<meta message end_of_track time=0>
+Track 11: 
 program_change channel=10 program=46 time=110
 control_change channel=10 control=7 value=100 time=5
-<meta message end_of_track time=19085>
-Track 12: Flute
-<meta message track_name name=u'Flute' time=0>
-<meta message channel_prefix channel=11 time=0>
-<meta message instrument_name name=u'Flute' time=0>
-<meta message key_signature key='C' time=0>
+<meta message end_of_track time=0>
+Track 12: 
 program_change channel=11 program=73 time=120
 control_change channel=11 control=7 value=100 time=5
-<meta message end_of_track time=19075>
+<meta message end_of_track time=0>
