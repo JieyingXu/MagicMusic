@@ -11,16 +11,16 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <style>
-        body {
-          position: relative;
-        }
-        ul.nav-pills {
-          top: 20px;
-          position: fixed;
-        }
-        div.col-8 div {
-          height: 100px;
-        }
+            body {
+              position: relative;
+            }
+            ul.nav-pills {
+              top: 20px;
+              position: fixed;
+            }
+            div.col-8 div {
+              height: 100px;
+            }
         </style>
     </head>
 
@@ -80,7 +80,7 @@
                 {% for track in tracks %}
                     <div id="{{track.trackid}}" class="bg-success">
                         <a href="{% url 'track' track.trackid %}" class="mx-auto">edit track</a>
-                        <p>{{track.instrument}}+{{track.instrument}}+{{track.instrument}}+{{track.instrument}}+{{track.instrument}}+{{track.instrument}}+{{track.instrument}}</p>
+                        <p>track preview</p>
                     </div>
                     <p></p>
                 {% endfor %}
