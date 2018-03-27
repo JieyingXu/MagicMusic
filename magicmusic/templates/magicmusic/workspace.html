@@ -79,7 +79,8 @@
             <div class="col-sm-9 col-8">
                 {% for track in tracks %}
                     <div id="{{track.trackid}}" class="bg-success">
-                        <p>{{track.instrument}}+{{track.instrument}}+{{track.instrument}}+{{track.instrument}}+{{track.instrument}}+{{track.instrument}}+{{track.instrument}}+{{track.instrument}}+{{track.instrument}}+{{track.instrument}}+{{track.instrument}}+{{track.instrument}}+{{track.instrument}}+{{track.instrument}}+{{track.instrument}}+{{track.instrument}}+{{track.instrument}}+{{track.instrument}}+{{track.instrument}}+{{track.instrument}}+{{track.instrument}}+{{track.instrument}}+{{track.instrument}}+{{track.instrument}}+{{track.instrument}}+{{track.instrument}}+{{track.instrument}}+{{track.instrument}}+{{track.instrument}}+{{track.instrument}}+{{track.instrument}}+</p>
+                        <a href="{% url 'track' track.trackid %}" class="mx-auto">edit track</a>
+                        <p>{{track.instrument}}+{{track.instrument}}+{{track.instrument}}+{{track.instrument}}+{{track.instrument}}+{{track.instrument}}+{{track.instrument}}</p>
                     </div>
                     <p></p>
                 {% endfor %}
