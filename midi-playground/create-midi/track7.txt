@@ -1,0 +1,3402 @@
+Track 7:
+<meta message midi_port port=0 time=0>
+program_change channel=5 program=66 time=0
+control_change channel=5 control=7 value=127 time=0
+control_change channel=5 control=10 value=64 time=0
+control_change channel=5 control=121 value=0 time=9
+control_change channel=5 control=101 value=0 time=33
+control_change channel=5 control=100 value=0 time=0
+control_change channel=5 control=6 value=12 time=0
+control_change channel=5 control=38 value=0 time=0
+control_change channel=5 control=93 value=18 time=2
+control_change channel=5 control=91 value=102 time=1
+control_change channel=5 control=11 value=90 time=8327
+note_on channel=5 note=51 velocity=121 time=1
+control_change channel=5 control=11 value=103 time=1
+control_change channel=5 control=11 value=111 time=2
+control_change channel=5 control=11 value=117 time=4
+control_change channel=5 control=11 value=122 time=4
+control_change channel=5 control=11 value=125 time=4
+control_change channel=5 control=11 value=124 time=2
+control_change channel=5 control=11 value=127 time=2
+control_change channel=5 control=11 value=126 time=4
+control_change channel=5 control=11 value=124 time=6
+control_change channel=5 control=11 value=122 time=2
+control_change channel=5 control=11 value=118 time=2
+control_change channel=5 control=11 value=114 time=2
+control_change channel=5 control=11 value=111 time=2
+control_change channel=5 control=11 value=108 time=2
+control_change channel=5 control=11 value=101 time=2
+control_change channel=5 control=11 value=97 time=2
+control_change channel=5 control=11 value=96 time=2
+control_change channel=5 control=11 value=92 time=2
+control_change channel=5 control=11 value=90 time=2
+control_change channel=5 control=11 value=87 time=2
+control_change channel=5 control=11 value=84 time=2
+control_change channel=5 control=11 value=79 time=2
+control_change channel=5 control=11 value=75 time=2
+note_on channel=5 note=52 velocity=107 time=2
+control_change channel=5 control=11 value=74 time=0
+note_on channel=5 note=51 velocity=0 time=1
+control_change channel=5 control=11 value=67 time=1
+control_change channel=5 control=11 value=62 time=2
+control_change channel=5 control=11 value=48 time=2
+control_change channel=5 control=11 value=45 time=4
+control_change channel=5 control=11 value=44 time=4
+control_change channel=5 control=11 value=43 time=24
+control_change channel=5 control=11 value=41 time=2
+control_change channel=5 control=11 value=40 time=4
+control_change channel=5 control=11 value=39 time=2
+control_change channel=5 control=11 value=37 time=6
+note_on channel=5 note=52 velocity=0 time=6
+control_change channel=5 control=11 value=32 time=14
+control_change channel=5 control=11 value=107 time=248
+control_change channel=5 control=11 value=109 time=2
+control_change channel=5 control=11 value=112 time=2
+note_on channel=5 note=54 velocity=121 time=4
+control_change channel=5 control=11 value=114 time=0
+control_change channel=5 control=11 value=120 time=2
+control_change channel=5 control=11 value=122 time=2
+control_change channel=5 control=11 value=124 time=2
+control_change channel=5 control=11 value=125 time=2
+control_change channel=5 control=11 value=126 time=4
+control_change channel=5 control=11 value=127 time=4
+control_change channel=5 control=11 value=126 time=12
+control_change channel=5 control=11 value=125 time=4
+control_change channel=5 control=11 value=122 time=2
+control_change channel=5 control=11 value=121 time=2
+control_change channel=5 control=11 value=120 time=4
+control_change channel=5 control=11 value=118 time=2
+control_change channel=5 control=11 value=117 time=2
+control_change channel=5 control=11 value=113 time=2
+control_change channel=5 control=11 value=109 time=2
+control_change channel=5 control=11 value=107 time=2
+control_change channel=5 control=11 value=99 time=2
+control_change channel=5 control=11 value=91 time=2
+control_change channel=5 control=11 value=80 time=2
+control_change channel=5 control=11 value=77 time=2
+note_on channel=5 note=55 velocity=106 time=1
+control_change channel=5 control=11 value=71 time=1
+control_change channel=5 control=11 value=65 time=2
+note_on channel=5 note=54 velocity=0 time=2
+control_change channel=5 control=11 value=61 time=0
+control_change channel=5 control=11 value=60 time=2
+control_change channel=5 control=11 value=57 time=4
+control_change channel=5 control=11 value=54 time=2
+control_change channel=5 control=11 value=52 time=6
+control_change channel=5 control=11 value=50 time=20
+control_change channel=5 control=11 value=49 time=2
+control_change channel=5 control=11 value=48 time=2
+control_change channel=5 control=11 value=47 time=4
+control_change channel=5 control=11 value=45 time=2
+control_change channel=5 control=11 value=44 time=2
+control_change channel=5 control=11 value=43 time=4
+control_change channel=5 control=11 value=41 time=2
+note_on channel=5 note=55 velocity=0 time=2
+control_change channel=5 control=11 value=100 time=264
+note_on channel=5 note=51 velocity=119 time=1
+control_change channel=5 control=11 value=104 time=1
+control_change channel=5 control=11 value=107 time=2
+control_change channel=5 control=11 value=111 time=2
+control_change channel=5 control=11 value=114 time=4
+control_change channel=5 control=11 value=117 time=2
+control_change channel=5 control=11 value=120 time=2
+control_change channel=5 control=11 value=121 time=2
+control_change channel=5 control=11 value=122 time=2
+control_change channel=5 control=11 value=123 time=4
+control_change channel=5 control=11 value=124 time=2
+control_change channel=5 control=11 value=122 time=10
+control_change channel=5 control=11 value=120 time=4
+control_change channel=5 control=11 value=118 time=4
+control_change channel=5 control=11 value=117 time=2
+control_change channel=5 control=11 value=116 time=2
+control_change channel=5 control=11 value=114 time=2
+control_change channel=5 control=11 value=112 time=2
+control_change channel=5 control=11 value=105 time=2
+control_change channel=5 control=11 value=97 time=2
+control_change channel=5 control=11 value=96 time=2
+note_on channel=5 note=52 velocity=102 time=1
+note_on channel=5 note=51 velocity=0 time=1
+control_change channel=5 control=11 value=90 time=0
+control_change channel=5 control=11 value=83 time=2
+control_change channel=5 control=11 value=80 time=2
+control_change channel=5 control=11 value=78 time=2
+control_change channel=5 control=11 value=71 time=2
+control_change channel=5 control=11 value=67 time=4
+control_change channel=5 control=11 value=65 time=4
+control_change channel=5 control=11 value=62 time=4
+control_change channel=5 control=11 value=60 time=6
+control_change channel=5 control=11 value=56 time=8
+control_change channel=5 control=11 value=54 time=2
+control_change channel=5 control=11 value=52 time=4
+control_change channel=5 control=11 value=48 time=4
+note_on channel=5 note=52 velocity=0 time=11
+control_change channel=5 control=11 value=100 time=71
+note_on channel=5 note=54 velocity=119 time=4
+control_change channel=5 control=11 value=111 time=2
+control_change channel=5 control=11 value=113 time=2
+control_change channel=5 control=11 value=116 time=2
+control_change channel=5 control=11 value=117 time=2
+control_change channel=5 control=11 value=121 time=2
+control_change channel=5 control=11 value=124 time=2
+control_change channel=5 control=11 value=126 time=4
+control_change channel=5 control=11 value=127 time=16
+control_change channel=5 control=11 value=126 time=6
+control_change channel=5 control=11 value=124 time=4
+control_change channel=5 control=11 value=121 time=4
+control_change channel=5 control=11 value=120 time=2
+control_change channel=5 control=11 value=116 time=2
+control_change channel=5 control=11 value=113 time=2
+control_change channel=5 control=11 value=108 time=2
+control_change channel=5 control=11 value=107 time=2
+control_change channel=5 control=11 value=99 time=2
+control_change channel=5 control=11 value=94 time=2
+control_change channel=5 control=11 value=91 time=2
+note_on channel=5 note=55 velocity=107 time=2
+control_change channel=5 control=11 value=88 time=0
+note_on channel=5 note=54 velocity=0 time=1
+control_change channel=5 control=11 value=84 time=1
+control_change channel=5 control=11 value=83 time=2
+control_change channel=5 control=11 value=78 time=2
+control_change channel=5 control=11 value=77 time=2
+control_change channel=5 control=11 value=75 time=2
+control_change channel=5 control=11 value=74 time=2
+control_change channel=5 control=11 value=71 time=6
+control_change channel=5 control=11 value=70 time=2
+control_change channel=5 control=11 value=66 time=4
+control_change channel=5 control=11 value=64 time=2
+control_change channel=5 control=11 value=63 time=2
+control_change channel=5 control=11 value=62 time=2
+control_change channel=5 control=11 value=61 time=2
+control_change channel=5 control=11 value=60 time=12
+control_change channel=5 control=11 value=58 time=4
+control_change channel=5 control=11 value=57 time=4
+note_on channel=5 note=55 velocity=0 time=3
+control_change channel=5 control=11 value=56 time=1
+note_on channel=5 note=60 velocity=112 time=75
+control_change channel=5 control=11 value=91 time=1
+control_change channel=5 control=11 value=107 time=2
+control_change channel=5 control=11 value=111 time=4
+control_change channel=5 control=11 value=114 time=4
+control_change channel=5 control=11 value=118 time=4
+control_change channel=5 control=11 value=121 time=2
+control_change channel=5 control=11 value=122 time=4
+control_change channel=5 control=11 value=120 time=22
+control_change channel=5 control=11 value=117 time=2
+control_change channel=5 control=11 value=114 time=2
+control_change channel=5 control=11 value=113 time=2
+control_change channel=5 control=11 value=108 time=2
+control_change channel=5 control=11 value=103 time=2
+control_change channel=5 control=11 value=97 time=2
+control_change channel=5 control=11 value=92 time=4
+note_on channel=5 note=59 velocity=106 time=2
+control_change channel=5 control=11 value=90 time=0
+note_on channel=5 note=60 velocity=0 time=2
+control_change channel=5 control=11 value=84 time=4
+control_change channel=5 control=11 value=77 time=2
+control_change channel=5 control=11 value=75 time=2
+control_change channel=5 control=11 value=71 time=2
+control_change channel=5 control=11 value=69 time=2
+control_change channel=5 control=11 value=67 time=6
+control_change channel=5 control=11 value=65 time=6
+control_change channel=5 control=11 value=64 time=6
+control_change channel=5 control=11 value=62 time=4
+control_change channel=5 control=11 value=61 time=4
+control_change channel=5 control=11 value=58 time=6
+note_on channel=5 note=59 velocity=0 time=5
+note_on channel=5 note=52 velocity=112 time=66
+control_change channel=5 control=11 value=83 time=5
+control_change channel=5 control=11 value=88 time=2
+control_change channel=5 control=11 value=96 time=2
+control_change channel=5 control=11 value=101 time=2
+control_change channel=5 control=11 value=105 time=2
+control_change channel=5 control=11 value=107 time=2
+control_change channel=5 control=11 value=109 time=2
+control_change channel=5 control=11 value=112 time=2
+control_change channel=5 control=11 value=113 time=2
+control_change channel=5 control=11 value=114 time=4
+control_change channel=5 control=11 value=117 time=2
+control_change channel=5 control=11 value=118 time=2
+control_change channel=5 control=11 value=120 time=2
+control_change channel=5 control=11 value=117 time=12
+control_change channel=5 control=11 value=116 time=2
+control_change channel=5 control=11 value=113 time=2
+control_change channel=5 control=11 value=111 time=2
+control_change channel=5 control=11 value=107 time=2
+control_change channel=5 control=11 value=103 time=2
+control_change channel=5 control=11 value=100 time=2
+note_on channel=5 note=52 velocity=0 time=1
+control_change channel=5 control=11 value=96 time=13
+note_on channel=5 note=55 velocity=112 time=2
+control_change channel=5 control=11 value=94 time=0
+control_change channel=5 control=11 value=91 time=2
+control_change channel=5 control=11 value=90 time=2
+control_change channel=5 control=11 value=87 time=2
+control_change channel=5 control=11 value=86 time=2
+control_change channel=5 control=11 value=84 time=2
+control_change channel=5 control=11 value=80 time=4
+control_change channel=5 control=11 value=79 time=2
+control_change channel=5 control=11 value=77 time=2
+control_change channel=5 control=11 value=73 time=6
+control_change channel=5 control=11 value=69 time=4
+control_change channel=5 control=11 value=67 time=6
+control_change channel=5 control=11 value=64 time=6
+control_change channel=5 control=11 value=62 time=2
+control_change channel=5 control=11 value=58 time=4
+control_change channel=5 control=11 value=57 time=4
+note_on channel=5 note=55 velocity=0 time=6
+control_change channel=5 control=11 value=56 time=8
+control_change channel=5 control=11 value=54 time=2
+control_change channel=5 control=11 value=109 time=38
+note_on channel=5 note=59 velocity=114 time=1
+control_change channel=5 control=11 value=112 time=1
+control_change channel=5 control=11 value=113 time=2
+control_change channel=5 control=11 value=114 time=2
+control_change channel=5 control=11 value=116 time=2
+control_change channel=5 control=11 value=117 time=2
+control_change channel=5 control=11 value=120 time=2
+control_change channel=5 control=11 value=121 time=2
+control_change channel=5 control=11 value=122 time=2
+control_change channel=5 control=11 value=124 time=6
+control_change channel=5 control=11 value=125 time=6
+note_on channel=5 note=59 velocity=0 time=30
+pitchwheel channel=5 pitch=-2341 time=0
+note_on channel=5 note=58 velocity=116 time=1
+control_change channel=5 control=11 value=101 time=1
+pitchwheel channel=5 pitch=-2208 time=0
+control_change channel=5 control=11 value=100 time=2
+pitchwheel channel=5 pitch=-1940 time=2
+control_change channel=5 control=11 value=97 time=2
+control_change channel=5 control=11 value=95 time=2
+pitchwheel channel=5 pitch=-1673 time=0
+pitchwheel channel=5 pitch=-1590 time=2
+pitchwheel channel=5 pitch=-1505 time=2
+pitchwheel channel=5 pitch=-1171 time=2
+control_change channel=5 control=11 value=96 time=2
+pitchwheel channel=5 pitch=-1004 time=0
+pitchwheel channel=5 pitch=-837 time=2
+control_change channel=5 control=11 value=97 time=4
+control_change channel=5 control=11 value=100 time=2
+pitchwheel channel=5 pitch=-669 time=0
+control_change channel=5 control=11 value=101 time=2
+control_change channel=5 control=11 value=103 time=4
+pitchwheel channel=5 pitch=-502 time=0
+control_change channel=5 control=11 value=104 time=2
+control_change channel=5 control=11 value=105 time=4
+control_change channel=5 control=11 value=107 time=6
+pitchwheel channel=5 pitch=-335 time=0
+control_change channel=5 control=11 value=105 time=16
+pitchwheel channel=5 pitch=-181 time=2
+control_change channel=5 control=11 value=104 time=2
+control_change channel=5 control=11 value=103 time=2
+control_change channel=5 control=11 value=100 time=2
+control_change channel=5 control=11 value=96 time=6
+control_change channel=5 control=11 value=93 time=2
+control_change channel=5 control=11 value=91 time=2
+control_change channel=5 control=11 value=89 time=4
+control_change channel=5 control=11 value=88 time=2
+control_change channel=5 control=11 value=86 time=4
+control_change channel=5 control=11 value=85 time=6
+control_change channel=5 control=11 value=84 time=6
+control_change channel=5 control=11 value=82 time=4
+control_change channel=5 control=11 value=79 time=2
+control_change channel=5 control=11 value=76 time=8
+control_change channel=5 control=11 value=73 time=14
+pitchwheel channel=5 pitch=-58 time=8
+control_change channel=5 control=11 value=72 time=6
+control_change channel=5 control=11 value=69 time=28
+control_change channel=5 control=11 value=68 time=8
+control_change channel=5 control=11 value=66 time=56
+pitchwheel channel=5 pitch=0 time=16
+control_change channel=5 control=11 value=71 time=16
+control_change channel=5 control=11 value=74 time=24
+control_change channel=5 control=11 value=78 time=22
+control_change channel=5 control=11 value=81 time=20
+control_change channel=5 control=11 value=85 time=22
+control_change channel=5 control=11 value=89 time=30
+control_change channel=5 control=11 value=92 time=20
+control_change channel=5 control=11 value=94 time=12
+control_change channel=5 control=11 value=96 time=14
+control_change channel=5 control=11 value=99 time=14
+control_change channel=5 control=11 value=103 time=26
+control_change channel=5 control=11 value=105 time=14
+control_change channel=5 control=11 value=106 time=8
+control_change channel=5 control=11 value=107 time=18
+control_change channel=5 control=11 value=105 time=4
+control_change channel=5 control=11 value=104 time=2
+control_change channel=5 control=11 value=101 time=4
+control_change channel=5 control=11 value=99 time=2
+control_change channel=5 control=11 value=97 time=2
+control_change channel=5 control=11 value=94 time=6
+control_change channel=5 control=11 value=92 time=6
+note_on channel=5 note=58 velocity=0 time=6
+note_on channel=5 note=57 velocity=111 time=2
+control_change channel=5 control=11 value=86 time=8
+control_change channel=5 control=11 value=84 time=8
+control_change channel=5 control=11 value=79 time=14
+control_change channel=5 control=11 value=76 time=8
+control_change channel=5 control=11 value=72 time=12
+note_on channel=5 note=55 velocity=101 time=30
+control_change channel=5 control=11 value=68 time=0
+note_on channel=5 note=57 velocity=0 time=6
+control_change channel=5 control=11 value=67 time=10
+control_change channel=5 control=11 value=64 time=14
+control_change channel=5 control=11 value=62 time=8
+control_change channel=5 control=11 value=61 time=2
+control_change channel=5 control=11 value=60 time=8
+note_on channel=5 note=55 velocity=0 time=4
+control_change channel=5 control=11 value=58 time=2
+note_on channel=5 note=52 velocity=104 time=1
+control_change channel=5 control=11 value=57 time=3
+control_change channel=5 control=11 value=54 time=6
+control_change channel=5 control=11 value=53 time=8
+control_change channel=5 control=11 value=52 time=14
+note_on channel=5 note=50 velocity=109 time=23
+control_change channel=5 control=11 value=54 time=7
+note_on channel=5 note=52 velocity=0 time=7
+control_change channel=5 control=11 value=58 time=3
+control_change channel=5 control=11 value=57 time=24
+control_change channel=5 control=11 value=56 time=4
+control_change channel=5 control=11 value=54 time=4
+control_change channel=5 control=11 value=52 time=2
+control_change channel=5 control=11 value=48 time=4
+control_change channel=5 control=11 value=44 time=8
+note_on channel=5 note=52 velocity=114 time=1
+note_on channel=5 note=50 velocity=0 time=1
+control_change channel=5 control=11 value=49 time=4
+control_change channel=5 control=11 value=52 time=8
+control_change channel=5 control=11 value=57 time=8
+control_change channel=5 control=11 value=58 time=4
+control_change channel=5 control=11 value=56 time=2
+control_change channel=5 control=11 value=58 time=4
+control_change channel=5 control=11 value=60 time=2
+control_change channel=5 control=11 value=61 time=16
+control_change channel=5 control=11 value=62 time=6
+control_change channel=5 control=11 value=65 time=8
+control_change channel=5 control=11 value=66 time=12
+control_change channel=5 control=11 value=67 time=8
+control_change channel=5 control=11 value=69 time=4
+control_change channel=5 control=11 value=70 time=16
+control_change channel=5 control=11 value=71 time=14
+control_change channel=5 control=11 value=72 time=4
+control_change channel=5 control=11 value=73 time=6
+control_change channel=5 control=11 value=74 time=2
+control_change channel=5 control=11 value=75 time=2
+control_change channel=5 control=11 value=76 time=4
+control_change channel=5 control=11 value=77 time=10
+control_change channel=5 control=11 value=78 time=2
+control_change channel=5 control=11 value=77 time=4
+pitchwheel channel=5 pitch=-550 time=11
+control_change channel=5 control=11 value=74 time=3
+pitchwheel channel=5 pitch=-1195 time=6
+control_change channel=5 control=11 value=71 time=2
+control_change channel=5 control=11 value=68 time=8
+pitchwheel channel=5 pitch=-1824 time=1
+pitchwheel channel=5 pitch=-1878 time=2
+control_change channel=5 control=11 value=65 time=5
+control_change channel=5 control=11 value=62 time=8
+pitchwheel channel=5 pitch=-2486 time=6
+control_change channel=5 control=11 value=59 time=2
+pitchwheel channel=5 pitch=-3110 time=8
+control_change channel=5 control=11 value=56 time=0
+pitchwheel channel=5 pitch=-3169 time=3
+control_change channel=5 control=11 value=53 time=5
+control_change channel=5 control=11 value=50 time=8
+pitchwheel channel=5 pitch=-3764 time=3
+pitchwheel channel=5 pitch=-3822 time=1
+control_change channel=5 control=11 value=47 time=4
+control_change channel=5 control=11 value=44 time=8
+pitchwheel channel=5 pitch=-4425 time=6
+control_change channel=5 control=11 value=41 time=2
+control_change channel=5 control=11 value=38 time=8
+pitchwheel channel=5 pitch=-5084 time=5
+control_change channel=5 control=11 value=35 time=3
+control_change channel=5 control=11 value=32 time=8
+control_change channel=5 control=11 value=29 time=8
+pitchwheel channel=5 pitch=-5659 time=1
+pitchwheel channel=5 pitch=-5724 time=1
+control_change channel=5 control=11 value=26 time=6
+control_change channel=5 control=11 value=23 time=8
+control_change channel=5 control=11 value=20 time=8
+pitchwheel channel=5 pitch=-6315 time=1
+pitchwheel channel=5 pitch=-6389 time=4
+control_change channel=5 control=11 value=17 time=3
+control_change channel=5 control=11 value=14 time=8
+pitchwheel channel=5 pitch=-6927 time=3
+pitchwheel channel=5 pitch=-6973 time=2
+control_change channel=5 control=11 value=11 time=3
+pitchwheel channel=5 pitch=-7030 time=1
+control_change channel=5 control=11 value=8 time=9
+control_change channel=5 control=11 value=7 time=4
+pitchwheel channel=5 pitch=-7589 time=4
+control_change channel=5 control=11 value=6 time=0
+control_change channel=5 control=11 value=5 time=2
+pitchwheel channel=5 pitch=-7663 time=1
+control_change channel=5 control=11 value=3 time=5
+control_change channel=5 control=11 value=2 time=4
+control_change channel=5 control=11 value=6 time=12
+control_change channel=5 control=11 value=5 time=16
+control_change channel=5 control=11 value=4 time=10
+note_on channel=5 note=52 velocity=0 time=15
+control_change channel=5 control=11 value=32 time=146
+control_change channel=5 control=11 value=56 time=3
+control_change channel=5 control=11 value=80 time=8
+pitchwheel channel=5 pitch=0 time=4
+control_change channel=5 control=11 value=90 time=134
+note_on channel=5 note=51 velocity=121 time=1
+control_change channel=5 control=11 value=103 time=1
+control_change channel=5 control=11 value=111 time=2
+control_change channel=5 control=11 value=117 time=4
+control_change channel=5 control=11 value=122 time=4
+control_change channel=5 control=11 value=125 time=4
+control_change channel=5 control=11 value=124 time=2
+control_change channel=5 control=11 value=127 time=2
+control_change channel=5 control=11 value=126 time=4
+control_change channel=5 control=11 value=124 time=6
+control_change channel=5 control=11 value=122 time=2
+control_change channel=5 control=11 value=118 time=2
+control_change channel=5 control=11 value=114 time=2
+control_change channel=5 control=11 value=111 time=2
+control_change channel=5 control=11 value=108 time=2
+control_change channel=5 control=11 value=101 time=2
+control_change channel=5 control=11 value=97 time=2
+control_change channel=5 control=11 value=96 time=2
+control_change channel=5 control=11 value=92 time=2
+control_change channel=5 control=11 value=90 time=2
+control_change channel=5 control=11 value=87 time=2
+control_change channel=5 control=11 value=84 time=2
+control_change channel=5 control=11 value=79 time=2
+control_change channel=5 control=11 value=75 time=2
+note_on channel=5 note=52 velocity=107 time=2
+control_change channel=5 control=11 value=74 time=0
+note_on channel=5 note=51 velocity=0 time=1
+control_change channel=5 control=11 value=67 time=1
+control_change channel=5 control=11 value=62 time=2
+control_change channel=5 control=11 value=48 time=2
+control_change channel=5 control=11 value=45 time=4
+control_change channel=5 control=11 value=44 time=4
+control_change channel=5 control=11 value=43 time=24
+control_change channel=5 control=11 value=41 time=2
+control_change channel=5 control=11 value=40 time=4
+control_change channel=5 control=11 value=39 time=2
+control_change channel=5 control=11 value=37 time=6
+note_on channel=5 note=52 velocity=0 time=6
+control_change channel=5 control=11 value=32 time=14
+control_change channel=5 control=11 value=107 time=248
+control_change channel=5 control=11 value=109 time=2
+control_change channel=5 control=11 value=112 time=2
+note_on channel=5 note=54 velocity=121 time=4
+control_change channel=5 control=11 value=114 time=0
+control_change channel=5 control=11 value=120 time=2
+control_change channel=5 control=11 value=122 time=2
+control_change channel=5 control=11 value=124 time=2
+control_change channel=5 control=11 value=125 time=2
+control_change channel=5 control=11 value=126 time=4
+control_change channel=5 control=11 value=127 time=4
+control_change channel=5 control=11 value=126 time=12
+control_change channel=5 control=11 value=125 time=4
+control_change channel=5 control=11 value=122 time=2
+control_change channel=5 control=11 value=121 time=2
+control_change channel=5 control=11 value=120 time=4
+control_change channel=5 control=11 value=118 time=2
+control_change channel=5 control=11 value=117 time=2
+control_change channel=5 control=11 value=113 time=2
+control_change channel=5 control=11 value=109 time=2
+control_change channel=5 control=11 value=107 time=2
+control_change channel=5 control=11 value=99 time=2
+control_change channel=5 control=11 value=91 time=2
+control_change channel=5 control=11 value=80 time=2
+control_change channel=5 control=11 value=77 time=2
+note_on channel=5 note=55 velocity=106 time=1
+control_change channel=5 control=11 value=71 time=1
+control_change channel=5 control=11 value=65 time=2
+note_on channel=5 note=54 velocity=0 time=2
+control_change channel=5 control=11 value=61 time=0
+control_change channel=5 control=11 value=60 time=2
+control_change channel=5 control=11 value=57 time=4
+control_change channel=5 control=11 value=54 time=2
+control_change channel=5 control=11 value=52 time=6
+control_change channel=5 control=11 value=50 time=20
+control_change channel=5 control=11 value=49 time=2
+control_change channel=5 control=11 value=48 time=2
+control_change channel=5 control=11 value=47 time=4
+control_change channel=5 control=11 value=45 time=2
+control_change channel=5 control=11 value=44 time=2
+control_change channel=5 control=11 value=43 time=4
+control_change channel=5 control=11 value=41 time=2
+note_on channel=5 note=55 velocity=0 time=2
+control_change channel=5 control=11 value=100 time=264
+note_on channel=5 note=51 velocity=119 time=1
+control_change channel=5 control=11 value=104 time=1
+control_change channel=5 control=11 value=107 time=2
+control_change channel=5 control=11 value=111 time=2
+control_change channel=5 control=11 value=114 time=4
+control_change channel=5 control=11 value=117 time=2
+control_change channel=5 control=11 value=120 time=2
+control_change channel=5 control=11 value=121 time=2
+control_change channel=5 control=11 value=122 time=2
+control_change channel=5 control=11 value=123 time=4
+control_change channel=5 control=11 value=124 time=2
+control_change channel=5 control=11 value=122 time=10
+control_change channel=5 control=11 value=120 time=4
+control_change channel=5 control=11 value=118 time=4
+control_change channel=5 control=11 value=117 time=2
+control_change channel=5 control=11 value=116 time=2
+control_change channel=5 control=11 value=114 time=2
+control_change channel=5 control=11 value=112 time=2
+control_change channel=5 control=11 value=105 time=2
+control_change channel=5 control=11 value=97 time=2
+control_change channel=5 control=11 value=96 time=2
+note_on channel=5 note=52 velocity=102 time=1
+note_on channel=5 note=51 velocity=0 time=1
+control_change channel=5 control=11 value=90 time=0
+control_change channel=5 control=11 value=83 time=2
+control_change channel=5 control=11 value=80 time=2
+control_change channel=5 control=11 value=78 time=2
+control_change channel=5 control=11 value=71 time=2
+control_change channel=5 control=11 value=67 time=4
+control_change channel=5 control=11 value=65 time=4
+control_change channel=5 control=11 value=62 time=4
+control_change channel=5 control=11 value=60 time=6
+control_change channel=5 control=11 value=56 time=8
+control_change channel=5 control=11 value=54 time=2
+control_change channel=5 control=11 value=52 time=4
+control_change channel=5 control=11 value=48 time=4
+note_on channel=5 note=52 velocity=0 time=11
+control_change channel=5 control=11 value=100 time=71
+note_on channel=5 note=54 velocity=119 time=4
+control_change channel=5 control=11 value=111 time=2
+control_change channel=5 control=11 value=113 time=2
+control_change channel=5 control=11 value=116 time=2
+control_change channel=5 control=11 value=117 time=2
+control_change channel=5 control=11 value=121 time=2
+control_change channel=5 control=11 value=124 time=2
+control_change channel=5 control=11 value=126 time=4
+control_change channel=5 control=11 value=127 time=16
+control_change channel=5 control=11 value=126 time=6
+control_change channel=5 control=11 value=124 time=4
+control_change channel=5 control=11 value=121 time=4
+control_change channel=5 control=11 value=120 time=2
+control_change channel=5 control=11 value=116 time=2
+control_change channel=5 control=11 value=113 time=2
+control_change channel=5 control=11 value=108 time=2
+control_change channel=5 control=11 value=107 time=2
+control_change channel=5 control=11 value=99 time=2
+control_change channel=5 control=11 value=94 time=2
+control_change channel=5 control=11 value=91 time=2
+note_on channel=5 note=55 velocity=107 time=2
+control_change channel=5 control=11 value=88 time=0
+note_on channel=5 note=54 velocity=0 time=1
+control_change channel=5 control=11 value=84 time=1
+control_change channel=5 control=11 value=83 time=2
+control_change channel=5 control=11 value=78 time=2
+control_change channel=5 control=11 value=77 time=2
+control_change channel=5 control=11 value=75 time=2
+control_change channel=5 control=11 value=74 time=2
+control_change channel=5 control=11 value=71 time=6
+control_change channel=5 control=11 value=70 time=2
+control_change channel=5 control=11 value=66 time=4
+control_change channel=5 control=11 value=64 time=2
+control_change channel=5 control=11 value=63 time=2
+control_change channel=5 control=11 value=62 time=2
+control_change channel=5 control=11 value=61 time=2
+control_change channel=5 control=11 value=60 time=12
+control_change channel=5 control=11 value=58 time=4
+control_change channel=5 control=11 value=57 time=4
+note_on channel=5 note=55 velocity=0 time=3
+control_change channel=5 control=11 value=56 time=1
+note_on channel=5 note=60 velocity=112 time=75
+control_change channel=5 control=11 value=91 time=1
+control_change channel=5 control=11 value=107 time=2
+control_change channel=5 control=11 value=111 time=4
+control_change channel=5 control=11 value=114 time=4
+control_change channel=5 control=11 value=118 time=4
+control_change channel=5 control=11 value=121 time=2
+control_change channel=5 control=11 value=122 time=4
+control_change channel=5 control=11 value=120 time=22
+control_change channel=5 control=11 value=117 time=2
+control_change channel=5 control=11 value=114 time=2
+control_change channel=5 control=11 value=113 time=2
+control_change channel=5 control=11 value=108 time=2
+control_change channel=5 control=11 value=103 time=2
+control_change channel=5 control=11 value=97 time=2
+control_change channel=5 control=11 value=92 time=4
+note_on channel=5 note=59 velocity=106 time=2
+control_change channel=5 control=11 value=90 time=0
+note_on channel=5 note=60 velocity=0 time=2
+control_change channel=5 control=11 value=84 time=4
+control_change channel=5 control=11 value=77 time=2
+control_change channel=5 control=11 value=75 time=2
+control_change channel=5 control=11 value=71 time=2
+control_change channel=5 control=11 value=69 time=2
+control_change channel=5 control=11 value=67 time=6
+control_change channel=5 control=11 value=65 time=6
+control_change channel=5 control=11 value=64 time=6
+control_change channel=5 control=11 value=62 time=4
+control_change channel=5 control=11 value=61 time=4
+control_change channel=5 control=11 value=58 time=6
+note_on channel=5 note=59 velocity=0 time=5
+note_on channel=5 note=55 velocity=112 time=66
+control_change channel=5 control=11 value=83 time=5
+control_change channel=5 control=11 value=88 time=2
+control_change channel=5 control=11 value=96 time=2
+control_change channel=5 control=11 value=101 time=2
+control_change channel=5 control=11 value=105 time=2
+control_change channel=5 control=11 value=107 time=2
+control_change channel=5 control=11 value=109 time=2
+control_change channel=5 control=11 value=112 time=2
+control_change channel=5 control=11 value=113 time=2
+control_change channel=5 control=11 value=114 time=4
+control_change channel=5 control=11 value=117 time=2
+control_change channel=5 control=11 value=118 time=2
+control_change channel=5 control=11 value=120 time=2
+control_change channel=5 control=11 value=117 time=12
+control_change channel=5 control=11 value=116 time=2
+control_change channel=5 control=11 value=113 time=2
+control_change channel=5 control=11 value=111 time=2
+control_change channel=5 control=11 value=107 time=2
+control_change channel=5 control=11 value=103 time=2
+control_change channel=5 control=11 value=100 time=2
+note_on channel=5 note=55 velocity=0 time=1
+control_change channel=5 control=11 value=96 time=1
+note_on channel=5 note=59 velocity=112 time=2
+control_change channel=5 control=11 value=94 time=0
+control_change channel=5 control=11 value=91 time=2
+control_change channel=5 control=11 value=90 time=2
+control_change channel=5 control=11 value=87 time=2
+control_change channel=5 control=11 value=86 time=2
+control_change channel=5 control=11 value=84 time=2
+control_change channel=5 control=11 value=80 time=4
+control_change channel=5 control=11 value=79 time=2
+control_change channel=5 control=11 value=77 time=2
+control_change channel=5 control=11 value=73 time=6
+control_change channel=5 control=11 value=69 time=4
+control_change channel=5 control=11 value=67 time=6
+control_change channel=5 control=11 value=64 time=6
+control_change channel=5 control=11 value=62 time=2
+control_change channel=5 control=11 value=58 time=4
+control_change channel=5 control=11 value=57 time=4
+note_on channel=5 note=59 velocity=0 time=6
+control_change channel=5 control=11 value=56 time=8
+control_change channel=5 control=11 value=54 time=2
+control_change channel=5 control=11 value=94 time=40
+control_change channel=5 control=11 value=99 time=2
+control_change channel=5 control=11 value=103 time=2
+control_change channel=5 control=11 value=104 time=2
+control_change channel=5 control=11 value=108 time=2
+control_change channel=5 control=11 value=109 time=2
+note_on channel=5 note=64 velocity=114 time=1
+control_change channel=5 control=11 value=112 time=1
+control_change channel=5 control=11 value=113 time=2
+control_change channel=5 control=11 value=114 time=2
+control_change channel=5 control=11 value=116 time=2
+control_change channel=5 control=11 value=117 time=2
+control_change channel=5 control=11 value=120 time=2
+control_change channel=5 control=11 value=121 time=2
+control_change channel=5 control=11 value=122 time=2
+control_change channel=5 control=11 value=124 time=6
+control_change channel=5 control=11 value=125 time=6
+control_change channel=5 control=11 value=124 time=10
+control_change channel=5 control=11 value=122 time=2
+control_change channel=5 control=11 value=121 time=2
+control_change channel=5 control=11 value=120 time=2
+control_change channel=5 control=11 value=118 time=2
+control_change channel=5 control=11 value=116 time=2
+control_change channel=5 control=11 value=113 time=2
+control_change channel=5 control=11 value=111 time=2
+control_change channel=5 control=11 value=108 time=2
+control_change channel=5 control=11 value=105 time=2
+note_on channel=5 note=64 velocity=0 time=2
+control_change channel=5 control=11 value=103 time=0
+pitchwheel channel=5 pitch=-1701 time=0
+note_on channel=5 note=63 velocity=116 time=1
+control_change channel=5 control=11 value=101 time=1
+pitchwheel channel=5 pitch=-1568 time=0
+control_change channel=5 control=11 value=100 time=2
+pitchwheel channel=5 pitch=-1428 time=2
+control_change channel=5 control=11 value=97 time=2
+control_change channel=5 control=11 value=95 time=2
+pitchwheel channel=5 pitch=-1289 time=0
+pitchwheel channel=5 pitch=-1206 time=2
+pitchwheel channel=5 pitch=-1121 time=2
+pitchwheel channel=5 pitch=-915 time=2
+control_change channel=5 control=11 value=96 time=2
+pitchwheel channel=5 pitch=-876 time=0
+pitchwheel channel=5 pitch=-709 time=2
+control_change channel=5 control=11 value=97 time=4
+control_change channel=5 control=11 value=100 time=2
+pitchwheel channel=5 pitch=-541 time=0
+control_change channel=5 control=11 value=101 time=2
+control_change channel=5 control=11 value=103 time=4
+pitchwheel channel=5 pitch=-502 time=0
+control_change channel=5 control=11 value=104 time=2
+control_change channel=5 control=11 value=105 time=4
+control_change channel=5 control=11 value=107 time=6
+pitchwheel channel=5 pitch=-335 time=0
+control_change channel=5 control=11 value=105 time=16
+pitchwheel channel=5 pitch=-181 time=2
+control_change channel=5 control=11 value=104 time=2
+control_change channel=5 control=11 value=103 time=2
+control_change channel=5 control=11 value=100 time=2
+control_change channel=5 control=11 value=96 time=6
+control_change channel=5 control=11 value=93 time=2
+control_change channel=5 control=11 value=91 time=2
+control_change channel=5 control=11 value=89 time=4
+control_change channel=5 control=11 value=88 time=2
+control_change channel=5 control=11 value=86 time=4
+control_change channel=5 control=11 value=85 time=6
+control_change channel=5 control=11 value=84 time=6
+control_change channel=5 control=11 value=82 time=4
+control_change channel=5 control=11 value=79 time=2
+control_change channel=5 control=11 value=76 time=8
+control_change channel=5 control=11 value=73 time=14
+pitchwheel channel=5 pitch=-58 time=8
+control_change channel=5 control=11 value=72 time=6
+control_change channel=5 control=11 value=69 time=28
+control_change channel=5 control=11 value=68 time=8
+control_change channel=5 control=11 value=66 time=56
+pitchwheel channel=5 pitch=0 time=16
+control_change channel=5 control=11 value=71 time=16
+control_change channel=5 control=11 value=74 time=24
+control_change channel=5 control=11 value=78 time=22
+control_change channel=5 control=11 value=81 time=20
+control_change channel=5 control=11 value=85 time=22
+control_change channel=5 control=11 value=89 time=30
+control_change channel=5 control=11 value=92 time=20
+control_change channel=5 control=11 value=94 time=12
+control_change channel=5 control=11 value=96 time=14
+control_change channel=5 control=11 value=99 time=14
+control_change channel=5 control=11 value=103 time=26
+control_change channel=5 control=11 value=105 time=14
+control_change channel=5 control=11 value=106 time=8
+control_change channel=5 control=11 value=107 time=18
+control_change channel=5 control=11 value=105 time=4
+control_change channel=5 control=11 value=104 time=2
+control_change channel=5 control=11 value=101 time=4
+control_change channel=5 control=11 value=99 time=2
+control_change channel=5 control=11 value=95 time=2
+control_change channel=5 control=11 value=91 time=6
+control_change channel=5 control=11 value=86 time=6
+control_change channel=5 control=11 value=78 time=671
+pitchwheel channel=5 pitch=-560 time=2
+pitchwheel channel=5 pitch=-629 time=2
+control_change channel=5 control=11 value=74 time=7
+control_change channel=5 control=11 value=70 time=5
+pitchwheel channel=5 pitch=-1174 time=2
+pitchwheel channel=5 pitch=-1231 time=3
+control_change channel=5 control=11 value=68 time=7
+control_change channel=5 control=11 value=66 time=7
+control_change channel=5 control=11 value=63 time=8
+pitchwheel channel=5 pitch=-1869 time=1
+pitchwheel channel=5 pitch=-1915 time=2
+control_change channel=5 control=11 value=59 time=4
+pitchwheel channel=5 pitch=-2444 time=16
+control_change channel=5 control=11 value=56 time=0
+pitchwheel channel=5 pitch=-2483 time=4
+control_change channel=5 control=11 value=53 time=0
+pitchwheel channel=5 pitch=-2560 time=2
+control_change channel=5 control=11 value=50 time=4
+control_change channel=5 control=11 value=46 time=10
+pitchwheel channel=5 pitch=-3143 time=1
+control_change channel=5 control=11 value=42 time=12
+pitchwheel channel=5 pitch=-3780 time=9
+control_change channel=5 control=11 value=38 time=8
+pitchwheel channel=5 pitch=-4380 time=6
+pitchwheel channel=5 pitch=-4471 time=3
+pitchwheel channel=5 pitch=-5041 time=11
+control_change channel=5 control=11 value=34 time=0
+pitchwheel channel=5 pitch=-5094 time=4
+control_change channel=5 control=11 value=30 time=0
+control_change channel=5 control=11 value=26 time=14
+pitchwheel channel=5 pitch=-5750 time=2
+control_change channel=5 control=11 value=22 time=6
+pitchwheel channel=5 pitch=-6296 time=6
+note_on channel=5 note=63 velocity=0 time=1
+pitchwheel channel=5 pitch=-6353 time=2
+control_change channel=5 control=11 value=16 time=1
+control_change channel=5 control=11 value=14 time=6
+control_change channel=5 control=11 value=12 time=5
+pitchwheel channel=5 pitch=-6980 time=9
+pitchwheel channel=5 pitch=-7594 time=13
+control_change channel=5 control=11 value=10 time=0
+control_change channel=5 control=11 value=8 time=7
+control_change channel=5 control=11 value=6 time=10
+control_change channel=5 control=11 value=56 time=48
+pitchwheel channel=5 pitch=732 time=9
+pitchwheel channel=5 pitch=0 time=20
+control_change channel=5 control=11 value=80 time=0
+control_change channel=5 control=11 value=90 time=2
+note_on channel=5 note=51 velocity=121 time=1
+control_change channel=5 control=11 value=103 time=1
+control_change channel=5 control=11 value=111 time=2
+control_change channel=5 control=11 value=117 time=4
+control_change channel=5 control=11 value=122 time=4
+control_change channel=5 control=11 value=125 time=4
+control_change channel=5 control=11 value=124 time=2
+control_change channel=5 control=11 value=127 time=2
+control_change channel=5 control=11 value=126 time=4
+control_change channel=5 control=11 value=124 time=6
+control_change channel=5 control=11 value=122 time=2
+control_change channel=5 control=11 value=118 time=2
+control_change channel=5 control=11 value=114 time=2
+control_change channel=5 control=11 value=111 time=2
+control_change channel=5 control=11 value=108 time=2
+control_change channel=5 control=11 value=101 time=2
+control_change channel=5 control=11 value=97 time=2
+control_change channel=5 control=11 value=96 time=2
+control_change channel=5 control=11 value=92 time=2
+control_change channel=5 control=11 value=90 time=2
+control_change channel=5 control=11 value=87 time=2
+control_change channel=5 control=11 value=84 time=2
+control_change channel=5 control=11 value=79 time=2
+control_change channel=5 control=11 value=75 time=2
+note_on channel=5 note=52 velocity=107 time=2
+control_change channel=5 control=11 value=74 time=0
+note_on channel=5 note=51 velocity=0 time=1
+control_change channel=5 control=11 value=67 time=1
+control_change channel=5 control=11 value=62 time=2
+control_change channel=5 control=11 value=48 time=2
+control_change channel=5 control=11 value=45 time=4
+control_change channel=5 control=11 value=44 time=4
+control_change channel=5 control=11 value=43 time=24
+control_change channel=5 control=11 value=41 time=2
+control_change channel=5 control=11 value=40 time=4
+control_change channel=5 control=11 value=39 time=2
+control_change channel=5 control=11 value=37 time=6
+note_on channel=5 note=52 velocity=0 time=6
+control_change channel=5 control=11 value=32 time=14
+control_change channel=5 control=11 value=107 time=248
+control_change channel=5 control=11 value=109 time=2
+control_change channel=5 control=11 value=112 time=2
+note_on channel=5 note=54 velocity=121 time=4
+control_change channel=5 control=11 value=114 time=0
+control_change channel=5 control=11 value=120 time=2
+control_change channel=5 control=11 value=122 time=2
+control_change channel=5 control=11 value=124 time=2
+control_change channel=5 control=11 value=125 time=2
+control_change channel=5 control=11 value=126 time=4
+control_change channel=5 control=11 value=127 time=4
+control_change channel=5 control=11 value=126 time=12
+control_change channel=5 control=11 value=125 time=4
+control_change channel=5 control=11 value=122 time=2
+control_change channel=5 control=11 value=121 time=2
+control_change channel=5 control=11 value=120 time=4
+control_change channel=5 control=11 value=118 time=2
+control_change channel=5 control=11 value=117 time=2
+control_change channel=5 control=11 value=113 time=2
+control_change channel=5 control=11 value=109 time=2
+control_change channel=5 control=11 value=107 time=2
+control_change channel=5 control=11 value=99 time=2
+control_change channel=5 control=11 value=91 time=2
+control_change channel=5 control=11 value=80 time=2
+control_change channel=5 control=11 value=77 time=2
+note_on channel=5 note=55 velocity=106 time=1
+control_change channel=5 control=11 value=71 time=1
+control_change channel=5 control=11 value=65 time=2
+note_on channel=5 note=54 velocity=0 time=2
+control_change channel=5 control=11 value=61 time=0
+control_change channel=5 control=11 value=60 time=2
+control_change channel=5 control=11 value=57 time=4
+control_change channel=5 control=11 value=54 time=2
+control_change channel=5 control=11 value=52 time=6
+control_change channel=5 control=11 value=50 time=20
+control_change channel=5 control=11 value=49 time=2
+control_change channel=5 control=11 value=48 time=2
+control_change channel=5 control=11 value=47 time=4
+control_change channel=5 control=11 value=45 time=2
+control_change channel=5 control=11 value=44 time=2
+control_change channel=5 control=11 value=43 time=4
+control_change channel=5 control=11 value=41 time=2
+note_on channel=5 note=55 velocity=0 time=2
+control_change channel=5 control=11 value=100 time=264
+note_on channel=5 note=51 velocity=119 time=1
+control_change channel=5 control=11 value=104 time=1
+control_change channel=5 control=11 value=107 time=2
+control_change channel=5 control=11 value=111 time=2
+control_change channel=5 control=11 value=114 time=4
+control_change channel=5 control=11 value=117 time=2
+control_change channel=5 control=11 value=120 time=2
+control_change channel=5 control=11 value=121 time=2
+control_change channel=5 control=11 value=122 time=2
+control_change channel=5 control=11 value=123 time=4
+control_change channel=5 control=11 value=124 time=2
+control_change channel=5 control=11 value=122 time=10
+control_change channel=5 control=11 value=120 time=4
+control_change channel=5 control=11 value=118 time=4
+control_change channel=5 control=11 value=117 time=2
+control_change channel=5 control=11 value=116 time=2
+control_change channel=5 control=11 value=114 time=2
+control_change channel=5 control=11 value=112 time=2
+control_change channel=5 control=11 value=105 time=2
+control_change channel=5 control=11 value=97 time=2
+control_change channel=5 control=11 value=96 time=2
+note_on channel=5 note=52 velocity=102 time=1
+note_on channel=5 note=51 velocity=0 time=1
+control_change channel=5 control=11 value=90 time=0
+control_change channel=5 control=11 value=83 time=2
+control_change channel=5 control=11 value=80 time=2
+control_change channel=5 control=11 value=78 time=2
+control_change channel=5 control=11 value=71 time=2
+control_change channel=5 control=11 value=67 time=4
+control_change channel=5 control=11 value=65 time=4
+control_change channel=5 control=11 value=62 time=4
+control_change channel=5 control=11 value=60 time=6
+control_change channel=5 control=11 value=56 time=8
+control_change channel=5 control=11 value=54 time=2
+control_change channel=5 control=11 value=52 time=4
+control_change channel=5 control=11 value=48 time=4
+note_on channel=5 note=52 velocity=0 time=11
+control_change channel=5 control=11 value=100 time=71
+note_on channel=5 note=54 velocity=119 time=4
+control_change channel=5 control=11 value=111 time=2
+control_change channel=5 control=11 value=113 time=2
+control_change channel=5 control=11 value=116 time=2
+control_change channel=5 control=11 value=117 time=2
+control_change channel=5 control=11 value=121 time=2
+control_change channel=5 control=11 value=124 time=2
+control_change channel=5 control=11 value=126 time=4
+control_change channel=5 control=11 value=127 time=16
+control_change channel=5 control=11 value=126 time=6
+control_change channel=5 control=11 value=124 time=4
+control_change channel=5 control=11 value=121 time=4
+control_change channel=5 control=11 value=120 time=2
+control_change channel=5 control=11 value=116 time=2
+control_change channel=5 control=11 value=113 time=2
+control_change channel=5 control=11 value=108 time=2
+control_change channel=5 control=11 value=107 time=2
+control_change channel=5 control=11 value=99 time=2
+control_change channel=5 control=11 value=94 time=2
+control_change channel=5 control=11 value=91 time=2
+note_on channel=5 note=55 velocity=107 time=2
+control_change channel=5 control=11 value=88 time=0
+note_on channel=5 note=54 velocity=0 time=1
+control_change channel=5 control=11 value=84 time=1
+control_change channel=5 control=11 value=83 time=2
+control_change channel=5 control=11 value=78 time=2
+control_change channel=5 control=11 value=77 time=2
+control_change channel=5 control=11 value=75 time=2
+control_change channel=5 control=11 value=74 time=2
+control_change channel=5 control=11 value=71 time=6
+control_change channel=5 control=11 value=70 time=2
+control_change channel=5 control=11 value=66 time=4
+control_change channel=5 control=11 value=64 time=2
+control_change channel=5 control=11 value=63 time=2
+control_change channel=5 control=11 value=62 time=2
+control_change channel=5 control=11 value=61 time=2
+control_change channel=5 control=11 value=60 time=12
+control_change channel=5 control=11 value=58 time=4
+control_change channel=5 control=11 value=57 time=4
+note_on channel=5 note=55 velocity=0 time=3
+control_change channel=5 control=11 value=56 time=1
+note_on channel=5 note=60 velocity=112 time=75
+control_change channel=5 control=11 value=91 time=1
+control_change channel=5 control=11 value=107 time=2
+control_change channel=5 control=11 value=111 time=4
+control_change channel=5 control=11 value=114 time=4
+control_change channel=5 control=11 value=118 time=4
+control_change channel=5 control=11 value=121 time=2
+control_change channel=5 control=11 value=122 time=4
+control_change channel=5 control=11 value=120 time=22
+control_change channel=5 control=11 value=117 time=2
+control_change channel=5 control=11 value=114 time=2
+control_change channel=5 control=11 value=113 time=2
+control_change channel=5 control=11 value=108 time=2
+control_change channel=5 control=11 value=103 time=2
+control_change channel=5 control=11 value=97 time=2
+control_change channel=5 control=11 value=92 time=4
+note_on channel=5 note=59 velocity=106 time=2
+control_change channel=5 control=11 value=90 time=0
+note_on channel=5 note=60 velocity=0 time=2
+control_change channel=5 control=11 value=84 time=4
+control_change channel=5 control=11 value=77 time=2
+control_change channel=5 control=11 value=75 time=2
+control_change channel=5 control=11 value=71 time=2
+control_change channel=5 control=11 value=69 time=2
+control_change channel=5 control=11 value=67 time=6
+control_change channel=5 control=11 value=65 time=6
+control_change channel=5 control=11 value=64 time=6
+control_change channel=5 control=11 value=62 time=4
+control_change channel=5 control=11 value=61 time=4
+control_change channel=5 control=11 value=58 time=6
+note_on channel=5 note=59 velocity=0 time=5
+note_on channel=5 note=52 velocity=112 time=66
+control_change channel=5 control=11 value=83 time=5
+control_change channel=5 control=11 value=88 time=2
+control_change channel=5 control=11 value=96 time=2
+control_change channel=5 control=11 value=101 time=2
+control_change channel=5 control=11 value=105 time=2
+control_change channel=5 control=11 value=107 time=2
+control_change channel=5 control=11 value=109 time=2
+control_change channel=5 control=11 value=112 time=2
+control_change channel=5 control=11 value=113 time=2
+control_change channel=5 control=11 value=114 time=4
+control_change channel=5 control=11 value=117 time=2
+control_change channel=5 control=11 value=118 time=2
+control_change channel=5 control=11 value=120 time=2
+control_change channel=5 control=11 value=117 time=12
+control_change channel=5 control=11 value=116 time=2
+control_change channel=5 control=11 value=113 time=2
+control_change channel=5 control=11 value=111 time=2
+control_change channel=5 control=11 value=107 time=2
+control_change channel=5 control=11 value=103 time=2
+control_change channel=5 control=11 value=100 time=2
+note_on channel=5 note=52 velocity=0 time=1
+control_change channel=5 control=11 value=96 time=1
+note_on channel=5 note=55 velocity=112 time=2
+control_change channel=5 control=11 value=94 time=0
+control_change channel=5 control=11 value=91 time=2
+control_change channel=5 control=11 value=90 time=2
+control_change channel=5 control=11 value=87 time=2
+control_change channel=5 control=11 value=86 time=2
+control_change channel=5 control=11 value=84 time=2
+control_change channel=5 control=11 value=80 time=4
+control_change channel=5 control=11 value=79 time=2
+control_change channel=5 control=11 value=77 time=2
+control_change channel=5 control=11 value=73 time=6
+control_change channel=5 control=11 value=69 time=4
+control_change channel=5 control=11 value=67 time=6
+control_change channel=5 control=11 value=64 time=6
+control_change channel=5 control=11 value=62 time=2
+control_change channel=5 control=11 value=58 time=4
+control_change channel=5 control=11 value=57 time=4
+note_on channel=5 note=55 velocity=0 time=6
+control_change channel=5 control=11 value=56 time=8
+control_change channel=5 control=11 value=54 time=2
+control_change channel=5 control=11 value=94 time=40
+control_change channel=5 control=11 value=99 time=2
+control_change channel=5 control=11 value=103 time=2
+control_change channel=5 control=11 value=104 time=2
+control_change channel=5 control=11 value=108 time=2
+control_change channel=5 control=11 value=109 time=2
+note_on channel=5 note=59 velocity=114 time=1
+control_change channel=5 control=11 value=112 time=1
+control_change channel=5 control=11 value=113 time=2
+control_change channel=5 control=11 value=114 time=2
+control_change channel=5 control=11 value=116 time=2
+control_change channel=5 control=11 value=117 time=2
+control_change channel=5 control=11 value=120 time=2
+control_change channel=5 control=11 value=121 time=2
+control_change channel=5 control=11 value=122 time=2
+control_change channel=5 control=11 value=124 time=6
+control_change channel=5 control=11 value=125 time=6
+control_change channel=5 control=11 value=124 time=10
+control_change channel=5 control=11 value=122 time=2
+control_change channel=5 control=11 value=121 time=2
+control_change channel=5 control=11 value=120 time=2
+control_change channel=5 control=11 value=118 time=2
+control_change channel=5 control=11 value=116 time=2
+control_change channel=5 control=11 value=113 time=2
+control_change channel=5 control=11 value=111 time=2
+control_change channel=5 control=11 value=108 time=2
+control_change channel=5 control=11 value=105 time=2
+note_on channel=5 note=59 velocity=0 time=2
+control_change channel=5 control=11 value=103 time=0
+pitchwheel channel=5 pitch=-2341 time=0
+note_on channel=5 note=58 velocity=116 time=1
+control_change channel=5 control=11 value=101 time=1
+pitchwheel channel=5 pitch=-2208 time=0
+control_change channel=5 control=11 value=100 time=2
+pitchwheel channel=5 pitch=-1940 time=2
+control_change channel=5 control=11 value=97 time=2
+control_change channel=5 control=11 value=95 time=2
+pitchwheel channel=5 pitch=-1673 time=0
+pitchwheel channel=5 pitch=-1590 time=2
+pitchwheel channel=5 pitch=-1505 time=2
+pitchwheel channel=5 pitch=-1171 time=2
+control_change channel=5 control=11 value=96 time=2
+pitchwheel channel=5 pitch=-1004 time=0
+pitchwheel channel=5 pitch=-837 time=2
+control_change channel=5 control=11 value=97 time=4
+control_change channel=5 control=11 value=100 time=2
+pitchwheel channel=5 pitch=-669 time=0
+control_change channel=5 control=11 value=101 time=2
+control_change channel=5 control=11 value=103 time=4
+pitchwheel channel=5 pitch=-502 time=0
+control_change channel=5 control=11 value=104 time=2
+control_change channel=5 control=11 value=105 time=4
+control_change channel=5 control=11 value=107 time=6
+pitchwheel channel=5 pitch=-335 time=0
+control_change channel=5 control=11 value=105 time=16
+pitchwheel channel=5 pitch=-181 time=2
+control_change channel=5 control=11 value=104 time=2
+control_change channel=5 control=11 value=103 time=2
+control_change channel=5 control=11 value=100 time=2
+control_change channel=5 control=11 value=96 time=6
+control_change channel=5 control=11 value=93 time=2
+control_change channel=5 control=11 value=91 time=2
+control_change channel=5 control=11 value=89 time=4
+control_change channel=5 control=11 value=88 time=2
+control_change channel=5 control=11 value=86 time=4
+control_change channel=5 control=11 value=85 time=6
+control_change channel=5 control=11 value=84 time=6
+control_change channel=5 control=11 value=82 time=4
+control_change channel=5 control=11 value=79 time=2
+control_change channel=5 control=11 value=76 time=8
+control_change channel=5 control=11 value=73 time=14
+pitchwheel channel=5 pitch=-58 time=8
+control_change channel=5 control=11 value=72 time=6
+control_change channel=5 control=11 value=69 time=28
+control_change channel=5 control=11 value=68 time=8
+control_change channel=5 control=11 value=66 time=56
+pitchwheel channel=5 pitch=0 time=16
+control_change channel=5 control=11 value=71 time=16
+control_change channel=5 control=11 value=74 time=24
+control_change channel=5 control=11 value=78 time=22
+control_change channel=5 control=11 value=81 time=20
+control_change channel=5 control=11 value=85 time=22
+control_change channel=5 control=11 value=89 time=30
+control_change channel=5 control=11 value=92 time=20
+control_change channel=5 control=11 value=94 time=12
+control_change channel=5 control=11 value=96 time=14
+control_change channel=5 control=11 value=99 time=14
+control_change channel=5 control=11 value=103 time=26
+control_change channel=5 control=11 value=105 time=14
+control_change channel=5 control=11 value=106 time=8
+control_change channel=5 control=11 value=107 time=18
+control_change channel=5 control=11 value=105 time=4
+control_change channel=5 control=11 value=104 time=2
+control_change channel=5 control=11 value=101 time=4
+control_change channel=5 control=11 value=99 time=2
+control_change channel=5 control=11 value=97 time=2
+control_change channel=5 control=11 value=94 time=6
+control_change channel=5 control=11 value=92 time=6
+note_on channel=5 note=58 velocity=0 time=6
+note_on channel=5 note=57 velocity=111 time=2
+control_change channel=5 control=11 value=86 time=8
+control_change channel=5 control=11 value=84 time=8
+control_change channel=5 control=11 value=79 time=14
+control_change channel=5 control=11 value=76 time=8
+control_change channel=5 control=11 value=72 time=12
+note_on channel=5 note=55 velocity=101 time=28
+control_change channel=5 control=11 value=68 time=0
+note_on channel=5 note=57 velocity=0 time=7
+control_change channel=5 control=11 value=67 time=9
+control_change channel=5 control=11 value=64 time=14
+control_change channel=5 control=11 value=62 time=8
+control_change channel=5 control=11 value=61 time=2
+control_change channel=5 control=11 value=60 time=8
+note_on channel=5 note=55 velocity=0 time=4
+control_change channel=5 control=11 value=58 time=2
+note_on channel=5 note=52 velocity=104 time=1
+control_change channel=5 control=11 value=57 time=3
+control_change channel=5 control=11 value=54 time=6
+control_change channel=5 control=11 value=53 time=8
+control_change channel=5 control=11 value=52 time=14
+note_on channel=5 note=50 velocity=109 time=23
+control_change channel=5 control=11 value=54 time=7
+note_on channel=5 note=52 velocity=0 time=7
+control_change channel=5 control=11 value=58 time=3
+control_change channel=5 control=11 value=57 time=24
+control_change channel=5 control=11 value=56 time=4
+control_change channel=5 control=11 value=54 time=4
+control_change channel=5 control=11 value=52 time=2
+control_change channel=5 control=11 value=48 time=4
+control_change channel=5 control=11 value=44 time=8
+note_on channel=5 note=52 velocity=114 time=1
+note_on channel=5 note=50 velocity=0 time=1
+control_change channel=5 control=11 value=49 time=4
+control_change channel=5 control=11 value=52 time=8
+control_change channel=5 control=11 value=57 time=8
+control_change channel=5 control=11 value=58 time=4
+control_change channel=5 control=11 value=56 time=2
+control_change channel=5 control=11 value=58 time=4
+control_change channel=5 control=11 value=60 time=2
+control_change channel=5 control=11 value=61 time=16
+control_change channel=5 control=11 value=62 time=6
+control_change channel=5 control=11 value=65 time=8
+control_change channel=5 control=11 value=66 time=12
+control_change channel=5 control=11 value=67 time=8
+control_change channel=5 control=11 value=69 time=4
+control_change channel=5 control=11 value=70 time=16
+control_change channel=5 control=11 value=71 time=14
+control_change channel=5 control=11 value=72 time=4
+control_change channel=5 control=11 value=73 time=6
+control_change channel=5 control=11 value=74 time=2
+control_change channel=5 control=11 value=75 time=2
+control_change channel=5 control=11 value=76 time=4
+control_change channel=5 control=11 value=77 time=10
+control_change channel=5 control=11 value=78 time=2
+control_change channel=5 control=11 value=77 time=4
+pitchwheel channel=5 pitch=-550 time=11
+control_change channel=5 control=11 value=74 time=3
+pitchwheel channel=5 pitch=-1195 time=6
+control_change channel=5 control=11 value=71 time=2
+control_change channel=5 control=11 value=68 time=8
+pitchwheel channel=5 pitch=-1824 time=1
+pitchwheel channel=5 pitch=-1878 time=2
+control_change channel=5 control=11 value=65 time=5
+control_change channel=5 control=11 value=62 time=8
+pitchwheel channel=5 pitch=-2486 time=6
+control_change channel=5 control=11 value=59 time=2
+pitchwheel channel=5 pitch=-3110 time=8
+control_change channel=5 control=11 value=56 time=0
+pitchwheel channel=5 pitch=-3169 time=3
+control_change channel=5 control=11 value=53 time=5
+control_change channel=5 control=11 value=50 time=8
+pitchwheel channel=5 pitch=-3764 time=3
+pitchwheel channel=5 pitch=-3822 time=1
+control_change channel=5 control=11 value=47 time=4
+control_change channel=5 control=11 value=44 time=8
+pitchwheel channel=5 pitch=-4425 time=6
+control_change channel=5 control=11 value=41 time=2
+control_change channel=5 control=11 value=38 time=8
+pitchwheel channel=5 pitch=-5084 time=5
+control_change channel=5 control=11 value=35 time=3
+control_change channel=5 control=11 value=32 time=8
+control_change channel=5 control=11 value=29 time=8
+pitchwheel channel=5 pitch=-5659 time=1
+pitchwheel channel=5 pitch=-5724 time=1
+control_change channel=5 control=11 value=26 time=6
+control_change channel=5 control=11 value=23 time=8
+control_change channel=5 control=11 value=20 time=8
+pitchwheel channel=5 pitch=-6315 time=1
+pitchwheel channel=5 pitch=-6389 time=4
+control_change channel=5 control=11 value=17 time=3
+control_change channel=5 control=11 value=14 time=8
+pitchwheel channel=5 pitch=-6927 time=3
+pitchwheel channel=5 pitch=-6973 time=2
+control_change channel=5 control=11 value=11 time=3
+pitchwheel channel=5 pitch=-7030 time=1
+control_change channel=5 control=11 value=8 time=9
+control_change channel=5 control=11 value=7 time=4
+pitchwheel channel=5 pitch=-7589 time=4
+control_change channel=5 control=11 value=6 time=0
+control_change channel=5 control=11 value=5 time=2
+pitchwheel channel=5 pitch=-7663 time=1
+control_change channel=5 control=11 value=3 time=5
+control_change channel=5 control=11 value=2 time=4
+control_change channel=5 control=11 value=6 time=12
+control_change channel=5 control=11 value=5 time=16
+control_change channel=5 control=11 value=4 time=10
+note_on channel=5 note=52 velocity=0 time=15
+control_change channel=5 control=11 value=32 time=148
+control_change channel=5 control=11 value=56 time=3
+control_change channel=5 control=11 value=80 time=8
+pitchwheel channel=5 pitch=0 time=4
+note_on channel=5 note=64 velocity=127 time=403
+pitchwheel channel=5 pitch=-2896 time=1
+pitchwheel channel=5 pitch=-2649 time=2
+pitchwheel channel=5 pitch=-2403 time=4
+pitchwheel channel=5 pitch=-1417 time=2
+pitchwheel channel=5 pitch=-1048 time=2
+pitchwheel channel=5 pitch=-925 time=2
+pitchwheel channel=5 pitch=-555 time=2
+pitchwheel channel=5 pitch=-432 time=2
+pitchwheel channel=5 pitch=-309 time=4
+pitchwheel channel=5 pitch=-186 time=6
+pitchwheel channel=5 pitch=0 time=2
+note_on channel=5 note=64 velocity=0 time=93
+note_on channel=5 note=62 velocity=106 time=3
+note_on channel=5 note=62 velocity=0 time=50
+pitchwheel channel=5 pitch=-1294 time=2
+note_on channel=5 note=59 velocity=127 time=0
+pitchwheel channel=5 pitch=-1171 time=4
+pitchwheel channel=5 pitch=-1048 time=8
+pitchwheel channel=5 pitch=-925 time=8
+pitchwheel channel=5 pitch=-801 time=2
+pitchwheel channel=5 pitch=-678 time=6
+pitchwheel channel=5 pitch=-555 time=2
+pitchwheel channel=5 pitch=-432 time=2
+pitchwheel channel=5 pitch=-309 time=2
+pitchwheel channel=5 pitch=0 time=2
+note_on channel=5 note=59 velocity=0 time=93
+note_on channel=5 note=57 velocity=97 time=7
+note_on channel=5 note=55 velocity=127 time=69
+note_on channel=5 note=57 velocity=0 time=5
+note_on channel=5 note=55 velocity=0 time=126
+note_on channel=5 note=52 velocity=107 time=1
+control_change channel=5 control=11 value=80 time=53
+note_on channel=5 note=52 velocity=0 time=2
+control_change channel=5 control=11 value=82 time=0
+note_on channel=5 note=58 velocity=127 time=0
+control_change channel=5 control=11 value=84 time=2
+control_change channel=5 control=11 value=86 time=2
+control_change channel=5 control=11 value=92 time=2
+control_change channel=5 control=11 value=94 time=2
+control_change channel=5 control=11 value=96 time=2
+control_change channel=5 control=11 value=98 time=2
+control_change channel=5 control=11 value=102 time=2
+control_change channel=5 control=11 value=105 time=2
+control_change channel=5 control=11 value=106 time=4
+control_change channel=5 control=11 value=105 time=6
+control_change channel=5 control=11 value=104 time=2
+pitchwheel channel=5 pitch=-58 time=0
+control_change channel=5 control=11 value=101 time=2
+control_change channel=5 control=11 value=99 time=2
+control_change channel=5 control=11 value=96 time=2
+control_change channel=5 control=11 value=93 time=2
+pitchwheel channel=5 pitch=-181 time=0
+control_change channel=5 control=11 value=89 time=4
+pitchwheel channel=5 pitch=-304 time=0
+control_change channel=5 control=11 value=88 time=2
+control_change channel=5 control=11 value=85 time=2
+pitchwheel channel=5 pitch=-417 time=0
+control_change channel=5 control=11 value=84 time=2
+pitchwheel channel=5 pitch=-550 time=0
+control_change channel=5 control=11 value=82 time=2
+pitchwheel channel=5 pitch=-657 time=2
+control_change channel=5 control=11 value=79 time=2
+control_change channel=5 control=11 value=76 time=4
+control_change channel=5 control=11 value=74 time=2
+control_change channel=5 control=11 value=72 time=4
+control_change channel=5 control=11 value=68 time=6
+control_change channel=5 control=11 value=65 time=4
+control_change channel=5 control=11 value=61 time=4
+control_change channel=5 control=11 value=59 time=2
+control_change channel=5 control=11 value=55 time=6
+control_change channel=5 control=11 value=53 time=4
+control_change channel=5 control=11 value=51 time=4
+control_change channel=5 control=11 value=49 time=8
+control_change channel=5 control=11 value=48 time=4
+control_change channel=5 control=11 value=46 time=6
+control_change channel=5 control=11 value=44 time=14
+control_change channel=5 control=11 value=43 time=12
+control_change channel=5 control=11 value=44 time=16
+control_change channel=5 control=11 value=45 time=4
+control_change channel=5 control=11 value=47 time=2
+control_change channel=5 control=11 value=49 time=2
+note_on channel=5 note=58 velocity=0 time=1
+control_change channel=5 control=11 value=51 time=3
+control_change channel=5 control=11 value=52 time=2
+control_change channel=5 control=11 value=55 time=4
+control_change channel=5 control=11 value=59 time=2
+control_change channel=5 control=11 value=60 time=2
+control_change channel=5 control=11 value=65 time=2
+control_change channel=5 control=11 value=67 time=2
+control_change channel=5 control=11 value=68 time=2
+control_change channel=5 control=11 value=72 time=2
+control_change channel=5 control=11 value=75 time=2
+control_change channel=5 control=11 value=76 time=2
+pitchwheel channel=5 pitch=0 time=0
+control_change channel=5 control=11 value=86 time=2
+control_change channel=5 control=11 value=90 time=2
+control_change channel=5 control=11 value=91 time=2
+control_change channel=5 control=11 value=98 time=2
+note_on channel=5 note=58 velocity=127 time=0
+control_change channel=5 control=11 value=102 time=2
+control_change channel=5 control=11 value=107 time=2
+control_change channel=5 control=11 value=108 time=2
+control_change channel=5 control=11 value=109 time=4
+control_change channel=5 control=11 value=111 time=4
+control_change channel=5 control=11 value=108 time=8
+control_change channel=5 control=11 value=101 time=2
+pitchwheel channel=5 pitch=-67 time=1
+control_change channel=5 control=11 value=96 time=1
+control_change channel=5 control=11 value=92 time=2
+pitchwheel channel=5 pitch=-186 time=6
+control_change channel=5 control=11 value=85 time=2
+pitchwheel channel=5 pitch=-309 time=3
+control_change channel=5 control=11 value=81 time=1
+pitchwheel channel=5 pitch=-432 time=4
+control_change channel=5 control=11 value=76 time=2
+pitchwheel channel=5 pitch=-555 time=1
+control_change channel=5 control=11 value=73 time=3
+pitchwheel channel=5 pitch=-673 time=1
+control_change channel=5 control=11 value=70 time=3
+control_change channel=5 control=11 value=67 time=4
+control_change channel=5 control=11 value=62 time=6
+control_change channel=5 control=11 value=58 time=6
+control_change channel=5 control=11 value=52 time=8
+control_change channel=5 control=11 value=49 time=10
+control_change channel=5 control=11 value=45 time=14
+control_change channel=5 control=11 value=44 time=18
+control_change channel=5 control=11 value=43 time=14
+control_change channel=5 control=11 value=41 time=16
+control_change channel=5 control=11 value=40 time=10
+note_on channel=5 note=58 velocity=0 time=2
+control_change channel=5 control=11 value=39 time=0
+control_change channel=5 control=11 value=38 time=2
+control_change channel=5 control=11 value=39 time=2
+control_change channel=5 control=11 value=40 time=2
+control_change channel=5 control=11 value=41 time=2
+control_change channel=5 control=11 value=43 time=2
+control_change channel=5 control=11 value=45 time=2
+control_change channel=5 control=11 value=47 time=2
+control_change channel=5 control=11 value=51 time=2
+control_change channel=5 control=11 value=52 time=2
+control_change channel=5 control=11 value=69 time=2
+control_change channel=5 control=11 value=102 time=2
+pitchwheel channel=5 pitch=0 time=1
+control_change channel=5 control=11 value=107 time=1
+control_change channel=5 control=11 value=108 time=2
+note_on channel=5 note=58 velocity=127 time=1
+control_change channel=5 control=11 value=112 time=1
+control_change channel=5 control=11 value=113 time=2
+control_change channel=5 control=11 value=117 time=2
+control_change channel=5 control=11 value=120 time=4
+control_change channel=5 control=11 value=119 time=4
+control_change channel=5 control=11 value=118 time=2
+control_change channel=5 control=11 value=116 time=2
+control_change channel=5 control=11 value=114 time=2
+control_change channel=5 control=11 value=112 time=2
+control_change channel=5 control=11 value=110 time=2
+control_change channel=5 control=11 value=105 time=4
+control_change channel=5 control=11 value=101 time=2
+pitchwheel channel=5 pitch=-58 time=1
+control_change channel=5 control=11 value=99 time=1
+control_change channel=5 control=11 value=97 time=2
+control_change channel=5 control=11 value=95 time=2
+control_change channel=5 control=11 value=93 time=2
+control_change channel=5 control=11 value=92 time=2
+pitchwheel channel=5 pitch=-176 time=1
+control_change channel=5 control=11 value=88 time=1
+control_change channel=5 control=11 value=87 time=2
+control_change channel=5 control=11 value=86 time=2
+control_change channel=5 control=11 value=84 time=2
+control_change channel=5 control=11 value=82 time=2
+pitchwheel channel=5 pitch=-299 time=1
+control_change channel=5 control=11 value=81 time=1
+control_change channel=5 control=11 value=80 time=4
+pitchwheel channel=5 pitch=-422 time=0
+control_change channel=5 control=11 value=78 time=2
+control_change channel=5 control=11 value=77 time=2
+pitchwheel channel=5 pitch=-545 time=0
+pitchwheel channel=5 pitch=-669 time=4
+control_change channel=5 control=11 value=75 time=2
+control_change channel=5 control=11 value=73 time=6
+control_change channel=5 control=11 value=70 time=6
+control_change channel=5 control=11 value=68 time=4
+control_change channel=5 control=11 value=67 time=2
+control_change channel=5 control=11 value=65 time=6
+control_change channel=5 control=11 value=64 time=2
+control_change channel=5 control=11 value=63 time=10
+control_change channel=5 control=11 value=62 time=2
+control_change channel=5 control=11 value=61 time=12
+control_change channel=5 control=11 value=59 time=12
+control_change channel=5 control=11 value=57 time=8
+control_change channel=5 control=11 value=54 time=12
+control_change channel=5 control=11 value=52 time=14
+note_on channel=5 note=58 velocity=0 time=3
+control_change channel=5 control=11 value=51 time=5
+control_change channel=5 control=11 value=52 time=18
+pitchwheel channel=5 pitch=0 time=0
+control_change channel=5 control=11 value=55 time=2
+control_change channel=5 control=11 value=92 time=2
+control_change channel=5 control=11 value=95 time=2
+control_change channel=5 control=11 value=105 time=2
+note_on channel=5 note=58 velocity=127 time=0
+control_change channel=5 control=11 value=107 time=2
+control_change channel=5 control=11 value=109 time=2
+control_change channel=5 control=11 value=110 time=2
+control_change channel=5 control=11 value=115 time=4
+control_change channel=5 control=11 value=117 time=2
+control_change channel=5 control=11 value=119 time=2
+control_change channel=5 control=11 value=121 time=4
+control_change channel=5 control=11 value=119 time=4
+control_change channel=5 control=11 value=116 time=4
+pitchwheel channel=5 pitch=-67 time=1
+control_change channel=5 control=11 value=115 time=1
+control_change channel=5 control=11 value=112 time=4
+control_change channel=5 control=11 value=108 time=2
+control_change channel=5 control=11 value=104 time=2
+pitchwheel channel=5 pitch=-186 time=2
+control_change channel=5 control=11 value=101 time=0
+control_change channel=5 control=11 value=95 time=4
+pitchwheel channel=5 pitch=-377 time=1
+control_change channel=5 control=11 value=91 time=3
+pitchwheel channel=5 pitch=-476 time=1
+pitchwheel channel=5 pitch=-545 time=3
+control_change channel=5 control=11 value=85 time=0
+pitchwheel channel=5 pitch=-661 time=2
+control_change channel=5 control=11 value=80 time=4
+control_change channel=5 control=11 value=77 time=6
+control_change channel=5 control=11 value=75 time=10
+control_change channel=5 control=11 value=72 time=6
+control_change channel=5 control=11 value=70 time=6
+control_change channel=5 control=11 value=69 time=4
+control_change channel=5 control=11 value=66 time=8
+control_change channel=5 control=11 value=65 time=10
+control_change channel=5 control=11 value=64 time=14
+control_change channel=5 control=11 value=62 time=18
+control_change channel=5 control=11 value=60 time=10
+control_change channel=5 control=11 value=58 time=6
+control_change channel=5 control=11 value=56 time=6
+control_change channel=5 control=11 value=55 time=4
+note_on channel=5 note=58 velocity=0 time=21
+control_change channel=5 control=11 value=117 time=10
+pitchwheel channel=5 pitch=0 time=1
+note_on channel=5 note=55 velocity=118 time=2
+note_on channel=5 note=52 velocity=98 time=61
+note_on channel=5 note=55 velocity=0 time=4
+note_on channel=5 note=50 velocity=111 time=54
+note_on channel=5 note=52 velocity=0 time=4
+note_on channel=5 note=52 velocity=111 time=68
+note_on channel=5 note=50 velocity=0 time=4
+control_change channel=5 control=11 value=0 time=109
+pitchwheel channel=5 pitch=-136 time=3
+pitchwheel channel=5 pitch=-658 time=6
+control_change channel=5 control=11 value=127 time=1
+pitchwheel channel=5 pitch=-768 time=5
+pitchwheel channel=5 pitch=-650 time=18
+pitchwheel channel=5 pitch=-450 time=6
+pitchwheel channel=5 pitch=0 time=6
+pitchwheel channel=5 pitch=-570 time=107
+control_change channel=5 control=11 value=77 time=14
+control_change channel=5 control=11 value=74 time=4
+pitchwheel channel=5 pitch=-1175 time=7
+pitchwheel channel=5 pitch=-1227 time=2
+pitchwheel channel=5 pitch=-1253 time=1
+control_change channel=5 control=11 value=71 time=5
+control_change channel=5 control=11 value=68 time=2
+pitchwheel channel=5 pitch=-1849 time=12
+pitchwheel channel=5 pitch=-1882 time=2
+pitchwheel channel=5 pitch=-1917 time=3
+control_change channel=5 control=11 value=65 time=2
+control_change channel=5 control=11 value=62 time=1
+pitchwheel channel=5 pitch=-2467 time=19
+control_change channel=5 control=11 value=59 time=0
+control_change channel=5 control=11 value=56 time=13
+pitchwheel channel=5 pitch=-3128 time=1
+control_change channel=5 control=11 value=53 time=15
+control_change channel=5 control=11 value=51 time=1
+pitchwheel channel=5 pitch=-3759 time=8
+pitchwheel channel=5 pitch=-3817 time=4
+control_change channel=5 control=11 value=48 time=3
+control_change channel=5 control=11 value=45 time=3
+pitchwheel channel=5 pitch=-4355 time=10
+pitchwheel channel=5 pitch=-4396 time=4
+pitchwheel channel=5 pitch=-4477 time=2
+control_change channel=5 control=11 value=42 time=1
+control_change channel=5 control=11 value=39 time=5
+control_change channel=5 control=11 value=36 time=15
+pitchwheel channel=5 pitch=-5012 time=0
+pitchwheel channel=5 pitch=-5077 time=5
+control_change channel=5 control=11 value=33 time=0
+control_change channel=5 control=11 value=30 time=16
+control_change channel=5 control=11 value=27 time=1
+pitchwheel channel=5 pitch=-5696 time=4
+control_change channel=5 control=11 value=24 time=9
+control_change channel=5 control=11 value=21 time=4
+pitchwheel channel=5 pitch=-6302 time=7
+pitchwheel channel=5 pitch=-6392 time=2
+note_on channel=5 note=52 velocity=0 time=4
+control_change channel=5 control=11 value=18 time=3
+pitchwheel channel=5 pitch=-6961 time=13
+pitchwheel channel=5 pitch=-6994 time=2
+control_change channel=5 control=11 value=24 time=0
+pitchwheel channel=5 pitch=-7038 time=4
+control_change channel=5 control=11 value=21 time=3
+pitchwheel channel=5 pitch=-7568 time=15
+control_change channel=5 control=11 value=18 time=0
+pitchwheel channel=5 pitch=-7609 time=4
+control_change channel=5 control=11 value=15 time=0
+control_change channel=5 control=11 value=12 time=16
+control_change channel=5 control=11 value=9 time=4
+control_change channel=5 control=11 value=6 time=2
+control_change channel=5 control=11 value=3 time=1
+control_change channel=5 control=11 value=0 time=421
+pitchwheel channel=5 pitch=-7038 time=5
+pitchwheel channel=5 pitch=-638 time=16
+pitchwheel channel=5 pitch=0 time=16
+control_change channel=5 control=11 value=80 time=0
+control_change channel=5 control=11 value=127 time=4974
+pitchwheel channel=5 pitch=-198 time=168
+pitchwheel channel=5 pitch=-563 time=6
+note_on channel=5 note=50 velocity=90 time=3
+pitchwheel channel=5 pitch=-767 time=8
+pitchwheel channel=5 pitch=-395 time=25
+pitchwheel channel=5 pitch=-220 time=6
+pitchwheel channel=5 pitch=0 time=6
+note_on channel=5 note=50 velocity=0 time=114
+pitchwheel channel=5 pitch=-158 time=6
+pitchwheel channel=5 pitch=-512 time=5
+note_on channel=5 note=50 velocity=112 time=11
+pitchwheel channel=5 pitch=-596 time=25
+pitchwheel channel=5 pitch=-366 time=7
+pitchwheel channel=5 pitch=-136 time=5
+pitchwheel channel=5 pitch=0 time=7
+pitchwheel channel=5 pitch=-63 time=107
+note_on channel=5 note=50 velocity=0 time=5
+pitchwheel channel=5 pitch=-461 time=2
+pitchwheel channel=5 pitch=-768 time=18
+note_on channel=5 note=50 velocity=110 time=2
+pitchwheel channel=5 pitch=-596 time=22
+pitchwheel channel=5 pitch=-209 time=6
+pitchwheel channel=5 pitch=0 time=6
+pitchwheel channel=5 pitch=-41 time=108
+note_on channel=5 note=50 velocity=0 time=6
+pitchwheel channel=5 pitch=-439 time=1
+pitchwheel channel=5 pitch=-767 time=11
+pitchwheel channel=5 pitch=-768 time=6
+note_on channel=5 note=50 velocity=108 time=12
+pitchwheel channel=5 pitch=-512 time=18
+pitchwheel channel=5 pitch=-242 time=5
+pitchwheel channel=5 pitch=0 time=7
+note_on channel=5 note=53 velocity=98 time=18
+note_on channel=5 note=50 velocity=0 time=12
+note_on channel=5 note=53 velocity=0 time=52
+note_on channel=5 note=53 velocity=114 time=80
+note_on channel=5 note=53 velocity=0 time=169
+note_on channel=5 note=50 velocity=94 time=34
+note_on channel=5 note=48 velocity=97 time=23
+note_on channel=5 note=50 velocity=0 time=17
+note_on channel=5 note=45 velocity=86 time=23
+note_on channel=5 note=48 velocity=0 time=4
+note_on channel=5 note=42 velocity=91 time=23
+note_on channel=5 note=45 velocity=0 time=5
+note_on channel=5 note=42 velocity=0 time=29
+note_on channel=5 note=52 velocity=54 time=780
+note_on channel=5 note=55 velocity=52 time=53
+note_on channel=5 note=52 velocity=0 time=15
+note_on channel=5 note=55 velocity=0 time=41
+note_on channel=5 note=57 velocity=42 time=79
+note_on channel=5 note=58 velocity=50 time=57
+note_on channel=5 note=57 velocity=0 time=14
+note_on channel=5 note=58 velocity=0 time=27
+note_on channel=5 note=58 velocity=67 time=99
+note_on channel=5 note=58 velocity=0 time=43
+note_on channel=5 note=58 velocity=68 time=18
+note_on channel=5 note=58 velocity=0 time=43
+note_on channel=5 note=57 velocity=61 time=22
+note_on channel=5 note=57 velocity=0 time=38
+note_on channel=5 note=55 velocity=59 time=9
+note_on channel=5 note=55 velocity=0 time=56
+note_on channel=5 note=52 velocity=61 time=21
+note_on channel=5 note=52 velocity=0 time=121
+note_on channel=5 note=55 velocity=107 time=22
+note_on channel=5 note=55 velocity=0 time=27
+note_on channel=5 note=52 velocity=87 time=153
+pitchwheel channel=5 pitch=-136 time=63
+pitchwheel channel=5 pitch=-136 time=0
+pitchwheel channel=5 pitch=-260 time=4
+pitchwheel channel=5 pitch=-260 time=0
+pitchwheel channel=5 pitch=-618 time=4
+pitchwheel channel=5 pitch=-618 time=0
+note_on channel=5 note=52 velocity=0 time=21
+note_on channel=5 note=55 velocity=98 time=0
+pitchwheel channel=5 pitch=-552 time=12
+pitchwheel channel=5 pitch=-552 time=0
+pitchwheel channel=5 pitch=-629 time=4
+pitchwheel channel=5 pitch=-629 time=0
+pitchwheel channel=5 pitch=-472 time=4
+pitchwheel channel=5 pitch=-472 time=0
+pitchwheel channel=5 pitch=-315 time=4
+pitchwheel channel=5 pitch=-315 time=0
+pitchwheel channel=5 pitch=-41 time=4
+pitchwheel channel=5 pitch=-41 time=0
+pitchwheel channel=5 pitch=0 time=4
+pitchwheel channel=5 pitch=0 time=0
+pitchwheel channel=5 pitch=-63 time=57
+pitchwheel channel=5 pitch=-63 time=0
+pitchwheel channel=5 pitch=-209 time=4
+pitchwheel channel=5 pitch=-209 time=0
+pitchwheel channel=5 pitch=-366 time=4
+pitchwheel channel=5 pitch=-366 time=0
+pitchwheel channel=5 pitch=-406 time=4
+pitchwheel channel=5 pitch=-406 time=0
+pitchwheel channel=5 pitch=-607 time=4
+pitchwheel channel=5 pitch=-607 time=0
+pitchwheel channel=5 pitch=-585 time=5
+pitchwheel channel=5 pitch=-585 time=0
+pitchwheel channel=5 pitch=-607 time=8
+pitchwheel channel=5 pitch=-607 time=0
+pitchwheel channel=5 pitch=-406 time=4
+pitchwheel channel=5 pitch=-406 time=0
+note_on channel=5 note=55 velocity=0 time=2
+note_on channel=5 note=57 velocity=87 time=0
+pitchwheel channel=5 pitch=-461 time=2
+pitchwheel channel=5 pitch=-461 time=0
+pitchwheel channel=5 pitch=-282 time=4
+pitchwheel channel=5 pitch=-282 time=0
+pitchwheel channel=5 pitch=-242 time=4
+pitchwheel channel=5 pitch=-242 time=0
+pitchwheel channel=5 pitch=-63 time=4
+pitchwheel channel=5 pitch=-63 time=0
+pitchwheel channel=5 pitch=0 time=4
+pitchwheel channel=5 pitch=0 time=0
+pitchwheel channel=5 pitch=-52 time=53
+pitchwheel channel=5 pitch=-52 time=0
+pitchwheel channel=5 pitch=-220 time=4
+pitchwheel channel=5 pitch=-220 time=0
+pitchwheel channel=5 pitch=-260 time=4
+pitchwheel channel=5 pitch=-260 time=0
+pitchwheel channel=5 pitch=-417 time=4
+pitchwheel channel=5 pitch=-417 time=0
+pitchwheel channel=5 pitch=-607 time=5
+pitchwheel channel=5 pitch=-607 time=0
+pitchwheel channel=5 pitch=-574 time=4
+pitchwheel channel=5 pitch=-574 time=0
+pitchwheel channel=5 pitch=-596 time=12
+pitchwheel channel=5 pitch=-596 time=0
+pitchwheel channel=5 pitch=-395 time=4
+pitchwheel channel=5 pitch=-395 time=0
+pitchwheel channel=5 pitch=-450 time=4
+pitchwheel channel=5 pitch=-450 time=0
+pitchwheel channel=5 pitch=-271 time=4
+pitchwheel channel=5 pitch=-271 time=0
+pitchwheel channel=5 pitch=-209 time=4
+pitchwheel channel=5 pitch=-209 time=0
+pitchwheel channel=5 pitch=-41 time=4
+pitchwheel channel=5 pitch=-41 time=0
+pitchwheel channel=5 pitch=-118 time=4
+pitchwheel channel=5 pitch=-118 time=0
+pitchwheel channel=5 pitch=0 time=5
+pitchwheel channel=5 pitch=0 time=0
+note_on channel=5 note=57 velocity=0 time=3
+note_on channel=5 note=58 velocity=91 time=0
+pitchwheel channel=5 pitch=-74 time=58
+pitchwheel channel=5 pitch=-74 time=0
+pitchwheel channel=5 pitch=-136 time=3
+pitchwheel channel=5 pitch=-136 time=0
+pitchwheel channel=5 pitch=-304 time=4
+pitchwheel channel=5 pitch=-304 time=0
+pitchwheel channel=5 pitch=-355 time=5
+pitchwheel channel=5 pitch=-355 time=0
+pitchwheel channel=5 pitch=-406 time=4
+pitchwheel channel=5 pitch=-406 time=0
+pitchwheel channel=5 pitch=-596 time=4
+pitchwheel channel=5 pitch=-596 time=0
+pitchwheel channel=5 pitch=-552 time=4
+pitchwheel channel=5 pitch=-552 time=0
+pitchwheel channel=5 pitch=-647 time=4
+pitchwheel channel=5 pitch=-647 time=0
+pitchwheel channel=5 pitch=-647 time=21
+pitchwheel channel=5 pitch=-647 time=0
+pitchwheel channel=5 pitch=-669 time=3
+pitchwheel channel=5 pitch=-669 time=0
+pitchwheel channel=5 pitch=-585 time=5
+pitchwheel channel=5 pitch=-585 time=0
+pitchwheel channel=5 pitch=-512 time=3
+pitchwheel channel=5 pitch=-512 time=0
+pitchwheel channel=5 pitch=-439 time=5
+pitchwheel channel=5 pitch=-439 time=0
+pitchwheel channel=5 pitch=-377 time=4
+pitchwheel channel=5 pitch=-377 time=0
+note_on channel=5 note=58 velocity=0 time=2
+note_on channel=5 note=58 velocity=91 time=0
+pitchwheel channel=5 pitch=-315 time=2
+pitchwheel channel=5 pitch=-315 time=0
+pitchwheel channel=5 pitch=-242 time=4
+pitchwheel channel=5 pitch=-242 time=0
+pitchwheel channel=5 pitch=-52 time=4
+pitchwheel channel=5 pitch=-52 time=0
+pitchwheel channel=5 pitch=-107 time=5
+pitchwheel channel=5 pitch=-107 time=0
+pitchwheel channel=5 pitch=0 time=3
+pitchwheel channel=5 pitch=0 time=0
+pitchwheel channel=5 pitch=-96 time=62
+pitchwheel channel=5 pitch=-96 time=0
+pitchwheel channel=5 pitch=-147 time=3
+pitchwheel channel=5 pitch=-147 time=0
+pitchwheel channel=5 pitch=-198 time=5
+pitchwheel channel=5 pitch=-198 time=0
+pitchwheel channel=5 pitch=-377 time=3
+pitchwheel channel=5 pitch=-377 time=0
+pitchwheel channel=5 pitch=-428 time=5
+pitchwheel channel=5 pitch=-428 time=0
+pitchwheel channel=5 pitch=-618 time=4
+pitchwheel channel=5 pitch=-618 time=0
+pitchwheel channel=5 pitch=-563 time=4
+pitchwheel channel=5 pitch=-563 time=0
+pitchwheel channel=5 pitch=-658 time=4
+pitchwheel channel=5 pitch=-658 time=0
+note_on channel=5 note=58 velocity=0 time=15
+note_on channel=5 note=57 velocity=91 time=0
+pitchwheel channel=5 pitch=-563 time=1
+pitchwheel channel=5 pitch=-563 time=0
+pitchwheel channel=5 pitch=-596 time=4
+pitchwheel channel=5 pitch=-596 time=0
+pitchwheel channel=5 pitch=-406 time=4
+pitchwheel channel=5 pitch=-406 time=0
+pitchwheel channel=5 pitch=-450 time=5
+pitchwheel channel=5 pitch=-450 time=0
+pitchwheel channel=5 pitch=-260 time=4
+pitchwheel channel=5 pitch=-260 time=0
+pitchwheel channel=5 pitch=-198 time=4
+pitchwheel channel=5 pitch=-198 time=0
+pitchwheel channel=5 pitch=-136 time=4
+pitchwheel channel=5 pitch=-136 time=0
+pitchwheel channel=5 pitch=-63 time=4
+pitchwheel channel=5 pitch=-63 time=0
+pitchwheel channel=5 pitch=0 time=4
+pitchwheel channel=5 pitch=0 time=0
+pitchwheel channel=5 pitch=-96 time=49
+pitchwheel channel=5 pitch=-96 time=0
+pitchwheel channel=5 pitch=-158 time=4
+pitchwheel channel=5 pitch=-158 time=0
+pitchwheel channel=5 pitch=-198 time=4
+pitchwheel channel=5 pitch=-198 time=0
+pitchwheel channel=5 pitch=-260 time=4
+pitchwheel channel=5 pitch=-260 time=0
+pitchwheel channel=5 pitch=-439 time=4
+pitchwheel channel=5 pitch=-439 time=0
+pitchwheel channel=5 pitch=-618 time=4
+pitchwheel channel=5 pitch=-618 time=0
+pitchwheel channel=5 pitch=-552 time=4
+pitchwheel channel=5 pitch=-552 time=0
+pitchwheel channel=5 pitch=-764 time=4
+pitchwheel channel=5 pitch=-764 time=0
+note_on channel=5 note=55 velocity=91 time=8
+note_on channel=5 note=57 velocity=0 time=2
+pitchwheel channel=5 pitch=-647 time=11
+pitchwheel channel=5 pitch=-647 time=0
+pitchwheel channel=5 pitch=-574 time=4
+pitchwheel channel=5 pitch=-574 time=0
+pitchwheel channel=5 pitch=-512 time=4
+pitchwheel channel=5 pitch=-512 time=0
+pitchwheel channel=5 pitch=-450 time=4
+pitchwheel channel=5 pitch=-450 time=0
+pitchwheel channel=5 pitch=-271 time=4
+pitchwheel channel=5 pitch=-271 time=0
+pitchwheel channel=5 pitch=-220 time=4
+pitchwheel channel=5 pitch=-220 time=0
+pitchwheel channel=5 pitch=-158 time=4
+pitchwheel channel=5 pitch=-158 time=0
+pitchwheel channel=5 pitch=-85 time=4
+pitchwheel channel=5 pitch=-85 time=0
+pitchwheel channel=5 pitch=0 time=4
+pitchwheel channel=5 pitch=0 time=0
+pitchwheel channel=5 pitch=-85 time=41
+pitchwheel channel=5 pitch=-85 time=0
+pitchwheel channel=5 pitch=-136 time=4
+pitchwheel channel=5 pitch=-136 time=0
+pitchwheel channel=5 pitch=-304 time=4
+pitchwheel channel=5 pitch=-304 time=0
+pitchwheel channel=5 pitch=-472 time=4
+pitchwheel channel=5 pitch=-472 time=0
+pitchwheel channel=5 pitch=-629 time=4
+pitchwheel channel=5 pitch=-629 time=0
+pitchwheel channel=5 pitch=-669 time=4
+pitchwheel channel=5 pitch=-669 time=0
+note_on channel=5 note=55 velocity=0 time=29
+note_on channel=5 note=52 velocity=91 time=0
+pitchwheel channel=5 pitch=-658 time=4
+pitchwheel channel=5 pitch=-658 time=0
+pitchwheel channel=5 pitch=-596 time=5
+pitchwheel channel=5 pitch=-596 time=0
+pitchwheel channel=5 pitch=-406 time=3
+pitchwheel channel=5 pitch=-406 time=0
+pitchwheel channel=5 pitch=-472 time=4
+pitchwheel channel=5 pitch=-472 time=0
+pitchwheel channel=5 pitch=-271 time=4
+pitchwheel channel=5 pitch=-271 time=0
+pitchwheel channel=5 pitch=-198 time=4
+pitchwheel channel=5 pitch=-198 time=0
+pitchwheel channel=5 pitch=-136 time=4
+pitchwheel channel=5 pitch=-136 time=0
+pitchwheel channel=5 pitch=-52 time=5
+pitchwheel channel=5 pitch=-52 time=0
+pitchwheel channel=5 pitch=-96 time=4
+pitchwheel channel=5 pitch=-96 time=0
+pitchwheel channel=5 pitch=0 time=4
+pitchwheel channel=5 pitch=0 time=0
+pitchwheel channel=5 pitch=73 time=12
+pitchwheel channel=5 pitch=73 time=0
+pitchwheel channel=5 pitch=219 time=6
+pitchwheel channel=5 pitch=219 time=0
+pitchwheel channel=5 pitch=259 time=5
+pitchwheel channel=5 pitch=259 time=0
+pitchwheel channel=5 pitch=365 time=7
+pitchwheel channel=5 pitch=365 time=0
+pitchwheel channel=5 pitch=376 time=6
+pitchwheel channel=5 pitch=376 time=0
+pitchwheel channel=5 pitch=314 time=5
+pitchwheel channel=5 pitch=314 time=0
+pitchwheel channel=5 pitch=157 time=6
+pitchwheel channel=5 pitch=157 time=0
+pitchwheel channel=5 pitch=95 time=7
+pitchwheel channel=5 pitch=95 time=0
+pitchwheel channel=5 pitch=0 time=5
+pitchwheel channel=5 pitch=0 time=0
+pitchwheel channel=5 pitch=106 time=31
+pitchwheel channel=5 pitch=106 time=0
+pitchwheel channel=5 pitch=252 time=6
+pitchwheel channel=5 pitch=252 time=0
+pitchwheel channel=5 pitch=292 time=5
+pitchwheel channel=5 pitch=292 time=0
+pitchwheel channel=5 pitch=259 time=6
+pitchwheel channel=5 pitch=259 time=0
+pitchwheel channel=5 pitch=208 time=12
+pitchwheel channel=5 pitch=208 time=0
+pitchwheel channel=5 pitch=40 time=7
+pitchwheel channel=5 pitch=40 time=0
+pitchwheel channel=5 pitch=0 time=5
+pitchwheel channel=5 pitch=0 time=0
+pitchwheel channel=5 pitch=40 time=43
+pitchwheel channel=5 pitch=40 time=0
+pitchwheel channel=5 pitch=135 time=5
+pitchwheel channel=5 pitch=135 time=0
+pitchwheel channel=5 pitch=51 time=18
+pitchwheel channel=5 pitch=51 time=0
+pitchwheel channel=5 pitch=0 time=6
+pitchwheel channel=5 pitch=0 time=0
+pitchwheel channel=5 pitch=117 time=43
+pitchwheel channel=5 pitch=117 time=0
+pitchwheel channel=5 pitch=281 time=6
+pitchwheel channel=5 pitch=281 time=0
+pitchwheel channel=5 pitch=511 time=5
+pitchwheel channel=5 pitch=511 time=0
+pitchwheel channel=5 pitch=562 time=7
+pitchwheel channel=5 pitch=562 time=0
+pitchwheel channel=5 pitch=606 time=11
+pitchwheel channel=5 pitch=606 time=0
+pitchwheel channel=5 pitch=354 time=7
+pitchwheel channel=5 pitch=354 time=0
+pitchwheel channel=5 pitch=146 time=6
+pitchwheel channel=5 pitch=146 time=0
+pitchwheel channel=5 pitch=0 time=6
+pitchwheel channel=5 pitch=0 time=0
+control_change channel=5 control=11 value=127 time=19
+control_change channel=5 control=11 value=127 time=0
+pitchwheel channel=5 pitch=135 time=4
+pitchwheel channel=5 pitch=135 time=0
+pitchwheel channel=5 pitch=449 time=6
+pitchwheel channel=5 pitch=449 time=0
+pitchwheel channel=5 pitch=617 time=7
+pitchwheel channel=5 pitch=617 time=0
+pitchwheel channel=5 pitch=595 time=5
+pitchwheel channel=5 pitch=595 time=0
+pitchwheel channel=5 pitch=617 time=6
+pitchwheel channel=5 pitch=617 time=0
+pitchwheel channel=5 pitch=471 time=6
+pitchwheel channel=5 pitch=471 time=0
+pitchwheel channel=5 pitch=252 time=6
+pitchwheel channel=5 pitch=252 time=0
+pitchwheel channel=5 pitch=0 time=7
+pitchwheel channel=5 pitch=0 time=0
+note_on channel=5 note=52 velocity=0 time=13
+pitchwheel channel=5 pitch=-52 time=111
+pitchwheel channel=5 pitch=-52 time=0
+pitchwheel channel=5 pitch=-282 time=6
+pitchwheel channel=5 pitch=-282 time=0
+pitchwheel channel=5 pitch=-395 time=6
+pitchwheel channel=5 pitch=-395 time=0
+pitchwheel channel=5 pitch=-647 time=7
+pitchwheel channel=5 pitch=-647 time=0
+note_on channel=5 note=50 velocity=94 time=10
+pitchwheel channel=5 pitch=-647 time=38
+pitchwheel channel=5 pitch=-647 time=0
+pitchwheel channel=5 pitch=-629 time=5
+pitchwheel channel=5 pitch=-629 time=0
+pitchwheel channel=5 pitch=-472 time=6
+pitchwheel channel=5 pitch=-472 time=0
+pitchwheel channel=5 pitch=-315 time=6
+pitchwheel channel=5 pitch=-315 time=0
+pitchwheel channel=5 pitch=-136 time=6
+pitchwheel channel=5 pitch=-136 time=0
+pitchwheel channel=5 pitch=-74 time=7
+pitchwheel channel=5 pitch=-74 time=0
+pitchwheel channel=5 pitch=0 time=5
+pitchwheel channel=5 pitch=0 time=0
+note_on channel=5 note=50 velocity=0 time=46
+note_on channel=5 note=46 velocity=91 time=6
+control_change channel=5 control=11 value=126 time=215
+control_change channel=5 control=11 value=126 time=0
+control_change channel=5 control=11 value=123 time=30
+control_change channel=5 control=11 value=123 time=0
+control_change channel=5 control=11 value=121 time=6
+control_change channel=5 control=11 value=121 time=0
+control_change channel=5 control=11 value=118 time=19
+control_change channel=5 control=11 value=118 time=0
+control_change channel=5 control=11 value=115 time=17
+control_change channel=5 control=11 value=115 time=0
+control_change channel=5 control=11 value=112 time=18
+control_change channel=5 control=11 value=112 time=0
+control_change channel=5 control=11 value=111 time=6
+control_change channel=5 control=11 value=111 time=0
+control_change channel=5 control=11 value=108 time=12
+control_change channel=5 control=11 value=108 time=0
+control_change channel=5 control=11 value=105 time=18
+control_change channel=5 control=11 value=105 time=0
+control_change channel=5 control=11 value=103 time=6
+control_change channel=5 control=11 value=103 time=0
+pitchwheel channel=5 pitch=-118 time=5
+pitchwheel channel=5 pitch=-118 time=0
+control_change channel=5 control=11 value=102 time=1
+control_change channel=5 control=11 value=102 time=0
+control_change channel=5 control=11 value=100 time=6
+control_change channel=5 control=11 value=100 time=0
+pitchwheel channel=5 pitch=-224 time=5
+pitchwheel channel=5 pitch=-224 time=0
+control_change channel=5 control=11 value=99 time=1
+control_change channel=5 control=11 value=99 time=0
+pitchwheel channel=5 pitch=-330 time=11
+pitchwheel channel=5 pitch=-330 time=0
+control_change channel=5 control=11 value=96 time=1
+control_change channel=5 control=11 value=96 time=0
+control_change channel=5 control=11 value=95 time=6
+control_change channel=5 control=11 value=95 time=0
+pitchwheel channel=5 pitch=-436 time=5
+pitchwheel channel=5 pitch=-436 time=0
+control_change channel=5 control=11 value=93 time=1
+control_change channel=5 control=11 value=93 time=0
+control_change channel=5 control=11 value=92 time=6
+control_change channel=5 control=11 value=92 time=0
+pitchwheel channel=5 pitch=-425 time=5
+pitchwheel channel=5 pitch=-425 time=0
+control_change channel=5 control=11 value=90 time=1
+control_change channel=5 control=11 value=90 time=0
+control_change channel=5 control=11 value=89 time=6
+control_change channel=5 control=11 value=89 time=0
+pitchwheel channel=5 pitch=-648 time=5
+pitchwheel channel=5 pitch=-648 time=0
+control_change channel=5 control=11 value=87 time=1
+control_change channel=5 control=11 value=87 time=0
+pitchwheel channel=5 pitch=-765 time=5
+pitchwheel channel=5 pitch=-765 time=0
+control_change channel=5 control=11 value=85 time=7
+control_change channel=5 control=11 value=85 time=0
+pitchwheel channel=5 pitch=-860 time=5
+pitchwheel channel=5 pitch=-860 time=0
+control_change channel=5 control=11 value=83 time=1
+control_change channel=5 control=11 value=83 time=0
+control_change channel=5 control=11 value=82 time=6
+control_change channel=5 control=11 value=82 time=0
+pitchwheel channel=5 pitch=-966 time=5
+pitchwheel channel=5 pitch=-966 time=0
+control_change channel=5 control=11 value=80 time=1
+control_change channel=5 control=11 value=80 time=0
+control_change channel=5 control=11 value=79 time=6
+control_change channel=5 control=11 value=79 time=0
+pitchwheel channel=5 pitch=-1072 time=5
+pitchwheel channel=5 pitch=-1072 time=0
+pitchwheel channel=5 pitch=-1178 time=5
+pitchwheel channel=5 pitch=-1178 time=0
+control_change channel=5 control=11 value=76 time=2
+control_change channel=5 control=11 value=76 time=0
+control_change channel=5 control=11 value=75 time=6
+control_change channel=5 control=11 value=75 time=0
+pitchwheel channel=5 pitch=-1284 time=5
+pitchwheel channel=5 pitch=-1284 time=0
+control_change channel=5 control=11 value=73 time=1
+control_change channel=5 control=11 value=73 time=0
+pitchwheel channel=5 pitch=-1518 time=5
+pitchwheel channel=5 pitch=-1518 time=0
+control_change channel=5 control=11 value=71 time=7
+pitchwheel channel=5 pitch=-1507 time=0
+pitchwheel channel=5 pitch=-1507 time=0
+control_change channel=5 control=11 value=71 time=0
+control_change channel=5 control=11 value=69 time=6
+control_change channel=5 control=11 value=69 time=0
+pitchwheel channel=5 pitch=-1730 time=5
+pitchwheel channel=5 pitch=-1730 time=0
+control_change channel=5 control=11 value=68 time=1
+control_change channel=5 control=11 value=68 time=0
+control_change channel=5 control=11 value=66 time=6
+control_change channel=5 control=11 value=66 time=0
+pitchwheel channel=5 pitch=-1825 time=5
+pitchwheel channel=5 pitch=-1825 time=0
+control_change channel=5 control=11 value=64 time=7
+control_change channel=5 control=11 value=64 time=0
+control_change channel=5 control=11 value=62 time=6
+control_change channel=5 control=11 value=62 time=0
+control_change channel=5 control=11 value=61 time=6
+pitchwheel channel=5 pitch=-1942 time=0
+pitchwheel channel=5 pitch=-1942 time=0
+control_change channel=5 control=11 value=61 time=0
+control_change channel=5 control=11 value=59 time=6
+control_change channel=5 control=11 value=59 time=0
+pitchwheel channel=5 pitch=-2165 time=5
+pitchwheel channel=5 pitch=-2165 time=0
+pitchwheel channel=5 pitch=-2154 time=6
+pitchwheel channel=5 pitch=-2154 time=0
+control_change channel=5 control=11 value=57 time=1
+control_change channel=5 control=11 value=57 time=0
+control_change channel=5 control=11 value=55 time=6
+control_change channel=5 control=11 value=55 time=0
+pitchwheel channel=5 pitch=-2260 time=5
+pitchwheel channel=5 pitch=-2260 time=0
+control_change channel=5 control=11 value=54 time=1
+control_change channel=5 control=11 value=54 time=0
+pitchwheel channel=5 pitch=-2366 time=5
+pitchwheel channel=5 pitch=-2366 time=0
+pitchwheel channel=5 pitch=-2483 time=6
+pitchwheel channel=5 pitch=-2483 time=0
+control_change channel=5 control=11 value=51 time=1
+control_change channel=5 control=11 value=51 time=0
+pitchwheel channel=5 pitch=-2589 time=5
+pitchwheel channel=5 pitch=-2589 time=0
+pitchwheel channel=5 pitch=-2578 time=6
+pitchwheel channel=5 pitch=-2578 time=0
+control_change channel=5 control=11 value=49 time=1
+control_change channel=5 control=11 value=49 time=0
+pitchwheel channel=5 pitch=-2812 time=5
+pitchwheel channel=5 pitch=-2812 time=0
+pitchwheel channel=5 pitch=-2918 time=6
+pitchwheel channel=5 pitch=-2918 time=0
+control_change channel=5 control=11 value=46 time=1
+control_change channel=5 control=11 value=46 time=0
+pitchwheel channel=5 pitch=-3013 time=5
+pitchwheel channel=5 pitch=-3013 time=0
+pitchwheel channel=5 pitch=-3236 time=6
+pitchwheel channel=5 pitch=-3236 time=0
+pitchwheel channel=5 pitch=-3331 time=6
+pitchwheel channel=5 pitch=-3331 time=0
+control_change channel=5 control=11 value=43 time=1
+control_change channel=5 control=11 value=43 time=0
+control_change channel=5 control=11 value=40 time=18
+control_change channel=5 control=11 value=40 time=0
+pitchwheel channel=5 pitch=-3408 time=11
+pitchwheel channel=5 pitch=-3408 time=0
+control_change channel=5 control=11 value=37 time=7
+control_change channel=5 control=11 value=37 time=0
+note_on channel=5 note=46 velocity=0 time=14
+control_change channel=5 control=11 value=34 time=4
+control_change channel=5 control=11 value=34 time=0
+control_change channel=5 control=11 value=31 time=12
+control_change channel=5 control=11 value=31 time=0
+control_change channel=5 control=11 value=29 time=24
+control_change channel=5 control=11 value=29 time=0
+pitchwheel channel=5 pitch=0 time=79
+pitchwheel channel=5 pitch=0 time=0
+control_change channel=5 control=11 value=127 time=16
+control_change channel=5 control=11 value=127 time=0
+note_on channel=5 note=38 velocity=96 time=44
+note_on channel=5 note=38 velocity=0 time=48
+note_on channel=5 note=41 velocity=81 time=6
+note_on channel=5 note=41 velocity=0 time=27
+note_on channel=5 note=41 velocity=96 time=111
+note_on channel=5 note=41 velocity=0 time=166
+note_on channel=5 note=38 velocity=79 time=30
+note_on channel=5 note=38 velocity=0 time=41
+note_on channel=5 note=41 velocity=78 time=5
+note_on channel=5 note=41 velocity=0 time=27
+note_on channel=5 note=41 velocity=98 time=120
+note_on channel=5 note=41 velocity=0 time=178
+note_on channel=5 note=38 velocity=87 time=10
+pitchwheel channel=5 pitch=-213 time=154
+pitchwheel channel=5 pitch=-213 time=0
+pitchwheel channel=5 pitch=-319 time=5
+pitchwheel channel=5 pitch=-319 time=0
+pitchwheel channel=5 pitch=-436 time=6
+pitchwheel channel=5 pitch=-436 time=0
+pitchwheel channel=5 pitch=-648 time=12
+pitchwheel channel=5 pitch=-648 time=0
+pitchwheel channel=5 pitch=-765 time=7
+pitchwheel channel=5 pitch=-765 time=0
+pitchwheel channel=5 pitch=-860 time=6
+pitchwheel channel=5 pitch=-860 time=0
+pitchwheel channel=5 pitch=-966 time=6
+pitchwheel channel=5 pitch=-966 time=0
+pitchwheel channel=5 pitch=-1072 time=6
+pitchwheel channel=5 pitch=-1072 time=0
+control_change channel=5 control=11 value=82 time=2
+pitchwheel channel=5 pitch=-1178 time=3
+pitchwheel channel=5 pitch=-1178 time=0
+control_change channel=5 control=11 value=84 time=11
+pitchwheel channel=5 pitch=-1401 time=1
+pitchwheel channel=5 pitch=-1401 time=0
+pitchwheel channel=5 pitch=-1507 time=7
+pitchwheel channel=5 pitch=-1507 time=0
+control_change channel=5 control=11 value=86 time=6
+pitchwheel channel=5 pitch=-1730 time=6
+pitchwheel channel=5 pitch=-1730 time=0
+control_change channel=5 control=11 value=88 time=9
+pitchwheel channel=5 pitch=-1836 time=2
+pitchwheel channel=5 pitch=-1836 time=0
+pitchwheel channel=5 pitch=-1825 time=6
+pitchwheel channel=5 pitch=-1825 time=0
+pitchwheel channel=5 pitch=-1931 time=12
+pitchwheel channel=5 pitch=-1931 time=0
+pitchwheel channel=5 pitch=-2165 time=7
+pitchwheel channel=5 pitch=-2165 time=0
+pitchwheel channel=5 pitch=-2271 time=6
+pitchwheel channel=5 pitch=-2271 time=0
+control_change channel=5 control=11 value=90 time=2
+pitchwheel channel=5 pitch=-2366 time=9
+pitchwheel channel=5 pitch=-2366 time=0
+pitchwheel channel=5 pitch=-2472 time=12
+pitchwheel channel=5 pitch=-2472 time=0
+control_change channel=5 control=11 value=92 time=7
+pitchwheel channel=5 pitch=-2695 time=5
+pitchwheel channel=5 pitch=-2695 time=0
+pitchwheel channel=5 pitch=-2801 time=12
+pitchwheel channel=5 pitch=-2801 time=0
+control_change channel=5 control=11 value=94 time=8
+pitchwheel channel=5 pitch=-3024 time=4
+pitchwheel channel=5 pitch=-3024 time=0
+pitchwheel channel=5 pitch=-3130 time=6
+pitchwheel channel=5 pitch=-3130 time=0
+pitchwheel channel=5 pitch=-3119 time=6
+pitchwheel channel=5 pitch=-3119 time=0
+pitchwheel channel=5 pitch=-3225 time=6
+pitchwheel channel=5 pitch=-3225 time=0
+pitchwheel channel=5 pitch=-3331 time=6
+pitchwheel channel=5 pitch=-3331 time=0
+control_change channel=5 control=11 value=96 time=5
+control_change channel=5 control=11 value=98 time=17
+control_change channel=5 control=11 value=100 time=13
+pitchwheel channel=5 pitch=-3408 time=1
+pitchwheel channel=5 pitch=-3408 time=0
+control_change channel=5 control=11 value=102 time=16
+note_on channel=5 note=38 velocity=0 time=13
+control_change channel=5 control=11 value=104 time=15
+control_change channel=5 control=11 value=106 time=47
+control_change channel=5 control=11 value=108 time=17
+control_change channel=5 control=11 value=110 time=16
+pitchwheel channel=5 pitch=0 time=22
+pitchwheel channel=5 pitch=0 time=0
+control_change channel=5 control=11 value=112 time=13
+control_change channel=5 control=11 value=114 time=14
+control_change channel=5 control=11 value=116 time=21
+control_change channel=5 control=11 value=118 time=9
+control_change channel=5 control=11 value=120 time=14
+control_change channel=5 control=11 value=122 time=19
+control_change channel=5 control=11 value=124 time=17
+control_change channel=5 control=11 value=126 time=17
+control_change channel=5 control=11 value=126 time=1146
+control_change channel=5 control=11 value=123 time=8
+note_on channel=5 note=67 velocity=96 time=3
+control_change channel=5 control=11 value=121 time=1
+control_change channel=5 control=11 value=118 time=4
+control_change channel=5 control=11 value=116 time=4
+note_on channel=5 note=65 velocity=93 time=1
+control_change channel=5 control=11 value=113 time=3
+control_change channel=5 control=11 value=110 time=5
+note_on channel=5 note=65 velocity=0 time=1
+note_on channel=5 note=64 velocity=127 time=2
+control_change channel=5 control=11 value=107 time=0
+control_change channel=5 control=11 value=105 time=4
+control_change channel=5 control=11 value=102 time=4
+control_change channel=5 control=11 value=100 time=5
+note_on channel=5 note=67 velocity=0 time=1
+control_change channel=5 control=11 value=98 time=3
+control_change channel=5 control=11 value=95 time=4
+control_change channel=5 control=11 value=93 time=4
+control_change channel=5 control=11 value=90 time=4
+control_change channel=5 control=11 value=87 time=4
+control_change channel=5 control=11 value=84 time=4
+control_change channel=5 control=11 value=81 time=4
+control_change channel=5 control=11 value=78 time=4
+note_on channel=5 note=64 velocity=0 time=1
+control_change channel=5 control=11 value=75 time=3
+note_on channel=5 note=59 velocity=92 time=3
+control_change channel=5 control=11 value=72 time=2
+control_change channel=5 control=11 value=69 time=3
+control_change channel=5 control=11 value=66 time=4
+control_change channel=5 control=11 value=62 time=5
+control_change channel=5 control=11 value=59 time=4
+note_on channel=5 note=57 velocity=120 time=3
+control_change channel=5 control=11 value=55 time=1
+control_change channel=5 control=11 value=51 time=4
+control_change channel=5 control=11 value=48 time=4
+control_change channel=5 control=11 value=45 time=4
+control_change channel=5 control=11 value=42 time=4
+note_on channel=5 note=59 velocity=0 time=4
+control_change channel=5 control=11 value=40 time=0
+control_change channel=5 control=11 value=39 time=4
+note_on channel=5 note=57 velocity=0 time=27
+control_change channel=5 control=11 value=39 time=63
+note_on channel=5 note=59 velocity=80 time=24
+control_change channel=5 control=11 value=89 time=8
+note_on channel=5 note=57 velocity=91 time=2
+note_on channel=5 note=59 velocity=0 time=26
+control_change channel=5 control=11 value=55 time=12
+control_change channel=5 control=11 value=51 time=4
+control_change channel=5 control=11 value=48 time=4
+control_change channel=5 control=11 value=45 time=4
+note_on channel=5 note=52 velocity=127 time=2
+control_change channel=5 control=11 value=42 time=2
+note_on channel=5 note=57 velocity=0 time=1
+control_change channel=5 control=11 value=40 time=3
+control_change channel=5 control=11 value=39 time=4
+note_on channel=5 note=52 velocity=0 time=61
+control_change channel=5 control=11 value=127 time=21
+note_on channel=5 note=55 velocity=73 time=18
+note_on channel=5 note=57 velocity=84 time=66
+note_on channel=5 note=55 velocity=0 time=12
+control_change channel=5 control=11 value=123 time=53
+control_change channel=5 control=11 value=119 time=4
+control_change channel=5 control=11 value=115 time=4
+control_change channel=5 control=11 value=111 time=4
+control_change channel=5 control=11 value=105 time=4
+control_change channel=5 control=11 value=97 time=4
+control_change channel=5 control=11 value=88 time=4
+control_change channel=5 control=11 value=76 time=5
+control_change channel=5 control=11 value=127 time=40
+note_on channel=5 note=55 velocity=95 time=0
+note_on channel=5 note=57 velocity=0 time=6
+note_on channel=5 note=57 velocity=102 time=50
+note_on channel=5 note=55 velocity=0 time=13
+control_change channel=5 control=11 value=123 time=59
+control_change channel=5 control=11 value=119 time=4
+control_change channel=5 control=11 value=115 time=4
+control_change channel=5 control=11 value=111 time=4
+control_change channel=5 control=11 value=105 time=4
+control_change channel=5 control=11 value=97 time=4
+control_change channel=5 control=11 value=88 time=4
+control_change channel=5 control=11 value=76 time=5
+note_on channel=5 note=57 velocity=0 time=25
+control_change channel=5 control=11 value=127 time=15
+note_on channel=5 note=55 velocity=110 time=57
+control_change channel=5 control=11 value=123 time=102
+control_change channel=5 control=11 value=119 time=4
+control_change channel=5 control=11 value=115 time=4
+control_change channel=5 control=11 value=111 time=4
+control_change channel=5 control=11 value=105 time=4
+control_change channel=5 control=11 value=97 time=4
+control_change channel=5 control=11 value=88 time=4
+control_change channel=5 control=11 value=76 time=5
+pitchwheel channel=5 pitch=453 time=12
+pitchwheel channel=5 pitch=1202 time=5
+pitchwheel channel=5 pitch=0 time=18
+control_change channel=5 control=11 value=97 time=5
+note_on channel=5 note=52 velocity=107 time=20
+note_on channel=5 note=55 velocity=0 time=1
+pitchwheel channel=5 pitch=208 time=47
+pitchwheel channel=5 pitch=295 time=5
+note_on channel=5 note=52 velocity=0 time=39
+pitchwheel channel=5 pitch=0 time=52
+note_on channel=5 note=55 velocity=127 time=51
+control_change channel=5 control=11 value=123 time=44
+control_change channel=5 control=11 value=119 time=4
+control_change channel=5 control=11 value=115 time=4
+control_change channel=5 control=11 value=111 time=4
+control_change channel=5 control=11 value=105 time=4
+control_change channel=5 control=11 value=97 time=4
+control_change channel=5 control=11 value=88 time=4
+control_change channel=5 control=11 value=76 time=5
+control_change channel=5 control=11 value=97 time=40
+pitchwheel channel=5 pitch=-41 time=5
+pitchwheel channel=5 pitch=-618 time=6
+pitchwheel channel=5 pitch=-768 time=12
+pitchwheel channel=5 pitch=0 time=18
+note_on channel=5 note=57 velocity=127 time=25
+note_on channel=5 note=55 velocity=0 time=14
+note_on channel=5 note=57 velocity=0 time=78
+note_on channel=5 note=57 velocity=80 time=74
+note_on channel=5 note=55 velocity=112 time=12
+note_on channel=5 note=57 velocity=0 time=17
+note_on channel=5 note=46 velocity=113 time=10
+note_on channel=5 note=55 velocity=0 time=16
+pitchwheel channel=5 pitch=-118 time=59
+pitchwheel channel=5 pitch=-107 time=4
+pitchwheel channel=5 pitch=-85 time=4
+pitchwheel channel=5 pitch=-74 time=8
+pitchwheel channel=5 pitch=-52 time=8
+pitchwheel channel=5 pitch=-136 time=9
+pitchwheel channel=5 pitch=-242 time=4
+pitchwheel channel=5 pitch=-220 time=4
+pitchwheel channel=5 pitch=-198 time=4
+pitchwheel channel=5 pitch=-293 time=8
+pitchwheel channel=5 pitch=-271 time=8
+pitchwheel channel=5 pitch=-377 time=8
+pitchwheel channel=5 pitch=-271 time=12
+pitchwheel channel=5 pitch=-304 time=9
+pitchwheel channel=5 pitch=-209 time=4
+pitchwheel channel=5 pitch=-231 time=4
+pitchwheel channel=5 pitch=-136 time=4
+pitchwheel channel=5 pitch=-158 time=4
+pitchwheel channel=5 pitch=-52 time=4
+pitchwheel channel=5 pitch=-74 time=8
+pitchwheel channel=5 pitch=-96 time=4
+pitchwheel channel=5 pitch=-118 time=5
+pitchwheel channel=5 pitch=0 time=3
+note_on channel=5 note=55 velocity=108 time=149
+note_on channel=5 note=46 velocity=0 time=5
+note_on channel=5 note=57 velocity=87 time=10
+control_change channel=5 control=11 value=63 time=8
+note_on channel=5 note=55 velocity=0 time=15
+control_change channel=5 control=11 value=66 time=41
+control_change channel=5 control=11 value=68 time=4
+control_change channel=5 control=11 value=70 time=5
+control_change channel=5 control=11 value=72 time=4
+control_change channel=5 control=11 value=74 time=4
+control_change channel=5 control=11 value=76 time=4
+control_change channel=5 control=11 value=78 time=4
+control_change channel=5 control=11 value=80 time=4
+control_change channel=5 control=11 value=82 time=4
+control_change channel=5 control=11 value=85 time=4
+control_change channel=5 control=11 value=87 time=4
+control_change channel=5 control=11 value=89 time=4
+control_change channel=5 control=11 value=91 time=4
+control_change channel=5 control=11 value=93 time=5
+control_change channel=5 control=11 value=96 time=3
+control_change channel=5 control=11 value=100 time=5
+control_change channel=5 control=11 value=103 time=4
+control_change channel=5 control=11 value=107 time=4
+control_change channel=5 control=11 value=110 time=4
+control_change channel=5 control=11 value=114 time=4
+control_change channel=5 control=11 value=118 time=4
+control_change channel=5 control=11 value=122 time=4
+control_change channel=5 control=11 value=125 time=4
+note_on channel=5 note=57 velocity=0 time=82
+note_on channel=5 note=57 velocity=87 time=47
+note_on channel=5 note=55 velocity=78 time=7
+note_on channel=5 note=53 velocity=104 time=16
+note_on channel=5 note=57 velocity=0 time=11
+note_on channel=5 note=55 velocity=0 time=1
+note_on channel=5 note=52 velocity=80 time=19
+note_on channel=5 note=53 velocity=0 time=13
+note_on channel=5 note=46 velocity=107 time=7
+note_on channel=5 note=52 velocity=0 time=8
+note_on channel=5 note=46 velocity=0 time=32
+note_on channel=5 note=53 velocity=114 time=0
+note_on channel=5 note=57 velocity=95 time=38
+note_on channel=5 note=53 velocity=0 time=5
+note_on channel=5 note=60 velocity=110 time=14
+note_on channel=5 note=57 velocity=0 time=18
+note_on channel=5 note=57 velocity=92 time=230
+note_on channel=5 note=60 velocity=0 time=11
+pitchwheel channel=5 pitch=84 time=37
+pitchwheel channel=5 pitch=906 time=5
+pitchwheel channel=5 pitch=1407 time=12
+control_change channel=5 control=11 value=123 time=50
+control_change channel=5 control=11 value=118 time=4
+pitchwheel channel=5 pitch=1392 time=1
+control_change channel=5 control=11 value=114 time=3
+pitchwheel channel=5 pitch=939 time=3
+control_change channel=5 control=11 value=110 time=1
+control_change channel=5 control=11 value=106 time=4
+pitchwheel channel=5 pitch=475 time=0
+control_change channel=5 control=11 value=102 time=4
+pitchwheel channel=5 pitch=95 time=3
+control_change channel=5 control=11 value=100 time=1
+control_change channel=5 control=11 value=99 time=4
+pitchwheel channel=5 pitch=0 time=0
+control_change channel=5 control=11 value=102 time=17
+pitchwheel channel=5 pitch=95 time=2
+control_change channel=5 control=11 value=106 time=1
+control_change channel=5 control=11 value=110 time=5
+pitchwheel channel=5 pitch=263 time=0
+control_change channel=5 control=11 value=115 time=4
+pitchwheel channel=5 pitch=844 time=1
+control_change channel=5 control=11 value=121 time=3
+pitchwheel channel=5 pitch=1286 time=3
+control_change channel=5 control=11 value=125 time=1
+control_change channel=5 control=11 value=127 time=4
+pitchwheel channel=5 pitch=1407 time=8
+pitchwheel channel=5 pitch=1406 time=24
+pitchwheel channel=5 pitch=1224 time=18
+pitchwheel channel=5 pitch=760 time=5
+control_change channel=5 control=11 value=126 time=2
+pitchwheel channel=5 pitch=285 time=5
+control_change channel=5 control=11 value=123 time=3
+pitchwheel channel=5 pitch=0 time=3
+control_change channel=5 control=11 value=120 time=1
+control_change channel=5 control=11 value=117 time=4
+control_change channel=5 control=11 value=114 time=4
+control_change channel=5 control=11 value=111 time=4
+control_change channel=5 control=11 value=109 time=5
+control_change channel=5 control=11 value=107 time=3
+control_change channel=5 control=11 value=105 time=5
+control_change channel=5 control=11 value=103 time=4
+control_change channel=5 control=11 value=101 time=4
+control_change channel=5 control=11 value=99 time=4
+control_change channel=5 control=11 value=96 time=4
+control_change channel=5 control=11 value=94 time=4
+control_change channel=5 control=11 value=91 time=4
+control_change channel=5 control=11 value=88 time=4
+control_change channel=5 control=11 value=85 time=5
+control_change channel=5 control=11 value=82 time=3
+control_change channel=5 control=11 value=80 time=5
+control_change channel=5 control=11 value=90 time=57
+note_on channel=5 note=57 velocity=0 time=11
+note_on channel=5 note=52 velocity=62 time=5
+note_on channel=5 note=55 velocity=91 time=60
+note_on channel=5 note=52 velocity=0 time=10
+pitchwheel channel=5 pitch=471 time=66
+pitchwheel channel=5 pitch=752 time=30
+pitchwheel channel=5 pitch=405 time=6
+pitchwheel channel=5 pitch=135 time=7
+pitchwheel channel=5 pitch=0 time=5
+pitchwheel channel=5 pitch=157 time=12
+pitchwheel channel=5 pitch=405 time=6
+pitchwheel channel=5 pitch=649 time=19
+pitchwheel channel=5 pitch=573 time=17
+pitchwheel channel=5 pitch=376 time=6
+pitchwheel channel=5 pitch=0 time=6
+note_on channel=5 note=55 velocity=0 time=11
+note_on channel=5 note=52 velocity=88 time=1
+note_on channel=5 note=52 velocity=0 time=54
+control_change channel=5 control=11 value=127 time=389
+note_on channel=5 note=59 velocity=80 time=26
+note_on channel=5 note=59 velocity=0 time=33
+note_on channel=5 note=62 velocity=78 time=9
+note_on channel=5 note=62 velocity=0 time=38
+note_on channel=5 note=64 velocity=127 time=18
+pitchwheel channel=5 pitch=-253 time=9
+pitchwheel channel=5 pitch=-366 time=4
+pitchwheel channel=5 pitch=-607 time=4
+pitchwheel channel=5 pitch=-647 time=4
+pitchwheel channel=5 pitch=-647 time=12
+pitchwheel channel=5 pitch=-618 time=4
+pitchwheel channel=5 pitch=-366 time=4
+pitchwheel channel=5 pitch=-242 time=4
+pitchwheel channel=5 pitch=-107 time=4
+pitchwheel channel=5 pitch=0 time=4
+note_on channel=5 note=64 velocity=0 time=16
+note_on channel=5 note=64 velocity=97 time=6
+note_on channel=5 note=64 velocity=0 time=54
+note_on channel=5 note=62 velocity=90 time=6
+pitchwheel channel=5 pitch=-118 time=45
+pitchwheel channel=5 pitch=-136 time=4
+pitchwheel channel=5 pitch=-271 time=4
+note_on channel=5 note=62 velocity=0 time=3
+pitchwheel channel=5 pitch=-417 time=1
+pitchwheel channel=5 pitch=-574 time=4
+note_on channel=5 note=64 velocity=127 time=0
+pitchwheel channel=5 pitch=-764 time=4
+pitchwheel channel=5 pitch=-574 time=21
+pitchwheel channel=5 pitch=-417 time=4
+pitchwheel channel=5 pitch=-282 time=4
+pitchwheel channel=5 pitch=-147 time=4
+pitchwheel channel=5 pitch=-118 time=4
+pitchwheel channel=5 pitch=0 time=4
+note_on channel=5 note=64 velocity=0 time=19
+note_on channel=5 note=64 velocity=97 time=3
+note_on channel=5 note=64 velocity=0 time=44
+note_on channel=5 note=62 velocity=74 time=15
+note_on channel=5 note=62 velocity=0 time=36
+note_on channel=5 note=65 velocity=115 time=24
+note_on channel=5 note=65 velocity=0 time=104
+note_on channel=5 note=62 velocity=83 time=2
+note_on channel=5 note=60 velocity=81 time=20
+note_on channel=5 note=62 velocity=0 time=11
+note_on channel=5 note=60 velocity=0 time=11
+note_on channel=5 note=53 velocity=95 time=2
+note_on channel=5 note=53 velocity=0 time=28
+note_on channel=5 note=62 velocity=125 time=1
+note_on channel=5 note=62 velocity=0 time=107
+note_on channel=5 note=60 velocity=90 time=2
+note_on channel=5 note=60 velocity=0 time=24
+note_on channel=5 note=50 velocity=94 time=35
+note_on channel=5 note=50 velocity=0 time=27
+note_on channel=5 note=58 velocity=113 time=9
+note_on channel=5 note=55 velocity=66 time=111
+note_on channel=5 note=58 velocity=0 time=3
+note_on channel=5 note=53 velocity=90 time=20
+note_on channel=5 note=55 velocity=0 time=10
+note_on channel=5 note=53 velocity=0 time=17
+note_on channel=5 note=57 velocity=115 time=17
+note_on channel=5 note=53 velocity=95 time=84
+note_on channel=5 note=57 velocity=0 time=2
+note_on channel=5 note=53 velocity=0 time=27
+note_on channel=5 note=50 velocity=94 time=15
+note_on channel=5 note=50 velocity=0 time=45
+note_on channel=5 note=57 velocity=86 time=13
+note_on channel=5 note=53 velocity=90 time=57
+note_on channel=5 note=57 velocity=0 time=8
+note_on channel=5 note=53 velocity=0 time=39
+note_on channel=5 note=50 velocity=78 time=20
+note_on channel=5 note=50 velocity=0 time=31
+note_on channel=5 note=53 velocity=92 time=44
+note_on channel=5 note=50 velocity=78 time=57
+note_on channel=5 note=53 velocity=0 time=7
+note_on channel=5 note=50 velocity=0 time=23
+note_on channel=5 note=55 velocity=92 time=20
+note_on channel=5 note=55 velocity=0 time=55
+note_on channel=5 note=58 velocity=119 time=1
+note_on channel=5 note=60 velocity=122 time=17
+note_on channel=5 note=58 velocity=0 time=8
+note_on channel=5 note=60 velocity=0 time=25
+note_on channel=5 note=62 velocity=127 time=0
+note_on channel=5 note=65 velocity=127 time=26
+note_on channel=5 note=62 velocity=0 time=8
+note_on channel=5 note=62 velocity=127 time=21
+note_on channel=5 note=65 velocity=0 time=7
+note_on channel=5 note=65 velocity=96 time=19
+note_on channel=5 note=62 velocity=0 time=8
+note_on channel=5 note=60 velocity=86 time=22
+note_on channel=5 note=65 velocity=0 time=9
+note_on channel=5 note=60 velocity=0 time=32
+note_on channel=5 note=61 velocity=127 time=354
+pitchwheel channel=5 pitch=1308 time=9
+pitchwheel channel=5 pitch=1407 time=6
+pitchwheel channel=5 pitch=0 time=24
+note_on channel=5 note=61 velocity=0 time=32
+pitchwheel channel=5 pitch=-366 time=180
+note_on channel=5 note=52 velocity=80 time=11
+pitchwheel channel=5 pitch=-768 time=1
+pitchwheel channel=5 pitch=-767 time=23
+pitchwheel channel=5 pitch=-552 time=18
+pitchwheel channel=5 pitch=-406 time=6
+control_change channel=5 control=11 value=124 time=1
+control_change channel=5 control=11 value=118 time=3
+pitchwheel channel=5 pitch=-293 time=3
+control_change channel=5 control=11 value=111 time=1
+control_change channel=5 control=11 value=104 time=4
+pitchwheel channel=5 pitch=-85 time=1
+control_change channel=5 control=11 value=96 time=3
+pitchwheel channel=5 pitch=0 time=3
+control_change channel=5 control=11 value=88 time=1
+control_change channel=5 control=11 value=81 time=4
+control_change channel=5 control=11 value=74 time=5
+control_change channel=5 control=11 value=68 time=4
+control_change channel=5 control=11 value=62 time=4
+control_change channel=5 control=11 value=59 time=4
+control_change channel=5 control=11 value=56 time=4
+control_change channel=5 control=11 value=60 time=29
+control_change channel=5 control=11 value=62 time=3
+control_change channel=5 control=11 value=65 time=5
+control_change channel=5 control=11 value=68 time=4
+control_change channel=5 control=11 value=72 time=4
+control_change channel=5 control=11 value=77 time=4
+control_change channel=5 control=11 value=82 time=4
+control_change channel=5 control=11 value=87 time=4
+control_change channel=5 control=11 value=93 time=4
+control_change channel=5 control=11 value=99 time=4
+control_change channel=5 control=11 value=106 time=4
+control_change channel=5 control=11 value=113 time=4
+control_change channel=5 control=11 value=120 time=4
+control_change channel=5 control=11 value=126 time=4
+control_change channel=5 control=11 value=127 time=5
+note_on channel=5 note=55 velocity=85 time=9
+note_on channel=5 note=52 velocity=0 time=11
+note_on channel=5 note=55 velocity=0 time=104
+pitchwheel channel=5 pitch=-293 time=71
+pitchwheel channel=5 pitch=-563 time=6
+note_on channel=5 note=59 velocity=100 time=5
+pitchwheel channel=5 pitch=-768 time=7
+pitchwheel channel=5 pitch=-428 time=30
+control_change channel=5 control=11 value=125 time=6
+pitchwheel channel=5 pitch=-136 time=0
+control_change channel=5 control=11 value=121 time=4
+pitchwheel channel=5 pitch=0 time=2
+control_change channel=5 control=11 value=116 time=2
+control_change channel=5 control=11 value=110 time=4
+control_change channel=5 control=11 value=104 time=4
+control_change channel=5 control=11 value=98 time=4
+control_change channel=5 control=11 value=91 time=4
+control_change channel=5 control=11 value=85 time=4
+control_change channel=5 control=11 value=79 time=4
+control_change channel=5 control=11 value=74 time=4
+control_change channel=5 control=11 value=69 time=4
+control_change channel=5 control=11 value=65 time=5
+control_change channel=5 control=11 value=62 time=3
+control_change channel=5 control=11 value=59 time=5
+control_change channel=5 control=11 value=57 time=4
+control_change channel=5 control=11 value=55 time=4
+control_change channel=5 control=11 value=58 time=20
+control_change channel=5 control=11 value=60 time=5
+control_change channel=5 control=11 value=63 time=3
+control_change channel=5 control=11 value=65 time=4
+control_change channel=5 control=11 value=69 time=5
+control_change channel=5 control=11 value=72 time=3
+control_change channel=5 control=11 value=76 time=5
+control_change channel=5 control=11 value=81 time=4
+control_change channel=5 control=11 value=86 time=4
+control_change channel=5 control=11 value=91 time=4
+control_change channel=5 control=11 value=96 time=4
+control_change channel=5 control=11 value=101 time=4
+control_change channel=5 control=11 value=106 time=4
+control_change channel=5 control=11 value=111 time=4
+control_change channel=5 control=11 value=116 time=4
+control_change channel=5 control=11 value=122 time=4
+control_change channel=5 control=11 value=126 time=4
+control_change channel=5 control=11 value=127 time=4
+note_on channel=5 note=62 velocity=94 time=9
+note_on channel=5 note=59 velocity=0 time=1
+control_change channel=5 control=11 value=121 time=8
+control_change channel=5 control=11 value=116 time=4
+control_change channel=5 control=11 value=110 time=4
+control_change channel=5 control=11 value=105 time=4
+control_change channel=5 control=11 value=100 time=4
+control_change channel=5 control=11 value=94 time=4
+control_change channel=5 control=11 value=89 time=5
+control_change channel=5 control=11 value=83 time=4
+control_change channel=5 control=11 value=77 time=3
+control_change channel=5 control=11 value=70 time=5
+control_change channel=5 control=11 value=63 time=4
+control_change channel=5 control=11 value=56 time=4
+control_change channel=5 control=11 value=50 time=4
+control_change channel=5 control=11 value=46 time=4
+control_change channel=5 control=11 value=44 time=5
+control_change channel=5 control=11 value=47 time=11
+control_change channel=5 control=11 value=50 time=4
+control_change channel=5 control=11 value=54 time=4
+control_change channel=5 control=11 value=59 time=5
+control_change channel=5 control=11 value=65 time=4
+control_change channel=5 control=11 value=71 time=4
+control_change channel=5 control=11 value=78 time=4
+control_change channel=5 control=11 value=85 time=4
+control_change channel=5 control=11 value=92 time=4
+control_change channel=5 control=11 value=100 time=4
+control_change channel=5 control=11 value=108 time=4
+note_on channel=5 note=62 velocity=0 time=1
+control_change channel=5 control=11 value=116 time=3
+control_change channel=5 control=11 value=124 time=4
+control_change channel=5 control=11 value=126 time=4
+note_on channel=5 note=59 velocity=85 time=0
+note_on channel=5 note=59 velocity=0 time=24
+pitchwheel channel=5 pitch=-304 time=22
+note_on channel=5 note=64 velocity=120 time=4
+pitchwheel channel=5 pitch=-669 time=2
+pitchwheel channel=5 pitch=-768 time=11
+pitchwheel channel=5 pitch=0 time=19
+control_change channel=5 control=11 value=119 time=10
+control_change channel=5 control=11 value=112 time=4
+control_change channel=5 control=11 value=104 time=4
+control_change channel=5 control=11 value=95 time=4
+control_change channel=5 control=11 value=86 time=4
+control_change channel=5 control=11 value=77 time=4
+control_change channel=5 control=11 value=67 time=4
+control_change channel=5 control=11 value=59 time=4
+control_change channel=5 control=11 value=52 time=4
+control_change channel=5 control=11 value=47 time=4
+control_change channel=5 control=11 value=45 time=4
+control_change channel=5 control=11 value=49 time=17
+control_change channel=5 control=11 value=53 time=4
+control_change channel=5 control=11 value=58 time=4
+control_change channel=5 control=11 value=64 time=4
+control_change channel=5 control=11 value=71 time=4
+control_change channel=5 control=11 value=79 time=4
+control_change channel=5 control=11 value=88 time=4
+control_change channel=5 control=11 value=100 time=4
+control_change channel=5 control=11 value=113 time=4
+control_change channel=5 control=11 value=125 time=4
+control_change channel=5 control=11 value=127 time=5
+note_on channel=5 note=64 velocity=0 time=41
+note_on channel=5 note=67 velocity=98 time=1
+control_change channel=5 control=11 value=120 time=36
+control_change channel=5 control=11 value=115 time=3
+control_change channel=5 control=11 value=110 time=5
+control_change channel=5 control=11 value=105 time=3
+control_change channel=5 control=11 value=100 time=4
+control_change channel=5 control=11 value=95 time=5
+control_change channel=5 control=11 value=90 time=4
+control_change channel=5 control=11 value=85 time=4
+control_change channel=5 control=11 value=81 time=4
+control_change channel=5 control=11 value=78 time=4
+control_change channel=5 control=11 value=77 time=4
+control_change channel=5 control=11 value=82 time=12
+control_change channel=5 control=11 value=87 time=4
+control_change channel=5 control=11 value=93 time=5
+control_change channel=5 control=11 value=100 time=3
+control_change channel=5 control=11 value=108 time=4
+control_change channel=5 control=11 value=116 time=5
+control_change channel=5 control=11 value=124 time=4
+note_on channel=5 note=67 velocity=0 time=2
+control_change channel=5 control=11 value=127 time=2
+pitchwheel channel=5 pitch=-52 time=340
+pitchwheel channel=5 pitch=-596 time=5
+pitchwheel channel=5 pitch=-768 time=12
+note_on channel=5 note=70 velocity=127 time=8
+pitchwheel channel=5 pitch=-767 time=11
+pitchwheel channel=5 pitch=-52 time=6
+pitchwheel channel=5 pitch=0 time=5
+note_on channel=5 note=70 velocity=0 time=24
+note_on channel=5 note=67 velocity=127 time=15
+note_on channel=5 note=67 velocity=0 time=43
+note_on channel=5 note=65 velocity=127 time=19
+note_on channel=5 note=65 velocity=0 time=29
+note_on channel=5 note=67 velocity=86 time=3
+note_on channel=5 note=65 velocity=72 time=29
+note_on channel=5 note=67 velocity=0 time=3
+note_on channel=5 note=65 velocity=0 time=27
+note_on channel=5 note=62 velocity=94 time=3
+note_on channel=5 note=62 velocity=0 time=26
+note_on channel=5 note=61 velocity=118 time=16
+note_on channel=5 note=61 velocity=0 time=49
+note_on channel=5 note=52 velocity=64 time=11
+note_on channel=5 note=52 velocity=0 time=30
+note_on channel=5 note=60 velocity=127 time=18
+note_on channel=5 note=60 velocity=0 time=46
+note_on channel=5 note=52 velocity=78 time=11
+note_on channel=5 note=52 velocity=0 time=49
+note_on channel=5 note=58 velocity=127 time=17
+note_on channel=5 note=58 velocity=0 time=70
+note_on channel=5 note=60 velocity=86 time=4
+note_on channel=5 note=58 velocity=67 time=25
+note_on channel=5 note=60 velocity=0 time=3
+note_on channel=5 note=55 velocity=66 time=18
+note_on channel=5 note=58 velocity=0 time=1
+note_on channel=5 note=55 velocity=0 time=32
+note_on channel=5 note=55 velocity=88 time=19
+note_on channel=5 note=55 velocity=0 time=113
+note_on channel=5 note=53 velocity=73 time=16
+note_on channel=5 note=53 velocity=0 time=33
+note_on channel=5 note=55 velocity=106 time=30
+control_change channel=5 control=11 value=123 time=13
+control_change channel=5 control=11 value=116 time=4
+control_change channel=5 control=11 value=107 time=4
+control_change channel=5 control=11 value=98 time=5
+control_change channel=5 control=11 value=89 time=4
+control_change channel=5 control=11 value=79 time=4
+control_change channel=5 control=11 value=70 time=4
+control_change channel=5 control=11 value=61 time=4
+control_change channel=5 control=11 value=52 time=4
+control_change channel=5 control=11 value=46 time=4
+control_change channel=5 control=11 value=41 time=4
+control_change channel=5 control=11 value=39 time=4
+control_change channel=5 control=11 value=42 time=13
+control_change channel=5 control=11 value=47 time=3
+control_change channel=5 control=11 value=54 time=5
+control_change channel=5 control=11 value=62 time=3
+control_change channel=5 control=11 value=72 time=5
+pitchwheel channel=5 pitch=-220 time=2
+control_change channel=5 control=11 value=84 time=2
+control_change channel=5 control=11 value=96 time=4
+pitchwheel channel=5 pitch=-574 time=0
+control_change channel=5 control=11 value=110 time=4
+control_change channel=5 control=11 value=124 time=4
+control_change channel=5 control=11 value=127 time=4
+pitchwheel channel=5 pitch=-768 time=0
+note_on channel=5 note=55 velocity=0 time=7
+note_on channel=5 note=58 velocity=99 time=23
+pitchwheel channel=5 pitch=-428 time=37
+pitchwheel channel=5 pitch=-242 time=6
+pitchwheel channel=5 pitch=0 time=6
+note_on channel=5 note=58 velocity=0 time=51
+pitchwheel channel=5 pitch=-231 time=261
+pitchwheel channel=5 pitch=-406 time=5
+pitchwheel channel=5 pitch=-768 time=19
+note_on channel=5 note=59 velocity=114 time=6
+pitchwheel channel=5 pitch=-647 time=48
+control_change channel=5 control=11 value=126 time=2
+control_change channel=5 control=11 value=123 time=3
+pitchwheel channel=5 pitch=-629 time=1
+control_change channel=5 control=11 value=119 time=3
+pitchwheel channel=5 pitch=-355 time=3
+control_change channel=5 control=11 value=115 time=1
+control_change channel=5 control=11 value=111 time=5
+pitchwheel channel=5 pitch=-315 time=0
+control_change channel=5 control=11 value=107 time=3
+pitchwheel channel=5 pitch=-242 time=3
+control_change channel=5 control=11 value=103 time=2
+control_change channel=5 control=11 value=99 time=4
+pitchwheel channel=5 pitch=-41 time=0
+control_change channel=5 control=11 value=96 time=4
+pitchwheel channel=5 pitch=-96 time=2
+control_change channel=5 control=11 value=93 time=2
+control_change channel=5 control=11 value=91 time=4
+pitchwheel channel=5 pitch=0 time=0
+control_change channel=5 control=11 value=89 time=4
+control_change channel=5 control=11 value=86 time=4
+control_change channel=5 control=11 value=85 time=4
+control_change channel=5 control=11 value=87 time=21
+control_change channel=5 control=11 value=89 time=4
+control_change channel=5 control=11 value=92 time=4
+control_change channel=5 control=11 value=94 time=4
+control_change channel=5 control=11 value=96 time=4
+control_change channel=5 control=11 value=97 time=4
+control_change channel=5 control=11 value=99 time=4
+control_change channel=5 control=11 value=101 time=5
+control_change channel=5 control=11 value=104 time=3
+control_change channel=5 control=11 value=106 time=4
+control_change channel=5 control=11 value=108 time=4
+control_change channel=5 control=11 value=111 time=4
+control_change channel=5 control=11 value=114 time=5
+control_change channel=5 control=11 value=117 time=4
+control_change channel=5 control=11 value=121 time=4
+control_change channel=5 control=11 value=125 time=4
+control_change channel=5 control=11 value=126 time=4
+note_on channel=5 note=64 velocity=108 time=57
+note_on channel=5 note=59 velocity=0 time=7
+note_on channel=5 note=64 velocity=0 time=107
+note_on channel=5 note=57 velocity=106 time=17
+pitchwheel channel=5 pitch=84 time=15
+pitchwheel channel=5 pitch=595 time=5
+pitchwheel channel=5 pitch=766 time=6
+pitchwheel channel=5 pitch=767 time=6
+pitchwheel channel=5 pitch=303 time=36
+pitchwheel channel=5 pitch=0 time=6
+control_change channel=5 control=11 value=124 time=12
+control_change channel=5 control=11 value=121 time=4
+control_change channel=5 control=11 value=117 time=4
+control_change channel=5 control=11 value=114 time=4
+control_change channel=5 control=11 value=111 time=4
+control_change channel=5 control=11 value=107 time=4
+control_change channel=5 control=11 value=104 time=4
+control_change channel=5 control=11 value=101 time=4
+control_change channel=5 control=11 value=98 time=4
+control_change channel=5 control=11 value=95 time=4
+control_change channel=5 control=11 value=91 time=4
+control_change channel=5 control=11 value=88 time=5
+control_change channel=5 control=11 value=85 time=3
+control_change channel=5 control=11 value=83 time=5
+control_change channel=5 control=11 value=81 time=4
+control_change channel=5 control=11 value=85 time=24
+control_change channel=5 control=11 value=90 time=5
+note_on channel=5 note=57 velocity=0 time=1
+control_change channel=5 control=11 value=96 time=2
+control_change channel=5 control=11 value=105 time=4
+control_change channel=5 control=11 value=116 time=5
+control_change channel=5 control=11 value=126 time=3
+note_on channel=5 note=52 velocity=98 time=26
+note_on channel=5 note=52 velocity=0 time=24
+note_on channel=5 note=58 velocity=127 time=26
+pitchwheel channel=5 pitch=628 time=30
+pitchwheel channel=5 pitch=767 time=6
+pitchwheel channel=5 pitch=0 time=25
+note_on channel=5 note=58 velocity=0 time=29
+note_on channel=5 note=52 velocity=85 time=21
+note_on channel=5 note=52 velocity=0 time=46
+note_on channel=5 note=57 velocity=84 time=21
+pitchwheel channel=5 pitch=51 time=34
+pitchwheel channel=5 pitch=197 time=5
+pitchwheel channel=5 pitch=376 time=4
+pitchwheel channel=5 pitch=449 time=3
+pitchwheel channel=5 pitch=427 time=5
+pitchwheel channel=5 pitch=449 time=8
+pitchwheel channel=5 pitch=365 time=4
+pitchwheel channel=5 pitch=292 time=4
+pitchwheel channel=5 pitch=146 time=4
+pitchwheel channel=5 pitch=106 time=4
+pitchwheel channel=5 pitch=0 time=4
+note_on channel=5 note=57 velocity=0 time=25
+note_on channel=5 note=52 velocity=98 time=48
+note_on channel=5 note=52 velocity=0 time=34
+note_on channel=5 note=55 velocity=112 time=14
+pitchwheel channel=5 pitch=1407 time=89
+pitchwheel channel=5 pitch=-169 time=24
+pitchwheel channel=5 pitch=117 time=6
+pitchwheel channel=5 pitch=0 time=7
+note_on channel=5 note=55 velocity=0 time=2
+note_on channel=5 note=52 velocity=110 time=6
+note_on channel=5 note=52 velocity=0 time=35
+note_on channel=5 note=50 velocity=112 time=4
+control_change channel=5 control=11 value=126 time=65
+control_change channel=5 control=11 value=123 time=8
+control_change channel=5 control=11 value=120 time=4
+control_change channel=5 control=11 value=116 time=4
+control_change channel=5 control=11 value=113 time=4
+control_change channel=5 control=11 value=109 time=4
+pitchwheel channel=5 pitch=-74 time=4
+control_change channel=5 control=11 value=106 time=1
+control_change channel=5 control=11 value=102 time=3
+pitchwheel channel=5 pitch=-198 time=2
+control_change channel=5 control=11 value=99 time=2
+control_change channel=5 control=11 value=95 time=4
+pitchwheel channel=5 pitch=-472 time=0
+control_change channel=5 control=11 value=92 time=4
+pitchwheel channel=5 pitch=-512 time=2
+control_change channel=5 control=11 value=89 time=3
+pitchwheel channel=5 pitch=-574 time=3
+control_change channel=5 control=11 value=86 time=1
+control_change channel=5 control=11 value=83 time=4
+pitchwheel channel=5 pitch=-669 time=1
+control_change channel=5 control=11 value=79 time=3
+control_change channel=5 control=11 value=76 time=4
+control_change channel=5 control=11 value=72 time=4
+control_change channel=5 control=11 value=69 time=4
+pitchwheel channel=5 pitch=-585 time=3
+control_change channel=5 control=11 value=66 time=1
+control_change channel=5 control=11 value=63 time=4
+pitchwheel channel=5 pitch=-629 time=1
+control_change channel=5 control=11 value=61 time=4
+pitchwheel channel=5 pitch=-428 time=2
+pitchwheel channel=5 pitch=-271 time=5
+pitchwheel channel=5 pitch=-96 time=7
+control_change channel=5 control=11 value=64 time=6
+pitchwheel channel=5 pitch=0 time=0
+control_change channel=5 control=11 value=66 time=4
+pitchwheel channel=5 pitch=95 time=1
+control_change channel=5 control=11 value=69 time=3
+pitchwheel channel=5 pitch=168 time=2
+control_change channel=5 control=11 value=72 time=2
+control_change channel=5 control=11 value=76 time=4
+pitchwheel channel=5 pitch=464 time=1
+control_change channel=5 control=11 value=80 time=3
+pitchwheel channel=5 pitch=749 time=3
+control_change channel=5 control=11 value=85 time=1
+control_change channel=5 control=11 value=90 time=5
+pitchwheel channel=5 pitch=1140 time=0
+control_change channel=5 control=11 value=95 time=3
+control_change channel=5 control=11 value=100 time=4
+control_change channel=5 control=11 value=105 time=5
+control_change channel=5 control=11 value=109 time=3
+pitchwheel channel=5 pitch=1407 time=3
+control_change channel=5 control=11 value=113 time=1
+control_change channel=5 control=11 value=117 time=5
+control_change channel=5 control=11 value=122 time=4
+control_change channel=5 control=11 value=125 time=4
+control_change channel=5 control=11 value=127 time=4
+note_on channel=5 note=50 velocity=0 time=348
+pitchwheel channel=5 pitch=0 time=11
+note_on channel=5 note=55 velocity=112 time=16
+control_change channel=5 control=11 value=87 time=52
+pitchwheel channel=5 pitch=201 time=33
+pitchwheel channel=5 pitch=1213 time=6
+pitchwheel channel=5 pitch=1407 time=6
+pitchwheel channel=5 pitch=0 time=23
+note_on channel=5 note=55 velocity=0 time=12
+note_on channel=5 note=52 velocity=110 time=5
+note_on channel=5 note=52 velocity=0 time=36
+note_on channel=5 note=50 velocity=114 time=8
+control_change channel=5 control=11 value=82 time=51
+control_change channel=5 control=11 value=75 time=4
+control_change channel=5 control=11 value=68 time=4
+control_change channel=5 control=11 value=61 time=4
+control_change channel=5 control=11 value=54 time=4
+control_change channel=5 control=11 value=47 time=4
+control_change channel=5 control=11 value=41 time=4
+control_change channel=5 control=11 value=35 time=5
+note_on channel=5 note=50 velocity=0 time=32
+pitchwheel channel=5 pitch=-1298 time=3
+control_change channel=5 control=11 value=88 time=1
+note_on channel=5 note=47 velocity=114 time=6
+pitchwheel channel=5 pitch=-1408 time=5
+pitchwheel channel=5 pitch=0 time=11
+control_change channel=5 control=11 value=88 time=127
+control_change channel=5 control=11 value=84 time=4
+control_change channel=5 control=11 value=80 time=4
+control_change channel=5 control=11 value=75 time=4
+control_change channel=5 control=11 value=71 time=4
+control_change channel=5 control=11 value=66 time=4
+control_change channel=5 control=11 value=61 time=4
+control_change channel=5 control=11 value=57 time=4
+control_change channel=5 control=11 value=53 time=4
+control_change channel=5 control=11 value=48 time=4
+control_change channel=5 control=11 value=45 time=5
+control_change channel=5 control=11 value=41 time=3
+control_change channel=5 control=11 value=38 time=5
+control_change channel=5 control=11 value=34 time=4
+control_change channel=5 control=11 value=31 time=4
+control_change channel=5 control=11 value=29 time=4
+control_change channel=5 control=11 value=26 time=4
+control_change channel=5 control=11 value=23 time=4
+control_change channel=5 control=11 value=20 time=4
+control_change channel=5 control=11 value=18 time=4
+control_change channel=5 control=11 value=15 time=4
+control_change channel=5 control=11 value=12 time=4
+control_change channel=5 control=11 value=9 time=4
+control_change channel=5 control=11 value=6 time=4
+control_change channel=5 control=11 value=3 time=5
+control_change channel=5 control=11 value=1 time=4
+note_on channel=5 note=47 velocity=0 time=31
+control_change channel=5 control=11 value=122 time=11341
+pitchwheel channel=5 pitch=-180 time=137
+pitchwheel channel=5 pitch=-750 time=6
+pitchwheel channel=5 pitch=-1408 time=12
+note_on channel=5 note=64 velocity=112 time=23
+pitchwheel channel=5 pitch=-1309 time=19
+pitchwheel channel=5 pitch=-538 time=6
+pitchwheel channel=5 pitch=0 time=6
+control_change channel=5 control=11 value=122 time=50
+control_change channel=5 control=11 value=117 time=5
+control_change channel=5 control=11 value=111 time=6
+control_change channel=5 control=11 value=106 time=7
+control_change channel=5 control=11 value=100 time=6
+control_change channel=5 control=11 value=95 time=6
+control_change channel=5 control=11 value=90 time=6
+control_change channel=5 control=11 value=85 time=6
+note_on channel=5 note=62 velocity=87 time=2
+control_change channel=5 control=11 value=83 time=4
+control_change channel=5 control=11 value=81 time=5
+note_on channel=5 note=64 velocity=0 time=1
+control_change channel=5 control=11 value=86 time=24
+control_change channel=5 control=11 value=90 time=6
+control_change channel=5 control=11 value=95 time=6
+control_change channel=5 control=11 value=101 time=6
+pitchwheel channel=5 pitch=-739 time=4
+note_on channel=5 note=62 velocity=0 time=2
+control_change channel=5 control=11 value=110 time=0
+note_on channel=5 note=59 velocity=110 time=6
+control_change channel=5 control=11 value=120 time=0
+pitchwheel channel=5 pitch=-1408 time=4
+control_change channel=5 control=11 value=127 time=2
+pitchwheel channel=5 pitch=-856 time=22
+pitchwheel channel=5 pitch=0 time=7
+control_change channel=5 control=11 value=125 time=91
+control_change channel=5 control=11 value=123 time=5
+control_change channel=5 control=11 value=120 time=6
+note_on channel=5 note=57 velocity=97 time=0
+note_on channel=5 note=59 velocity=0 time=7
+control_change channel=5 control=11 value=116 time=0
+control_change channel=5 control=11 value=112 time=6
+control_change channel=5 control=11 value=108 time=6
+control_change channel=5 control=11 value=104 time=6
+control_change channel=5 control=11 value=100 time=6
+control_change channel=5 control=11 value=97 time=6
+control_change channel=5 control=11 value=96 time=6
+note_on channel=5 note=55 velocity=80 time=13
+control_change channel=5 control=11 value=99 time=23
+note_on channel=5 note=57 velocity=0 time=2
+control_change channel=5 control=11 value=101 time=4
+control_change channel=5 control=11 value=103 time=6
+control_change channel=5 control=11 value=106 time=6
+control_change channel=5 control=11 value=109 time=6
+control_change channel=5 control=11 value=113 time=6
+control_change channel=5 control=11 value=118 time=6
+control_change channel=5 control=11 value=122 time=6
+control_change channel=5 control=11 value=125 time=6
+control_change channel=5 control=11 value=127 time=6
+note_on channel=5 note=55 velocity=0 time=43
+note_on channel=5 note=52 velocity=77 time=0
+note_on channel=5 note=52 velocity=0 time=52
+note_on channel=5 note=58 velocity=95 time=24
+pitchwheel channel=5 pitch=-96 time=79
+pitchwheel channel=5 pitch=-52 time=3
+pitchwheel channel=5 pitch=-136 time=4
+pitchwheel channel=5 pitch=-209 time=3
+pitchwheel channel=5 pitch=-293 time=4
+pitchwheel channel=5 pitch=-260 time=4
+pitchwheel channel=5 pitch=-461 time=3
+pitchwheel channel=5 pitch=-417 time=4
+pitchwheel channel=5 pitch=-629 time=3
+pitchwheel channel=5 pitch=-585 time=4
+pitchwheel channel=5 pitch=-563 time=3
+pitchwheel channel=5 pitch=-596 time=15
+pitchwheel channel=5 pitch=-629 time=3
+pitchwheel channel=5 pitch=-417 time=4
+pitchwheel channel=5 pitch=-355 time=4
+pitchwheel channel=5 pitch=-293 time=3
+pitchwheel channel=5 pitch=-136 time=4
+pitchwheel channel=5 pitch=-96 time=3
+pitchwheel channel=5 pitch=0 time=4
+note_on channel=5 note=58 velocity=0 time=13
+note_on channel=5 note=58 velocity=93 time=14
+pitchwheel channel=5 pitch=-85 time=98
+pitchwheel channel=5 pitch=-41 time=3
+pitchwheel channel=5 pitch=-242 time=4
+pitchwheel channel=5 pitch=-315 time=3
+pitchwheel channel=5 pitch=-260 time=4
+pitchwheel channel=5 pitch=-472 time=3
+pitchwheel channel=5 pitch=-439 time=4
+pitchwheel channel=5 pitch=-406 time=4
+pitchwheel channel=5 pitch=-629 time=3
+pitchwheel channel=5 pitch=-618 time=4
+pitchwheel channel=5 pitch=-512 time=10
+pitchwheel channel=5 pitch=-406 time=4
+pitchwheel channel=5 pitch=-439 time=4
+pitchwheel channel=5 pitch=-366 time=3
+pitchwheel channel=5 pitch=-282 time=4
+pitchwheel channel=5 pitch=-220 time=3
+pitchwheel channel=5 pitch=-52 time=4
+pitchwheel channel=5 pitch=0 time=3
+note_on channel=5 note=58 velocity=0 time=18
+note_on channel=5 note=58 velocity=96 time=17
+pitchwheel channel=5 pitch=-96 time=87
+pitchwheel channel=5 pitch=-63 time=3
+pitchwheel channel=5 pitch=-158 time=4
+pitchwheel channel=5 pitch=-231 time=3
+pitchwheel channel=5 pitch=-315 time=4
+pitchwheel channel=5 pitch=-271 time=3
+pitchwheel channel=5 pitch=-472 time=4
+pitchwheel channel=5 pitch=-417 time=4
+pitchwheel channel=5 pitch=-395 time=3
+pitchwheel channel=5 pitch=-618 time=4
+pitchwheel channel=5 pitch=-596 time=3
+pitchwheel channel=5 pitch=-574 time=8
+pitchwheel channel=5 pitch=-607 time=7
+pitchwheel channel=5 pitch=-406 time=3
+pitchwheel channel=5 pitch=-472 time=4
+pitchwheel channel=5 pitch=-315 time=3
+pitchwheel channel=5 pitch=-41 time=4
+pitchwheel channel=5 pitch=0 time=3
+note_on channel=5 note=58 velocity=0 time=17
+note_on channel=5 note=58 velocity=93 time=25
+pitchwheel channel=5 pitch=-85 time=77
+pitchwheel channel=5 pitch=-147 time=4
+pitchwheel channel=5 pitch=-209 time=3
+pitchwheel channel=5 pitch=-282 time=4
+pitchwheel channel=5 pitch=-271 time=3
+pitchwheel channel=5 pitch=-293 time=25
+pitchwheel channel=5 pitch=-209 time=4
+pitchwheel channel=5 pitch=-147 time=3
+pitchwheel channel=5 pitch=-85 time=4
+pitchwheel channel=5 pitch=0 time=4
+note_on channel=5 note=58 velocity=0 time=27
+note_on channel=5 note=55 velocity=60 time=33
+note_on channel=5 note=52 velocity=60 time=65
+note_on channel=5 note=55 velocity=0 time=1
+note_on channel=5 note=50 velocity=50 time=49
+note_on channel=5 note=52 velocity=0 time=1
+note_on channel=5 note=50 velocity=0 time=53
+note_on channel=5 note=52 velocity=80 time=13
+pitchwheel channel=5 pitch=-85 time=103
+pitchwheel channel=5 pitch=-260 time=6
+pitchwheel channel=5 pitch=-585 time=5
+pitchwheel channel=5 pitch=-658 time=31
+pitchwheel channel=5 pitch=-417 time=6
+pitchwheel channel=5 pitch=-220 time=6
+pitchwheel channel=5 pitch=0 time=5
+control_change channel=5 control=11 value=125 time=16
+control_change channel=5 control=11 value=123 time=12
+control_change channel=5 control=11 value=121 time=9
+control_change channel=5 control=11 value=119 time=7
+control_change channel=5 control=11 value=117 time=13
+pitchwheel channel=5 pitch=-703 time=7
+control_change channel=5 control=11 value=111 time=17
+control_change channel=5 control=11 value=109 time=13
+control_change channel=5 control=11 value=107 time=8
+pitchwheel channel=5 pitch=-2224 time=19
+pitchwheel channel=5 pitch=-2575 time=20
+control_change channel=5 control=11 value=97 time=1
+control_change channel=5 control=11 value=95 time=9
+pitchwheel channel=5 pitch=-3394 time=10
+pitchwheel channel=5 pitch=-3745 time=8
+control_change channel=5 control=11 value=85 time=11
+pitchwheel channel=5 pitch=-4213 time=1
+pitchwheel channel=5 pitch=-4915 time=17
+pitchwheel channel=5 pitch=-5650 time=9
+control_change channel=5 control=11 value=73 time=13
+pitchwheel channel=5 pitch=-6246 time=2
+control_change channel=5 control=11 value=65 time=14
+pitchwheel channel=5 pitch=-6948 time=3
+control_change channel=5 control=11 value=63 time=1
+control_change channel=5 control=11 value=63 time=5
+pitchwheel channel=5 pitch=-7800 time=2
+pitchwheel channel=5 pitch=-8151 time=8
+note_on channel=5 note=52 velocity=0 time=23
+pitchwheel channel=5 pitch=0 time=94
+control_change channel=5 control=11 value=127 time=24
+note_on channel=5 note=55 velocity=60 time=28
+note_on channel=5 note=52 velocity=60 time=65
+note_on channel=5 note=55 velocity=0 time=1
+note_on channel=5 note=50 velocity=50 time=49
+note_on channel=5 note=52 velocity=0 time=1
+note_on channel=5 note=50 velocity=0 time=53
+note_on channel=5 note=52 velocity=80 time=13
+pitchwheel channel=5 pitch=-85 time=103
+pitchwheel channel=5 pitch=-260 time=6
+pitchwheel channel=5 pitch=-585 time=5
+pitchwheel channel=5 pitch=-658 time=31
+pitchwheel channel=5 pitch=-417 time=6
+pitchwheel channel=5 pitch=-220 time=6
+pitchwheel channel=5 pitch=0 time=5
+control_change channel=5 control=11 value=125 time=16
+control_change channel=5 control=11 value=123 time=12
+control_change channel=5 control=11 value=121 time=9
+control_change channel=5 control=11 value=119 time=7
+control_change channel=5 control=11 value=117 time=13
+pitchwheel channel=5 pitch=-703 time=7
+control_change channel=5 control=11 value=111 time=17
+control_change channel=5 control=11 value=109 time=13
+control_change channel=5 control=11 value=107 time=8
+pitchwheel channel=5 pitch=-2224 time=19
+pitchwheel channel=5 pitch=-2575 time=20
+control_change channel=5 control=11 value=97 time=1
+control_change channel=5 control=11 value=95 time=9
+pitchwheel channel=5 pitch=-3394 time=10
+pitchwheel channel=5 pitch=-3745 time=8
+control_change channel=5 control=11 value=85 time=11
+pitchwheel channel=5 pitch=-4213 time=1
+pitchwheel channel=5 pitch=-4915 time=17
+pitchwheel channel=5 pitch=-5650 time=9
+control_change channel=5 control=11 value=73 time=13
+pitchwheel channel=5 pitch=-6246 time=2
+control_change channel=5 control=11 value=65 time=14
+pitchwheel channel=5 pitch=-6948 time=3
+control_change channel=5 control=11 value=63 time=1
+control_change channel=5 control=11 value=63 time=5
+pitchwheel channel=5 pitch=-7800 time=2
+pitchwheel channel=5 pitch=-8151 time=8
+note_on channel=5 note=52 velocity=0 time=23
+pitchwheel channel=5 pitch=0 time=94
+control_change channel=5 control=11 value=127 time=24
+note_on channel=5 note=55 velocity=70 time=28
+note_on channel=5 note=52 velocity=60 time=65
+note_on channel=5 note=55 velocity=0 time=1
+note_on channel=5 note=50 velocity=50 time=49
+note_on channel=5 note=52 velocity=0 time=1
+note_on channel=5 note=50 velocity=0 time=53
+note_on channel=5 note=52 velocity=50 time=13
+pitchwheel channel=5 pitch=-63 time=99
+pitchwheel channel=5 pitch=-406 time=6
+pitchwheel channel=5 pitch=-768 time=11
+pitchwheel channel=5 pitch=0 time=37
+note_on channel=5 note=52 velocity=0 time=979
+note_on channel=5 note=40 velocity=127 time=25
+control_change channel=5 control=11 value=124 time=511
+control_change channel=5 control=11 value=121 time=41
+pitchwheel channel=5 pitch=-118 time=1
+pitchwheel channel=5 pitch=-352 time=12
+pitchwheel channel=5 pitch=-469 time=18
+pitchwheel channel=5 pitch=-703 time=12
+control_change channel=5 control=11 value=119 time=17
+pitchwheel channel=5 pitch=-820 time=1
+pitchwheel channel=5 pitch=-1171 time=18
+pitchwheel channel=5 pitch=-1288 time=12
+pitchwheel channel=5 pitch=-1522 time=12
+pitchwheel channel=5 pitch=-1639 time=12
+control_change channel=5 control=11 value=116 time=11
+pitchwheel channel=5 pitch=-1873 time=1
+pitchwheel channel=5 pitch=-2107 time=12
+pitchwheel channel=5 pitch=-2341 time=12
+pitchwheel channel=5 pitch=-2458 time=12
+pitchwheel channel=5 pitch=-2692 time=18
+control_change channel=5 control=11 value=114 time=18
+pitchwheel channel=5 pitch=-2926 time=18
+control_change channel=5 control=11 value=111 time=30
+pitchwheel channel=5 pitch=-3043 time=6
+pitchwheel channel=5 pitch=-3277 time=18
+control_change channel=5 control=11 value=109 time=18
+pitchwheel channel=5 pitch=-3511 time=12
+pitchwheel channel=5 pitch=-3628 time=18
+control_change channel=5 control=11 value=106 time=23
+pitchwheel channel=5 pitch=-3862 time=8
+pitchwheel channel=5 pitch=-3979 time=23
+control_change channel=5 control=11 value=104 time=5
+pitchwheel channel=5 pitch=-4330 time=13
+pitchwheel channel=5 pitch=-4564 time=12
+control_change channel=5 control=11 value=101 time=18
+pitchwheel channel=5 pitch=-4681 time=6
+pitchwheel channel=5 pitch=-4915 time=12
+pitchwheel channel=5 pitch=-5032 time=12
+control_change channel=5 control=11 value=99 time=5
+pitchwheel channel=5 pitch=-5266 time=13
+pitchwheel channel=5 pitch=-5500 time=24
+pitchwheel channel=5 pitch=-5734 time=12
+control_change channel=5 control=11 value=96 time=6
+pitchwheel channel=5 pitch=-5851 time=6
+pitchwheel channel=5 pitch=-6085 time=18
+pitchwheel channel=5 pitch=-6202 time=12
+pitchwheel channel=5 pitch=-6436 time=18
+pitchwheel channel=5 pitch=-6553 time=18
+control_change channel=5 control=11 value=94 time=6
+pitchwheel channel=5 pitch=-6787 time=6
+pitchwheel channel=5 pitch=-7021 time=24
+pitchwheel channel=5 pitch=-7138 time=18
+pitchwheel channel=5 pitch=-7372 time=18
+control_change channel=5 control=11 value=91 time=6
+pitchwheel channel=5 pitch=-7489 time=12
+pitchwheel channel=5 pitch=-7723 time=12
+pitchwheel channel=5 pitch=-7840 time=12
+control_change channel=5 control=11 value=89 time=11
+pitchwheel channel=5 pitch=-8074 time=7
+pitchwheel channel=5 pitch=-8192 time=12
+control_change channel=5 control=11 value=86 time=11
+control_change channel=5 control=11 value=84 time=25
+control_change channel=5 control=11 value=81 time=29
+control_change channel=5 control=11 value=79 time=15
+control_change channel=5 control=11 value=76 time=12
+control_change channel=5 control=11 value=74 time=25
+control_change channel=5 control=11 value=71 time=18
+control_change channel=5 control=11 value=69 time=33
+control_change channel=5 control=11 value=66 time=25
+control_change channel=5 control=11 value=64 time=33
+control_change channel=5 control=11 value=61 time=45
+control_change channel=5 control=11 value=59 time=20
+control_change channel=5 control=11 value=56 time=19
+control_change channel=5 control=11 value=54 time=32
+control_change channel=5 control=11 value=51 time=10
+control_change channel=5 control=11 value=49 time=13
+control_change channel=5 control=11 value=46 time=10
+control_change channel=5 control=11 value=44 time=14
+control_change channel=5 control=11 value=41 time=12
+control_change channel=5 control=11 value=39 time=11
+note_on channel=5 note=40 velocity=0 time=18
+control_change channel=5 control=11 value=36 time=2
+control_change channel=5 control=11 value=34 time=14
+pitchwheel channel=5 pitch=0 time=7
+control_change channel=5 control=11 value=31 time=5
+control_change channel=5 control=11 value=29 time=13
+control_change channel=5 control=11 value=26 time=7
+control_change channel=5 control=11 value=23 time=7
+control_change channel=5 control=11 value=19 time=6
+control_change channel=5 control=11 value=17 time=4
+control_change channel=5 control=11 value=14 time=4
+control_change channel=5 control=11 value=11 time=6
+control_change channel=5 control=11 value=8 time=4
+control_change channel=5 control=11 value=7 time=2
+control_change channel=5 control=11 value=5 time=2
+control_change channel=5 control=11 value=3 time=2
+control_change channel=5 control=11 value=2 time=2
+control_change channel=5 control=11 value=9 time=563
+control_change channel=5 control=11 value=15 time=2
+control_change channel=5 control=11 value=23 time=2
+control_change channel=5 control=11 value=32 time=2
+control_change channel=5 control=11 value=44 time=2
+control_change channel=5 control=11 value=58 time=2
+control_change channel=5 control=11 value=76 time=2
+control_change channel=5 control=11 value=105 time=2
+control_change channel=5 control=11 value=127 time=2
+control_change channel=5 control=1 value=0 time=126
+control_change channel=5 control=1 value=0 time=48
+control_change channel=5 control=1 value=0 time=48
+control_change channel=5 control=1 value=0 time=48
+control_change channel=5 control=1 value=0 time=48
+control_change channel=5 control=1 value=0 time=48
+control_change channel=5 control=1 value=0 time=48
+control_change channel=5 control=1 value=0 time=48
+control_change channel=5 control=1 value=0 time=48
+control_change channel=5 control=1 value=0 time=48
+control_change channel=5 control=1 value=0 time=48
+control_change channel=5 control=1 value=0 time=48
+control_change channel=5 control=1 value=0 time=48
+control_change channel=5 control=1 value=0 time=48
+control_change channel=5 control=1 value=0 time=48
+control_change channel=5 control=1 value=0 time=48
+<meta message end_of_track time=0>
