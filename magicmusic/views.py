@@ -58,7 +58,7 @@ def workspace(request, id):
         tracks = []
         objects = Track.objects.filter(user__exact=request.user)
         for e in objects:
-            track = {'instrument': e.instrument, 'id': e.id}
+            track = {'instrument': e.instrument, 'trackid': e.id}
             print("track instrument is:"+str(e.id))
             tracks.append(track);
         context = {'tracks': tracks, 'workspaceID':id}
@@ -66,19 +66,18 @@ def workspace(request, id):
     else:
         objects = Workspace.objects.filter(id__exact=id)
         workspace = objects.all()[0]
+        instrument = request.POST.getlist('instruments')[0]
         newtrack = Track(user=request.user,
                         instrument=instrument)
         newtrack.save()
         workspace.track_set.add(newtrack)
         workspace.save()
-        print("newtrack instrument is:"+str(newtrack.id)+"\n")
-        print("workspace is:"+str(workspace.id))
         tracks = []
         objects = Track.objects.filter(user__exact=request.user)
         for e in objects:
-            track = {'instrument': e.instrument, 'id': e.id}
+            track = {'instrument': e.instrument, 'trackid': e.id}
             tracks.append(track);
-        context = {'tracks': tracks}
+        context = {'tracks': tracks, 'workspaceID':id}
         return render(request, 'magicmusic/workspace.html', context)
 
 @login_required
