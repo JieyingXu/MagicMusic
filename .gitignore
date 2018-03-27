@@ -13,3 +13,6 @@ local_settings.py
 
 # Django's SQL Lite Database File
 db.sqlite3
+
+# idea files
+.idea/
