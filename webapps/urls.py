@@ -19,4 +19,5 @@ from magicmusic import views
 urlpatterns = [
     url(r'^$', views.mymusic, name='mymusic'),
     url(r'^magicmusic/', include('magicmusic.urls')),
+    url(r'^community/', include('community.urls')),
 ]
