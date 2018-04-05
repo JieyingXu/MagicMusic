@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'authenticate',
     'magicmusic',
 ]
 
@@ -54,7 +55,7 @@ ROOT_URLCONF = 'webapps.urls'
 
 # Used by the authentication system for the private-todo-list application.
 # URL to use if the authentication system requires a user to log in.
-LOGIN_URL = '/magicmusic/login'
+LOGIN_URL = '/authenticate/login'
 
 # Default URL to redirect to after a user logs in.
 LOGIN_REDIRECT_URL = '/magicmusic/'
@@ -126,3 +127,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+

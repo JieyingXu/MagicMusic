@@ -14,9 +14,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import include, url
-from magicmusic import views
+from magicmusic import views as magicmusic_views
 
 urlpatterns = [
-    url(r'^$', views.mymusic, name='mymusic'),
+    url(r'^$', magicmusic_views.mymusic, name='mymusic'),
+    url(r'^authenticate/', include('authenticate.urls')),
     url(r'^magicmusic/', include('magicmusic.urls')),
 ]
