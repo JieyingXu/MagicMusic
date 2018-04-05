@@ -20,4 +20,5 @@ urlpatterns = [
     url(r'^$', magicmusic_views.mymusic, name='mymusic'),
     url(r'^authenticate/', include('authenticate.urls')),
     url(r'^magicmusic/', include('magicmusic.urls')),
+    url(r'^community/', include('community.urls')),
 ]
