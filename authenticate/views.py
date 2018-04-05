@@ -41,12 +41,7 @@ def register(request):
 
     # ------ SOME NECESSARY INITIALIZATION HERE -----
 
-    # newprofile = ProfileEntry(user=new_user,
-    #                           update_time=timezone.now(),
-    #                           username=form.cleaned_data['username'],
-    #                           first_name=form.cleaned_data['first_name'],
-    #                           last_name=form.cleaned_data['last_name'])
-    # newprofile.save()
+    # init new default portfolio here (maybe create one default album)
 
     # Logs in the new user and redirects to his/her todo list
     new_user = authenticate(username=form.cleaned_data['username'],
