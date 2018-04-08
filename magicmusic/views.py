@@ -29,7 +29,7 @@ def mymusic(request):
 
 @login_required
 def addworkspace(request):
-	print("addworkspace\n")
+	# print("addworkspace\n")
 	if request.method == 'GET':
 		context = {'form': WorkspaceForm()}
 		return render(request, 'magicmusic/addworkspace.html', context)
@@ -55,12 +55,12 @@ def workspace(request, id):
     if request.method == 'GET':
         objects = Workspace.objects.filter(id__exact=id)
         workspace = objects.all()[0]
-    	"""print("workspace is:"+str(workspace.id))"""
+    	# print("workspace is:"+str(workspace.id))
         tracks = []
-        objects = Track.objects.filter(user__exact=request.user)
+        objects = Track.objects.filter(workspace__exact=workspace)
         for e in objects:
             track = {'instrument': e.instrument, 'trackid': e.id}
-            print("track instrument is:"+str(e.id))
+            # print("track instrument is:"+str(e.id))
             tracks.append(track);
         context = {'tracks': tracks, 'workspaceID':id}
         return render(request, 'magicmusic/workspace.html', context)
@@ -68,13 +68,15 @@ def workspace(request, id):
         objects = Workspace.objects.filter(id__exact=id)
         workspace = objects.all()[0]
         instrument = request.POST.getlist('instruments')[0]
-        newtrack = Track(user=request.user,
+        newtrack = Track(workspace=workspace,
+        				name=request.POST.get('name'),
+        				description=request.POST.get('description'),
                         instrument=instrument)
         newtrack.save()
         workspace.track_set.add(newtrack)
         workspace.save()
         tracks = []
-        objects = Track.objects.filter(user__exact=request.user)
+        objects = Track.objects.filter(workspace__exact=workspace)
         for e in objects:
             track = {'instrument': e.instrument, 'trackid': e.id}
             tracks.append(track);
@@ -93,3 +95,10 @@ def track(request, id):
     else:
         print("post")
 
+@login_required
+def profile(request):
+	print("profile")
+
+@login_required
+def follower(request):
+	print("follower")

@@ -12,13 +12,12 @@ class WorkspaceGroup(models.Model):
 # Data model for Workspace, has many tracks
 class Workspace(models.Model):
     workspace_group = models.OneToOneField(WorkspaceGroup)
-    name = models.CharField(max_length=100, blank=False)
+    name = models.CharField(max_length=100, blank=False, null=True)
     description = models.CharField(max_length=200, blank=True, null=True)
-
 
 # Data model for Workspace Track
 class Track(models.Model):
     workspace = models.ForeignKey(Workspace)
-    name = models.CharField(max_length=100, blank=False)
+    name = models.CharField(max_length=100, blank=False, null=True)
     description = models.CharField(max_length=200, blank=True, null=True)
-    instrument = models.CharField(max_length=100, blank=False)
+    instrument = models.CharField(max_length=100, blank=False, null=True)
