@@ -16,37 +16,36 @@ from magicmusic.forms import *
 @login_required
 def mymusic(request):
     if request.method == 'GET':
-        objects = Song.objects.filter(user__exact=request.user)
-        songs = []
+        objects = Workspace.workspacegroup.user_set.filter(user__exact=request.user)
+        workspaces = []
         for e in objects:
-            workspace = e.workspace_set.all()[0]
             """print("song name:"+str(e.name))"""
-            song = {'name': e.name, 'id':workspace.id}
-            songs.append(song);
-        context = {'songs': songs}
+            workspace = {'name': e.name, 'id':workspace.id}
+            workspaces.append(workspace);
+        context = {'workspaces': workspaces}
         return render(request, 'magicmusic/mymusic.html', context)
     else:
         print("post\n")
 
 @login_required
-def addsong(request):
-    print("addsong\n")
-    if request.method == 'GET':
-        context = {'form': SongForm()}
-        return render(request, 'magicmusic/addsong.html', context)
-    else:
-    	newsong_form = SongForm(request.POST)
-    	newsong = Song(user=request.user,
+def addworkspace(request):
+	print("addworkspace\n")
+	if request.method == 'GET':
+		context = {'form': SongForm()}
+		return render(request, 'magicmusic/addsong.html', context)
+	else:
+		newsong_form = SongForm(request.POST)
+		newsong = Song(user=request.user,
     					name=newsong_form.data['name'],
     					description=newsong_form.data['description'])
-    	newsong.save()
-        newworkspace = Workspace(user=request.user)
-        newworkspace.save()
-        newsong.workspace_set.add(newworkspace)
-        newsong.save()
-        """print("newsong name is:"+str(newsong.name)+"\n")
-        print("newworkspace is:"+str(newworkspace.id))"""
-        return redirect(reverse('mymusic'))
+		newsong.save()
+		newworkspace = Workspace(user=request.user)
+		newworkspace.save()
+		newsong.workspace_set.add(newworkspace)
+		newsong.save()
+		"""print("newsong name is:"+str(newsong.name)+"\n")
+		print("newworkspace is:"+str(newworkspace.id))"""
+		return redirect(reverse('mymusic'))
 
 @login_required
 def workspace(request, id):
@@ -92,7 +91,7 @@ def track(request, id):
     else:
         print("post")
 
-
+"""
 @login_required
 def follower(request):
     print("follower\n")
@@ -100,6 +99,6 @@ def follower(request):
 @login_required
 def profile(request):
     print("profile\n")
-
+"""
 
 
