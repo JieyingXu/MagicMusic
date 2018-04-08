@@ -16,11 +16,11 @@ from magicmusic.forms import *
 @login_required
 def mymusic(request):
     if request.method == 'GET':
-        objects = Workspace.workspacegroup.user_set.filter(user__exact=request.user)
+        objects = Workspace.objects.filter(workspace_group__users__in=[request.user])
         workspaces = []
         for e in objects:
-            """print("song name:"+str(e.name))"""
-            workspace = {'name': e.name, 'id':workspace.id}
+            workspace = []
+            workspace = {'name': e.name, 'id':e.id}
             workspaces.append(workspace);
         context = {'workspaces': workspaces}
         return render(request, 'magicmusic/mymusic.html', context)
@@ -31,20 +31,22 @@ def mymusic(request):
 def addworkspace(request):
 	print("addworkspace\n")
 	if request.method == 'GET':
-		context = {'form': SongForm()}
-		return render(request, 'magicmusic/addsong.html', context)
+		context = {'form': WorkspaceForm()}
+		return render(request, 'magicmusic/addworkspace.html', context)
 	else:
-		newsong_form = SongForm(request.POST)
-		newsong = Song(user=request.user,
-    					name=newsong_form.data['name'],
-    					description=newsong_form.data['description'])
-		newsong.save()
-		newworkspace = Workspace(user=request.user)
+		newworkspace_form = WorkspaceForm(request.POST)
+		with transaction.atomic():
+			newworkspacegroup = WorkspaceGroup()
+			newworkspacegroup.save()
+			# print("newworkspacegroup id: " + str(newworkspacegroup.id))
+			newworkspacegroup.users.add(request.user)
+			# print("newworkspacegroup user: " + str(newworkspacegroup.users.all()[0]))
+			newworkspacegroup.save()
+		newworkspace = Workspace(workspace_group=newworkspacegroup,
+						name=newworkspace_form.data['name'],
+    					description=newworkspace_form.data['description'])
 		newworkspace.save()
-		newsong.workspace_set.add(newworkspace)
-		newsong.save()
-		"""print("newsong name is:"+str(newsong.name)+"\n")
-		print("newworkspace is:"+str(newworkspace.id))"""
+		# print("newworkspace user: " + str(newworkspace.name))
 		return redirect(reverse('mymusic'))
 
 @login_required

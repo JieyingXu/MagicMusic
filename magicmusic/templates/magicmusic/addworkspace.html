@@ -6,9 +6,9 @@
     </div>
 
     <div class="card bg-light text-dark mx-auto" style="width:400px">
-        <div class="card-header mx-auto">Add New Song</div>
+        <div class="card-header mx-auto">Add New Workspace</div>
         <div class="card-body">
-            <form method="post" action="{% url 'addsong' %}">
+            <form method="post" action="{% url 'addworkspace' %}">
                 <table class="mx-auto">
                     {% for field in form.visible_fields %}
                         <tr>
@@ -18,7 +18,7 @@
                     {% endfor %}
                 </table>
                 <p></p>
-                <button type="submit" class="btn btn-lg btn-primary btn-block" value="addsong">Create</button>
+                <button type="submit" class="btn btn-lg btn-primary btn-block" value="addworkspace">Create</button>
                 <input type="hidden" name="next" value="{{ next }}" />
                 {% csrf_token %}
             </form>
