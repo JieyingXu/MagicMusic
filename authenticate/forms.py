@@ -21,11 +21,11 @@ class RegistrationForm(forms.Form):
     first_name = forms.CharField(max_length=20)
     last_name  = forms.CharField(max_length=20)
     username   = forms.CharField(max_length = 20)
-    password1  = forms.CharField(max_length = 200, 
-                                 label='Password', 
+    password1  = forms.CharField(max_length = 200,
+                                 label='Password',
                                  widget = forms.PasswordInput())
-    password2  = forms.CharField(max_length = 200, 
-                                 label='Confirm password',  
+    password2  = forms.CharField(max_length = 200,
+                                 label='Confirm password',
                                  widget = forms.PasswordInput())
 
     # Customizes form validation for properties that apply to more
@@ -55,15 +55,3 @@ class RegistrationForm(forms.Form):
         # We must return the cleaned data we got from the cleaned_data
         # dictionary
         return username
-
-# class SongForm(forms.ModelForm):
-#     class Meta:
-#         model = Song
-#         exclude = (
-#             'album',
-#             'picture',
-#         )
-#         widgets = {
-#             'user': forms.HiddenInput(),
-#             'update_time':forms.HiddenInput(),
-#         }

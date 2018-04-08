@@ -92,6 +92,7 @@ def track(request, id):
     else:
         print("post")
 
+
 @login_required
 def follower(request):
     print("follower\n")
@@ -100,40 +101,5 @@ def follower(request):
 def profile(request):
     print("profile\n")
 
-def register(request):
-    context = {}
 
-    # Just display the registration form if this is a GET request.
-    if request.method == 'GET':
-        context['form'] = RegistrationForm()
-        return render(request, 'magicmusic/register.html', context)
-
-    # Creates a bound form from the request POST parameters and makes the 
-    # form available in the request context dictionary.
-    form = RegistrationForm(request.POST)
-    context['form'] = form
-
-    # Validates the form.
-    if not form.is_valid():
-        return render(request, 'magicmusic/register.html', context)
-
-    # At this point, the form data is valid.  Register and login the user.
-    new_user = User.objects.create_user(username=form.cleaned_data['username'], 
-                                        password=form.cleaned_data['password1'],
-                                        first_name=form.cleaned_data['first_name'],
-                                        last_name=form.cleaned_data['last_name'])
-    new_user.save()
-
-    newprofile = ProfileEntry(user=new_user,
-                              update_time=timezone.now(),
-                              username=form.cleaned_data['username'], 
-                              first_name=form.cleaned_data['first_name'],
-                              last_name=form.cleaned_data['last_name'])
-    newprofile.save()
-
-    # Logs in the new user and redirects to his/her todo list
-    new_user = authenticate(username=form.cleaned_data['username'],
-                            password=form.cleaned_data['password1'])
-    login(request, new_user)
-    return redirect(reverse('mymusic'))
 
