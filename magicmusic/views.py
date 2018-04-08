@@ -93,14 +93,3 @@ def track(request, id):
     else:
         print("post")
 
-"""
-@login_required
-def follower(request):
-    print("follower\n")
-
-@login_required
-def profile(request):
-    print("profile\n")
-"""
-
-
