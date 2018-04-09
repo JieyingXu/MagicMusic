@@ -1,6 +1,6 @@
 from django.conf.urls import include, url
 from django.contrib.auth import views as auth_views
-import views
+from . import views
 
 urlpatterns = [
     url(r'^$', views.mymusic, name='mymusic'),
