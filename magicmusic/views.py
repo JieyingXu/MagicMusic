@@ -12,6 +12,7 @@ from django.http import HttpResponse, Http404
 
 from magicmusic.models import *
 from magicmusic.forms import *
+from magicmusic.midilib import MidiLib
 
 @login_required
 def mymusic(request):
@@ -102,3 +103,27 @@ def profile(request):
 @login_required
 def follower(request):
 	print("follower")
+
+
+@login_required
+def generate_music(request):
+    # if not request.POST:
+    #     raise Http404
+    # else:
+    #     if 'js_blob' not in request.POST or \
+    #             not request.POST['js_blob']:
+    #         json_error = \
+    #             '{"error": "You should pass some musical blob data to backend."}'
+    #         return HttpResponse(json_error, content_type='application/json')
+    #     else:
+    blob = \
+    "c1 0 2\n" \
+    "c2 1 2\n" \
+    "c3 1 1\n" \
+    "c3 3 1\n" \
+    "c1 4 2\n" \
+    "c2 4 1\n"
+
+    res_str = MidiLib.parse_midi_json(blob)
+    return HttpResponse(res_str, content_type='application/json')
+

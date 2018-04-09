@@ -9,4 +9,5 @@ urlpatterns = [
     url(r'^addworkspace', views.addworkspace, name='addworkspace'),
     url(r'^workspace/(?P<id>\d+)$', views.workspace, name='workspace'),
     url(r'^track/(?P<id>\d+)$', views.track, name='track'),
+    url(r'^generate-music/$', views.generate_music, name='generate-music'),
 ]
