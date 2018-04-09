@@ -33,3 +33,9 @@
 .my-menu {
     background-color: black;
 }
+
+.banner {
+    background: url("images/header.jpg")no-repeat;
+    min-height: 350px;
+    background-size: cover;
+}
