@@ -16,37 +16,38 @@ from magicmusic.forms import *
 @login_required
 def mymusic(request):
     if request.method == 'GET':
-        objects = Song.objects.filter(user__exact=request.user)
-        songs = []
+        objects = Workspace.objects.filter(workspace_group__users__in=[request.user])
+        workspaces = []
         for e in objects:
-            workspace = e.workspace_set.all()[0]
-            """print("song name:"+str(e.name))"""
-            song = {'name': e.name, 'id':workspace.id}
-            songs.append(song);
-        context = {'songs': songs}
+            workspace = []
+            workspace = {'name': e.name, 'id':e.id}
+            workspaces.append(workspace);
+        context = {'workspaces': workspaces}
         return render(request, 'magicmusic/mymusic.html', context)
     else:
         print("post\n")
 
 @login_required
-def addsong(request):
-    print("addsong\n")
-    if request.method == 'GET':
-        context = {'form': SongForm()}
-        return render(request, 'magicmusic/addsong.html', context)
-    else:
-    	newsong_form = SongForm(request.POST)
-    	newsong = Song(user=request.user,
-    					name=newsong_form.data['name'],
-    					description=newsong_form.data['description'])
-    	newsong.save()
-        newworkspace = Workspace(user=request.user)
-        newworkspace.save()
-        newsong.workspace_set.add(newworkspace)
-        newsong.save()
-        """print("newsong name is:"+str(newsong.name)+"\n")
-        print("newworkspace is:"+str(newworkspace.id))"""
-        return redirect(reverse('mymusic'))
+def addworkspace(request):
+	# print("addworkspace\n")
+	if request.method == 'GET':
+		context = {'form': WorkspaceForm()}
+		return render(request, 'magicmusic/addworkspace.html', context)
+	else:
+		newworkspace_form = WorkspaceForm(request.POST)
+		with transaction.atomic():
+			newworkspacegroup = WorkspaceGroup()
+			newworkspacegroup.save()
+			# print("newworkspacegroup id: " + str(newworkspacegroup.id))
+			newworkspacegroup.users.add(request.user)
+			# print("newworkspacegroup user: " + str(newworkspacegroup.users.all()[0]))
+			newworkspacegroup.save()
+		newworkspace = Workspace(workspace_group=newworkspacegroup,
+						name=newworkspace_form.data['name'],
+    					description=newworkspace_form.data['description'])
+		newworkspace.save()
+		# print("newworkspace user: " + str(newworkspace.name))
+		return redirect(reverse('mymusic'))
 
 @login_required
 def workspace(request, id):
@@ -54,12 +55,12 @@ def workspace(request, id):
     if request.method == 'GET':
         objects = Workspace.objects.filter(id__exact=id)
         workspace = objects.all()[0]
-    	"""print("workspace is:"+str(workspace.id))"""
+    	# print("workspace is:"+str(workspace.id))
         tracks = []
-        objects = Track.objects.filter(user__exact=request.user)
+        objects = Track.objects.filter(workspace__exact=workspace)
         for e in objects:
             track = {'instrument': e.instrument, 'trackid': e.id}
-            print("track instrument is:"+str(e.id))
+            # print("track instrument is:"+str(e.id))
             tracks.append(track);
         context = {'tracks': tracks, 'workspaceID':id}
         return render(request, 'magicmusic/workspace.html', context)
@@ -67,13 +68,15 @@ def workspace(request, id):
         objects = Workspace.objects.filter(id__exact=id)
         workspace = objects.all()[0]
         instrument = request.POST.getlist('instruments')[0]
-        newtrack = Track(user=request.user,
+        newtrack = Track(workspace=workspace,
+        				name=request.POST.get('name'),
+        				description=request.POST.get('description'),
                         instrument=instrument)
         newtrack.save()
         workspace.track_set.add(newtrack)
         workspace.save()
         tracks = []
-        objects = Track.objects.filter(user__exact=request.user)
+        objects = Track.objects.filter(workspace__exact=workspace)
         for e in objects:
             track = {'instrument': e.instrument, 'trackid': e.id}
             tracks.append(track);
@@ -92,14 +95,10 @@ def track(request, id):
     else:
         print("post")
 
+@login_required
+def profile(request):
+	print("profile")
 
 @login_required
 def follower(request):
-    print("follower\n")
-
-@login_required
-def profile(request):
-    print("profile\n")
-
-
-
+	print("follower")

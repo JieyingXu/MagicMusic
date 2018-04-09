@@ -4,18 +4,18 @@
     <p></p>
     <div class="card bg-light text-dark mx-auto" style="width:400px">
         <div class="card-body">
-            <form method="get" action="{% url 'addsong' %}">
-                <button type="submit" class="btn btn-lg btn-primary btn-block" value="addsong">Add New Song</button>
+            <form method="get" action="{% url 'addworkspace' %}">
+                <button type="submit" class="btn btn-lg btn-primary btn-block" value="addworkspace">Add New Workspace</button>
                 {% csrf_token %}
             </form>
         </div>
     </div>
     <p></p>
     <div>
-        {% for song in songs %}
+        {% for workspace in workspaces %}
             <div class="card bg-light text-dark mx-auto" style="width:400px">
                 <div class="card-body">
-                    <p>Song <a href="{% url 'workspace' song.id %}">{{song.name}}</a>
+                    <p>Workspace <a href="{% url 'workspace' workspace.id %}">{{workspace.name}}</a>
                     </p>
                 </div>
             </div>

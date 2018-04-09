@@ -3,20 +3,6 @@ from django import forms
 from django.contrib.auth.models import User
 from magicmusic.models import *
 
-# class ProfileForm(forms.ModelForm):
-#     class Meta:
-#         model = ProfileEntry
-#         exclude = (
-#             'username',
-#             'first_name',
-#             'last_name',
-#             'updated_by',
-#             'user',
-#         )
-#         widgets = {
-#             'update_time': forms.HiddenInput(),
-#         }
-
 class RegistrationForm(forms.Form):
     first_name = forms.CharField(max_length=20)
     last_name  = forms.CharField(max_length=20)
@@ -56,14 +42,9 @@ class RegistrationForm(forms.Form):
         # dictionary
         return username
 
-# class SongForm(forms.ModelForm):
-#     class Meta:
-#         model = Song
-#         exclude = (
-#             'album',
-#             'picture',
-#         )
-#         widgets = {
-#             'user': forms.HiddenInput(),
-#             'update_time':forms.HiddenInput(),
-#         }
+class WorkspaceForm(forms.ModelForm):
+    class Meta:
+        model = Workspace
+        exclude = (
+            'workspace_group',
+        )
