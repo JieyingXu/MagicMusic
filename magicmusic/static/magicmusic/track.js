@@ -1,5 +1,5 @@
 var numOfRows = 88;
-var highestKey = 108;
+var highestKey = 111;
 var numOfNotes = 0; //num of notes on page;
 
 var trackNotes = {}; // keeps the notes string ,key is note id
@@ -43,14 +43,13 @@ function addColumns(numOfColumns) {
 
 
 function updateNotesString(noteNum) {
-    var noteKey = $('#note-' + noteNum).parent().parent().attr('id');
+    var noteKey = $('#note-' + noteNum).parent().parent().attr('id').replace('Sharp', '#');
     var dataX = $('#note-' + noteNum).attr('data-x');
     var width = $('#note-' + noteNum).css('width') || cellWidth;
     var left = parseFloat(dataX) / cellWidth;
     var span = parseFloat(width) / cellWidth;
 
     trackNotes[noteKey] = [noteKey, left, span];
-    console.log(trackNotes);
 }
 
 function getThDisplayName(i) {
