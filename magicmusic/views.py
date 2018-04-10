@@ -117,13 +117,14 @@ def generate_music(request):
     #         return HttpResponse(json_error, content_type='application/json')
     #     else:
     blob = \
-    "c1 0 2\n" \
-    "c2 1 2\n" \
-    "c3 1 1\n" \
-    "c3 3 1\n" \
-    "c1 4 2\n" \
-    "c2 4 1\n"
+    "E7 0 2\n" \
+    "D7 1 2\n" \
+    "C7 1 1\n" \
+    "C7 3 1\n" \
+    "E7 4 2\n" \
+    "D7 4 1\n"
 
-    res_str = MidiLib.parse_midi_json(blob)
+    res_str = MidiLib.format_mido_onoffs_default_velocity(MidiLib.parse_midi_offset_from_blob(blob), 0, 96)
+
     return HttpResponse(res_str, content_type='application/json')
 
