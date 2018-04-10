@@ -1,4 +1,5 @@
 <!doctype html>
+{% load staticfiles %}
 <html>
 <head>
     <meta charset="utf-8">
@@ -9,47 +10,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="magicmusic/resize.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/interactjs@1.3.3/dist/interact.min.js"></script>
+
     <style>
-        .resize-drag {
-            background-color: #29e;
-            color: white;
-            {#font-size: 20px;#}
-            {#font-family: sans-serif;#}
-            border-radius: 8px;
-            {#margin: 30px 20px;#}
-
-            {#width: 120px;#}
-            height: 100%;
-
-            /* This makes things *much* easier */
-            box-sizing: border-box;
-            {#z-index: 4;#}
-            {#position: absolute;#}
+        table {
+            overflow: hidden;
         }
-
-        .resize-container {
-            display: inline-block;
-            {#width: 100%;#}
-            {#height: 100px;#}
-            /*z-index: 2;*/
-            /*position: absolute;*/
-        }
-
         .overlay {
             position: absolute;
             background: rgba(120, 35, 95, 0.7);
             padding: 0;
-                left: 23em;
-            {#right: 0.7em;#}
-            height: 3em;
-                width: 2%;
-            {#z-index: 2;#}
+            {#left: 23em;#}
+        {#right: 0.7em;#} height: 3em;
+        {#    width: 2%;#}
+        {#z-index: 2;#}
+
+
         }
+
+
+
+        td.overlay.resize-container {
+            display: inline-block;
+        {#width: 100%;#}{#height: 100px;#}
+            /*z-index: 2;*/
+            /*position: absolute;*/
+            padding: 0px;
+        }
+
+        .resize-drag {
+            background-color: #29e;
+            color: white;
+        {#font-size: 20px;#}{#font-family: sans-serif;#} border-radius: 8px;
+        {#margin: 30px 20px;#}{#width: 120px;#} height: 100%;
+
+            /* This makes things *much* easier */
+            box-sizing: border-box;
+        {#z-index: 4;#}{#position: absolute;#}
+        }
+
 
 
 
@@ -104,408 +102,40 @@
     </div>
 </nav>
 
-<table class="table table-dark"
-       style="height: 1154px; width: 2400px; overflow: hidden">
-    <thead>
-    <tr class="border">
-        <th scope="col" class="border">UNFINISHED CONTROL BAR --></th>
-        <!-- <th scope="col" class="border">Play button here</th>
-        <th scope="col" class="border">Stop Button here</th>
-        <th scope="col" class="border">Tempo here</th> -->
-    </tr>
-    </thead>
-    <tbody name="working-table">
-    {% for i in "xxxxx" %}
+<table class="table table-dark">
+{#    <thead>#}
+{#    <tr class="border">#}
+{#        <th scope="col" class="border">UNFINISHED CONTROL BAR --></th>#}
+{#        <!-- <th scope="col" class="border">Play button here</th>#}
+{#        <th scope="col" class="border">Stop Button here</th>#}
+{#        <th scope="col" class="border">Tempo here</th> -->#}
+{#    </tr>#}
+{#    </thead>#}
+    <tbody id="working-table">
         <tr class="border">
             <th scope="row" class="border">Note</th>
             <td id="C4#7-2" class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            {#                <div class="resize-container">#}
-            {#                  <div class="resize-drag">#}
-            {#                  </div>#}
-            {#                </div>#}
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="overlay resize-container"><div class="resize-drag"></div></td>
-{#            <td class="overlay resize-container"><div class="resize-drag"></div></td>#}
+            <td id="C4#7-2" class="border"></td>
+            <td id="C4#7-2" class="border"></td>
 
+            <td class="overlay resize-container">
+                <div class="resize-drag"></div>
+            </td>
 
 
         </tr>
-    {% endfor %}
 
-    <tr class="border">
-        <th scope="row" class="border">Note</th>
-        <td class="border"></td>
-        <td class="border bg-warning"></td>
-        <td class="border"></td>
-        <td class="border bg-warning"></td>
-        <td class="border"></td>
-        <td class="border bg-warning"></td>
-        <td class="border bg-warning"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border bg-warning"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border bg-warning"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border bg-warning"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-    </tr>
 
-    <tr class="border">
-        <th scope="row" class="border">Note</th>
-        <td class="border"></td>
-        <td class="border bg-warning"></td>
-        <td class="border"></td>
-        <td class="border bg-warning"></td>
-        <td class="border"></td>
-        <td class="border bg-warning"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border bg-warning"></td>
-        <td class="border"></td>
-        <td class="border bg-warning"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border bg-warning"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border bg-warning"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-    </tr>
-
-    <tr class="border">
-        <th scope="row" class="border">Note</th>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border bg-warning"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border bg-warning"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border bg-warning"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border bg-warning"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border bg-warning"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border "></td>
-        <td class="border"></td>
-        <td class="border bg-warning"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border bg-warning"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border bg-warning"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-        <td class="border"></td>
-    </tr>
-
-    {% for i in "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" %}
-        <tr class="border">
-            <th scope="row" class="border">Note</th>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-            <td class="border"></td>
-        </tr>
-    {% endfor %}
     </tbody>
 </table>
 </body>
 </html>
 
-<script>
-    // var chi = $("#working-table").child;
-    // var clonedRow = $('tbody tr:first').clone();
-    // var clonedRow = $('#working-table').find("tr:first").clone();
-    var clonedRow = $(this).closest('table').find(' tbody tr:first')
-    // chi.clone().appendTo("#working-table");
-    // $(this).prev().find($('table tbody')).append(clonedRow);
-    $("#working-table").append(clonedRow);
-</script>
 
-<script>
-    interact('.resize-drag')
-        .draggable({
-            onmove: window.dragMoveListener,
-            restrict: {
-                restriction: 'parent',
-                elementRect: {top: 0, left: 0, bottom: 1, right: 1}
-            },
-        })
-        .resizable({
-            // resize from all edges and corners
-            edges: {left: true, right: true, bottom: false, top: false},
-
-            // keep the edges inside the parent
-            restrictEdges: {
-                outer: 'self',
-                endOnly: true,
-            },
-
-            // minimum size
-            restrictSize: {
-                min: {width: 100, height: 50},
-            },
-
-            inertia: true,
-        })
-        .on('resizemove', function (event) {
-            var target = event.target,
-                x = (parseFloat(target.getAttribute('data-x')) || 0),
-                y = (parseFloat(target.getAttribute('data-y')) || 0);
-
-            // update the element's style
-            target.style.width = event.rect.width + 'px';
-            target.style.height = event.rect.height + 'px';
-
-            // translate when resizing from top or left edges
-            x += event.deltaRect.left;
-            y += event.deltaRect.top;
-
-            target.style.webkitTransform = target.style.transform =
-                'translate(' + x + 'px,' + y + 'px)';
-
-            target.setAttribute('data-x', x);
-            target.setAttribute('data-y', y);
-            target.textContent = Math.round(event.rect.width) + '\u00D7' + Math.round(event.rect.height);
-        });
-</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="magicmusic/resize.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/interactjs@1.3.3/dist/interact.min.js"></script>
+<script src="{% static 'magicmusic/note-parser.js' %}"></script>
+<script src="{% static 'magicmusic/track.js' %}"></script>
