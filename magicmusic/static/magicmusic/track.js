@@ -1,6 +1,14 @@
 var numOfRows = 88;
 var highestKey = 108;
-var numofNotes = 0; //numofnotes on page;
+var numOfNotes = 0; //num of notes on page;
+
+var trackNotes = {}; // keeps the notes string ,key is note id
+
+// globally kept calibration value
+var leftMargin;
+var cellWidth;
+var cellHeight;
+
 
 
 function initCanvasTable() {
@@ -19,13 +27,6 @@ function initCanvasTable() {
     }
     addColumns(initialColumns);
 
-    // should be move to another listener
-    // var parser = require('note-parser');
-    // console.log(parser.build(parser.midi('60')));
-
-}
-
-function addNode(row, column) {
 
 
 }
@@ -38,6 +39,18 @@ function addColumns(numOfColumns) {
             $('#' + thName).append($('<td>').attr('class', 'border').attr('id', thName + '-' + j));
         }
     }
+}
+
+
+function updateNotesString(noteNum) {
+    var noteKey = $('#note-' + noteNum).parent().parent().attr('id');
+    var dataX = $('#note-' + noteNum).attr('data-x');
+    var width = $('#note-' + noteNum).css('width') || cellWidth;
+    var left = parseFloat(dataX) / cellWidth;
+    var span = parseFloat(width) / cellWidth;
+
+    trackNotes[noteKey] = [noteKey, left, span];
+    console.log(trackNotes);
 }
 
 function getThDisplayName(i) {
@@ -55,9 +68,9 @@ function setClickactions() {
         var offset = tdid.split("-")[1];
         var trid = $('#' + tdid).parent().attr('id');
 
-        var leftMargin = $('#' + trid).find('th').outerWidth();
-        var cellWidth = $('#' + tdid).outerWidth();
-        var cellHeight = $('#' + tdid).outerHeight();
+        leftMargin = $('#' + trid).find('th').outerWidth();
+        cellWidth = $('#' + tdid).outerWidth();
+        cellHeight = $('#' + tdid).outerHeight();
         var dataX = offset * cellWidth;
 
         // append a new drag
@@ -65,7 +78,7 @@ function setClickactions() {
             .append($('<div>')
                 .attr('class', 'resize-drag')
                 .attr('data-x', dataX)
-                .attr('id', 'note-' + numOfRows))
+                .attr('id', 'note-' + numOfNotes))
             .attr('class', 'overlay resize-container'));
 
         // recalibrate the left margin
@@ -75,17 +88,17 @@ function setClickactions() {
 
 
         // trigger interact.js event
-        var drag_object = document.getElementById('note-' + numOfRows);
+        var drag_object = document.getElementById('note-' + numOfNotes);
         drag_object.style.webkitTransform = drag_object.style.transform =
             'translate(' + dataX + 'px, ' + 0 + 'px)';
 
-        // keep this at last! we are count the number of notes and naming them
-        numOfRows++;
-    });
 
-    // $('.resize-drag').contextmenu(function (event) {
-    //     alert("right click");
-    // });
+        // update notes string <notekey, start, end>
+        updateNotesString(numOfNotes);
+
+        // keep this at last! we are count the number of notes and naming them
+        numOfNotes++;
+    });
 
 }
 
@@ -193,4 +206,8 @@ interact('.resize-drag')
         target.setAttribute('data-x', x);
         target.setAttribute('data-y', y);
         target.textContent = Math.round(event.rect.width) + '\u00D7' + Math.round(event.rect.height);
+
+
+        // update the trackNotes datastructre
+        updateNotesString(target.id.split('-')[1]);
     });
