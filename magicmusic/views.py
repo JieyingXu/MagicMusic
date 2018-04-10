@@ -14,6 +14,8 @@ from magicmusic.models import *
 from magicmusic.forms import *
 from magicmusic.midilib import MidiLib
 
+import json
+
 
 @login_required
 def mymusic(request):
@@ -115,42 +117,47 @@ def follower(request):
 
 @login_required
 def generate_music(request):
-    # if not request.POST:
-    #     raise Http404
-    # else:
-    #     if 'js_blob' not in request.POST or \
-    #             not request.POST['js_blob']:
-    #         json_error = \
-    #             '{"error": "You should pass some musical blob data to backend."}'
-    #         return HttpResponse(json_error, content_type='application/json')
-    #     else:
+    if not request.POST:
+        raise Http404
+    else:
+        if 'notes_blob' not in request.POST or \
+                not request.POST['notes_blob']:
+            json_error = \
+                '{"error": "You should pass some musical blob data to backend."}'
+            return HttpResponse(json_error, content_type='application/json')
+        else:
+
+            notes_blob=request.POST['notes_blob']
 
 
-    # uncomment above !!!! ------------
+            # print(blob[0][0])
+            # print(blob[0])
+            #
+            # blob = \
+            #     "E7 0 2\n" \
+            #     "D7 1 2\n" \
+            #     "C#7 1 1\n" \
+            #     "C#7 3 1\n" \
+            #     "E7 4 2\n" \
+            #     "D7 4 1\n"
+
+            channel = 0
+            time_multiplier = 96
+            global_metadata = ""
+            track_metadata = ""
+            sorted_commands = MidiLib.parse_midi_offset_from_blob(notes_blob)
+            formatted_onoffs = MidiLib.format_mido_onoffs_default_velocity(
+                offset_note_messages=sorted_commands, channel=channel,
+                multiplier=time_multiplier)
 
 
-    blob = \
-        "E7 0 2\n" \
-        "D7 1 2\n" \
-        "C#7 1 1\n" \
-        "C#7 3 1\n" \
-        "E7 4 2\n" \
-        "D7 4 1\n"
-
-    channel = 0
-    time_multiplier = 96
-    global_metadata = ""
-    track_metadata = ""
-    sorted_commands = MidiLib.parse_midi_offset_from_blob(blob)
-    formatted_onoffs = MidiLib.format_mido_onoffs_default_velocity(
-        offset_note_messages=sorted_commands, channel=channel,
-        multiplier=time_multiplier)
+            filename = str(request.user.id) + "_track_"+str(channel)
+            file_path = MidiLib.save_one_track_to_wav(filename, global_metadata, track_metadata, formatted_onoffs)
 
 
-    filename = str(request.user.id) + "_track_"+str(channel)
-    filepath = MidiLib.save_one_track_to_wav(filename,global_metadata, track_metadata, formatted_onoffs)
+            res_obj = {
+                'file_path': file_path
+            }
+            res_str = json.dumps(res_obj)
 
-
-
-
-    return HttpResponse(filepath, content_type='application/json')
+            return HttpResponse(res_str, content_type='application/json')

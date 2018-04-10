@@ -2,13 +2,14 @@ from mido import *
 from mido.messages import *
 import mido
 import os
+import midi2audio
 
 class MidiLib:
 
     # midi blob sample:
     #
-    # c3 2.3 5.1
-    # c4 4.0 7.0
+    # c3,2.3,5.1
+    # c4,4.0,7.0
     # <key startposition duration>
     # return a list of tuples
     # <"on/off", notekey, offset>
@@ -20,7 +21,7 @@ class MidiLib:
         note_messages = []
 
         for line in lines:
-            splits = line.strip().split()
+            splits = line.strip().split(',')
             note_key = splits[0]
             start = float(splits[1])    # absolute time
             duration = float(splits[2])
@@ -77,9 +78,11 @@ class MidiLib:
         midFile.save(midFilePath)
 
         # save to wav file
+        fluid_synth = midi2audio.FluidSynth("media/audio/soundfonts/OmegaGMGS2.sf2")
         wavFilePath = 'media/audio/runtime-wavs/'+filename+'.wav'
-        os.system('fluidsynth -ni audio/soundfonts/OmegaGMGS2.sf2 ' + midFilePath + ' -F ' + wavFilePath + ' -r 44100')
-
+        # os.system('fluidsynth -ni audio/soundfonts/OmegaGMGS2.sf2 '
+        # + midFilePath + ' -F ' + wavFilePath + ' -r 44100')
+        fluid_synth.midi_to_audio(midFilePath, wavFilePath)
 
         return wavFilePath
 

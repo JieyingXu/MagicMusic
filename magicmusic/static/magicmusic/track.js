@@ -100,13 +100,24 @@ function setClickactions() {
 
 }
 
+function trackPlayButtonOnClick() {
+    generateTrackWav();
+}
 
 function generateTrackWav() {
+    // check if there are any notes yet
+    if (Object.keys(trackNotes).length === 0) {
+        alert("You have not put in any notes yet.");
+        return;
+    }
+
+    var notes_blob = Object.values(trackNotes).join('\n');
+
     // make the ajax request
     $.ajax({
-        url: "/magicmusic/generate-music",
+        url: "/magicmusic/generate-music/",
         type: "POST",
-        data: "js_blob=" + str(trackNotes) +
+        data: "notes_blob=" + notes_blob +
         "&csrfmiddlewaretoken=" + getCSRFToken(),
         dataType: "json",
         success: function (response) {
@@ -114,14 +125,16 @@ function generateTrackWav() {
                 // should clear errors
 
                 // var newPosts = JSON.parse(response.new_posts);
-
+                var trackWavPath = response.file_path;
 
             } else {
                 // error
+                alert("get error info");
             }
         },
         error: function () {
             // error
+            alert("failed");
         }
     });
 }
@@ -182,6 +195,17 @@ function pitchtooctave(pitchdata) {
 
 function escapeSharp(input) {
     return input.replace('#', '\\#');
+}
+
+
+function getCSRFToken() {
+    var cookies = document.cookie.split(";");
+    for (var i = 0; i < cookies.length; i++) {
+        if (cookies[i].startsWith("csrftoken=")) {
+            return cookies[i].substring("csrftoken=".length, cookies[i].length);
+        }
+    }
+    return "unknown";
 }
 
 
