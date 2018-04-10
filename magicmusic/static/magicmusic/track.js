@@ -10,7 +10,6 @@ var cellWidth;
 var cellHeight;
 
 
-
 function initCanvasTable() {
     var initialColumns = 200;
 
@@ -22,7 +21,7 @@ function initCanvasTable() {
                 .attr('style', 'padding-top:0px;padding-bottom:0px;')
                 .attr('class', 'border')
                 .text(getThDisplayName(i)))
-                
+
             .attr('class', 'border')
             .attr('id', thName)
         );
@@ -56,7 +55,7 @@ function getThDisplayName(i) {
 }
 
 function getThName(i) {
-    return miditopitch(i).replace('#','Sharp');
+    return miditopitch(i).replace('#', 'Sharp');
 }
 
 function setClickactions() {
@@ -101,7 +100,20 @@ function setClickactions() {
 }
 
 function trackPlayButtonOnClick() {
-    generateTrackWav();
+    var trackWavPath = generateTrackWav();
+
+
+}
+
+function playAudio(trackWavPath) {
+    var cacheBustedPath = trackWavPath + "?cb="+Date.now().toString();
+    console.log(cacheBustedPath);
+    $('audio source').attr('src', trackWavPath);
+    var audio = document.querySelector("audio");
+    // audio.src = trackWavPath;
+    // var audio = new Audio(cacheBustedPath);
+    audio.load(); // !HUL|_O! PAY ATTENTI0N!
+    audio.play();
 }
 
 function generateTrackWav() {
@@ -112,6 +124,7 @@ function generateTrackWav() {
     }
 
     var notes_blob = Object.values(trackNotes).join('\n');
+    var trackWavPath = "";
 
     // make the ajax request
     $.ajax({
@@ -125,7 +138,10 @@ function generateTrackWav() {
                 // should clear errors
 
                 // var newPosts = JSON.parse(response.new_posts);
-                var trackWavPath = response.file_path;
+                trackWavPath = '/'+response.file_path;
+                console.log(trackWavPath);
+                playAudio(trackWavPath);
+
 
             } else {
                 // error
@@ -137,6 +153,8 @@ function generateTrackWav() {
             alert("failed");
         }
     });
+    // console.log(trackWavPath);
+    // return trackWavPath;
 }
 
 
