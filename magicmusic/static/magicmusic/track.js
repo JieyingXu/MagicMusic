@@ -1,16 +1,18 @@
 var numOfRows = 88;
+var highestKey = 108;
 var numofNotes = 0; //numofnotes on page;
+
 
 function initCanvasTable() {
     var initialColumns = 200;
 
     // add table header
-    for (var i = 1; i <= numOfRows; i++) {
+    for (var i = highestKey; i > highestKey - numOfRows; i--) {
         var thName = getThName(i);
         $('#working-table').append($('<tr>')
             .append($('<th>')
                 .attr('class', 'border')
-                .text(thName))
+                .text(getThDisplayName(i)))
             .attr('class', 'border')
             .attr('id', thName)
         );
@@ -29,7 +31,7 @@ function addNode(row, column) {
 }
 
 function addColumns(numOfColumns) {
-    for (var i = 1; i <= numOfRows; i++) {
+    for (var i = highestKey; i > highestKey - numOfRows; i--) {
         // add num of columns to the row
         var thName = getThName(i);
         for (var j = 0; j < numOfColumns; j++) {
@@ -38,9 +40,12 @@ function addColumns(numOfColumns) {
     }
 }
 
+function getThDisplayName(i) {
+    return miditopitch(i);
+}
 
 function getThName(i) {
-    return "row" + i;
+    return miditopitch(i).replace('#','Sharp');
 }
 
 function setClickactions() {
@@ -50,17 +55,17 @@ function setClickactions() {
         var offset = tdid.split("-")[1];
         var trid = $('#' + tdid).parent().attr('id');
 
-        var leftMargin = $('#'+trid).find('th').outerWidth();
-        var cellWidth = $('#'+tdid).outerWidth();
-        var cellHeight = $('#'+tdid).outerHeight();
-        var dataX = offset*cellWidth;
+        var leftMargin = $('#' + trid).find('th').outerWidth();
+        var cellWidth = $('#' + tdid).outerWidth();
+        var cellHeight = $('#' + tdid).outerHeight();
+        var dataX = offset * cellWidth;
 
         // append a new drag
         $('#' + trid).append($('<td>')
             .append($('<div>')
                 .attr('class', 'resize-drag')
                 .attr('data-x', dataX)
-                .attr('id', 'note-'+numOfRows))
+                .attr('id', 'note-' + numOfRows))
             .attr('class', 'overlay resize-container'));
 
         // recalibrate the left margin
@@ -70,9 +75,9 @@ function setClickactions() {
 
 
         // trigger interact.js event
-        var drag_object = document.getElementById('note-'+numOfRows);
-        drag_object.style.webkitTransform =  drag_object.style.transform =
-           'translate(' + dataX + 'px, ' + 0 + 'px)';
+        var drag_object = document.getElementById('note-' + numOfRows);
+        drag_object.style.webkitTransform = drag_object.style.transform =
+            'translate(' + dataX + 'px, ' + 0 + 'px)';
 
         // keep this at last! we are count the number of notes and naming them
         numOfRows++;
@@ -90,6 +95,58 @@ $(document).ready(function () {
     initCanvasTable();
     setClickactions();
 });
+
+
+function miditopitch(mididata) {
+    var midinotes = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
+    //document.getElementById("midi").innerHTML = 1;
+    midinote = midinotes[mididata % 12];
+    midioctave = Math.floor(mididata / 12) - 1;
+    var midipitch = midinote.toString() + midioctave.toString();
+    return midipitch;
+    // document.getElementById("midi").innerHTML = midipitch;
+}
+
+function pitchtooctave(pitchdata) {
+    var pitchnotes = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
+    // document.getElementById("pitch").innerHTML = pitchnotes;
+    var len = pitchdata.length - 2;
+    // document.getElementById("pitch").innerHTML = len;
+    switch (pitchdata.charAt(0)) {
+        case 'C':
+            pitchnote = len;
+            break;
+        case 'D':
+            pitchnote = 2 + len;
+            break;
+        case 'E':
+            pitchnote = 4;
+            break;
+        case 'F':
+            pitchnote = 5 + len;
+            break;
+        case 'G':
+            pitchnote = 7 + len;
+            break;
+        case 'A':
+            pitchnote = 9 + len;
+            break;
+        case 'B':
+            pitchnote = 11;
+    }
+    // document.getElementById("pitch").innerHTML = pitchnote;
+    pitchoctave = pitchdata.charCodeAt(len + 1) - 47;
+    // document.getElementById("pitch").innerHTML = pitchoctave;
+    var pitchmidi = pitchoctave * 12 + pitchnote;
+    return pitchmidi;
+    // document.getElementById("pitch").innerHTML = pitchmidi;
+}
+
+
+function escapeSharp(input) {
+    return input.replace('#', '\\#');
+}
+
 
 // from interact.js
 interact('.resize-drag')

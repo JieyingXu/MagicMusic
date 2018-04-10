@@ -92,7 +92,7 @@ def track(request, id):
         track = objects.all()[0]
         print("track is:"+str(track.id))
         context = {'trackID':id}
-        return render(request, 'magicmusic/track-zeyuan.html', context)
+        return render(request, 'magicmusic/track.html', context)
     else:
         print("post")
 
