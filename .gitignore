@@ -16,3 +16,9 @@ db.sqlite3
 
 # idea files
 .idea/
+
+# sound font
+*.sf2
+
+# wav
+*.wav

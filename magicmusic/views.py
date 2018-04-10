@@ -146,7 +146,10 @@ def generate_music(request):
         offset_note_messages=sorted_commands, channel=channel,
         multiplier=time_multiplier)
 
-    # filepath = MidiLib.save_one_track_to_wav(uid=request.user.id,global_metadata, track_metadata, formatted_onoffs)
+
+    filename = str(request.user.id) + "_track_"+str(channel)
+    filepath = MidiLib.save_one_track_to_wav(filename,global_metadata, track_metadata, formatted_onoffs)
+
 
 
 

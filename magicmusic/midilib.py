@@ -1,6 +1,7 @@
 from mido import *
 from mido.messages import *
 import mido
+import os
 
 class MidiLib:
 
@@ -61,6 +62,26 @@ class MidiLib:
             onoffs += line
         return onoffs
 
+    @staticmethod
+    def save_one_track_to_wav(filename ,global_metadata, track_metadata, formatted_onoffs):
+        midFile = mido.MidiFile()
+        track = mido.MidiTrack()
+        midFile.tracks.append(track)
+
+        for line in formatted_onoffs.strip().split("\n"):
+            msg = mido.Message.from_str(line)
+            track.append(msg)
+
+        # save to midi file
+        midFilePath = 'audio/runtime-wavs/'+filename+'.mid'
+        midFile.save(midFilePath)
+
+        # save to wav file
+        wavFilePath = 'audio/runtime-wavs/'+filename+'.wav'
+        os.system('fluidsynth -ni audio/soundfonts/OmegaGMGS2.sf2 ' + midFilePath + ' -F ' + wavFilePath + ' -r 44100')
+
+
+        return filename
 
     # https://stackoverflow.com/questions/13926280/musical-note-string-c-4-f-3-etc-to-midi-note-value-in-python
     # Input is string in the form C#-4, Db-4, or F-3. If your implementation doesn't use the hyphen,
