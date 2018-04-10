@@ -15,41 +15,27 @@
         table {
             overflow: hidden;
         }
+
         .overlay {
             position: absolute;
-            background: rgba(120, 35, 95, 0.7);
+            {#background: rgba(120, 35, 95, 0.7);#}
             padding: 0;
-            {#left: 23em;#}
-        {#right: 0.7em;#}
-        {#    height: 3em;#}
-        {#    width: 2%;#}
-        {#z-index: 2;#}
-
-
         }
-
-
 
         td.overlay.resize-container {
             display: inline-block;
-        {#width: 100%;#}{#height: 100px;#}
-            /*z-index: 2;*/
-            /*position: absolute;*/
             padding: 0px;
         }
 
         .resize-drag {
             background-color: #29e;
             color: white;
-        {#font-size: 20px;#}{#font-family: sans-serif;#} border-radius: 8px;
-        {#margin: 30px 20px;#}{#width: 120px;#} height: 100%;
+            border-radius: 8px;
+            height: 100%;
 
             /* This makes things *much* easier */
             box-sizing: border-box;
-        {#z-index: 4;#}{#position: absolute;#}
         }
-
-
 
 
     </style>
@@ -104,29 +90,7 @@
 </nav>
 
 <table class="table table-dark">
-{#    <thead>#}
-{#    <tr class="border">#}
-{#        <th scope="col" class="border">UNFINISHED CONTROL BAR --></th>#}
-{#        <!-- <th scope="col" class="border">Play button here</th>#}
-{#        <th scope="col" class="border">Stop Button here</th>#}
-{#        <th scope="col" class="border">Tempo here</th> -->#}
-{#    </tr>#}
-{#    </thead>#}
     <tbody id="working-table">
-        <tr class="border">
-            <th scope="row" class="border">Note</th>
-            <td id="C4#7-2" class="border"></td>
-            <td id="C4#7-2" class="border"></td>
-            <td id="C4#7-2" class="border"></td>
-
-            <td class="overlay resize-container">
-                <div class="resize-drag"></div>
-            </td>
-
-
-        </tr>
-
-
     </tbody>
 </table>
 </body>

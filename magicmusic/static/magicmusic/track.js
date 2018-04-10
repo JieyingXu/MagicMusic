@@ -2,7 +2,7 @@ var numOfRows = 88;
 var numofNotes = 0; //numofnotes on page;
 
 function initCanvasTable() {
-    var initialColumns = 100;
+    var initialColumns = 200;
 
     // add table header
     for (var i = 1; i <= numOfRows; i++) {
@@ -76,7 +76,11 @@ function setClickactions() {
 
         // keep this at last! we are count the number of notes and naming them
         numOfRows++;
-    })
+    });
+
+    // $('.resize-drag').contextmenu(function (event) {
+    //     alert("right click");
+    // });
 
 }
 
@@ -108,7 +112,7 @@ interact('.resize-drag')
 
         // minimum size
         restrictSize: {
-            min: {width: 100, height: 50},
+            min: {width: 5, height: 45},
         },
 
         inertia: true,
