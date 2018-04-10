@@ -19,16 +19,15 @@ function initCanvasTable() {
         var thName = getThName(i);
         $('#working-table').append($('<tr>')
             .append($('<th>')
+                .attr('style', 'padding-top:0px;padding-bottom:0px;')
                 .attr('class', 'border')
                 .text(getThDisplayName(i)))
+                
             .attr('class', 'border')
             .attr('id', thName)
         );
     }
     addColumns(initialColumns);
-
-
-
 }
 
 function addColumns(numOfColumns) {
@@ -36,7 +35,7 @@ function addColumns(numOfColumns) {
         // add num of columns to the row
         var thName = getThName(i);
         for (var j = 0; j < numOfColumns; j++) {
-            $('#' + thName).append($('<td>').attr('class', 'border').attr('id', thName + '-' + j));
+            $('#' + thName).append($('<td>').attr('class', 'border').attr('id', thName + '-' + j).attr('style', 'padding-top:0px;padding-bottom:0px;'));
         }
     }
 }
