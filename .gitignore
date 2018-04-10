@@ -20,5 +20,3 @@ db.sqlite3
 # sound font
 *.sf2
 
-# wav
-*.wav
