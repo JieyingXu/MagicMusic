@@ -32,7 +32,6 @@ class MidiLib:
 
         sorted_note_messages = sorted(note_messages, key=lambda tuple: tuple[2])
 
-        print(sorted_note_messages)
 
         offset_note_messages = []
         # print sorted message in an offset manner
