@@ -153,4 +153,4 @@ def generate_music(request):
 
 
 
-    return HttpResponse(formatted_onoffs, content_type='application/json')
+    return HttpResponse(filepath, content_type='application/json')

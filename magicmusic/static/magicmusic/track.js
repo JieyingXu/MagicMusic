@@ -101,6 +101,32 @@ function setClickactions() {
 }
 
 
+function generateTrackWav() {
+    // make the ajax request
+    $.ajax({
+        url: "/magicmusic/generate-music",
+        type: "POST",
+        data: "js_blob=" + str(trackNotes) +
+        "&csrfmiddlewaretoken=" + getCSRFToken(),
+        dataType: "json",
+        success: function (response) {
+            if (!response.hasOwnProperty("error")) {
+                // should clear errors
+
+                // var newPosts = JSON.parse(response.new_posts);
+
+
+            } else {
+                // error
+            }
+        },
+        error: function () {
+            // error
+        }
+    });
+}
+
+
 // init a timestamp marking newest posts and comments
 $(document).ready(function () {
     initCanvasTable();
