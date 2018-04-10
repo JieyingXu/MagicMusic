@@ -148,6 +148,6 @@ def generate_music(request):
 
     # filepath = MidiLib.save_one_track_to_wav(uid=request.user.id,global_metadata, track_metadata, formatted_onoffs)
 
-    
+
 
     return HttpResponse(formatted_onoffs, content_type='application/json')
