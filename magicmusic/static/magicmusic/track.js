@@ -1,4 +1,5 @@
 var numOfRows = 88;
+var numofNotes = 0; //numofnotes on page;
 
 function initCanvasTable() {
     var initialColumns = 100;
@@ -51,18 +52,32 @@ function setClickactions() {
 
         var leftMargin = $('#'+trid).find('th').outerWidth();
         var cellWidth = $('#'+tdid).outerWidth();
+        var cellHeight = $('#'+tdid).outerHeight();
+        var dataX = offset*cellWidth;
 
         // append a new drag
         $('#' + trid).append($('<td>')
             .append($('<div>')
                 .attr('class', 'resize-drag')
-                .attr('data-x', offset*cellWidth))
+                .attr('data-x', dataX)
+                .attr('id', 'note-'+numOfRows))
             .attr('class', 'overlay resize-container'));
+
         // recalibrate the left margin
         $('.overlay').css('left', leftMargin)
-            .css('width', cellWidth);
-        $('#'+tdid).find('.resize-drag').attr('data-x', offset*cellWidth);
+            .css('width', cellWidth)
+            .css('height', cellHeight);
+
+
+        // trigger interact.js event
+        var drag_object = document.getElementById('note-'+numOfRows);
+        drag_object.style.webkitTransform =  drag_object.style.transform =
+           'translate(' + dataX + 'px, ' + 0 + 'px)';
+
+        // keep this at last! we are count the number of notes and naming them
+        numOfRows++;
     })
+
 }
 
 
