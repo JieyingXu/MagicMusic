@@ -4,7 +4,7 @@
     <link href="{% static 'community/globalStream.css' %}" rel="stylesheet" type="text/css">
 {% endblock %}
 
-{% block content %}
+{% block navbar %}
     <div class="banner">
         <div class="navbar navbar-inverse my-nav-bar" role="navigation">
             <div class="navbar-header">
@@ -29,57 +29,86 @@
                     <li><a class="option" href="#">Following</a></li>
                   </ul>
                 </li>
-                <li><a href="#" class="navbar-right"><span class="glyphicon glyphicon-log-out my-icon"></span>Log Out</a></li>
+                <li class="pull-right"><a href="#"><span class="glyphicon glyphicon-log-out my-icon"></span>Log Out</a></li>
             </ul>
         </div>
     </div>
+{% endblock %}
 
+{% block content %}
     <div class="songs">
         <div class="container">
             <div class="songs-head">
                 <h2>New Song Delivery</h2>
+                <p>Hear the lastest voice from the music world</p>
             </div>
-            <div class="row song-block-row">
-                <div class="song-top">
-                    <h4>Jieying Xu</h4>
-                    <div class="col-md-1 song-left">
-                        <a href="#">
-                            <img src="{% static "community/images/user1.jpg" %}" class="img-responsive img-rounded global-song-img">
-                        </a>
-                    </div>
-                    <div class="col-md-7 song-mid">
-                        <h3>hello world</h3>
-                        <p class="song-desc">A song specifically for programmers...</p>
-                    </div>
-                    <div class="col-md-3 song-right">
-                        <label class="">write a comment:</label>
-                        <input type="text">
-                    </div>
+
+            <div class="row">
+                <div class="col-md-2 col-md-offset-1 song-top">
+                    <h4><a href="{% url 'profile' %}" class="profile-link">Jieying Xu</a></h4>
                 </div>
             </div>
             <div class="row song-block-row">
-                <div class="song-top">
-                    <h4>Kejing Meng</h4>
-                    <div class="col-md-1 song-left">
-                        <a href="#">
-                            <img src="{% static "community/images/user2.jpg" %}" class="img-responsive img-rounded global-song-img">
-                        </a>
+                <div class="col-md-1 col-md-offset-1 song-left">
+                    <a href="{% url 'profile' %}">
+                        <img src="{% static "community/images/user1.jpg" %}" class="img-responsive img-rounded global-song-img">
+                    </a>
+                </div>
+                <div class="col-md-8 song-right">
+                    <span><a href="#" class="song-name">hello world</a></span><span class="song-detail">created at 2018/4/10</span>
+                    <p class="song-desc">A song specifically for programmers...</p>
+                    <div class="btn-group my-btn-group">
+                        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-play button-icon"></span>0</button>
+                        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-heart-empty button-icon"></span>0</button>
+                        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-download-alt button-icon"></span>0</button>
                     </div>
-                    <div class="col-md-9 song-right">
-                        <h3>New World</h3>
-                        <p class="song-desc">Completed after the snow</p>
-                    </div>
+                    <form role="form" action="#" method="POST">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <label class="sr-only" for="user1">write a comment:</label>
+                                <input type="text" id="user1" class="form-control comment-textbox" placeholder="write a comment...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-edit comment-icon"></span></button>
+                                </span>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
-{#            <div class="song-top">#}
-{#                <h4>Zeyuan Tan</h4>#}
-{#                <div class="col-md-1 song-left">#}
-{#                    <a href="#">#}
-{#                        <img src="{% static "community/images/user3.jpg" %}" class="img-responsive img-rounded global-song-img">#}
-{#                    </a>#}
-{#                </div>#}
-{#                <div class="col-md-9 song-right"><h3>hello world</h3></div>#}
-{#            </div>#}
+
+            <div class="row">
+                <div class="col-md-2 col-md-offset-1 song-top">
+                    <h4><a href="{% url 'profile' %}" class="profile-link">Kejing Meng</a></h4>
+                </div>
+            </div>
+            <div class="row song-block-row">
+                <div class="col-md-1 col-md-offset-1 song-left">
+                    <a href="{% url 'profile' %}">
+                        <img src="{% static "community/images/user2.jpg" %}" class="img-responsive img-rounded global-song-img">
+                    </a>
+                </div>
+                <div class="col-md-8 song-right">
+                    <span class="song-name"><a href="#" class="song-name">Snow White</a></span><span class="song-detail">created at 2018/4/10</span>
+                    <p class="song-desc">Pittsburgh is so COLD!</p>
+                    <div class="btn-group my-btn-group">
+                        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-play button-icon"></span>0</button>
+                        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-heart-empty button-icon"></span>0</button>
+                        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-download-alt button-icon"></span>0</button>
+                    </div>
+                    <form role="form" action="#" method="POST">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <label class="sr-only" for="user2">write a comment:</label>
+                                <input type="text" id="user2" class="form-control comment-textbox" placeholder="write a comment...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-edit comment-icon"></span></button>
+                                </span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
         </div>
     </div>
 {% endblock %}

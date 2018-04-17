@@ -20,6 +20,9 @@ from django.utils import timezone
 def home(request):
     return render(request, 'community/globalStream.html', {})
 
+def profile(request):
+    return render(request, 'community/profile.html', {})
+
 # def search(request):
 #     if not 'last' in request.GET:
 #         return render(request, 'addrbook/search.html', {})
