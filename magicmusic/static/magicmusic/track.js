@@ -39,7 +39,7 @@ function addColumns(numOfColumns) {
     }
 }
 
-
+// TODO: Using noteNum as a key could be a problem - when deleting!
 function updateNotesString(noteNum) {
     var noteKey = $('#note-' + noteNum).parent().parent().attr('id').replace('Sharp', '#');
     var dataX = $('#note-' + noteNum).attr('data-x');
@@ -47,7 +47,7 @@ function updateNotesString(noteNum) {
     var left = parseFloat(dataX) / cellWidth;
     var span = parseFloat(width) / cellWidth;
 
-    trackNotes[noteKey] = [noteKey, left, span];
+    trackNotes[noteNum] = [noteKey, left, span];
 }
 
 function getThDisplayName(i) {
@@ -60,41 +60,79 @@ function getThName(i) {
 
 function setClickactions() {
     $('td').mousedown(function (e) {
-        var tdid = e.target.id;
-        // should parse tdid to get the desired postion
-        var offset = tdid.split("-")[1];
-        var trid = $('#' + tdid).parent().attr('id');
+        switch (e.which) {
+            case 1:
+                // left mouse clicked
+                var tdid = e.target.id;
+                // should parse tdid to get the desired postion
+                var offset = tdid.split("-")[1];
+                var trid = $('#' + tdid).parent().attr('id');
 
-        leftMargin = $('#' + trid).find('th').outerWidth();
-        cellWidth = $('#' + tdid).outerWidth();
-        cellHeight = $('#' + tdid).outerHeight();
-        var dataX = offset * cellWidth;
+                leftMargin = $('#' + trid).find('th').outerWidth();
+                cellWidth = $('#' + tdid).outerWidth();
+                cellHeight = $('#' + tdid).outerHeight();
+                var dataX = offset * cellWidth;
 
-        // append a new drag
-        $('#' + trid).append($('<td>')
-            .append($('<div>')
-                .attr('class', 'resize-drag')
-                .attr('data-x', dataX)
-                .attr('id', 'note-' + numOfNotes))
-            .attr('class', 'overlay resize-container'));
+                // append a new drag
+                var randomNoteName = Date.now().toString();
 
-        // recalibrate the left margin
-        $('.overlay').css('left', leftMargin)
-            .css('width', cellWidth)
-            .css('height', cellHeight);
+                $('#' + trid).append($('<td>')
+                    .append($('<div>')
+                        .attr('class', 'resize-drag')
+                        .attr('data-x', dataX)
+                        .attr('id', 'note-' + randomNoteName))
+                    .attr('class', 'overlay resize-container'));
+
+                // recalibrate the left margin
+                $('.overlay').css('left', leftMargin)
+                    .css('width', cellWidth)
+                    .css('height', cellHeight);
+
+                // trigger interact.js event
+                var drag_object = document.getElementById('note-' + randomNoteName);
+                drag_object.style.webkitTransform = drag_object.style.transform =
+                    'translate(' + dataX + 'px, ' + 0 + 'px)';
 
 
-        // trigger interact.js event
-        var drag_object = document.getElementById('note-' + numOfNotes);
-        drag_object.style.webkitTransform = drag_object.style.transform =
-            'translate(' + dataX + 'px, ' + 0 + 'px)';
+                // update notes string <notekey, start, end>
+                updateNotesString(randomNoteName);
 
+                // keep this at last! we are count the number of notes and naming them
+                numOfNotes++;
+                resetResizeDragMouseDown();
+                break;
 
-        // update notes string <notekey, start, end>
-        updateNotesString(numOfNotes);
+            case 3:
+                // right mouse clicked
+                e.preventDefault();
 
-        // keep this at last! we are count the number of notes and naming them
-        numOfNotes++;
+        }
+
+    });
+    $('td').contextmenu(function () {
+        return false;
+    });
+
+}
+
+function resetResizeDragMouseDown() {
+    $('.resize-drag').contextmenu(function () {
+        return false;
+    });
+    $('.resize-drag').mousedown(function (e) {
+        switch (e.which) {
+            case 3:
+                // right mouse clicked
+                e.preventDefault();
+
+                // remove the note
+                var tdid = e.target.id;
+                $('#'+tdid).parent().remove();
+                delete trackNotes[tdid.replace("note-","")];
+
+                numOfNotes--;
+        }
+
     });
 
 }
@@ -106,8 +144,7 @@ function trackPlayButtonOnClick() {
 }
 
 function playAudio(trackWavPath) {
-    var cacheBustedPath = trackWavPath + "?cb="+Date.now().toString();
-    console.log(cacheBustedPath);
+    var cacheBustedPath = trackWavPath + "?cb=" + Date.now().toString();
     $('audio source').attr('src', trackWavPath);
     var audio = document.querySelector("audio");
     // audio.src = trackWavPath;
@@ -138,8 +175,7 @@ function generateTrackWav() {
                 // should clear errors
 
                 // var newPosts = JSON.parse(response.new_posts);
-                trackWavPath = '/'+response.file_path;
-                console.log(trackWavPath);
+                trackWavPath = '/' + response.file_path;
                 playAudio(trackWavPath);
 
 

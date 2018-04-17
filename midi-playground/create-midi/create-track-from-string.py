@@ -5,7 +5,7 @@ track = MidiTrack()
 
 
 # fname = "20th-century-fox.txt"
-fname = "onlinesq2.txt"
+fname = "glich.txt"
 
 with open(fname) as f:
     lines = f.readlines()
@@ -28,4 +28,4 @@ with open(fname) as f:
             msg = Message.from_str(line)
             track.append(msg)
 
-mid.save("onlinesq2.mid")
+mid.save("glich.mid")

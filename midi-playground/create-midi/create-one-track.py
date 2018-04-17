@@ -6,7 +6,7 @@ mid.tracks.append(track)
 
 track.append(MetaMessage('instrument_name', name='102'))
 
-fname = "track7.txt"
+fname = "glich.txt"
 note_on_inputs = []
 
 with open(fname) as f:
@@ -51,4 +51,4 @@ with open(fname) as f:
 #
 #     track.append(Message('note_on', note=int(note), velocity=int(velocity), time=int(time)))
 
-mid.save('track7.mid')
+mid.save('glich.mid')

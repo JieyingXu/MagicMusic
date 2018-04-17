@@ -128,7 +128,7 @@ def generate_music(request):
         else:
 
             notes_blob=request.POST['notes_blob']
-
+            print("blob=", notes_blob)
 
             # print(blob[0][0])
             # print(blob[0])
