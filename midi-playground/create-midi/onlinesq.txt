@@ -1,0 +1,28 @@
+Track 0: 
+<meta message time_signature numerator=4 denominator=4 clocks_per_click=24 notated_32nd_notes_per_beat=8 time=0>
+<meta message set_tempo tempo=545454 time=0>
+<meta message end_of_track time=0>
+Track 1: Electric Piano
+<meta message track_name name='Electric Piano' time=0>
+program_change channel=0 program=0 time=0
+note_on channel=0 note=80 velocity=50 time=672
+note_on channel=0 note=79 velocity=50 time=0
+note_off channel=0 note=80 velocity=0 time=96
+note_on channel=0 note=78 velocity=50 time=96
+note_off channel=0 note=79 velocity=0 time=0
+note_on channel=0 note=78 velocity=50 time=96
+note_off channel=0 note=78 velocity=0 time=0
+note_on channel=0 note=78 velocity=50 time=96
+note_off channel=0 note=78 velocity=0 time=0
+note_off channel=0 note=78 velocity=0 time=96
+note_on channel=0 note=79 velocity=50 time=0
+note_on channel=0 note=80 velocity=50 time=96
+note_off channel=0 note=79 velocity=0 time=0
+note_on channel=0 note=80 velocity=50 time=96
+note_off channel=0 note=80 velocity=0 time=0
+note_off channel=0 note=80 velocity=0 time=96
+note_on channel=0 note=80 velocity=50 time=192
+note_off channel=0 note=80 velocity=0 time=192
+note_on channel=0 note=80 velocity=50 time=96
+note_off channel=0 note=80 velocity=0 time=96
+<meta message end_of_track time=0>

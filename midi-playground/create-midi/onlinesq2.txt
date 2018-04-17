@@ -1,0 +1,13 @@
+Track 1: Electric Piano
+note_on channel=0 note=88 velocity=64 time=0
+note_on channel=0 note=86 velocity=64 time=496
+note_on channel=0 note=85 velocity=64 time=0
+note_off channel=0 note=88 velocity=64 time=496
+note_off channel=0 note=85 velocity=64 time=0
+note_off channel=0 note=86 velocity=64 time=496
+note_on channel=0 note=85 velocity=64 time=0
+note_off channel=0 note=85 velocity=64 time=496
+note_on channel=0 note=88 velocity=64 time=0
+note_on channel=0 note=86 velocity=64 time=0
+note_off channel=0 note=86 velocity=64 time=496
+note_off channel=0 note=88 velocity=64 time=496

@@ -1,17 +1,17 @@
 from django.conf.urls import include, url
 from django.contrib.auth import views as auth_views
+<<<<<<< HEAD
 from . import views
+=======
+from magicmusic import views
+>>>>>>> 86c582863738b94ca3c58299fc852b4151f214da
 
 urlpatterns = [
     url(r'^$', views.mymusic, name='mymusic'),
-    url(r'^register$', views.register, name='register'),
     url(r'^profile', views.profile, name='profile'),
     url(r'^follower', views.follower, name='follower'),
-    url(r'^addsong', views.addsong, name='addsong'),
+    url(r'^addworkspace', views.addworkspace, name='addworkspace'),
     url(r'^workspace/(?P<id>\d+)$', views.workspace, name='workspace'),
     url(r'^track/(?P<id>\d+)$', views.track, name='track'),
-    # Route for built-in authentication with our own custom login page
-    url(r'^login$', auth_views.login, {'template_name':'magicmusic/login.html'}, name='login'),
-    # Route to logout a user and send them back to the login page
-    url(r'^logout$', auth_views.logout_then_login, name='logout'),
+    url(r'^generate-music/$', views.generate_music, name='generate-music'),
 ]

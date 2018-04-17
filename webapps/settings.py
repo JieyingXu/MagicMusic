@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'authenticate',
     'magicmusic',
     'community',
 ]
@@ -55,7 +56,7 @@ ROOT_URLCONF = 'webapps.urls'
 
 # Used by the authentication system for the private-todo-list application.
 # URL to use if the authentication system requires a user to log in.
-LOGIN_URL = '/magicmusic/login'
+LOGIN_URL = '/authenticate/login'
 
 # Default URL to redirect to after a user logs in.
 LOGIN_REDIRECT_URL = '/magicmusic/'
@@ -71,6 +72,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -127,3 +129,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# media files
+MEDIA_ROOT=os.path.join(BASE_DIR, "media/")
+MEDIA_URL='/media/'
+

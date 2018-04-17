@@ -1,0 +1,8 @@
+Track 1:
+note_on channel=0 note=84 velocity=64 time=1344
+note_off channel=0 note=84 velocity=64 time=96
+note_on channel=0 note=86 velocity=64 time=96
+note_off channel=0 note=86 velocity=64 time=96
+note_on channel=0 note=88 velocity=64 time=96
+note_off channel=0 note=88 velocity=64 time=96
+note_off channel=0 note=88 velocity=64 time=1096

@@ -1,0 +1,52 @@
+ <!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        {% load staticfiles %}
+        <link href="{% static 'magicmusic/base.css' %}" rel="stylesheet" type="text/css">
+        <title> {% block title %} Magic Music {% endblock %} </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        <div class="container-fluid" style="background-color:black;">
+          <h1 class="text-center" style="color: white">Web App Magic Music</h1>
+        </div>
+
+        <div class="card bg-light text-dark mx-auto" style="width:400px">
+            <div class="card-header mx-auto">Sign In Magic Music</div>
+            <div class="card-body">
+                {% if form.errors %}
+                    <p style="color:red">
+                        Incorrect user name and password.
+                    </p>
+                {% endif %}
+                <form method="post" action="{% url 'login' %}">
+                    <table class="mx-auto">
+                    <tr>
+                        <td>{{ form.username.label_tag }}</td>
+                        <td>{{ form.username }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ form.password.label_tag }}</td>
+                        <td>{{ form.password }}</td>
+                    </tr>
+                    </table>
+                    <p></p>
+                    <button type="submit" class="btn btn-lg btn-primary btn-block" value="Login">Login</button>
+                    <input type="hidden" name="next" value="{{ next }}" />
+                    {% csrf_token %}
+                </form>
+                <p></p>
+            </div>
+        </div> 
+        
+        <div class="card bg-white text-dark mx-auto" style="width:400px">
+            <a href="{% url 'register' %}" class="mx-auto">Create an account</a> 
+        </div> 
+    </body>
+</html>

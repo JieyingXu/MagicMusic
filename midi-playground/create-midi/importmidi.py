@@ -1,11 +1,12 @@
 from mido import MidiFile
 
 # mid = MidiFile('the-pink-panther-original.mid')
-mid = MidiFile('20th-century-fox.mid')
+# mid = MidiFile('20th-century-fox.mid')
 # mid = MidiFile('track7.mid')
-mid = MidiFile('test.mid')
+# mid = MidiFile('test.mid')
+mid = MidiFile('onlinesq-piano.mid')
 
-f = open("test.txt", "w")
+f = open("onlinesq-piano.txt", "w")
 
 for i, track in enumerate(mid.tracks):
     # if i == 7:

@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 from django.shortcuts import render
 
 # Create your views here.
+
 # -*- coding: utf-8 -*-
 
 from django.shortcuts import render
@@ -203,3 +204,4 @@ def profile(request):
 #     'spouse_last':  'Bush',
 #     'spouse_first': 'Laura',
 # }
+

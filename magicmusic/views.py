@@ -12,41 +12,50 @@ from django.http import HttpResponse, Http404
 
 from magicmusic.models import *
 from magicmusic.forms import *
+from magicmusic.midilib import MidiLib
+
+import json
+
 
 @login_required
 def mymusic(request):
     if request.method == 'GET':
-        objects = Song.objects.filter(user__exact=request.user)
-        songs = []
+        objects = Workspace.objects.filter(
+            workspace_group__users__in=[request.user])
+        workspaces = []
         for e in objects:
-            workspace = e.workspace_set.all()[0]
-            """print("song name:"+str(e.name))"""
-            song = {'name': e.name, 'id':workspace.id}
-            songs.append(song);
-        context = {'songs': songs}
+            workspace = []
+            workspace = {'name': e.name, 'id': e.id}
+            workspaces.append(workspace);
+        context = {'workspaces': workspaces}
         return render(request, 'magicmusic/mymusic.html', context)
     else:
         print("post\n")
 
+
 @login_required
-def addsong(request):
-    print("addsong\n")
+def addworkspace(request):
+    # print("addworkspace\n")
     if request.method == 'GET':
-        context = {'form': SongForm()}
-        return render(request, 'magicmusic/addsong.html', context)
+        context = {'form': WorkspaceForm()}
+        return render(request, 'magicmusic/addworkspace.html', context)
     else:
-    	newsong_form = SongForm(request.POST)
-    	newsong = Song(user=request.user,
-    					name=newsong_form.data['name'],
-    					description=newsong_form.data['description'])
-    	newsong.save()
-        newworkspace = Workspace(user=request.user)
+        newworkspace_form = WorkspaceForm(request.POST)
+        with transaction.atomic():
+            newworkspacegroup = WorkspaceGroup()
+            newworkspacegroup.save()
+            # print("newworkspacegroup id: " + str(newworkspacegroup.id))
+            newworkspacegroup.users.add(request.user)
+            # print("newworkspacegroup user: " + str(newworkspacegroup.users.all()[0]))
+            newworkspacegroup.save()
+        newworkspace = Workspace(workspace_group=newworkspacegroup,
+                                 name=newworkspace_form.data['name'],
+                                 description=newworkspace_form.data[
+                                     'description'])
         newworkspace.save()
-        newsong.workspace_set.add(newworkspace)
-        newsong.save()
-        """print("newsong name is:"+str(newsong.name)+"\n")
-        print("newworkspace is:"+str(newworkspace.id))"""
+        # print("newworkspace user: " + str(newworkspace.name))
         return redirect(reverse('mymusic'))
+
 
 @login_required
 def workspace(request, id):
@@ -54,31 +63,34 @@ def workspace(request, id):
     if request.method == 'GET':
         objects = Workspace.objects.filter(id__exact=id)
         workspace = objects.all()[0]
-    	"""print("workspace is:"+str(workspace.id))"""
+        # print("workspace is:"+str(workspace.id))
         tracks = []
-        objects = Track.objects.filter(user__exact=request.user)
+        objects = Track.objects.filter(workspace__exact=workspace)
         for e in objects:
             track = {'instrument': e.instrument, 'trackid': e.id}
-            print("track instrument is:"+str(e.id))
+            # print("track instrument is:"+str(e.id))
             tracks.append(track);
-        context = {'tracks': tracks, 'workspaceID':id}
+        context = {'tracks': tracks, 'workspaceID': id}
         return render(request, 'magicmusic/workspace.html', context)
     else:
         objects = Workspace.objects.filter(id__exact=id)
         workspace = objects.all()[0]
         instrument = request.POST.getlist('instruments')[0]
-        newtrack = Track(user=request.user,
-                        instrument=instrument)
+        newtrack = Track(workspace=workspace,
+                         name=request.POST.get('name'),
+                         description=request.POST.get('description'),
+                         instrument=instrument)
         newtrack.save()
         workspace.track_set.add(newtrack)
         workspace.save()
         tracks = []
-        objects = Track.objects.filter(user__exact=request.user)
+        objects = Track.objects.filter(workspace__exact=workspace)
         for e in objects:
             track = {'instrument': e.instrument, 'trackid': e.id}
             tracks.append(track);
-        context = {'tracks': tracks, 'workspaceID':id}
+        context = {'tracks': tracks, 'workspaceID': id}
         return render(request, 'magicmusic/workspace.html', context)
+
 
 @login_required
 def track(request, id):
@@ -86,54 +98,66 @@ def track(request, id):
     if request.method == 'GET':
         objects = Track.objects.filter(id__exact=id)
         track = objects.all()[0]
-        print("track is:"+str(track.id))
-        context = {'trackID':id}
+        print("track is:" + str(track.id))
+        context = {'trackID': id}
         return render(request, 'magicmusic/track.html', context)
     else:
         print("post")
 
-@login_required
-def follower(request):
-    print("follower\n")
 
 @login_required
 def profile(request):
-    print("profile\n")
+    print("profile")
 
-def register(request):
-    context = {}
 
-    # Just display the registration form if this is a GET request.
-    if request.method == 'GET':
-        context['form'] = RegistrationForm()
-        return render(request, 'magicmusic/register.html', context)
+@login_required
+def follower(request):
+    print("follower")
 
-    # Creates a bound form from the request POST parameters and makes the 
-    # form available in the request context dictionary.
-    form = RegistrationForm(request.POST)
-    context['form'] = form
 
-    # Validates the form.
-    if not form.is_valid():
-        return render(request, 'magicmusic/register.html', context)
+@login_required
+def generate_music(request):
+    if not request.POST:
+        raise Http404
+    else:
+        if 'notes_blob' not in request.POST or \
+                not request.POST['notes_blob']:
+            json_error = \
+                '{"error": "You should pass some musical blob data to backend."}'
+            return HttpResponse(json_error, content_type='application/json')
+        else:
 
-    # At this point, the form data is valid.  Register and login the user.
-    new_user = User.objects.create_user(username=form.cleaned_data['username'], 
-                                        password=form.cleaned_data['password1'],
-                                        first_name=form.cleaned_data['first_name'],
-                                        last_name=form.cleaned_data['last_name'])
-    new_user.save()
+            notes_blob=request.POST['notes_blob']
+            print("blob=", notes_blob)
 
-    newprofile = ProfileEntry(user=new_user,
-                              update_time=timezone.now(),
-                              username=form.cleaned_data['username'], 
-                              first_name=form.cleaned_data['first_name'],
-                              last_name=form.cleaned_data['last_name'])
-    newprofile.save()
+            # print(blob[0][0])
+            # print(blob[0])
+            #
+            # blob = \
+            #     "E7 0 2\n" \
+            #     "D7 1 2\n" \
+            #     "C#7 1 1\n" \
+            #     "C#7 3 1\n" \
+            #     "E7 4 2\n" \
+            #     "D7 4 1\n"
 
-    # Logs in the new user and redirects to his/her todo list
-    new_user = authenticate(username=form.cleaned_data['username'],
-                            password=form.cleaned_data['password1'])
-    login(request, new_user)
-    return redirect(reverse('mymusic'))
+            channel = 0
+            time_multiplier = 96
+            global_metadata = ""
+            track_metadata = ""
+            sorted_commands = MidiLib.parse_midi_offset_from_blob(notes_blob)
+            formatted_onoffs = MidiLib.format_mido_onoffs_default_velocity(
+                offset_note_messages=sorted_commands, channel=channel,
+                multiplier=time_multiplier)
 
+
+            filename = str(request.user.id) + "_track_"+str(channel)
+            file_path = MidiLib.save_one_track_to_wav(filename, global_metadata, track_metadata, formatted_onoffs)
+
+
+            res_obj = {
+                'file_path': file_path
+            }
+            res_str = json.dumps(res_obj)
+
+            return HttpResponse(res_str, content_type='application/json')
