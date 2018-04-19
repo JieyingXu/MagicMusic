@@ -1,6 +1,10 @@
 from django.conf.urls import include, url
 from django.contrib.auth import views as auth_views
+<<<<<<< HEAD
+from . import views
+=======
 from magicmusic import views
+>>>>>>> 86c582863738b94ca3c58299fc852b4151f214da
 
 urlpatterns = [
     url(r'^$', views.mymusic, name='mymusic'),

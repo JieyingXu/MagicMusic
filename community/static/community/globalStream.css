@@ -1,0 +1,113 @@
+h4, h5, h6,
+h1, h2, h3 {
+    margin-top: 0;
+}
+ul, ol {margin: 0;}
+p {margin: 0;}
+
+.my-nav-bar {
+    height: 50px;
+    font-family:"SansSerif";
+    font-size: 16px;
+    text-align: center;
+}
+
+.navbar-logo {
+    height: 40px;
+    width: 50px;
+    margin-top: 6px;
+    padding-left:8px;
+}
+
+.my-navbar-header {
+    font-size: 30px;
+    font-family: "Colonna MT";
+    font-weight: bold;
+}
+
+.my-icon {
+    font-size: 15px;
+    margin-right: 4px;
+}
+.button-icon {
+    font-size: 6px;
+    margin-right: 4px;
+}
+.option {
+    font-size:16px;
+    background-color: black;
+    margin-top:5px;
+    margin-bottom: 5px;
+}
+
+.my-menu {
+    background-color: black;
+}
+
+.banner {
+    background: url("images/header.jpg")no-repeat;
+    min-height: 350px;
+    background-size: cover;
+}
+
+div {
+    display: block;
+}
+
+.songs {
+    padding: 2em 0em 2em 0em;
+}
+
+.songs-head {
+    text-align: center;
+    padding: 0em 0em 2em 0em;
+}
+
+.song-top {
+    padding: 0em 0em 0.3em 0em;
+}
+.profile-link {
+    font-size: 1.3em;
+    font-weight: 400;
+    color: #00a78e;
+    margin: 0em 0em 0em 0em;
+}
+
+.song-left {
+    padding: 0px;
+}
+
+.global-song-img {
+    width: 100px;
+    height: 100px;
+}
+
+.song-block-row {
+    margin-bottom: 35px;
+}
+
+.song-desc {
+    font-style: Italic;
+    font-size: 15px;
+}
+
+.my-btn-group {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.song-name {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.song-detail {
+    margin-left: 20px;
+    font-style: Italic;
+    text-align: center;
+}
+
+.comment-icon {
+    margin-left: 8px;
+    margin-right: 8px;
+}
