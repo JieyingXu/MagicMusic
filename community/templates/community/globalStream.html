@@ -29,13 +29,17 @@
                     <li><a class="option" href="#">Following</a></li>
                   </ul>
                 </li>
-                <li class="pull-right"><a href="#"><span class="glyphicon glyphicon-log-out my-icon"></span>Log Out</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="logout"><a href="#"><span class="glyphicon glyphicon-log-out my-icon"></span>Log Out</a></li>
             </ul>
         </div>
     </div>
 {% endblock %}
 
 {% block content %}
+    <div class="my-bg-pic">
+    </div>
     <div class="songs">
         <div class="container">
             <div class="songs-head">
@@ -58,9 +62,12 @@
                     <span><a href="#" class="song-name">hello world</a></span><span class="song-detail">created at 2018/4/10</span>
                     <p class="song-desc">A song specifically for programmers...</p>
                     <div class="btn-group my-btn-group">
-                        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-play button-icon"></span>0</button>
-                        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-heart-empty button-icon"></span>0</button>
-                        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-download-alt button-icon"></span>0</button>
+                        <button type="button" class="btn btn-default song-btn">
+                            <audio controls><source src="{% static "community/media/I_Love_You_so.mp3" %}" type="audio/mp3"></audio>
+                        </button>
+{#                        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-play button-icon"></span>0</button>#}
+                        <button type="button" class="btn btn-default song-btn"><span class="glyphicon glyphicon-heart-empty button-icon"></span>0</button>
+                        <button type="button" class="btn btn-default song-btn"><span class="glyphicon glyphicon-download-alt button-icon"></span>0</button>
                     </div>
                     <form role="form" action="#" method="POST">
                         <div class="form-group">

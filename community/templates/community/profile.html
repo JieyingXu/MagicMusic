@@ -1,10 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
- <h1>Hello!</h1>
-</body>
-</html>
+{% extends "community/globalStream.html" %}
+{% block styleSheet %}
+    {% load staticfiles %}
+    <link href="{% static 'community/globalStream.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'community/profile.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block user-info %}
+    <div class="user-bg-pic">
+        <div><img class="user-avatar" src="{% static "community/images/user2.jpg" %}"></div>
+        <div class="username-display">Jieying Xu</div>
+        <div class="user-detail">
+            <span><a href="#" class="user-follow">Followers: 0</a></span>
+            <span class="vertical-line"> | </span>
+            <span><a href="#" class="user-follow">Following: 0</a></span></div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1 song-number">1.</div>
+            <div class="col-md-2 song-left">
+                <img src="{% static "community/images/song-cover.jpg" %}" class="img-responsive img-rounded profile-song-img">
+            </div>
+            <div class="col-md-8 song-right">
+                <div>Song name</div>
+                <div>creation_time</div>
+                <p>Song desc........</p>
+                <div class="btn-group my-btn-group">
+                    <button type="button" class="btn btn-default song-btn">
+                        <audio controls><source src="{% static "community/media/I_Love_You_so.mp3" %}" type="audio/mp3"></audio>
+                    </button>
+{#                        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-play button-icon"></span>0</button>#}
+                    <button type="button" class="btn btn-default song-btn"><span class="glyphicon glyphicon-heart-empty button-icon"></span>0</button>
+                    <button type="button" class="btn btn-default song-btn"><span class="glyphicon glyphicon-download-alt button-icon"></span>0</button>
+                </div>
+                <form role="form" action="#" method="POST">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <label class="sr-only" for="user1">write a comment:</label>
+                            <input type="text" id="user1" class="form-control comment-textbox" placeholder="write a comment...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-edit comment-icon"></span></button>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
