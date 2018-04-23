@@ -56,6 +56,24 @@
 .song-number {
     text-align: center;
     font-family:SansSerif;
-    font-size: 30px;
+    font-size: 40px;
     padding-left: 50px;
+    color: #2299ee;
+    font-weight: 700;
+}
+
+.profile-song-name {
+    font-weight: 700;
+    font-size: 30px;
+    color: #2299ee;
+}
+
+.profile-song-time {
+    font-size: 15px;
+}
+
+.profile-song-desc {
+    font-size: 15px;
+    font-style: italic;
+    margin-top: 5px;
 }

@@ -67,19 +67,49 @@
                         </button>
 {#                        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-play button-icon"></span>0</button>#}
                         <button type="button" class="btn btn-default song-btn"><span class="glyphicon glyphicon-heart-empty button-icon"></span>0</button>
-                        <button type="button" class="btn btn-default song-btn"><span class="glyphicon glyphicon-download-alt button-icon"></span>0</button>
+                        <button type="button" class="btn btn-default song-btn"><span class="glyphicon glyphicon-edit button-icon"></span>0</button>
                     </div>
-                    <form role="form" action="#" method="POST">
-                        <div class="form-group">
-                            <div class="input-group">
-                                <label class="sr-only" for="user1">write a comment:</label>
-                                <input type="text" id="user1" class="form-control comment-textbox" placeholder="write a comment...">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-edit comment-icon"></span></button>
-                                </span>
+                    <div>
+                        <form role="form" action="#" method="POST">
+                            <div class="form-group comment-form">
+                                <div class="input-group">
+                                    <label class="sr-only" for="user1">write a comment:</label>
+                                    <input type="text" id="user1" class="form-control comment-textbox" placeholder="write a comment...">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-send comment-icon"></span></button>
+                                    </span>
+                                </div>
                             </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
+                    <div>
+                        <table class="comment-block">
+                            <tr class="single-comment-row">
+                                <td class="avatar-cell"><img class="comment-user-avatar" src="{% static "community/images/user1.jpg" %}"></td>
+                                <td class="content-cell">
+                                    <a href="#" class="comment-username">jill:</a>
+                                    <span class="comment-content">I love this song!</span>
+                                </td>
+                                <td><span class="comment-time">2018/4/22</span></td>
+                            </tr>
+                            <tr class="single-comment-row">
+                                <td class="avatar-cell"><img class="comment-user-avatar" src="{% static "community/images/user2.jpg" %}"></td>
+                                <td class="content-cell">
+                                    <a href="#" class="comment-username">joejoejoejoejoejoejoe:</a>
+                                    <span class="comment-content">I love this song, tootoooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo! </span>
+                                </td>
+                                <td><span class="comment-time">2018/4/22</span></td>
+                            </tr>
+                        </table>
+{#                        <ul class="comment-block">#}
+{#                            <li class="single-comment-row">#}
+{#                                <img class="comment-user-avatar" src="{% static "community/images/user1.jpg" %}">#}
+{#                                <span class="comment-username"><a href="#">jill:</a></span>#}
+{#                                <span class="comment-content">I love this song!</span>#}
+{#                                <span class="comment-time">2018/4/22</span>#}
+{#                            </li>#}
+{#                        </ul>#}
+                    </div>
                 </div>
             </div>
 
