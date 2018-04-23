@@ -10,6 +10,7 @@ p {margin: 0;}
     font-family:"SansSerif";
     font-size: 16px;
     text-align: center;
+    margin-bottom: 0px;
 }
 
 .navbar-logo {
@@ -45,7 +46,16 @@ p {margin: 0;}
 }
 
 .banner {
-    background: url("images/header.jpg")no-repeat;
+    /*background: url("images/header.jpg")no-repeat;*/
+    /*!*background: url("images/bg1.jpg");*!*/
+    /*min-height: 350px;*/
+    /*background-size: cover;*/
+}
+
+.my-bg-pic {
+    /*background: url("images/bg.gif")no-repeat;*/
+    /*background: url("images/bg1.jpg");*/
+    background: url("images/header_1.jpg")no-repeat;
     min-height: 350px;
     background-size: cover;
 }
@@ -110,4 +120,82 @@ div {
 .comment-icon {
     margin-left: 8px;
     margin-right: 8px;
+}
+
+.logout {
+    padding-right: 8px;
+}
+
+.song-btn {
+    height: 45px;
+}
+
+.comment-block {
+    height: 60px;
+    background: white;
+    background-size: cover;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+.single-comment-row {
+    /*display: table-cell;*/
+    /*vertical-align: middle;*/
+    /*display: table;*/
+    height: 60px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-bottom: 1px solid #ccc;
+}
+.comment-form {
+    margin: 0;
+}
+
+.comment-textbox {
+    margin-bottom: 0;
+}
+
+.comment-time{
+    /*vertical-align: middle;*/
+    /*line-height: 100%;*/
+    margin-right: 10px;
+    float: right;
+    /*position: relative;*/
+}
+
+.comment-user-avatar {
+    line-height: 100%;
+    margin-left: 10px;
+    border-radius: 4px;
+    width: 45px;
+    height: 45px;
+    margin-top: 7.5px;
+}
+
+.comment-username {
+    /*vertical-align: middle;*/
+    /*line-height: 100%;*/
+    float: left;
+}
+
+.comment-content {
+    /*vertical-align: middle;*/
+    /*line-height: 100%;*/
+    float: left;
+}
+
+.avatar-cell {
+    width: 10%;
+    vertical-align: top;
+}
+
+.content-cell {
+    width: 75%;
+    margin: 10px;
+    word-break: break-all;
 }

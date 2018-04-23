@@ -1,0 +1,79 @@
+.user-bg-pic {
+    background: url("images/bg1.jpg");
+    min-height: 310px;
+    background-size: cover;
+    margin-bottom: 40px;
+}
+
+.user-avatar {
+    /*padding-top: 10px;*/
+    /*padding-bottom: 10px;*/
+    border-radius: 50%;
+    border-width: 6px;
+    border-color: gray;
+    border-style: solid;
+    /*vertical-align: middle;*/
+    width: 10%;
+    height: 10%;
+    /*display: block;*/
+    margin-left: 45%;
+    margin-right: 45%;
+    margin-top: 2%;
+    margin-bottom: 10px;
+}
+
+.username-display {
+    text-align: center;
+    font-family:"SansSerif";
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.user-detail {
+    text-align: center;
+    font-family:"SansSerif";
+    font-size: 20px;
+    margin-top: 5px;
+}
+.user-follow {
+    color: darkgrey;
+}
+.vertical-line {
+    color: white;
+    margin-left:10px;
+    margin-right: 10px;
+    font-size: 30px;
+}
+.profile-song-img {
+    width: 200px;
+    height: 200px;
+}
+
+.song-left {
+    display: inline-block;
+}
+
+.song-number {
+    text-align: center;
+    font-family:SansSerif;
+    font-size: 40px;
+    padding-left: 50px;
+    color: #2299ee;
+    font-weight: 700;
+}
+
+.profile-song-name {
+    font-weight: 700;
+    font-size: 30px;
+    color: #2299ee;
+}
+
+.profile-song-time {
+    font-size: 15px;
+}
+
+.profile-song-desc {
+    font-size: 15px;
+    font-style: italic;
+    margin-top: 5px;
+}

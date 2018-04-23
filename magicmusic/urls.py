@@ -3,6 +3,9 @@ from django.contrib.auth import views as auth_views
 from magicmusic import views
 
 
+from magicmusic import views
+
+
 urlpatterns = [
     url(r'^$', views.mymusic, name='mymusic'),
     url(r'^profile', views.profile, name='profile'),
