@@ -1,13 +1,13 @@
 from django.conf.urls import include, url
 from django.contrib.auth import views as auth_views
 
-from . import views
+from community import views
 
 urlpatterns = [
     url(r'^$', views.home, name='home'),
-    url(r'^profile', views.profile, name='profile')
-    # url(r'^register$', views.register, name='register'),
-    # url(r'^profile', views.profile, name='profile'),
+    url(r'^profile', views.profile, name='profile'),
+    url(r'^setting', views.profile_setting, name='profile_setting'),
+    url(r'^following', views.following_users, name='following_users')
     # url(r'^follower', views.follower, name='follower'),
     # url(r'^addsong', views.addsong, name='addsong'),
     # url(r'^workspace/(?P<id>\d+)$', views.workspace, name='workspace'),
