@@ -8,6 +8,7 @@ var trackNotes = {}; // keeps the notes string ,key is note id
 var leftMargin;
 var cellWidth;
 var cellHeight;
+var totalColumns = 0;
 
 
 function initCanvasTable() {
@@ -33,10 +34,18 @@ function addColumns(numOfColumns) {
     for (var i = highestKey; i > highestKey - numOfRows; i--) {
         // add num of columns to the row
         var thName = getThName(i);
-        for (var j = 0; j < numOfColumns; j++) {
-            $('#' + thName).append($('<td>').attr('class', 'border').attr('id', thName + '-' + j).attr('style', 'padding-top:0px;padding-bottom:0px;'));
+        for (var j = totalColumns; j < numOfColumns + totalColumns; j++) {
+            var newCell = $('<td>').attr('class', 'border').attr('id', thName + '-' + j).attr('style', 'padding-top:0px;padding-bottom:0px;');
+            if (j == 0) {
+                $('#' + thName).append(newCell);
+            } else {
+                newCell.insertAfter($('#' + thName + '-' + (j-1)));
+            }
+
         }
     }
+    setClickactions();
+    totalColumns += numOfColumns;
 }
 
 // TODO: Using noteNum as a key could be a problem - when deleting!
@@ -100,6 +109,13 @@ function setClickactions() {
                 // keep this at last! we are count the number of notes and naming them
                 numOfNotes++;
                 resetResizeDragMouseDown();
+
+                // add columns if not enough
+                if (offset >= totalColumns - 8) {
+                    console.log("offset is " + offset);
+                    addColumns(20);
+                }
+
                 break;
 
             case 3:
@@ -137,8 +153,8 @@ function resetResizeDragMouseDown() {
 
 }
 
-function trackPlayButtonOnClick() {
-    var trackWavPath = generateTrackWav();
+function trackPlayButtonOnClick(trackID) {
+    var trackWavPath = generateTrackWav(trackID);
 
 
 }
@@ -153,7 +169,7 @@ function playAudio(trackWavPath) {
     audio.play();
 }
 
-function generateTrackWav() {
+function generateTrackWav(trackID) {
     // check if there are any notes yet
     if (Object.keys(trackNotes).length === 0) {
         alert("You have not put in any notes yet.");
@@ -165,7 +181,7 @@ function generateTrackWav() {
 
     // make the ajax request
     $.ajax({
-        url: "/magicmusic/generate-music/",
+        url: "/magicmusic/generate-music/" + trackID,
         type: "POST",
         data: "notes_blob=" + notes_blob +
         "&csrfmiddlewaretoken=" + getCSRFToken(),
@@ -197,7 +213,7 @@ function generateTrackWav() {
 // init a timestamp marking newest posts and comments
 $(document).ready(function () {
     initCanvasTable();
-    setClickactions();
+    // setClickactions();
 });
 
 

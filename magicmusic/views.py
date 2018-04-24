@@ -69,7 +69,7 @@ def workspace(request, id):
         for e in objects:
             track = {'instrument': e.instrument, 'trackid': e.id}
             # print("track instrument is:"+str(e.id))
-            tracks.append(track);
+            tracks.append(track)
         context = {'tracks': tracks, 'workspaceID': id}
         return render(request, 'magicmusic/workspace.html', context)
     else:
@@ -116,7 +116,7 @@ def follower(request):
 
 
 @login_required
-def generate_music(request):
+def generate_music(request, trackID):
     if not request.POST:
         raise Http404
     else:
@@ -153,6 +153,12 @@ def generate_music(request):
 
             filename = str(request.user.id) + "_track_"+str(channel)
             file_path = MidiLib.save_one_track_to_wav(filename, global_metadata, track_metadata, formatted_onoffs)
+
+
+            # update database with the new notes blob
+            blob_json = {"blob": notes_blob}
+            track = Track.objects.filter(id__exact=trackID)
+            track.update(blob=json.dumps(blob_json))
 
 
             res_obj = {
