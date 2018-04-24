@@ -11,6 +11,7 @@ from django.shortcuts import render
 
 # Create your views here.
 
+from community.models import *
 from django.shortcuts import render, redirect
 from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required
@@ -19,7 +20,10 @@ from django.utils import timezone
 
 @login_required
 def home(request):
-    return render(request, 'community/globalStream.html', {})
+    context = {}
+    songs = Song.objects.all().order_by('-creation_time')
+    comments = Comment.objects.all().order_by('creation_time')
+    return render(request, 'community/globalStream.html', context)
 
 @login_required
 def profile(request):

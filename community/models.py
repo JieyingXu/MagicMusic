@@ -38,7 +38,7 @@ class Album(models.Model):
 # Song Data Model has some metadata, a link to one wav/mp3 file and is connected
 # with an original workspace
 class Song(models.Model):
-    liking_profile = models.ManyToManyField(Profile, related_name="liking_people_set", blank=True)
+    liking_people = models.ManyToManyField(Profile, related_name="liking_people_set", blank=True)
     album = models.ForeignKey(Album)
     name = models.CharField(max_length=100, blank=False)
     description = models.CharField(max_length=200, blank=True, null=True, default=DEFAULT_SONG_DESC)
