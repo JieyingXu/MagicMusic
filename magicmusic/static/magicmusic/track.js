@@ -153,8 +153,8 @@ function resetResizeDragMouseDown() {
 
 }
 
-function trackPlayButtonOnClick() {
-    var trackWavPath = generateTrackWav();
+function trackPlayButtonOnClick(trackID) {
+    var trackWavPath = generateTrackWav(trackID);
 
 
 }
@@ -169,7 +169,7 @@ function playAudio(trackWavPath) {
     audio.play();
 }
 
-function generateTrackWav() {
+function generateTrackWav(trackID) {
     // check if there are any notes yet
     if (Object.keys(trackNotes).length === 0) {
         alert("You have not put in any notes yet.");
@@ -181,7 +181,7 @@ function generateTrackWav() {
 
     // make the ajax request
     $.ajax({
-        url: "/magicmusic/generate-music/",
+        url: "/magicmusic/generate-music/" + trackID,
         type: "POST",
         data: "notes_blob=" + notes_blob +
         "&csrfmiddlewaretoken=" + getCSRFToken(),
