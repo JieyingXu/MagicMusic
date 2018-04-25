@@ -99,7 +99,16 @@ def track(request, id):
         objects = Track.objects.filter(id__exact=id)
         track = objects.all()[0]
         print("track is:" + str(track.id))
-        context = {'trackID': id}
+
+        json_blob = Track.objects.filter(id__exact=id).values('blob')[0]["blob"]
+        if json_blob == None:
+            blob_json = ""
+        else:
+            blob_json = json.loads(str(json_blob))["blob"]
+
+        context = {'trackID': id,
+                   'notes_blob': blob_json}
+
         return render(request, 'magicmusic/track.html', context)
     else:
         print("post")

@@ -28,6 +28,54 @@ function initCanvasTable() {
         );
     }
     addColumns(initialColumns);
+
+    // TODO: num of columns might not be enough
+    // put all the notes in to the track Notes data structure
+    var notes_blob = $("#notes_blob_input").val();
+    if (notes_blob !== "") {
+        var notesLines = notes_blob.split("\n");
+        var baseDate = Date.now();
+        for (var i = 0; i < notesLines.length; i++) {
+            var splits = notesLines[i].split(",");
+            var noteKey = splits[0];
+            var left = splits[1];
+            var span = splits[2];
+            trackNotes[(baseDate-i).toString()] = [noteKey, left, span];
+            numOfNotes++;
+        }
+    }
+
+    // init width and stuff
+    leftMargin = $('#C4').find('th').outerWidth();
+    cellWidth = $('#C4-0').outerWidth();
+    cellHeight = $('#C4-0').outerHeight();
+
+    for (var noteNum in trackNotes) {
+        var note = trackNotes[noteNum];
+        var dataX = note[1] * cellWidth;
+
+        // append a new drag
+        $('#' + note[0].replace('#', 'Sharp')).append($('<td>')
+            .append($('<div>')
+                .attr('class', 'resize-drag')
+                .attr('data-x', dataX)
+                .attr('id', 'note-' + noteNum))
+            .attr('class', 'overlay resize-container'));
+
+        // recalibrate the left margin
+        $('.overlay').css('left', leftMargin)
+            .css('width', cellWidth * note[2])
+            .css('height', cellHeight);
+
+        // trigger interact.js event
+        var drag_object = document.getElementById('note-' + noteNum);
+        drag_object.style.webkitTransform = drag_object.style.transform =
+            'translate(' + dataX + 'px, ' + 0 + 'px)';
+    }
+    resetResizeDragMouseDown();
+
+
+
 }
 
 function addColumns(numOfColumns) {
