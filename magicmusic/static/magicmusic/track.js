@@ -44,7 +44,7 @@ function initCanvasTable() {
             numOfNotes++;
         }
     }
-
+    console.log(trackNotes);
     // init width and stuff
     leftMargin = $('#C4').find('th').outerWidth();
     cellWidth = $('#C4-0').outerWidth();
@@ -62,9 +62,12 @@ function initCanvasTable() {
                 .attr('id', 'note-' + noteNum))
             .attr('class', 'overlay resize-container'));
 
+        // update the element's style
+        $('#note-' + noteNum).width(cellWidth*note[2]);
+
         // recalibrate the left margin
         $('.overlay').css('left', leftMargin)
-            .css('width', cellWidth * note[2])
+            .css('width', cellWidth)
             .css('height', cellHeight);
 
         // trigger interact.js event
