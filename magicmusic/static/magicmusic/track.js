@@ -44,7 +44,6 @@ function initCanvasTable() {
             numOfNotes++;
         }
     }
-    console.log(trackNotes);
     // init width and stuff
     leftMargin = $('#C4').find('th').outerWidth();
     cellWidth = $('#C4-0').outerWidth();
@@ -163,7 +162,6 @@ function setClickactions() {
 
                 // add columns if not enough
                 if (offset >= totalColumns - 8) {
-                    console.log("offset is " + offset);
                     addColumns(20);
                 }
 
