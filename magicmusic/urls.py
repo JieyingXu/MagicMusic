@@ -3,6 +3,8 @@ from django.contrib.auth import views as auth_views
 from magicmusic import views
 # from community import views as comm_views
 
+from magicmusic import views
+
 urlpatterns = [
     url(r'^$', views.mymusic, name='mymusic'),
     # url(r'^profile(?P<user_id>\d+)$', comm_views.profile, name='profile'),
