@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'community/profile.html' %}
 
-</body>
-</html>
+{% block styleSheet %}
+    {% load staticfiles %}
+    <link href="{% static 'community/globalStream.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'community/profile.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+{% endblock %}

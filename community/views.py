@@ -54,7 +54,11 @@ def profile_setting(request):
 
 @login_required
 def following_users(request, profile_id):
-    pass
+    context = {}
+    profile = get_object_or_404(Profile, id=profile_id)
+    context['followings'] = profile.followings.all()
+    return render(request, 'community/following.html', context)
+
 
 @login_required
 def get_profile_avatar(request, profile_id):
@@ -91,9 +95,15 @@ def get_song(request, song_id):
 @transaction.atomic
 @login_required
 def follow(request, profile_id):
-    pass
+    login_profile = request.user.profile
+    curr_profile = get_object_or_404(Profile, id=profile_id)
+    login_profile.followings.add(curr_profile)
+    return redirect('profile', profile_id=profile_id)
 
 @transaction.atomic
 @login_required
 def unfollow(request, profile_id):
-    pass
+    login_profile = request.user.profile
+    curr_profile = get_object_or_404(Profile, id=profile_id)
+    login_profile.followings.remove(curr_profile)
+    return redirect('profile', profile_id=profile_id)
