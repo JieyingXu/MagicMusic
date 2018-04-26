@@ -44,7 +44,6 @@ class MidiLib:
                 offset = message[2] - sorted_note_messages[i-1][2]
                 offset_note_messages.append((message[0], message[1], offset))
 
-        print offset_note_messages
         return offset_note_messages
 
     # multipler will be used to magnify the time offset, e.g. 96
@@ -65,7 +64,6 @@ class MidiLib:
             line = str(message) + "\n"
             onoffs += line
 
-        print onoffs
         return onoffs
 
     @staticmethod
@@ -83,7 +81,7 @@ class MidiLib:
         midFile.save(midFilePath)
 
         # save to wav file
-        soundfont_path = "media/audio/soundfonts/OmegaGMGS2.sf2"
+        soundfont_path = "media/audio/soundfonts/FluidR3_GM.sf2"
         # fluid_synth = midi2audio.FluidSynth(soundfont_path)
         wavFilePath = 'media/audio/runtime-wavs/'+filename+'.wav'
         os.system('fluidsynth -g 2.5 -ni ' + soundfont_path + ' '
