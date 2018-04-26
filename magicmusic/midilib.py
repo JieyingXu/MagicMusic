@@ -2,7 +2,6 @@ from mido import *
 from mido.messages import *
 import mido
 import os
-import midi2audio
 
 class MidiLib:
 
@@ -29,6 +28,9 @@ class MidiLib:
 
             note_messages.append(("on", note_key, start))
             note_messages.append(("off", note_key, end))
+
+        # additional note off at the end
+        note_messages.append(("off", note_key, end+20))
 
         sorted_note_messages = sorted(note_messages, key=lambda tuple: tuple[2])
 
@@ -57,7 +59,8 @@ class MidiLib:
 
 
             message = Message(type, channel=channel, time=time,
-                              note=MidiLib.convert_note_key_to_num(note_key))
+                              note=MidiLib.convert_note_key_to_num(note_key),
+                              velocity=127)
 
             line = str(message) + "\n"
             onoffs += line
@@ -80,11 +83,14 @@ class MidiLib:
         midFile.save(midFilePath)
 
         # save to wav file
-        fluid_synth = midi2audio.FluidSynth("media/audio/soundfonts/OmegaGMGS2.sf2")
+        soundfont_path = "media/audio/soundfonts/OmegaGMGS2.sf2"
+        # fluid_synth = midi2audio.FluidSynth(soundfont_path)
         wavFilePath = 'media/audio/runtime-wavs/'+filename+'.wav'
-        # os.system('fluidsynth -ni audio/soundfonts/OmegaGMGS2.sf2 '
-        # + midFilePath + ' -F ' + wavFilePath + ' -r 44100')
-        fluid_synth.midi_to_audio(midFilePath, wavFilePath)
+        os.system('fluidsynth -g 2.5 -ni ' + soundfont_path + ' '
+        + midFilePath + ' -F ' + wavFilePath + ' -r 44100')
+        # fluid_synth.midi_to_audio(midFilePath, wavFilePath)
+
+
 
         return wavFilePath
 

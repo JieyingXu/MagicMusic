@@ -26,7 +26,7 @@ def mymusic(request):
         for e in objects:
             workspace = []
             workspace = {'name': e.name, 'id': e.id}
-            workspaces.append(workspace);
+            workspaces.append(workspace)
         context = {'workspaces': workspaces}
         return render(request, 'magicmusic/mymusic.html', context)
     else:
