@@ -40,7 +40,7 @@ class Profile(models.Model):
 class Song(models.Model):
     liking_people = models.ManyToManyField(Profile, related_name="liking_people_set", blank=True)
     # album = models.ForeignKey(Album)
-    creator = models.ForeignKey(Profile)
+    creator = models.ForeignKey(Profile, blank=False)
     name = models.CharField(max_length=100, blank=False)
     description = models.CharField(max_length=200, blank=True, null=True, default=DEFAULT_SONG_DESC)
     # length = models.IntegerField
@@ -49,14 +49,14 @@ class Song(models.Model):
     songfile_content_type = models.CharField(max_length=50)
     workspace = models.OneToOneField(Workspace)
     likes = models.IntegerField
-    played_counts = models.IntegerField
+    edit_counts = models.IntegerField
     cover = models.FileField(blank=True, upload_to="community/song-covers", default=DEFAULT_COVER_URL)
     cover_content_type = models.CharField(max_length=50)
 
 
 # model for a comment, people can comment on a song
 class Comment(models.Model):
-    user = models.ForeignKey(Profile, related_name="comment_set")
+    creator_profile = models.ForeignKey(Profile, related_name="comment_set")
     text = models.CharField(max_length=500)
     creation_time = models.DateTimeField(auto_now_add=True)
     parent_song = models.ForeignKey(Song)

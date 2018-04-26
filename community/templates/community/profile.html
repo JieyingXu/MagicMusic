@@ -6,48 +6,77 @@
 {% endblock %}
 
 {% block user-info %}
-    <div class="user-bg-pic">
-        <div><img class="user-avatar" src="{% static "community/images/user2.jpg" %}"></div>
-        <div class="username-display">Jieying Xu</div>
+{#    <div class="user-bg-pic">#}
+    <div style="
+            background: url({% url 'profile-bg' result_profile.id %});
+            min-height: 310px;
+            background-size: cover;
+            margin-bottom: 40px;">
+        <div><img class="user-avatar" src="{% url 'profile-avatar' result_profile.id %}" alt=""></div>
+        <div class="username-display">{{ result_profile.user.username }}</div>
         <div class="user-detail">
-            <span><a href="#" class="user-follow">Followers: 0</a></span>
-            <span class="vertical-line"> | </span>
-            <span><a href="#" class="user-follow">Following: 0</a></span></div>
+            <span><a href="{% url 'following-users' result_profile.id %}" class="user-follow">
+                Following: {{ following_count }}
+            </a></span>
+{#            <span class="vertical-line"> | </span>#}
+            {% if user == result_profile.user %}
+                <form action="{% url 'profile-setting' %}"
+                      method="post">
+                    <input type="submit" class="btn-dark mb-4" value="Setting"/>
+                    {% csrf_token %}
+                </form>
+{#                <span><a href="{% url 'profile_setting' %}" class="user_follow">setting</a></span>#}
+            {% elif not followed %}
+                <form action="{% url 'follow' current_profile.id %}"
+                      method="post">
+                    <input type="submit" class="btn-dark mb-4" value="Follow"/>
+                    {% csrf_token %}
+                </form>
+            {% else %}
+                <form action="{% url 'unfollow' current_profile.id %}"
+                      method="post">
+                    <input type="submit" class="btn-dark mb-4" value="Unfollow"/>
+                    {% csrf_token %}
+                </form>
+            {% endif %}
+
     </div>
 {% endblock %}
 
 {% block content %}
     <div class="container">
-        <div class="row">
-            <div class="col-md-1 song-number">1.</div>
-            <div class="col-md-2 song-left">
-                <img src="{% static "community/images/song-cover.jpg" %}" class="img-responsive img-rounded profile-song-img">
-            </div>
-            <div class="col-md-8 song-right">
-                <div class="profile-song-name">Song name</div>
-                <div class="profile-song-time">creation_time</div>
-                <div class="profile-song-desc">Song desc........</div>
-                <div class="btn-group my-btn-group">
-                    <button type="button" class="btn btn-default song-btn">
-                        <audio controls><source src="{% static "community/media/I_Love_You_so.mp3" %}" type="audio/mp3"></audio>
-                    </button>
-{#                        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-play button-icon"></span>0</button>#}
-                    <button type="button" class="btn btn-default song-btn"><span class="glyphicon glyphicon-heart-empty button-icon"></span>0</button>
-                    <button type="button" class="btn btn-default song-btn"><span class="glyphicon glyphicon-download-alt button-icon"></span>0</button>
+        {% for song in songs %}
+            <div class="row">
+                <div class="col-md-1 song-number">1.</div>
+                <div class="col-md-2 song-left">
+                    <img src="{% url "song-cover" song.id %}" class="img-responsive img-rounded profile-song-img">
                 </div>
-                <form role="form" action="#" method="POST">
-                    <div class="form-group">
-                        <div class="input-group">
-                            <label class="sr-only" for="user1">write a comment:</label>
-                            <input type="text" id="user1" class="form-control comment-textbox" placeholder="write a comment...">
-                            <span class="input-group-btn">
-                                <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-edit comment-icon"></span></button>
-                            </span>
-                        </div>
+                <div class="col-md-8 song-right">
+                    <div class="profile-song-name">{{ song.name }}</div>
+                    <div class="profile-song-time">{{ song.creation_time }}</div>
+                    <div class="profile-song-desc">{{ song.description }}</div>
+                    <div class="btn-group my-btn-group">
+                        <button type="button" class="btn btn-default song-btn">
+                            <audio controls><source src="{% url 'song' song.id %}" type="audio/wav"></audio>
+                        </button>
+                        <button type="button" class="btn btn-default song-btn"><span class="glyphicon glyphicon-heart-empty button-icon"></span>{{ song.likes }}</button>
+                        <button type="button" class="btn btn-default song-btn"><span class="glyphicon glyphicon-download-alt button-icon"></span>{{ song.edit_counts }}</button>
                     </div>
-                </form>
+                    <form role="form" action="#" method="POST">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <label class="sr-only" for="user1">write a comment:</label>
+                                <input type="text" id="user1" class="form-control comment-textbox" placeholder="write a comment...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-edit comment-icon"></span></button>
+                                </span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
 
+                </div>
             </div>
-        </div>
+        {% endfor %}
     </div>
 {% endblock %}
