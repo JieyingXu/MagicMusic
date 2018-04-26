@@ -21,3 +21,4 @@ class Track(models.Model):
     name = models.CharField(max_length=100, blank=False, null=True)
     description = models.CharField(max_length=200, blank=True, null=True)
     instrument = models.CharField(max_length=100, blank=False, null=True)
+    blob = models.TextField(blank=True, null=True)

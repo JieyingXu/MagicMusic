@@ -38,7 +38,7 @@
                     </tr>
                     </table>
                     <p></p>
-                    <button type="submit" class="btn btn-lg btn-primary btn-block" value="Login">Login</button>
+                    <button type="submit" class="btn btn-lg btn-secondary btn-block" value="Login">Login</button>
                     <input type="hidden" name="next" value="{{ next }}" />
                     {% csrf_token %}
                 </form>
@@ -47,7 +47,7 @@
         </div> 
         
         <div class="card bg-white text-dark mx-auto" style="width:400px">
-            <a href="{% url 'register' %}" class="mx-auto">Create an account</a> 
+            <a href="{% url 'register' %}" class="mx-auto text-dark">Create an account</a> 
         </div> 
     </body>
 </html>
