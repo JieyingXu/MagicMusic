@@ -7,13 +7,11 @@ urlpatterns = [
     url(r'^$', views.home, name='home'),
     url(r'^profile', views.profile, name='profile'),
     url(r'^setting', views.profile_setting, name='profile_setting'),
-    url(r'^following', views.following_users, name='following_users')
-    # url(r'^follower', views.follower, name='follower'),
-    # url(r'^addsong', views.addsong, name='addsong'),
+    url(r'^following', views.following_users, name='following_users'),
+    url(r'^profile-avatar/(?P<user_id>\d+)$', views.get_profile_avatar, name='profile-avatar'),
+    url(r'^profile-bg/(?P<user_id>\d+)$', views.get_profile_bg, name='profile-bg'),
+    url(r'^song-cover/(?P<song_id>\d+)$', views.get_song_cover, name='song_cover'),
+    url(r'^song/(?P<song_id>\d+)$', views.get_song, name='song'),
+    url(r'^logout$', auth_views.logout_then_login, name='logout'),
     # url(r'^workspace/(?P<id>\d+)$', views.workspace, name='workspace'),
-    # url(r'^track/(?P<id>\d+)$', views.track, name='track'),
-    # # Route for built-in authentication with our own custom login page
-    # url(r'^login$', auth_views.login, {'template_name':'magicmusic/login.html'}, name='login'),
-    # # Route to logout a user and send them back to the login page
-    # url(r'^logout$', auth_views.logout_then_login, name='logout'),
 ]

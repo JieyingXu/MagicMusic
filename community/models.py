@@ -26,8 +26,8 @@ class Profile(models.Model):
                                         symmetrical=False)  # who am I following
 
 # Album has many songs
-class Album(models.Model):
-    portfolio = models.ForeignKey(Profile)
+# class Album(models.Model):
+#     portfolio = models.ForeignKey(Profile)
     # name = models.CharField(max_length=100, blank=False)
     # description = models.CharField(max_length=200, blank=True, null=True)
     # cover_picture = models.FileField(blank=True, upload_to="userfiles/community/album-images")
@@ -39,7 +39,8 @@ class Album(models.Model):
 # with an original workspace
 class Song(models.Model):
     liking_people = models.ManyToManyField(Profile, related_name="liking_people_set", blank=True)
-    album = models.ForeignKey(Album)
+    # album = models.ForeignKey(Album)
+    creator = models.ForeignKey(Profile)
     name = models.CharField(max_length=100, blank=False)
     description = models.CharField(max_length=200, blank=True, null=True, default=DEFAULT_SONG_DESC)
     # length = models.IntegerField
@@ -49,6 +50,8 @@ class Song(models.Model):
     workspace = models.OneToOneField(Workspace)
     likes = models.IntegerField
     played_counts = models.IntegerField
+    cover = models.FileField(blank=True, upload_to="community/song-covers", default=DEFAULT_COVER_URL)
+    cover_content_type = models.CharField(max_length=50)
 
 
 # model for a comment, people can comment on a song
