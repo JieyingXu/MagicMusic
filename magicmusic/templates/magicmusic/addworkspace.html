@@ -1,10 +1,6 @@
 {% extends "magicmusic/base.html" %}
 
 {% block addsong %}
-    <div class="container-fluid" style="background-color:black;">
-      <h1 class="text-center" style="color: white">Web App Magic Music</h1>
-    </div>
-
     <div class="card bg-light text-dark mx-auto" style="width:400px">
         <div class="card-header mx-auto">Add New Workspace</div>
         <div class="card-body">
@@ -18,7 +14,7 @@
                     {% endfor %}
                 </table>
                 <p></p>
-                <button type="submit" class="btn btn-lg btn-primary btn-block" value="addworkspace">Create</button>
+                <button type="submit" class="btn btn-lg btn-secondary btn-block" value="addworkspace">Create</button>
                 <input type="hidden" name="next" value="{{ next }}" />
                 {% csrf_token %}
             </form>
