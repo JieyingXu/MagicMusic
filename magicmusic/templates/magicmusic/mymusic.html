@@ -15,8 +15,8 @@
         {% for workspace in workspaces %}
             <div class="card bg-light text-dark mx-auto" style="width:400px">
                 <div class="card-body">
-                    <p>Workspace : <a href="{% url 'workspace' workspace.id %}" style="color:grey">{{workspace.name}}</a>
-                    </p>
+                    <i class="material-icons" style="font-size:50px;color:grey;">assignment</i>
+                    <a href="{% url 'workspace' workspace.id %}" style="font-size:30px;color:grey;">{{workspace.name}}</a>
                 </div>
             </div>
             <p></p>
