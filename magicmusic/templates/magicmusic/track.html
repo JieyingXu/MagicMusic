@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <style>
         table {
@@ -50,7 +51,7 @@
     <ul class="navbar-nav">
         <li class="nav-item">
             <form action="{% url 'logout' %}" method="get">
-                <button type="submit" class="btn btn-primary btn-lg"
+                <button type="submit" class="btn btn-secondary btn-lg"
                         value="Logout">Logout
                 </button>
             </form>
@@ -82,7 +83,8 @@
         </ul>
         <ul class="navbar-nav">
             <li class="nav-item">
-                <button type="button" class="btn btn-success btn-lg" onclick="trackPlayButtonOnClick({{ trackID }})">Play
+                <button type="button" class="btn btn-sm" onclick="trackPlayButtonOnClick({{ trackID }})">
+                    <i class="material-icons" style="font-size:50px;color:grey;">play_circle_outline</i>
                 </button>
             </li>
             <li class="nav-item">

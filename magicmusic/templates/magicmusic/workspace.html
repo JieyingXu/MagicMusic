@@ -11,6 +11,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <style>
             body {
               position: relative;
@@ -46,7 +47,7 @@
           <ul class="navbar-nav">
             <li class="nav-item">
                 <form action="{% url 'logout' %}" method="get">
-                    <button type="submit" class="btn btn-primary btn-lg" value="Logout">Logout</button>
+                    <button type="submit" class="btn btn-secondary btn-lg" value="Logout">Logout</button>
                 </form>
             </li>
           </ul>
@@ -96,7 +97,7 @@
                                 </div>
 
                                 <div class="col-3">
-                                    <button type="submit" class="btn btn-primary btn-block" value="addtrack">Add Track</button>
+                                    <button type="submit" class="btn btn-secondary btn-block" value="addtrack">Add Track</button>
                                 </div>
                             </div>
                             {% csrf_token %}
@@ -104,13 +105,26 @@
                     </div>
                   </div>
             </a>
-            <div id="navbarNavDropdown" class="navbar-collapse collapse py-0">
+            <div id="navbarNavDropdown" class="navbar-collapse collapse">
+                <ul class="navbar-nav">
+                    <form method="post">
+                        <li class="nav-item">
+                            <button type="button" class="btn btn-light btn-sm play">
+                                <i class="material-icons" style="font-size:55px;color:grey;">play_circle_filled</i>
+                            </button>
+                        </li>
+                    </form>
+                </ul>
                 <ul class="navbar-nav mr-auto">
                 </ul>
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <button type="button" class="btn btn-success btn-lg">Play</button>
-                    </li>
+                    <form method="post">
+                        <li class="nav-item">
+                            <button type="button" class="btn btn-light btn-sm info">
+                                <i class="material-icons" style="font-size:40px;color:green;">info_outline</i>
+                            </button>
+                        </li>
+                    </form>
                 </ul>
             </div>
         </nav>
@@ -123,10 +137,7 @@
                             <p></p>
                             <tr>
                             <td class="first-col bg-secondary" id="{{track.trackid}}"><a style="color: white" href="#{{track.trackid}}">{{track.instrument}}</a></td>
-                            <td><a href="{% url 'track' track.trackid %}" class="mx-auto" style="color: white">edit track</a></td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
+                            <td><a href="{% url 'track' track.trackid %}" class="mx-auto" style="color: black">edit track</a></td>
                             <td>Table cell</td>
                         </tr>
                         {% endfor %}
