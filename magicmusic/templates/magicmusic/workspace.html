@@ -61,7 +61,6 @@
                     <form action="{% url 'logout' %}" method="get">
                     <button type="submit" class="btn bt-dark btn-sm" value="Logout">
                         <i class="material-icons" style="font-size:40px;color:black;">exit_to_app</i>
-
                     </button>
                 </form>
                 </li>
@@ -78,7 +77,7 @@
                             <div class="row" style="width:1000px">
                                 <div class="col-2">
                                     <div class="dropdown show">
-                                      <button class="btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Instrument</button>
+                                      <button class="btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="material-icons" style="font-size:30px;color:white;">music_note</i></button>
 
                                       <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                         <div class="dropdown-item form-check">
@@ -162,8 +161,7 @@
                             <p></p>
                             <tr>
                             <td class="first-col bg-secondary" id="{{track.trackid}}"><a style="color: white" href="#{{track.trackid}}">{{track.instrument}}</a></td>
-                            <td><a href="{% url 'track' track.trackid %}" class="mx-auto" style="color: black">edit track</a></td>
-                            <td>Table cell</td>
+                            <td><a href="{% url 'track' track.trackid %}" class="mx-auto" style="color: grey">click to edit track</a></td>
                         </tr>
                         {% endfor %}
                     </tbody>

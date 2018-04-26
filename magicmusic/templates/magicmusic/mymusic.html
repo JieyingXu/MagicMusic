@@ -2,7 +2,7 @@
 
 {% block albums %}
     <p></p>
-    <div class="card bg-light text-dark mx-auto" style="width:400px">
+    <div class="card bg-light text-center text-dark mx-auto" style="width:400px">
         <div class="card-body">
             <form method="get" action="{% url 'addworkspace' %}">
                 <button type="submit" class="btn btn-lg btn-secondary btn-block" value="addworkspace">Add New Workspace</button>
@@ -11,15 +11,16 @@
         </div>
     </div>
     <p></p>
+
     <div>
         {% for workspace in workspaces %}
-            <div class="card bg-light text-dark mx-auto" style="width:400px">
-                <div class="card-body">
-                    <i class="material-icons" style="font-size:50px;color:grey;">assignment</i>
-                    <a href="{% url 'workspace' workspace.id %}" style="font-size:30px;color:grey;">{{workspace.name}}</a>
-                </div>
+            <div class="card bg-light text-center mx-auto" style="width:400px">
+              <div class="card-body">
+                <h5 class="card-title"><i class="material-icons" style="font-size:50px;color:grey;">assignment</i></h5>
+                <p class="card-text"><a href="{% url 'workspace' workspace.id %}" style="font-size:30px;color:grey;">{{workspace.name}}</a></p>
+              </div>
             </div>
-            <p></p>
+            <p></p> 
         {% endfor %}
     </div>
 {% endblock %}
