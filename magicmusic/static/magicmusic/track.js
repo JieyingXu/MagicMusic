@@ -210,7 +210,7 @@ function trackPlayButtonOnClick(trackID) {
 
 function playAudio(trackWavPath) {
     var cacheBustedPath = trackWavPath + "?cb=" + Date.now().toString();
-    $('audio source').attr('src', trackWavPath);
+    $('audio source').attr('src', cacheBustedPath);
     var audio = document.querySelector("audio");
     // audio.src = trackWavPath;
     // var audio = new Audio(cacheBustedPath);

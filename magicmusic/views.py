@@ -155,6 +155,8 @@ def generate_music(request, trackID):
             global_metadata = ""
             track_metadata = ""
             sorted_commands = MidiLib.parse_midi_offset_from_blob(notes_blob)
+
+            print("notes_blob is:" + notes_blob)
             formatted_onoffs = MidiLib.format_mido_onoffs_default_velocity(
                 offset_note_messages=sorted_commands, channel=channel,
                 multiplier=time_multiplier)
