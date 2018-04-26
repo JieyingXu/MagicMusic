@@ -55,8 +55,19 @@ def profile_setting(request):
 @login_required
 def following_users(request, profile_id):
     context = {}
-    profile = get_object_or_404(Profile, id=profile_id)
-    context['followings'] = profile.followings.all()
+
+    login_user_profile = get_object_or_404(Profile, user=request.user)
+    result_profile = get_object_or_404(Profile, id=profile_id)
+    context['result_profile'] = result_profile
+    followings = result_profile.followings.all()
+    context['following_count'] = followings.count()
+    context['followings'] = followings
+
+    if login_user_profile != result_profile:
+        if result_profile in login_user_profile.followings.all():
+            context['followed'] = True
+        else:
+            context['followed'] = False
     return render(request, 'community/following.html', context)
 
 
