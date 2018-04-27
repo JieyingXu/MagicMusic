@@ -197,7 +197,7 @@ class MidiLib:
             for form in note:
                 if letter.upper() == form:
                     answer = i
-                    break;
+                    break
             i += 1
         # Octave
         answer += (int(midstr[-1])) * 12
