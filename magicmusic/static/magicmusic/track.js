@@ -42,16 +42,21 @@ function initCanvasTable() {
             var span = splits[2];
             trackNotes[(baseDate-i).toString()] = [noteKey, left, span];
             numOfNotes++;
+
         }
     }
     // init width and stuff
     leftMargin = $('#C4').find('th').outerWidth();
     cellWidth = $('#C4-0').outerWidth();
     cellHeight = $('#C4-0').outerHeight();
+    var mostRightPointValue = 0;
 
     for (var noteNum in trackNotes) {
         var note = trackNotes[noteNum];
         var dataX = note[1] * cellWidth;
+        mostRightPointValue = Math.max(mostRightPointValue, parseFloat(note[1])+parseFloat(note[2]));
+
+
 
         // append a new drag
         $('#' + note[0].replace('#', 'Sharp')).append($('<td>')
@@ -76,8 +81,10 @@ function initCanvasTable() {
     }
     resetResizeDragMouseDown();
 
-
-
+    var addOn = Math.floor(mostRightPointValue) + 1 - initialColumns;
+    if (addOn > 0) {
+        addColumns(addOn);
+    }
 }
 
 function addColumns(numOfColumns) {
@@ -204,13 +211,11 @@ function resetResizeDragMouseDown() {
 
 function trackPlayButtonOnClick(trackID) {
     var trackWavPath = generateTrackWav(trackID);
-
-
 }
 
 function playAudio(trackWavPath) {
     var cacheBustedPath = trackWavPath + "?cb=" + Date.now().toString();
-    $('audio source').attr('src', trackWavPath);
+    $('audio source').attr('src', cacheBustedPath);
     var audio = document.querySelector("audio");
     // audio.src = trackWavPath;
     // var audio = new Audio(cacheBustedPath);

@@ -41,3 +41,17 @@ class CommentForm(forms.ModelForm):
             )
         }
 
+class SongForm(forms.ModelForm):
+    class Meta:
+        model = Song
+        exclude = (
+            'liking_people',
+            'songfile',
+            'songfile_content_type',
+            'creator',
+            'likes',
+            'edit_counts',
+            'cover',
+            'creation_time',
+            'workspace',
+        )

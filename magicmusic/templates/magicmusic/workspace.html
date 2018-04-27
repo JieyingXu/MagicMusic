@@ -13,6 +13,7 @@
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="shortcut icon" href="{% static 'magicmusic/favicon.png' %}"/>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="{% static 'magicmusic/workspace.js' %}"></script>
         <style>
             body {
               position: relative;
@@ -48,7 +49,7 @@
                     <a class="navbar-brand" style="color: white;font-size: 30px" href="{% url 'profile' user.profile.id %}">{{user.username}}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" style="font-size: 20px;margin-top: 9px" href="{% url 'mymusic' %}?username=' + '{{user.username}}' + '">Workspaces</a>
+                    <a class="nav-link" style="font-size: 20px;margin-top: 9px" href="{% url 'mymusic' %}">Workspaces</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" style="font-size: 20px;margin-top: 9px" href="{% url 'home' %}">Community</a>
@@ -98,15 +99,15 @@
                                 </div>
 
                                 <div class="col-3">
-                                    <input class="form-control form-control-sm" type="name" name="name" placeholder="track name">
+                                    <input class="form-control form-control-sm" type="name" name="name" placeholder="track name" style="margin-top: 8px">
                                 </div>
 
                                 <div class="col-3">
-                                    <input class="form-control form-control-sm" type="description" name="description" placeholder="track description">
+                                    <input class="form-control form-control-sm" type="description" name="description" placeholder="track description" style="margin-top: 8px">
                                 </div>
 
                                 <div class="col-3">
-                                    <button type="submit" class="btn btn-secondary btn-block" value="addtrack">Add Track</button>
+                                    <button type="submit" class="btn btn-secondary btn-block" value="addtrack" style="margin-top: 3px">Add Track</button>
                                 </div>
                             </div>
                             {% csrf_token %}
@@ -116,28 +117,32 @@
             </a>
             <div id="navbarNavDropdown" class="navbar-collapse collapse">
                 <ul class="navbar-nav">
+
                     <form method="post">
                         <li class="nav-item">
-                            <button type="button" class="btn btn-light btn-sm play">
+                            <button type="button" class="btn btn-light btn-sm play" onclick="generateWorkspaceWav({{ workspaceID }})">
+
                                 <i class="material-icons" style="font-size:55px;color:grey;">play_circle_filled</i>
                             </button>
-                        </li>
-                    </form>
+                            {% csrf_token %}
+                        </form>
+                    </li>
                 </ul>
 
                 <ul class="navbar-nav mr-auto">
-                    <form method="post">
-                        <li class="nav-item">
-                            <button type="button" class="btn btn-light btn-sm publish">
-                                <i class="material-icons" style="font-size:55px;color:grey;">library_add</i>
-                            </button>
-                        </li>
-                    </form>
+                    <li class="nav-item">
+                        <p></p>
+                        <a href="{% url 'addsong' workspaceID %}">
+                        <button type="button" class="btn btn-light btn-sm publish">
+                            <i class="material-icons" style="font-size:55px;color:grey;">library_add</i>
+                        </button>
+                        </a>
+                    </li>
                 </ul>
                 <ul class="navbar-nav">
                     <form method="post">
                         <li class="nav-item">
-                            <button type="button" class="btn btn-light btn-sm info">
+                            <button type="button" class="btn btn-light btn-sm info" data-toggle="modal" data-target="#exampleModalLong">
                                 <i class="material-icons" style="font-size:40px;color:green;">info_outline</i>
                             </button>
                         </li>
@@ -145,6 +150,30 @@
                 </ul>
             </div>
         </nav>
+
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Workspace User Guide</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                What is Workspace?
+                    Workspace is a page for user to edit it's song. It's composed 
+
+                <hr>
+                Step 2:
+
+              </div>
+              <div class="modal-footer mx-auto">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <div class="container-fluid offset" style="margin-top: 10px">
             <div class="table-wrapper text-center">
@@ -161,5 +190,8 @@
                 </table>
             </div>
         </div>
+
+        <div class="d-none"><audio controls><source src="" type="audio/wav"></audio></div>
+
     </body>
 </html>
