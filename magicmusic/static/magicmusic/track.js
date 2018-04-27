@@ -134,6 +134,9 @@ function setClickactions() {
                 var offset = tdid.split("-")[1];
                 var trid = $('#' + tdid).parent().attr('id');
 
+                // play the note song
+                playNoteAudio(trid);
+
                 leftMargin = $('#' + trid).find('th').outerWidth();
                 cellWidth = $('#' + tdid).outerWidth();
                 cellHeight = $('#' + tdid).outerHeight();
@@ -210,20 +213,30 @@ function resetResizeDragMouseDown() {
 }
 
 function trackPlayButtonOnClick(trackID) {
-    var trackWavPath = generateTrackWav(trackID);
+    var trackWavPath = generateTrackWav(trackID, true);
+}
+
+function trackSaveButtonOnClick(trackID) {
+     var trackWavPath = generateTrackWav(trackID, false);
 }
 
 function playAudio(trackWavPath) {
     var cacheBustedPath = trackWavPath + "?cb=" + Date.now().toString();
     $('audio source').attr('src', cacheBustedPath);
-    var audio = document.querySelector("audio");
+    var audio = document.querySelector("#audio-main");
     // audio.src = trackWavPath;
     // var audio = new Audio(cacheBustedPath);
     audio.load(); // !HUL|_O! PAY ATTENTI0N!
     audio.play();
 }
 
-function generateTrackWav(trackID) {
+function playNoteAudio(noteStr) {
+    var noteNum = pitchtooctave(noteStr.replace("Sharp", "#"));
+    var audio = document.querySelector("#audio-note-" + noteNum);
+    audio.play();
+}
+
+function generateTrackWav(trackID, doPlayAudio) {
     // check if there are any notes yet
     if (Object.keys(trackNotes).length === 0) {
         alert("You have not put in any notes yet.");
@@ -246,9 +259,9 @@ function generateTrackWav(trackID) {
 
                 // var newPosts = JSON.parse(response.new_posts);
                 trackWavPath = '/' + response.file_path;
-                playAudio(trackWavPath);
-
-
+                if (doPlayAudio) {
+                    playAudio(trackWavPath);
+                }
             } else {
                 // error
                 alert("get error info");

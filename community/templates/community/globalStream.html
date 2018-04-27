@@ -67,7 +67,7 @@
                         <div class="btn-group my-btn-group">
                             <button type="button" class="btn btn-default song-btn">
 {#                                <audio controls><source src="{% url 'song' song.id %}" type="audio/wav"></audio>#}
-                                <audio controls><source src="{{ song.songfile }}" type="audio/wav"></audio>
+                                <audio controls><source src="{{ MEDIA_URL }}{{ song.songfile }}" type="audio/wav"></audio>
                             </button>
 {#                            <button type="button" class="btn btn-default song-btn"><span class="glyphicon glyphicon-heart-empty button-icon"></span>{{ song.likes }}</button>#}
 {#                            <button type="button" class="btn btn-default song-btn"><span class="glyphicon glyphicon-edit button-icon"></span>{{ song.edit_counts }}</button>#}

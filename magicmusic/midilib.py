@@ -86,7 +86,6 @@ class MidiLib:
         track.append(mido.Message(type='program_change', channel=0, program=instrument_number, time=0))
         for line in formatted_onoffs.strip().split("\n"):
             msg = mido.Message.from_str(line)
-            print(line)
             track.append(msg)
 
         # save to midi file
@@ -105,14 +104,12 @@ class MidiLib:
         return wavFilePath
 
     @staticmethod
-    def save_all_track_to_wav(filename, global_metadata, track_info_list):
+    def save_all_track_to_wav(filename, global_metadata, track_info_list, is_publish):
         midFile = mido.MidiFile()
         for info in track_info_list:
             channel = int(info['channel'])
             instrument = str(info['instrument']).lower()
-            print("got instrument:", instrument)
             instrument_number = MidiLib.translate_instrument_number(instrument)
-            print("instrument number:", instrument_number)
             blob = info['blob']
 
             # add to track
@@ -129,12 +126,17 @@ class MidiLib:
                     msg = mido.Message.from_str(line)
                     track.append(msg)
 
+        if is_publish:
+            path_prefix = "media/audio/published-wavs/"
+        else:
+            path_prefix = "media/audio/runtime-wavs/"
+
         # save to midi file
-        midFilePath = 'media/audio/runtime-wavs/' + filename + '.mid'
+        midFilePath = path_prefix + filename + '.mid'
         midFile.save(midFilePath)
 
         # generate wav
-        wavFilePath = 'media/audio/runtime-wavs/' + filename + '.wav'
+        wavFilePath = path_prefix + filename + '.wav'
         os.system('fluidsynth -g 2.5 -ni ' + soundfont_path + ' '
                   + midFilePath + ' -F ' + wavFilePath + ' -r 44100 > /dev/null')
 
@@ -200,7 +202,7 @@ class MidiLib:
             for form in note:
                 if letter.upper() == form:
                     answer = i
-                    break;
+                    break
             i += 1
         # Octave
         answer += (int(midstr[-1])) * 12
@@ -215,6 +217,7 @@ class MidiLib:
 
     @staticmethod
     def translate_instrument_number(instrument_name):
+        instrument_name = str(instrument_name).lower()
         if instrument_name == 'guitar':
             return 24
         elif instrument_name == "drum":

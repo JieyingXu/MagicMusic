@@ -29,13 +29,13 @@
                 </form>
 {#                <span><a href="{% url 'profile_setting' %}" class="user_follow">setting</a></span>#}
             {% elif not followed %}
-                <form action="{% url 'follow' current_profile.id %}"
+                <form action="{% url 'follow' result_profile.id %}"
                       method="post">
                     <input type="submit" class="btn-dark mb-4" value="Follow"/>
                     {% csrf_token %}
                 </form>
             {% else %}
-                <form action="{% url 'unfollow' current_profile.id %}"
+                <form action="{% url 'unfollow' result_profile.id %}"
                       method="post">
                     <input type="submit" class="btn-dark mb-4" value="Unfollow"/>
                     {% csrf_token %}
@@ -61,7 +61,7 @@
                     <div class="btn-group my-btn-group">
                         <button type="button" class="btn btn-default song-btn">
 {#                            <audio controls><source src="{% url 'song' song.id %}" type="audio/wav"></audio>#}
-                            <audio controls><source src="{{ song.songfile }}" type="audio/wav"></audio>
+                            <audio controls><source src="{{ MEDIA_URL }}{{ song.songfile }}" type="audio/wav"></audio>
                         </button>
 {#                        <button type="button" class="btn btn-default song-btn"><span class="glyphicon glyphicon-heart-empty button-icon"></span>{{ song.likes }}</button>#}
 {#                        <button type="button" class="btn btn-default song-btn"><span class="glyphicon glyphicon-download-alt button-icon"></span>{{ song.edit_counts }}</button>#}
