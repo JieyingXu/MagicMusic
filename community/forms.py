@@ -1,5 +1,5 @@
 from django import forms
-from django.forms import Textarea
+from django.forms.widgets import *
 
 from community.models import *
 
@@ -18,30 +18,28 @@ class UpdateProfileForm(forms.ModelForm):
         #     'description': Textarea(
         #         attrs={'class': "form-control", 'rows': "2"}),
         # }
+        widgets = {
+            'avatar': ClearableFileInput(attrs={'class': "my-file-input"}),
+            'header_image': ClearableFileInput(attrs={'class': "my-file-input"}),
+            'description': Textarea(attrs={'class': "form-control my-text-input",
+                                           'rows': "5",
+                                           'placeholder': "Say something about yourself..."})
+        }
 
-    # def clean_avatar(self):
-    #     avatar = self.cleaned_data['avatar']
-    #     if not avatar:
-    #         raise forms.ValidationError('You must upload a picture')
-    #     if not avatar.content_type or not avatar.content_type.startswith(
-    #             'image'):
-    #         raise forms.ValidationError('File type is not image')
-    #     if avatar.size > MAX_UPLOAD_SIZE:
-    #         raise forms.ValidationError(
-    #             'File too big (max size is {0} bytes)'.format(MAX_UPLOAD_SIZE))
-    #     return avatar
-    #
-    # def clean_header_image(self):
-    #     header_image = self.cleaned_data['header_image']
-    #     if not header_image:
-    #         raise forms.ValidationError('You must upload a picture')
-    #     if not header_image.content_type or not header_image.content_type.startswith(
-    #             'image'):
-    #         raise forms.ValidationError('File type is not image')
-    #     if header_image.size > MAX_UPLOAD_SIZE:
-    #         raise forms.ValidationError(
-    #             'File too big (max size is {0} bytes)'.format(MAX_UPLOAD_SIZE))
-    #     return header_image
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        exclude = (
+            'creator_profile',
+            'creation_time',
+            'parent_song',
+        )
+        widgets = {
+            'text' : TextInput(
+                attrs={'class':"form-control comment-textbox",
+                       'placeholder': "write a comment..."}
+            )
+        }
 
 class SongForm(forms.ModelForm):
     class Meta:
@@ -49,11 +47,9 @@ class SongForm(forms.ModelForm):
         exclude = (
             'liking_people',
             'songfile',
-            'songfile_content_type',
             'creator',
-            'likes',
-            'edit_counts',
-            'cover',
+            # 'likes',
+            # 'edit_counts',
             'creation_time',
             'workspace',
         )

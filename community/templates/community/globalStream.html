@@ -27,6 +27,7 @@
                     <li><a class="option" href="{% url 'profile' user.profile.id %}">Profile</a></li>
                     <li><a class="option" href="{% url 'following-users' user.profile.id %}">Following</a></li>
                     <li><a class="option" href="{% url 'profile-setting' %}">Setting</a></li>
+                    <li><a class="option" href="{% url 'mymusic' %}">Workspace</a></li>
                   </ul>
                 </li>
             </ul>
@@ -42,8 +43,8 @@
     <div class="songs">
         <div class="container">
             <div class="songs-head">
-                <h2>New Song Delivery</h2>
-                <p>Hear the lastest voice from the music world</p>
+                <h2 class="big-head">New Song Delivery</h2>
+{#                <p class="small-head">Hear the lastest voice from the music world</p>#}
             </div>
 
             {% for song in songs %}
@@ -72,11 +73,15 @@
                         </div>
 
                         <div>
-                            <form role="form" action="#" method="POST">
+                            <form role="form" action="{% url 'add-comment' song.id %}" method="POST">
+                                {% csrf_token %}
                                 <div class="form-group comment-form">
                                     <div class="input-group">
                                         <label class="sr-only" for="user1">write a comment:</label>
-                                        <input type="text" id="user1" class="form-control comment-textbox" placeholder="write a comment...">
+{#                                        <input type="text" id="user1" class="form-control comment-textbox" placeholder="write a comment...">#}
+                                        {% for field in comment_form.visible_fields %}
+                                            {{ field }}
+                                        {% endfor %}
                                         <span class="input-group-btn">
                                             <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-send comment-icon"></span></button>
                                         </span>
