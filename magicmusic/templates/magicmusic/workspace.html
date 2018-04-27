@@ -154,7 +154,7 @@
                         <p></p>
                         <tr>
                             <td class="first-col bg-secondary" id="{{track.trackid}}" style="color: white">{{track.instrument}}</td>
-                            <td><a href="{% url 'track' track.trackid %}" class="mx-auto text-light">Click to Edit Track</a><cite class="text-success" style="font-size: 14px">   [Name: {{track.name}}]   [Description: {{track.description}}]</cite></td>
+                            <td style="background:rgba(0,0,0,0.3)"><a href="{% url 'track' track.trackid %}" class="mx-auto text-light">Click to Edit Track</a><cite class="text-success" style="font-size: 14px">   [Name: {{track.name}}]   [Description: {{track.description}}]</cite></td>
                         </tr>
                         {% endfor %}
                     </tbody>
