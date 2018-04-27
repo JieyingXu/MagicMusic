@@ -13,9 +13,10 @@ from django.http import HttpResponse, Http404
 from magicmusic.models import *
 from magicmusic.forms import *
 from magicmusic.midilib import MidiLib
+from community.models import *
+from community.forms import *
 
 import json
-
 
 @login_required
 def mymusic(request):
@@ -58,6 +59,25 @@ def addworkspace(request):
 
 
 @login_required
+def addsong(request, id):
+    print("enter addsong")
+    if request.method == 'GET':
+        context = {'form': SongForm(),  'workspaceID': id}
+        return render(request, 'magicmusic/addsong.html', context)
+    else:
+        newsong_form = SongForm(request.POST)
+        objects = Workspace.objects.filter(id__exact=id)
+        workspace = objects.all()[0]
+        newsong = Song(creator=request.user.profile,
+                        name=newsong_form.data['name'],
+                        description=newsong_form.data[
+                                     'description'],
+                        workspace=workspace,
+                        creation_time=timezone.now())
+        newsong.save()
+        return redirect(reverse('mymusic'))
+
+@login_required
 def workspace(request, id):
     if request.method == 'GET':
         objects = Workspace.objects.filter(id__exact=id)
@@ -93,11 +113,12 @@ def workspace(request, id):
 
 @login_required
 def track(request, id):
-    print("track")
     if request.method == 'GET':
         objects = Track.objects.filter(id__exact=id)
         track = objects.all()[0]
-        print("track is:" + str(track.id))
+        instrument_name = track.instrument
+
+        unit_note_urls = MidiLib.generate_unit_notes_if_not_exists(instrument_name)
 
         json_blob = Track.objects.filter(id__exact=id).values('blob')[0]["blob"]
         if json_blob == None:
@@ -106,7 +127,8 @@ def track(request, id):
             blob_json = json.loads(str(json_blob))["blob"]
 
         context = {'trackID': id,
-                   'notes_blob': blob_json}
+                   'notes_blob': blob_json,
+                   'unit_note_urls': unit_note_urls}
 
         return render(request, 'magicmusic/track.html', context)
     else:

@@ -43,3 +43,17 @@ class UpdateProfileForm(forms.ModelForm):
     #             'File too big (max size is {0} bytes)'.format(MAX_UPLOAD_SIZE))
     #     return header_image
 
+class SongForm(forms.ModelForm):
+    class Meta:
+        model = Song
+        exclude = (
+            'liking_people',
+            'songfile',
+            'songfile_content_type',
+            'creator',
+            'likes',
+            'edit_counts',
+            'cover',
+            'creation_time',
+            'workspace',
+        )

@@ -42,7 +42,7 @@ class Song(models.Model):
     # album = models.ForeignKey(Album)
     creator = models.ForeignKey(Profile, blank=False)
     name = models.CharField(max_length=100, blank=False)
-    description = models.CharField(max_length=200, blank=True, null=True, default=DEFAULT_SONG_DESC)
+    description = models.CharField(max_length=200, blank=False, null=True)
     # length = models.IntegerField
     creation_time = models.DateTimeField(auto_now_add=True)
     songfile = models.FileField(blank=True, upload_to="community/songfiles")  #songfile name should be <username>_<songfilename>
