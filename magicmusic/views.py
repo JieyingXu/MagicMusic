@@ -148,17 +148,27 @@ def generate_music(request, trackID):
                 offset_note_messages=sorted_commands, channel=channel,
                 multiplier=time_multiplier)
 
-            track = Track.objects.filter(id__exact=trackID)
-            track_metadata["instrument"] = track.values('instrument')[0]["instrument"]
+            track_qs = Track.objects.filter(id__exact=trackID)
+            track = track_qs[0]
+            workspace = track.workspace
+            all_tracks = Track.objects.filter(workspace__id=workspace.id)
+            channel = 0
+            for i, potential_track in enumerate(all_tracks):
+                if potential_track.id == track.id:
+                    channel = i
 
-            filename = str(request.user.id) + "_track_"+str(channel)
+            track_metadata["instrument"] = track.instrument
+            track_metadata["channel"] = channel
+
+            filename = "usr_"+ str(request.user.id) + \
+                       "_ws_" + str(workspace.id) +"_trk_" + str(track.id)
             file_path = MidiLib.save_one_track_to_wav(filename, global_metadata, track_metadata, formatted_onoffs)
 
 
             # update database with the new notes blob
             blob_json = {"blob": notes_blob}
 
-            track.update(blob=json.dumps(blob_json))
+            track_qs.update(blob=json.dumps(blob_json))
 
 
             res_obj = {

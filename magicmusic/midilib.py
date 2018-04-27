@@ -72,19 +72,17 @@ class MidiLib:
         track = mido.MidiTrack()
         midFile.tracks.append(track)
 
-        print(track_metadata)
         instrument_number = MidiLib.get_instrument_number(track_metadata)
-        print("instrument_number=", instrument_number)
 
         # change instrument
         track.append(mido.Message(type='program_change', channel=0, program=instrument_number, time=0))
         for line in formatted_onoffs.strip().split("\n"):
             msg = mido.Message.from_str(line)
             track.append(msg)
-        for msg in track:
-            print(msg)
+
         # save to midi file
         midFilePath = 'media/audio/runtime-wavs/'+filename+'.mid'
+        print("midFilePath=", midFilePath)
         midFile.save(midFilePath)
 
         # save to wav file
@@ -92,7 +90,7 @@ class MidiLib:
         # fluid_synth = midi2audio.FluidSynth(soundfont_path)
         wavFilePath = 'media/audio/runtime-wavs/'+filename+'.wav'
         os.system('fluidsynth -g 2.5 -ni ' + soundfont_path + ' '
-        + midFilePath + ' -F ' + wavFilePath + ' -r 44100')
+        + midFilePath + ' -F ' + wavFilePath + ' -r 44100 > /dev/null')
         # fluid_synth.midi_to_audio(midFilePath, wavFilePath)
 
 
