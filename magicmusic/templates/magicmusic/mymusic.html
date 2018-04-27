@@ -15,18 +15,21 @@
     <div class="carousel-inner row w-100 mx-auto">
       <div class="carousel-item col-md-4 active">
         <div class="card text-center">
-          <img class="card-img-top img-fluid img-thumbnail" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/6-col/img%20(7).jpg" alt="rgba-red-light">
+            <a href="{% url 'addworkspace' %}">
+          <img class="card-img-top img-fluid img-thumbnail" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/6-col/img%20(1).jpg" alt="rgba-red-light">
+            </a>
           <div class="card-body">
-            <p class="card-text" style="font-size:30px;color:grey;">Wait For Your Innovation</p>
+            <p class="card-text" style="font-size:30px;color:grey;">Add New Workspace</p>
           </div>
         </div>
       </div>
       {% for workspace in workspaces %}
       <div class="carousel-item col-md-4">
         <div class="card text-center">
-          <img class="card-img-top img-fluid img-thumbnail rgba-red-light" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/6-col/img%20(7).jpg" alt="Card image cap">
+          <a href="{% url 'workspace' workspace.id %}">
+          <img class="card-img-top img-fluid img-thumbnail rgba-red-light" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/6-col/img%20(7).jpg" alt="Card image cap"></a>
           <div class="card-body">
-            <p class="card-text"><a href="{% url 'workspace' workspace.id %}" style="font-size:30px;color:grey;">{{workspace.name}}</a></p>
+            <p class="card-text" style="font-size:30px;color:grey;">{{workspace.name}}</p>
           </div>
         </div>
       </div>
