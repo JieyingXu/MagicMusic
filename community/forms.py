@@ -1,5 +1,5 @@
 from django import forms
-from django.forms.widgets import TextInput
+from django.forms.widgets import *
 
 from community.models import *
 
@@ -18,6 +18,13 @@ class UpdateProfileForm(forms.ModelForm):
         #     'description': Textarea(
         #         attrs={'class': "form-control", 'rows': "2"}),
         # }
+        widgets = {
+            'avatar': ClearableFileInput(attrs={'class': "my-file-input"}),
+            'header_image': ClearableFileInput(attrs={'class': "my-file-input"}),
+            'description': Textarea(attrs={'class': "form-control my-text-input",
+                                           'rows': "5",
+                                           'placeholder': "Say something about yourself..."})
+        }
 
 class CommentForm(forms.ModelForm):
     class Meta:

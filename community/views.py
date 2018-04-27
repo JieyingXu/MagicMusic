@@ -26,7 +26,7 @@ def home(request):
     context = {}
     context['songs'] = Song.objects.all().order_by('-creation_time')
     context['comments'] = Comment.objects.all().order_by('creation_time')
-    context['comment-form'] = CommentForm()
+    context['comment_form'] = CommentForm()
     return render(request, 'community/globalStream.html', context)
 
 @login_required
@@ -38,7 +38,7 @@ def profile(request, profile_id):
     context['result_profile'] = result_profile
     context['songs'] = result_profile.song_set.all().order_by('-creation_time')
     context['comments'] = Comment.objects.all().order_by('creation_time')
-    context['comment-form'] = CommentForm()
+    context['comment_form'] = CommentForm()
     if login_user_profile == result_profile:
         followings = login_user_profile.followings.all()
         context['following_count'] = followings.count()
