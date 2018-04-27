@@ -78,7 +78,7 @@ def addsong(request, id):
         #                 workspace=workspace,
         #                 creation_time=timezone.now())
         # newsong.save()
->>>>>>> 7526a791808b6c379ebae72fa5b851a9bb28da54
+
         return redirect(reverse('mymusic'))
 
 @login_required
