@@ -45,101 +45,74 @@
 </head>
 
 <body>
-        <nav class="navbar fixed-top navbar-expand-sm bg-dark navbar-dark">
-          <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="navbar-brand" style="color: white;font-size: 30px" href="{% url 'profile' %}?username=' + '{{user.username}}' + '"">{{user.first_name}} {{user.last_name}}</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" style="font-size: 20px;margin-top: 9px" href="{% url 'mymusic' %}?username=' + '{{user.username}}' + '"">Workspaces</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" style="font-size: 20px;margin-top: 9px" href="{% url 'follower' %}?username=' + '{{user.username}}' + '"">Community</a>
-                </li>
-            </ul>
-          </div>
+    <nav class="navbar fixed-top navbar-expand-sm bg-dark navbar-dark">
+      <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="navbar-brand" style="color: white;font-size: 30px" href="{% url 'profile' %}?username=' + '{{user.username}}' + '"">{{user.first_name}} {{user.last_name}}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="font-size: 20px;margin-top: 9px" href="{% url 'mymusic' %}?username=' + '{{user.username}}' + '"">Workspaces</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="font-size: 20px;margin-top: 9px" href="{% url 'follower' %}?username=' + '{{user.username}}' + '"">Community</a>
+            </li>
+        </ul>
+      </div>
 
-          <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <form action="{% url 'logout' %}" method="get">
-                    <button type="submit" class="btn bt-dark btn-sm" value="Logout">
-                        <i class="material-icons" style="font-size:40px;color:black;">exit_to_app</i>
-                    </button>
-                </form>
-                </li>
-                <li style="font-size:20px;color:white;margin-top: 10px">Log out</li>
-            </ul>
-          </div>
-        </nav>
-
-
-<!-- <nav class="navbar sticky-top navbar-expand-sm bg-dark navbar-dark">
-    <a class="navbar-brand" style="color: white"
-       href="{% url 'profile' %}?username=' + '{{ user.username }}' + '"">{{ user.first_name }} {{ user.last_name }}</a>
-    <ul class="navbar-nav">
-        <li class="nav-item">
-            <form action="{% url 'logout' %}" method="get">
-                <button type="submit" class="btn btn-secondary btn-lg"
-                        value="Logout">Logout
+      <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <form action="{% url 'logout' %}" method="get">
+                <button type="submit" class="btn bt-dark btn-sm bg-transparent" value="Logout">
+                    <i class="material-icons" style="font-size:40px;color:white;">exit_to_app</i>
                 </button>
             </form>
-        </li>
-    </ul>
-    <ul class="navbar-nav">
-        <li class="nav-item">
-            <a class="nav-link"
-               href="{% url 'mymusic' %}?username=' + '{{ user.username }}' + '"">My
-            Workspaces</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link"
-               href="{% url 'follower' %}?username=' + '{{ user.username }}' + '"">Friends
-            Music</a>
-        </li>
-    </ul>
-</nav> -->
-
-<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light fixed-top-2">
-    <a class="navbar-brand" href="#"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
-            aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div id="navbarNavDropdown" class="navbar-collapse collapse">
-        <ul class="navbar-nav mr-auto">
+            </li>
+            <li style="font-size:20px;color:white;margin-top: 10px">Log out</li>
         </ul>
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <form method="post">
-                    <button type="button" class="btn btn-light btn-sm save">
-                        <i class="material-icons" style="font-size:50px;color:grey;">save</i>
+      </div>
+    </nav>
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light fixed-top-2">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbarNavDropdown" class="navbar-collapse collapse">
+            <ul class="navbar-nav mr-auto">
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <form method="post">
+                        <button type="button" class="btn btn-light btn-sm save">
+                            <i class="material-icons" style="font-size:50px;color:grey;">save</i>
+                        </button>
+                    </form>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-light btn-sm" onclick="trackPlayButtonOnClick({{ trackID }})">
+                        <i class="material-icons" style="font-size:50px;color:grey;">play_circle_outline</i>
                     </button>
-                </form>
-            </li>
-            <li class="nav-item">
-                <button type="button" class="btn btn-light btn-sm" onclick="trackPlayButtonOnClick({{ trackID }})">
-                    <i class="material-icons" style="font-size:50px;color:grey;">play_circle_outline</i>
-                </button>
-            </li>
-            <li class="nav-item">
-                <audio controls>
-                    <source src="{{ MEDIA_URL }}audio/runtime-wavs/1_track_0.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </li>
-        </ul>
-    </div>
-</nav>
+                </li>
+                <li class="nav-item">
+                    <audio controls>
+                        <source src="{{ MEDIA_URL }}audio/runtime-wavs/1_track_0.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-<table class="table table-dark">
-    <tbody id="working-table">
-    </tbody>
-</table>
+    <table class="table table-dark">
+        <tbody id="working-table">
+        </tbody>
+    </table>
 
-<input type="hidden" id="notes_blob_input" name="notes_blob_input" value="{{ notes_blob }}">
+    <input type="hidden" id="notes_blob_input" name="notes_blob_input" value="{{ notes_blob }}">
 </body>
 </html>
 
@@ -147,7 +120,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<!-- <script src="magicmusic/resize.js"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/interactjs@1.3.3/dist/interact.min.js"></script>
 <script src="{% static 'magicmusic/note-parser.js' %}"></script>
 

@@ -1,7 +1,7 @@
 {% extends "magicmusic/base.html" %}
 
 {% block albums %}
-    <div class="card bg-light text-center text-dark mx-auto" style="width:400px;margin-top: 100px">
+    <div class="card bg-transparent text-center text-dark mx-auto" style="width:400px;margin-top:100px">
         <div class="card-body">
             <form method="get" action="{% url 'addworkspace' %}">
                 <button type="submit" class="btn btn-lg btn-secondary btn-block" value="addworkspace">Add New Workspace</button>
@@ -23,7 +23,7 @@
       </div>
       {% for workspace in workspaces %}
       <div class="carousel-item col-md-4">
-        <div class="card text-center view overlay">
+        <div class="card text-center">
           <img class="card-img-top img-fluid img-thumbnail rgba-red-light" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/6-col/img%20(7).jpg" alt="Card image cap">
           <div class="card-body">
             <p class="card-text"><a href="{% url 'workspace' workspace.id %}" style="font-size:30px;color:grey;">{{workspace.name}}</a></p>

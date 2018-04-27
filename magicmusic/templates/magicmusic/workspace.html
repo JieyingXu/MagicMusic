@@ -59,8 +59,8 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <form action="{% url 'logout' %}" method="get">
-                    <button type="submit" class="btn bt-dark btn-sm" value="Logout">
-                        <i class="material-icons" style="font-size:40px;color:black;">exit_to_app</i>
+                    <button type="submit" class="btn bt-dark btn-sm bg-transparent" value="Logout">
+                        <i class="material-icons" style="font-size:40px;color:white;">exit_to_app</i>
                     </button>
                 </form>
                 </li>
@@ -161,7 +161,7 @@
                             <p></p>
                             <tr>
                             <td class="first-col bg-secondary" id="{{track.trackid}}"><a style="color: white" href="#{{track.trackid}}">{{track.instrument}}</a></td>
-                            <td><a href="{% url 'track' track.trackid %}" class="mx-auto" style="color: grey">click to edit track</a></td>
+                            <td><a href="{% url 'track' track.trackid %}" class="mx-auto" style="color: white">click to edit track</a></td>
                         </tr>
                         {% endfor %}
                     </tbody>
