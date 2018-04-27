@@ -51,8 +51,8 @@ def addworkspace(request):
             newworkspacegroup.save()
         newworkspace = Workspace(workspace_group=newworkspacegroup,
                                  name=newworkspace_form.data['name'],
-                                 description=newworkspace_form.data[
-                                     'description'])
+                                 description=newworkspace_form.data['description'],
+                                 )
         newworkspace.save()
         # print("newworkspace user: " + str(newworkspace.name))
         return redirect(reverse('mymusic'))
