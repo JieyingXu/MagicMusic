@@ -118,7 +118,7 @@
                 <ul class="navbar-nav">
                     <form method="post">
                         <li class="nav-item">
-                            <button type="button" class="btn btn-light btn-sm play">
+                            <button type="button" class="btn btn-light btn-sm play" onclick="generateWorkspaceWav({{ workspaceID }})">
                                 <i class="material-icons" style="font-size:55px;color:grey;">play_circle_filled</i>
                             </button>
                         </li>
@@ -169,5 +169,8 @@
                 </table>
             </div>
         </div>
+
+        <div class="d-none"><audio controls><source src="" type="audio/wav"></audio></div>
+
     </body>
 </html>

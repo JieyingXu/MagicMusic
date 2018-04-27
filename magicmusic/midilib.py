@@ -114,7 +114,9 @@ class MidiLib:
             # change instrument
             track.append(mido.Message(type='program_change', channel=channel,
                                       program=instrument_number, time=0))
-            for line in json.load(blob)['blob'].strip().split("\n"):
+            parsed_onoffs = MidiLib.parse_midi_offset_from_blob(str(json.loads(blob)['blob']))
+            formatted_onoffs = MidiLib.format_mido_onoffs_default_velocity(parsed_onoffs, channel, 96).strip()
+            for line in formatted_onoffs.split("\n"):
                 msg = mido.Message.from_str(line)
                 track.append(msg)
 

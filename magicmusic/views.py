@@ -59,7 +59,6 @@ def addworkspace(request):
 
 @login_required
 def workspace(request, id):
-    print("workspace\n")
     if request.method == 'GET':
         objects = Workspace.objects.filter(id__exact=id)
         workspace = objects.all()[0]
