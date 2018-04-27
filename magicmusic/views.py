@@ -198,3 +198,10 @@ def generate_workspace_music(request, workspace_id):
         filename = "usr_" + str(request.user.id) + \
                    "_ws_" + str(workspace_id)
         file_path = MidiLib.save_all_track_to_wav(filename, global_metadata, track_info_list)
+
+        res_obj = {
+            'file_path': file_path
+        }
+        res_str = json.dumps(res_obj)
+
+        return HttpResponse(res_str, content_type='application/json')

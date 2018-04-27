@@ -14,4 +14,6 @@ urlpatterns = [
     url(r'^workspace/(?P<id>\d+)$', views.workspace, name='workspace'),
     url(r'^track/(?P<id>\d+)$', views.track, name='track'),
     url(r'^generate-music/(?P<trackID>\d+)$', views.generate_music, name='generate-music'),
+    url(r'^generate-workspace-music/(?P<workspace_id>\d+)$', views.generate_workspace_music,
+        name='generate-workspace-music'),
 ]
