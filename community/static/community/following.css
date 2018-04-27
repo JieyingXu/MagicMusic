@@ -1,0 +1,39 @@
+.following-avatar {
+    width: 60%;
+    height: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    /*margin-bottom: 10%;*/
+}
+/*.try {*/
+    /*margin-top: 40px;*/
+    /*width: 80%;*/
+    /*margin-left: 10%;*/
+    /*margin-right: 10%;*/
+/*}*/
+
+.following-username-area {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.following-username {
+    font-family: SansSerif;
+    font-size: 20px;
+    color: #00a78e;
+    font-weight: bold;
+}
+
+.following-user-block {
+    background-color: aliceblue;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    /*min-height: 240px;*/
+    /*background-size: cover;*/
+    border-radius: 10px;
+    /*margin-top: 30px;*/
+}
+
+.following-avatar-area {
+    margin-top: 20px;
+}

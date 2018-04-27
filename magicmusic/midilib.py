@@ -17,7 +17,8 @@ class MidiLib:
     # <"on/off", notekey, offset>
     @staticmethod
     def parse_midi_offset_from_blob(midi_blob):
-        lines = midi_blob.strip().split("\n")
+        strip =  midi_blob.strip()
+        lines = strip.split("\n")
 
         # will sort everything
         note_messages = []
@@ -114,20 +115,21 @@ class MidiLib:
             # change instrument
             track.append(mido.Message(type='program_change', channel=channel,
                                       program=instrument_number, time=0))
-            parsed_onoffs = MidiLib.parse_midi_offset_from_blob(str(json.loads(blob)['blob']))
-            formatted_onoffs = MidiLib.format_mido_onoffs_default_velocity(parsed_onoffs, channel, 96).strip()
-            for line in formatted_onoffs.split("\n"):
-                msg = mido.Message.from_str(line)
-                track.append(msg)
+            if blob != None:
+                parsed_onoffs = MidiLib.parse_midi_offset_from_blob(str(json.loads(blob)['blob']))
+                formatted_onoffs = MidiLib.format_mido_onoffs_default_velocity(parsed_onoffs, channel, 96).strip()
+                for line in formatted_onoffs.split("\n"):
+                    msg = mido.Message.from_str(line)
+                    track.append(msg)
 
-            # save to midi file
-            midFilePath = 'media/audio/runtime-wavs/' + filename + '.mid'
-            midFile.save(midFilePath)
+        # save to midi file
+        midFilePath = 'media/audio/runtime-wavs/' + filename + '.mid'
+        midFile.save(midFilePath)
 
-            # generate wav
-            wavFilePath = 'media/audio/runtime-wavs/' + filename + '.wav'
-            os.system('fluidsynth -g 2.5 -ni ' + soundfont_path + ' '
-                      + midFilePath + ' -F ' + wavFilePath + ' -r 44100 > /dev/null')
+        # generate wav
+        wavFilePath = 'media/audio/runtime-wavs/' + filename + '.wav'
+        os.system('fluidsynth -g 2.5 -ni ' + soundfont_path + ' '
+                  + midFilePath + ' -F ' + wavFilePath + ' -r 44100 > /dev/null')
 
         return wavFilePath
 

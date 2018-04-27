@@ -8,38 +8,37 @@
     <div class="banner">
         <div class="navbar navbar-inverse my-nav-bar" role="navigation">
             <div class="navbar-header">
-                <a href="#" class="navbar-left">
+                <a href="{% url "home" %}" class="navbar-left">
                     <img class="navbar-logo" alt="music magician" src={% static "community/favicon.png" %}>
                 </a>
             </div>
             <div class="navbar-header">
-                <a href="#" class="navbar-brand my-navbar-header">
+                <a href="{% url "home" %}" class="navbar-brand my-navbar-header">
                     music magicians
                 </a>
             </div>
             <ul class="nav navbar-nav">
-                <li><a href="#"><span class="glyphicon glyphicon-home my-icon"></span>Home</a></li>
+                <li><a href="{% url 'home' %}"><span class="glyphicon glyphicon-home my-icon"></span>Home</a></li>
                 <li class="dropdown">
-                  <a href="#" data-toggle="dropdown" class="dropdown-toggle">
-                      <span class="glyphicon glyphicon-user my-icon"></span>Jieying Xu<span class="caret"></span>
+                  <a href="" data-toggle="dropdown" class="dropdown-toggle">
+                      <span class="glyphicon glyphicon-user my-icon"></span>{{ user.username }}<span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu my-menu">
-                    <li class="option"><a href="#">Profile</a></li>
-                    <li><a class="option" href="#">Portfolio</a></li>
-                    <li><a class="option" href="#">Following</a></li>
+                    <li><a class="option" href="{% url 'profile' user.profile.id %}">Profile</a></li>
+                    <li><a class="option" href="{% url 'following-users' user.profile.id %}">Following</a></li>
+                    <li><a class="option" href="{% url 'profile-setting' %}">Setting</a></li>
                   </ul>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li class="logout"><a href="#"><span class="glyphicon glyphicon-log-out my-icon"></span>Log Out</a></li>
+                <li class="logout"><a href="{% url 'logout' %}"><span class="glyphicon glyphicon-log-out my-icon"></span>Log Out</a></li>
             </ul>
         </div>
     </div>
 {% endblock %}
 
 {% block content %}
-    <div class="my-bg-pic">
-    </div>
+    <div class="my-bg-pic"></div>
     <div class="songs">
         <div class="container">
             <div class="songs-head">
@@ -47,104 +46,66 @@
                 <p>Hear the lastest voice from the music world</p>
             </div>
 
-            <div class="row">
-                <div class="col-md-2 col-md-offset-1 song-top">
-                    <h4><a href="{% url 'profile' %}" class="profile-link">Jieying Xu</a></h4>
-                </div>
-            </div>
-            <div class="row song-block-row">
-                <div class="col-md-1 col-md-offset-1 song-left">
-                    <a href="{% url 'profile' %}">
-                        <img src="{% static "community/images/user1.jpg" %}" class="img-responsive img-rounded global-song-img">
-                    </a>
-                </div>
-                <div class="col-md-8 song-right">
-                    <span><a href="#" class="song-name">hello world</a></span><span class="song-detail">created at 2018/4/10</span>
-                    <p class="song-desc">A song specifically for programmers...</p>
-                    <div class="btn-group my-btn-group">
-                        <button type="button" class="btn btn-default song-btn">
-                            <audio controls><source src="{% static "community/media/I_Love_You_so.mp3" %}" type="audio/mp3"></audio>
-                        </button>
-{#                        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-play button-icon"></span>0</button>#}
-                        <button type="button" class="btn btn-default song-btn"><span class="glyphicon glyphicon-heart-empty button-icon"></span>0</button>
-                        <button type="button" class="btn btn-default song-btn"><span class="glyphicon glyphicon-edit button-icon"></span>0</button>
-                    </div>
-                    <div>
-                        <form role="form" action="#" method="POST">
-                            <div class="form-group comment-form">
-                                <div class="input-group">
-                                    <label class="sr-only" for="user1">write a comment:</label>
-                                    <input type="text" id="user1" class="form-control comment-textbox" placeholder="write a comment...">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-send comment-icon"></span></button>
-                                    </span>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div>
-                        <table class="comment-block">
-                            <tr class="single-comment-row">
-                                <td class="avatar-cell"><img class="comment-user-avatar" src="{% static "community/images/user1.jpg" %}"></td>
-                                <td class="content-cell">
-                                    <a href="#" class="comment-username">jill:</a>
-                                    <span class="comment-content">I love this song!</span>
-                                </td>
-                                <td><span class="comment-time">2018/4/22</span></td>
-                            </tr>
-                            <tr class="single-comment-row">
-                                <td class="avatar-cell"><img class="comment-user-avatar" src="{% static "community/images/user2.jpg" %}"></td>
-                                <td class="content-cell">
-                                    <a href="#" class="comment-username">joejoejoejoejoejoejoe:</a>
-                                    <span class="comment-content">I love this song, tootoooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo! </span>
-                                </td>
-                                <td><span class="comment-time">2018/4/22</span></td>
-                            </tr>
-                        </table>
-{#                        <ul class="comment-block">#}
-{#                            <li class="single-comment-row">#}
-{#                                <img class="comment-user-avatar" src="{% static "community/images/user1.jpg" %}">#}
-{#                                <span class="comment-username"><a href="#">jill:</a></span>#}
-{#                                <span class="comment-content">I love this song!</span>#}
-{#                                <span class="comment-time">2018/4/22</span>#}
-{#                            </li>#}
-{#                        </ul>#}
+            {% for song in songs %}
+                <div class="row">
+                    <div class="col-md-2 col-md-offset-1 song-top">
+                        <h4><a href="{% url 'profile' song.creator.id %}" class="profile-link">{{ song.creator.user.username }}</a></h4>
                     </div>
                 </div>
-            </div>
 
-            <div class="row">
-                <div class="col-md-2 col-md-offset-1 song-top">
-                    <h4><a href="{% url 'profile' %}" class="profile-link">Kejing Meng</a></h4>
-                </div>
-            </div>
-            <div class="row song-block-row">
-                <div class="col-md-1 col-md-offset-1 song-left">
-                    <a href="{% url 'profile' %}">
-                        <img src="{% static "community/images/user2.jpg" %}" class="img-responsive img-rounded global-song-img">
-                    </a>
-                </div>
-                <div class="col-md-8 song-right">
-                    <span class="song-name"><a href="#" class="song-name">Snow White</a></span><span class="song-detail">created at 2018/4/10</span>
-                    <p class="song-desc">Pittsburgh is so COLD!</p>
-                    <div class="btn-group my-btn-group">
-                        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-play button-icon"></span>0</button>
-                        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-heart-empty button-icon"></span>0</button>
-                        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-download-alt button-icon"></span>0</button>
+                <div class="row song-block-row">
+                    <div class="col-md-1 col-md-offset-1 song-left">
+                        <a href="{% url 'profile' song.creator.id %}">
+{#                            <img src="{% url 'profile-avatar' song.creator.id %}" class="img-responsive img-rounded global-song-img">#}
+                            <img src="{{ song.creator.avatar.url }}" class="img-responsive img-rounded global-song-img">
+                        </a>
                     </div>
-                    <form role="form" action="#" method="POST">
-                        <div class="form-group">
-                            <div class="input-group">
-                                <label class="sr-only" for="user2">write a comment:</label>
-                                <input type="text" id="user2" class="form-control comment-textbox" placeholder="write a comment...">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-edit comment-icon"></span></button>
-                                </span>
-                            </div>
+                    <div class="col-md-8 song-right">
+                        <span class="song-name">{{ song.name }}</span><span class="song-detail">created at {{ song.creation_time }}</span>
+                        <p class="song-desc">{{ song.description }}</p>
+                        <div class="btn-group my-btn-group">
+                            <button type="button" class="btn btn-default song-btn">
+                                <audio controls><source src="{% url 'song' song.id %}" type="audio/wav"></audio>
+                            </button>
+                            <button type="button" class="btn btn-default song-btn"><span class="glyphicon glyphicon-heart-empty button-icon"></span>{{ song.likes }}</button>
+                            <button type="button" class="btn btn-default song-btn"><span class="glyphicon glyphicon-edit button-icon"></span>{{ song.edit_counts }}</button>
                         </div>
-                    </form>
+
+                        <div>
+                            <form role="form" action="#" method="POST">
+                                <div class="form-group comment-form">
+                                    <div class="input-group">
+                                        <label class="sr-only" for="user1">write a comment:</label>
+                                        <input type="text" id="user1" class="form-control comment-textbox" placeholder="write a comment...">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-send comment-icon"></span></button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div>
+                            <table class="comment-block">
+                                {% for comment in comments %}
+                                    {% if comment.parent_song == song %}
+                                        <tr class="single-comment-row">
+{#                                            <td class="avatar-cell"><img class="comment-user-avatar" src="{% url 'profile-avatar' comment.creator_profile.id %}"></td>#}
+                                            <td class="avatar-cell"><img class="comment-user-avatar" src="{{ comment.creator_profile.avatar.url }}"></td>
+                                            <td class="content-cell">
+                                                <a href="{% url 'profile' comment.creator_profile.id %}" class="comment-username">{{ comment.creator_profile.user.username }}:</a>
+                                                <span class="comment-content">{{ comment.text }}</span>
+                                            </td>
+                                            <td><span class="comment-time">{{ comment.creation_time }}</span></td>
+                                        </tr>
+                                    {% endif %}
+                                {% endfor %}
+                            </table>
+                        </div>
+
+                    </div>
                 </div>
-            </div>
+            {% endfor %}
 
         </div>
     </div>

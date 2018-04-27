@@ -1,0 +1,46 @@
+{% extends "community/globalStream.html" %}
+{% block styleSheet %}
+    {% load staticfiles %}
+    <link href="{% static 'community/globalStream.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'community/profile.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block user-info %}
+{#    <div class="user-bg-pic">#}
+    <div style="
+{#            background: url({% url 'profile-bg' login_profile.id %});#}
+            background: url({{ login_profile.header_image.url }});
+            min-height: 300px;
+            background-size: cover;
+            margin-bottom: 40px;">
+{#        <div><img class="user-avatar" src="{% url 'profile-avatar' login_profile.id %}" alt=""></div>#}
+        <div><img class="user-avatar" src="{{ login_profile.avatar.url }}" alt=""></div>
+        <div class="username-display">{{ login_profile.user.username }}</div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    {% for error in form.non_field_errors %}
+        <p style="color: deepskyblue">
+            {{ error }}
+        </p>
+    {% endfor %}
+
+{#    <div class="text-center align-center "#}
+    <form enctype="multipart/form-data" method="POST" action="{% url 'profile-setting' %}">
+        <table>
+            {% for field in form.visible_fields %}
+            <tr>
+                <td>{{ field.label_tag }}</td>
+                <td>{{ field }}</td>
+                <td class="error">
+                    {% for error in field.errors %} {{ error }} {% endfor %}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        <input type="submit" value="Update Profile">
+        {% csrf_token %}
+    </form>
+
+{% endblock %}

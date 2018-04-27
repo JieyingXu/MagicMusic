@@ -1,0 +1,68 @@
+{% extends 'community/profile.html' %}
+
+{% block styleSheet %}
+    {% load staticfiles %}
+    <link href="{% static 'community/globalStream.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'community/profile.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'community/following.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block user-info %}
+{#    <div class="user-bg-pic">#}
+    <div style="
+            background: url({{ result_profile.header_image.url }});
+            min-height: 310px;
+            background-size: cover;
+            margin-bottom: 40px;">
+        <div><img class="user-avatar" src="{{ result_profile.avatar.url }}" alt=""></div>
+        <div class="username-display">{{ result_profile.user.username }}</div>
+        <div class="user-detail">
+            <span><a href="{% url 'following-users' result_profile.id %}" class="user-follow">
+                Following: {{ following_count }}
+            </a></span>
+{#            <span class="vertical-line"> | </span>#}
+            {% if user == result_profile.user %}
+                <form action="{% url 'profile-setting' %}"
+                      method="GET">
+                    <input type="submit" class="btn-dark mb-4" value="Setting"/>
+                    {% csrf_token %}
+                </form>
+{#                <span><a href="{% url 'profile_setting' %}" class="user_follow">setting</a></span>#}
+            {% elif not followed %}
+                <form action="{% url 'follow' current_profile.id %}"
+                      method="post">
+                    <input type="submit" class="btn-dark mb-4" value="Follow"/>
+                    {% csrf_token %}
+                </form>
+            {% else %}
+                <form action="{% url 'unfollow' current_profile.id %}"
+                      method="post">
+                    <input type="submit" class="btn-dark mb-4" value="Unfollow"/>
+                    {% csrf_token %}
+                </form>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+
+        <div class="row">
+            {% for following_user in followings %}
+                <div class="col-md-3 text-center">
+                    <div class="following-user-block">
+                        <div class="following-avatar-area">
+{#                            <img src="{% url 'profile-avatar' following_user.id %}" class="img-responsive img-rounded following-avatar">#}
+                            <img src="{{ following_user.avatar.url }}" class="img-responsive img-rounded following-avatar">
+                        </div>
+                        <div class="following-username-area">
+                            <a href="{% url 'profile' following_user.id %}" class="following-username">{{ following_user.user.username }}</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+    </div>
+{% endblock %}

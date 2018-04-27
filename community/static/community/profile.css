@@ -1,9 +1,9 @@
-.user-bg-pic {
-    background: url("images/bg1.jpg");
-    min-height: 310px;
-    background-size: cover;
-    margin-bottom: 40px;
-}
+/*.user-bg-pic {*/
+    /*background: url("images/bg1.jpg");*/
+    /*min-height: 310px;*/
+    /*background-size: cover;*/
+    /*margin-bottom: 40px;*/
+/*}*/
 
 .user-avatar {
     /*padding-top: 10px;*/
@@ -14,7 +14,7 @@
     border-style: solid;
     /*vertical-align: middle;*/
     width: 10%;
-    height: 10%;
+    height: 130px;
     /*display: block;*/
     margin-left: 45%;
     margin-right: 45%;

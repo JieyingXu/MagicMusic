@@ -1,11 +1,11 @@
 {% extends "magicmusic/base.html" %}
 
 {% block addsong %}
-    <div class="card bg-light text-dark mx-auto" style="width:400px">
-        <div class="card-header mx-auto">Add New Workspace</div>
+    <div class="card text-dark mx-auto" style="width:400px;margin-top:100px;background:rgba(0,0,0,0.1)">
+        <div class="card-header mx-auto text-white" style="font-size:20px">Add New Workspace</div>
         <div class="card-body">
             <form method="post" action="{% url 'addworkspace' %}">
-                <table class="mx-auto">
+                <table class="mx-auto text-white">
                     {% for field in form.visible_fields %}
                         <tr>
                             <td>{{field.label_tag}}</td>
@@ -14,7 +14,7 @@
                     {% endfor %}
                 </table>
                 <p></p>
-                <button type="submit" class="btn btn-lg btn-secondary btn-block" value="addworkspace">Create</button>
+                <button type="submit" class="btn btn-lg btn-secondary btn-block text-white" value="addworkspace">Create</button>
                 <input type="hidden" name="next" value="{{ next }}" />
                 {% csrf_token %}
             </form>

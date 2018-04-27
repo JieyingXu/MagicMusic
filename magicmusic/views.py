@@ -85,7 +85,7 @@ def workspace(request, id):
         tracks = []
         objects = Track.objects.filter(workspace__exact=workspace)
         for e in objects:
-            track = {'instrument': e.instrument, 'trackid': e.id}
+            track = {'instrument': e.instrument, 'trackid': e.id, 'name':e.name, 'description':e.description}
             tracks.append(track);
         context = {'tracks': tracks, 'workspaceID': id}
         return render(request, 'magicmusic/workspace.html', context)
