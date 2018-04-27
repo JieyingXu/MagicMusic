@@ -39,8 +39,8 @@ def register(request):
     new_user.save()
 
     new_user_profile = Profile.objects.create(user=new_user)
-    new_user_profile.avatar_content_type = "image/jpeg"
-    new_user_profile.header_image_content_type = "image/jpeg"
+    # new_user_profile.avatar_content_type = "image/jpeg"
+    # new_user_profile.header_image_content_type = "image/jpeg"
     new_user_profile.save()
 
 

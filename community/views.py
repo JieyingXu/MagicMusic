@@ -61,10 +61,10 @@ def profile_setting(request):
             print("form is not valid")
             context['form'] = form
         else:
-            new_profile.avatar_content_type = form.cleaned_data['avatar'].content_type
-            new_profile.header_image_content_type = form.cleaned_data['header_image'].file.content_type
+            # new_profile.avatar_content_type = form.cleaned_data['avatar'].content_type
+            # new_profile.header_image_content_type = form.cleaned_data['header_image'].file.content_type
             form.save()
-            context['form'] = UpdateProfileForm()
+            context['form'] = UpdateProfileForm(initial={"description":""})
         context['login_profile'] = Profile.objects.get(user=request.user)
         return render(request, 'community/profile-setting.html', context)
 
@@ -97,29 +97,29 @@ def following_users(request, profile_id):
     return render(request, 'community/following.html', context)
 
 
-@login_required
-def get_profile_avatar(request, profile_id):
-    profile = get_object_or_404(Profile, id=profile_id)
-
-    if not profile.avatar:
-        raise Http404
-    return HttpResponse(profile.avatar, content_type=profile.avatar_content_type)
-
-@login_required
-def get_profile_bg(request, profile_id):
-    profile = get_object_or_404(Profile, id=profile_id)
-
-    if not profile.header_image:
-        raise Http404
-    return HttpResponse(profile.header_image, content_type=profile.header_image_content_type)
-
-@login_required
-def get_song_cover(request, song_id):
-    song = get_object_or_404(Song, id=song_id)
-
-    if not song.cover:
-        raise Http404
-    return HttpResponse(song.cover, content_type=song.cover_content_type)
+# @login_required
+# def get_profile_avatar(request, profile_id):
+#     profile = get_object_or_404(Profile, id=profile_id)
+#
+#     if not profile.avatar:
+#         raise Http404
+#     return HttpResponse(profile.avatar, content_type=profile.avatar_content_type)
+#
+# @login_required
+# def get_profile_bg(request, profile_id):
+#     profile = get_object_or_404(Profile, id=profile_id)
+#
+#     if not profile.header_image:
+#         raise Http404
+#     return HttpResponse(profile.header_image, content_type=profile.header_image_content_type)
+#
+# @login_required
+# def get_song_cover(request, song_id):
+#     song = get_object_or_404(Song, id=song_id)
+#
+#     if not song.cover:
+#         raise Http404
+#     return HttpResponse(song.cover, content_type=song.cover_content_type)
 
 @login_required
 def get_song(request, song_id):

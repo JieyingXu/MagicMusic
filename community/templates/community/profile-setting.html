@@ -8,11 +8,13 @@
 {% block user-info %}
 {#    <div class="user-bg-pic">#}
     <div style="
-            background: url({% url 'profile-bg' login_profile.id %});
+{#            background: url({% url 'profile-bg' login_profile.id %});#}
+            background: url({{ login_profile.header_image.url }});
             min-height: 300px;
             background-size: cover;
             margin-bottom: 40px;">
-        <div><img class="user-avatar" src="{% url 'profile-avatar' login_profile.id %}" alt=""></div>
+{#        <div><img class="user-avatar" src="{% url 'profile-avatar' login_profile.id %}" alt=""></div>#}
+        <div><img class="user-avatar" src="{{ login_profile.avatar.url }}" alt=""></div>
         <div class="username-display">{{ login_profile.user.username }}</div>
     </div>
 {% endblock %}

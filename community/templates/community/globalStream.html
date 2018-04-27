@@ -56,7 +56,8 @@
                 <div class="row song-block-row">
                     <div class="col-md-1 col-md-offset-1 song-left">
                         <a href="{% url 'profile' song.creator.id %}">
-                            <img src="{% url 'profile-avatar' song.creator.id %}" class="img-responsive img-rounded global-song-img">
+{#                            <img src="{% url 'profile-avatar' song.creator.id %}" class="img-responsive img-rounded global-song-img">#}
+                            <img src="{{ song.creator.avatar.url }}" class="img-responsive img-rounded global-song-img">
                         </a>
                     </div>
                     <div class="col-md-8 song-right">
@@ -89,7 +90,8 @@
                                 {% for comment in comments %}
                                     {% if comment.parent_song == song %}
                                         <tr class="single-comment-row">
-                                            <td class="avatar-cell"><img class="comment-user-avatar" src="{% url 'profile-avatar' comment.creator_profile.id %}"></td>
+{#                                            <td class="avatar-cell"><img class="comment-user-avatar" src="{% url 'profile-avatar' comment.creator_profile.id %}"></td>#}
+                                            <td class="avatar-cell"><img class="comment-user-avatar" src="{{ comment.creator_profile.avatar.url }}"></td>
                                             <td class="content-cell">
                                                 <a href="{% url 'profile' comment.creator_profile.id %}" class="comment-username">{{ comment.creator_profile.user.username }}:</a>
                                                 <span class="comment-content">{{ comment.text }}</span>

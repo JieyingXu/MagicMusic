@@ -15,10 +15,10 @@ DEFAULT_SONG_DESC = "Add some descriptions..."
 # and we directly list all the albums in Web UI
 class Profile(models.Model):
     user = models.OneToOneField(User)
-    avatar = models.FileField(blank=True, upload_to="community/user-avatars", default=DEFAULT_AVATAR_URL)
-    avatar_content_type = models.CharField(max_length=50)
-    header_image = models.FileField(blank=True, upload_to="community/user-backgrounds", default=DEFAULT_BG_URL)
-    header_image_content_type = models.CharField(max_length=50)
+    avatar = models.ImageField(blank=True, upload_to="community/user-avatars", default=DEFAULT_AVATAR_URL)
+    # avatar_content_type = models.CharField(max_length=50)
+    header_image = models.ImageField(blank=True, upload_to="community/user-backgrounds", default=DEFAULT_BG_URL)
+    # header_image_content_type = models.CharField(max_length=50)
     description = models.CharField(max_length=200, blank=True, default=DEFAULT_PROFILE_DESC)
     followings = models.ManyToManyField('self',
                                         related_name="follower_profile_set",
@@ -48,10 +48,12 @@ class Song(models.Model):
     songfile = models.FileField(blank=True, upload_to="community/songfiles")  #songfile name should be <username>_<songfilename>
     songfile_content_type = models.CharField(max_length=50)
     workspace = models.OneToOneField(Workspace)
+
     likes = models.IntegerField
     edit_counts = models.IntegerField
-    cover = models.FileField(blank=True, upload_to="community/song-covers", default=DEFAULT_COVER_URL)
-    cover_content_type = models.CharField(max_length=50)
+
+    cover = models.ImageField(blank=True, upload_to="community/song-covers", default=DEFAULT_COVER_URL)
+    # cover_content_type = models.CharField(max_length=50)
 
 
 # model for a comment, people can comment on a song

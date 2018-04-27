@@ -10,11 +10,11 @@
 {% block user-info %}
 {#    <div class="user-bg-pic">#}
     <div style="
-            background: url({% url 'profile-bg' result_profile.id %});
+            background: url({{ result_profile.header_image.url }});
             min-height: 310px;
             background-size: cover;
             margin-bottom: 40px;">
-        <div><img class="user-avatar" src="{% url 'profile-avatar' result_profile.id %}" alt=""></div>
+        <div><img class="user-avatar" src="{{ result_profile.avatar.url }}" alt=""></div>
         <div class="username-display">{{ result_profile.user.username }}</div>
         <div class="user-detail">
             <span><a href="{% url 'following-users' result_profile.id %}" class="user-follow">
@@ -23,7 +23,7 @@
 {#            <span class="vertical-line"> | </span>#}
             {% if user == result_profile.user %}
                 <form action="{% url 'profile-setting' %}"
-                      method="post">
+                      method="GET">
                     <input type="submit" class="btn-dark mb-4" value="Setting"/>
                     {% csrf_token %}
                 </form>
@@ -53,7 +53,8 @@
                 <div class="col-md-3 text-center">
                     <div class="following-user-block">
                         <div class="following-avatar-area">
-                            <img src="{% url 'profile-avatar' following_user.id %}" class="img-responsive img-rounded following-avatar">
+{#                            <img src="{% url 'profile-avatar' following_user.id %}" class="img-responsive img-rounded following-avatar">#}
+                            <img src="{{ following_user.avatar.url }}" class="img-responsive img-rounded following-avatar">
                         </div>
                         <div class="following-username-area">
                             <a href="{% url 'profile' following_user.id %}" class="following-username">{{ following_user.user.username }}</a>

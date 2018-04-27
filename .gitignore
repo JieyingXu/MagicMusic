@@ -20,3 +20,4 @@ db.sqlite3
 # sound font
 *.sf2
 
+/media

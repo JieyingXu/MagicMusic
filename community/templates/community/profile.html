@@ -8,11 +8,13 @@
 {% block user-info %}
 {#    <div class="user-bg-pic">#}
     <div style="
-            background: url({% url 'profile-bg' result_profile.id %});
+{#            background: url({% url 'profile-bg' result_profile.id %});#}
+            background: url({{ result_profile.header_image.url }});
             min-height: 310px;
             background-size: cover;
             margin-bottom: 40px;">
-        <div><img class="user-avatar" src="{% url 'profile-avatar' result_profile.id %}" alt=""></div>
+{#        <div><img class="user-avatar" src="{% url 'profile-avatar' result_profile.id %}" alt=""></div>#}
+        <div><img class="user-avatar" src="{{ result_profile.avatar.url }}" alt=""></div>
         <div class="username-display">{{ result_profile.user.username }}</div>
         <div class="user-detail">
             <span><a href="{% url 'following-users' result_profile.id %}" class="user-follow">
@@ -49,7 +51,8 @@
             <div class="row">
                 <div class="col-md-1 song-number">{{ forloop.counter }}.</div>
                 <div class="col-md-2 song-left">
-                    <img src="{% url "song-cover" song.id %}" class="img-responsive img-rounded profile-song-img">
+{#                    <img src="{% url "song-cover" song.id %}" class="img-responsive img-rounded profile-song-img">#}
+                    <img src="{{ song.cover.url }}" class="img-responsive img-rounded profile-song-img">
                 </div>
                 <div class="col-md-8 song-right">
                     <div class="profile-song-name">{{ song.name }}</div>
