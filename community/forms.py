@@ -47,11 +47,9 @@ class SongForm(forms.ModelForm):
         exclude = (
             'liking_people',
             'songfile',
-            'songfile_content_type',
             'creator',
-            'likes',
-            'edit_counts',
-            'cover',
+            # 'likes',
+            # 'edit_counts',
             'creation_time',
             'workspace',
         )
