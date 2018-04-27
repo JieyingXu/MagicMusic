@@ -126,9 +126,31 @@ def unfollow(request, profile_id):
     login_profile.followings.remove(curr_profile)
     return redirect('profile', profile_id=profile_id)
 
+# @transaction.atomic
+# @login_required
+# def add_comment_global(request, song_id):
+#     related_song = get_object_or_404(Song, id=song_id)
+#     new_comment = Comment(creator_profile=request.user.profile, parent_song=related_song)
+#     comment_form = CommentForm(request.POST, instance=new_comment)
+#
+#     if comment_form.is_valid():
+#         comment_form.save()
+#     return redirect('home')
+#
+# @transaction.atomic
+# @login_required
+# def add_comment_profile(request, song_id, profile_id):
+#     related_song = get_object_or_404(Song, id=song_id)
+#     new_comment = Comment(creator_profile=request.user.profile, parent_song=related_song)
+#     comment_form = CommentForm(request.POST, instance=new_comment)
+#
+#     if comment_form.is_valid():
+#         comment_form.save()
+#     return redirect('profile', profile_id=profile_id)
+
 @transaction.atomic
 @login_required
-def add_comment_global(request, song_id):
+def add_comment(request, song_id):
     related_song = get_object_or_404(Song, id=song_id)
     new_comment = Comment(creator_profile=request.user.profile, parent_song=related_song)
     comment_form = CommentForm(request.POST, instance=new_comment)
@@ -136,14 +158,3 @@ def add_comment_global(request, song_id):
     if comment_form.is_valid():
         comment_form.save()
     return redirect('home')
-
-@transaction.atomic
-@login_required
-def add_comment_profile(request, song_id, profile_id):
-    related_song = get_object_or_404(Song, id=song_id)
-    new_comment = Comment(creator_profile=request.user.profile, parent_song=related_song)
-    comment_form = CommentForm(request.POST, instance=new_comment)
-
-    if comment_form.is_valid():
-        comment_form.save()
-    return redirect('profile', profile_id=profile_id)
