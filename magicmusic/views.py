@@ -93,11 +93,12 @@ def workspace(request, id):
 
 @login_required
 def track(request, id):
-    print("track")
     if request.method == 'GET':
         objects = Track.objects.filter(id__exact=id)
         track = objects.all()[0]
-        print("track is:" + str(track.id))
+        instrument_name = track.instrument
+
+        unit_note_urls = MidiLib.generate_unit_notes_if_not_exists(instrument_name)
 
         json_blob = Track.objects.filter(id__exact=id).values('blob')[0]["blob"]
         if json_blob == None:
@@ -106,7 +107,8 @@ def track(request, id):
             blob_json = json.loads(str(json_blob))["blob"]
 
         context = {'trackID': id,
-                   'notes_blob': blob_json}
+                   'notes_blob': blob_json,
+                   'unit_note_urls': unit_note_urls}
 
         return render(request, 'magicmusic/track.html', context)
     else:

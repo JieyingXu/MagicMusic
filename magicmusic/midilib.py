@@ -3,6 +3,7 @@ from mido.messages import *
 import mido
 import os
 import json
+from django.conf import settings
 
 soundfont_path = "media/audio/soundfonts/FluidR3_GM.sf2"
 
@@ -34,7 +35,7 @@ class MidiLib:
             note_messages.append(("off", note_key, end))
 
         # additional note off at the end
-        note_messages.append(("off", note_key, end+20))
+        # note_messages.append(("off", note_key, 0.1))
 
         sorted_note_messages = sorted(note_messages, key=lambda tuple: tuple[2])
 
@@ -68,6 +69,9 @@ class MidiLib:
             line = str(message) + "\n"
             onoffs += line
 
+        lastnote="note_off channel=" + str(channel) + " note=56 velocity=127 time=180\n"
+        onoffs += lastnote
+
         return onoffs
 
     @staticmethod
@@ -82,6 +86,7 @@ class MidiLib:
         track.append(mido.Message(type='program_change', channel=0, program=instrument_number, time=0))
         for line in formatted_onoffs.strip().split("\n"):
             msg = mido.Message.from_str(line)
+            print(line)
             track.append(msg)
 
         # save to midi file
@@ -134,6 +139,47 @@ class MidiLib:
                   + midFilePath + ' -F ' + wavFilePath + ' -r 44100 > /dev/null')
 
         return wavFilePath
+
+
+    @staticmethod
+    def generate_unit_notes_if_not_exists(instrument_name):
+        instrument_number = MidiLib.translate_instrument_number(instrument_name)
+        file_prefix = "ins_" + str(instrument_number) + "_nt_"
+
+        unit_urls = []
+        for i in range(0, 128):
+            filename = file_prefix + str(i)
+            midFilePath = 'media/audio/runtime-wavs/' + filename + '.mid'
+            wavFilePath = 'media/audio/runtime-wavs/' + filename + '.wav'
+
+            # check exists
+            checkpath = settings.MEDIA_ROOT + '/audio/runtime-wavs/' + filename + '.wav'
+            if os.path.exists(checkpath):
+                unit_urls.append(wavFilePath)
+                continue
+
+            # save to midi file
+            midFile = mido.MidiFile()
+            track = mido.MidiTrack()
+            midFile.tracks.append(track)
+            track.append(mido.Message(type='program_change', channel=0,
+                                      program=instrument_number, time=0))
+            track.append(mido.Message(type='note_on', channel=0,
+                                      note=i, time=0))
+            track.append(mido.Message(type='note_off', channel=0,
+                                      note=i, time=96))
+            track.append(mido.Message(type='note_off', channel=0,
+                                      note=i, time=180))
+
+            # save to midi file
+            midFile.save(midFilePath)
+            # generate wav
+            os.system('fluidsynth -g 2.5 -ni ' + soundfont_path + ' '
+                      + midFilePath + ' -F ' + wavFilePath + ' -r 44100 > /dev/null')
+
+            unit_urls.append(wavFilePath)
+
+        return unit_urls
 
 
     # https://stackoverflow.com/questions/13926280/musical-note-string-c-4-f-3-etc-to-midi-note-value-in-python

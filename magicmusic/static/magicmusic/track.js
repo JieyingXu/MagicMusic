@@ -211,8 +211,6 @@ function resetResizeDragMouseDown() {
 
 function trackPlayButtonOnClick(trackID) {
     var trackWavPath = generateTrackWav(trackID);
-
-
 }
 
 function playAudio(trackWavPath) {
