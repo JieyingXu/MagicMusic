@@ -13,6 +13,7 @@
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="shortcut icon" href="{% static 'magicmusic/favicon.png' %}"/>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="{% static 'magicmusic/workspace.js' %}"></script>
         <style>
             body {
               position: relative;
@@ -116,9 +117,11 @@
             </a>
             <div id="navbarNavDropdown" class="navbar-collapse collapse">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <form method="post">
-                            <button type="button" class="btn btn-light btn-sm play">
+
+                    <form method="post">
+                        <li class="nav-item">
+                            <button type="button" class="btn btn-light btn-sm play" onclick="generateWorkspaceWav({{ workspaceID }})">
+
                                 <i class="material-icons" style="font-size:55px;color:grey;">play_circle_filled</i>
                             </button>
                             {% csrf_token %}
@@ -187,5 +190,8 @@
                 </table>
             </div>
         </div>
+
+        <div class="d-none"><audio controls><source src="" type="audio/wav"></audio></div>
+
     </body>
 </html>
