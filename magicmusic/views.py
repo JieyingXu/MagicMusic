@@ -136,31 +136,20 @@ def generate_music(request, trackID):
             return HttpResponse(json_error, content_type='application/json')
         else:
 
-            notes_blob=request.POST['notes_blob']
-            print("blob=", notes_blob)
-
-            # print(blob[0][0])
-            # print(blob[0])
-            #
-            # blob = \
-            #     "E7 0 2\n" \
-            #     "D7 1 2\n" \
-            #     "C#7 1 1\n" \
-            #     "C#7 3 1\n" \
-            #     "E7 4 2\n" \
-            #     "D7 4 1\n"
+            notes_blob = request.POST['notes_blob']
 
             channel = 0
             time_multiplier = 96
-            global_metadata = ""
-            track_metadata = ""
+            global_metadata = {}
+            track_metadata = {}
             sorted_commands = MidiLib.parse_midi_offset_from_blob(notes_blob)
 
-            print("notes_blob is:" + notes_blob)
             formatted_onoffs = MidiLib.format_mido_onoffs_default_velocity(
                 offset_note_messages=sorted_commands, channel=channel,
                 multiplier=time_multiplier)
 
+            track = Track.objects.filter(id__exact=trackID)
+            track_metadata["instrument"] = track.values('instrument')[0]["instrument"]
 
             filename = str(request.user.id) + "_track_"+str(channel)
             file_path = MidiLib.save_one_track_to_wav(filename, global_metadata, track_metadata, formatted_onoffs)
@@ -168,7 +157,7 @@ def generate_music(request, trackID):
 
             # update database with the new notes blob
             blob_json = {"blob": notes_blob}
-            track = Track.objects.filter(id__exact=trackID)
+
             track.update(blob=json.dumps(blob_json))
 
 

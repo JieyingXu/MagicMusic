@@ -72,10 +72,17 @@ class MidiLib:
         track = mido.MidiTrack()
         midFile.tracks.append(track)
 
+        print(track_metadata)
+        instrument_number = MidiLib.get_instrument_number(track_metadata)
+        print("instrument_number=", instrument_number)
+
+        # change instrument
+        track.append(mido.Message(type='program_change', channel=0, program=instrument_number, time=0))
         for line in formatted_onoffs.strip().split("\n"):
             msg = mido.Message.from_str(line)
             track.append(msg)
-
+        for msg in track:
+            print(msg)
         # save to midi file
         midFilePath = 'media/audio/runtime-wavs/'+filename+'.mid'
         midFile.save(midFilePath)
@@ -115,3 +122,15 @@ class MidiLib:
         # Octave
         answer += (int(midstr[-1])) * 12
         return answer
+
+    @staticmethod
+    def get_instrument_number(track_metadata):
+        if 'instrument' not in track_metadata:
+            return 0
+        instrument_name = str(track_metadata['instrument']).lower()
+        if instrument_name == 'guitar':
+            return 24
+        elif instrument_name == "drum":
+            return 118
+        else:
+            return 0
