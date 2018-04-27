@@ -21,7 +21,7 @@
 {#            <span class="vertical-line"> | </span>#}
             {% if user == result_profile.user %}
                 <form action="{% url 'profile-setting' %}"
-                      method="post">
+                      method="GET">
                     <input type="submit" class="btn-dark mb-4" value="Setting"/>
                     {% csrf_token %}
                 </form>

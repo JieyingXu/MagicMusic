@@ -52,14 +52,8 @@ def profile(request, profile_id):
 @transaction.atomic
 def profile_setting(request):
     context = {}
-    if request.method == "GET":
-        # profile = Profile.objects.get(user=request.user)
-        form = UpdateProfileForm()
-        context['form'] = form
-        context['login_profile'] = Profile.objects.get(user=request.user)
-        return render(request, 'community/profile-setting.html', context)
 
-    if request.method == "POST":
+    if request.method == "POST" and request.FILES:
         new_profile = Profile.objects.get(user=request.user)
         form = UpdateProfileForm(request.POST, request.FILES, instance=new_profile)
 
@@ -68,11 +62,21 @@ def profile_setting(request):
             context['form'] = form
         else:
             new_profile.avatar_content_type = form.cleaned_data['avatar'].content_type
-            new_profile.header_image_content_type = form.cleaned_data['header_image'].content_type
+            new_profile.header_image_content_type = form.cleaned_data['header_image'].file.content_type
             form.save()
             context['form'] = UpdateProfileForm()
         context['login_profile'] = Profile.objects.get(user=request.user)
         return render(request, 'community/profile-setting.html', context)
+
+    # if request.method == "GET":
+    else:
+        # profile = Profile.objects.get(user=request.user)
+        form = UpdateProfileForm(initial={"description":""})
+        context['form'] = form
+        context['login_profile'] = Profile.objects.get(user=request.user)
+        return render(request, 'community/profile-setting.html', context)
+
+
 
 @login_required
 def following_users(request, profile_id):

@@ -16,3 +16,29 @@
         <div class="username-display">{{ login_profile.user.username }}</div>
     </div>
 {% endblock %}
+
+{% block content %}
+    {% for error in form.non_field_errors %}
+        <p style="color: deepskyblue">
+            {{ error }}
+        </p>
+    {% endfor %}
+
+{#    <div class="text-center align-center "#}
+    <form enctype="multipart/form-data" method="POST" action="{% url 'profile-setting' %}">
+        <table>
+            {% for field in form.visible_fields %}
+            <tr>
+                <td>{{ field.label_tag }}</td>
+                <td>{{ field }}</td>
+                <td class="error">
+                    {% for error in field.errors %} {{ error }} {% endfor %}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        <input type="submit" value="Update Profile">
+        {% csrf_token %}
+    </form>
+
+{% endblock %}
