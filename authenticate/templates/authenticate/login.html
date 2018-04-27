@@ -13,12 +13,14 @@
         <link rel="shortcut icon" href="{% static 'authenticate/favicon.png' %}"/>
     </head>
 
-    <body>
-        <div class="container-fluid" style="background-color:black;">
-          <h1 class="text-center" style="color: white">Web App Magic Music</h1>
-        </div>
+    <body class="backgroundimage">
+        <nav class="navbar fixed-top navbar-expand-lg bg-dark navbar-dark">
+            <ul class="navbar-nav mx-auto">
+                <li style="font-size:30px;color:white;margin-top: 10px">Welcome to Magic Music</li>
+            </ul>
+        </nav>
 
-        <div class="card bg-light text-dark mx-auto" style="width:400px">
+        <div class="card text-white mx-auto" style="width:400px;margin-top: 100px;background:rgba(0,0,0,0.1)">
             <div class="card-header mx-auto">Sign In Magic Music</div>
             <div class="card-body">
                 {% if form.errors %}
@@ -46,8 +48,8 @@
             </div>
         </div> 
         
-        <div class="card bg-white text-dark mx-auto" style="width:400px">
-            <a href="{% url 'register' %}" class="mx-auto text-dark">Create an account</a> 
+        <div class="card text-white mx-auto" style="width:400px;background:rgba(0,0,0,0.1)">
+            <a href="{% url 'register' %}" class="mx-auto text-white">Create an account</a> 
         </div> 
     </body>
 </html>
