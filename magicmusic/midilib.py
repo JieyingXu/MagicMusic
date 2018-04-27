@@ -86,7 +86,6 @@ class MidiLib:
         track.append(mido.Message(type='program_change', channel=0, program=instrument_number, time=0))
         for line in formatted_onoffs.strip().split("\n"):
             msg = mido.Message.from_str(line)
-            print(line)
             track.append(msg)
 
         # save to midi file
@@ -213,6 +212,7 @@ class MidiLib:
 
     @staticmethod
     def translate_instrument_number(instrument_name):
+        instrument_name = str(instrument_name).lower()
         if instrument_name == 'guitar':
             return 24
         elif instrument_name == "drum":
