@@ -74,7 +74,7 @@
                         </div>
 
                         <div>
-                            <form role="form" action="{% url 'add-comment' song.id %}" method="POST">
+                            <form role="form" action="{% url 'add-comment-global' song.id %}" method="POST">
                                 {% csrf_token %}
                                 <div class="form-group comment-form">
                                     <div class="input-group">
