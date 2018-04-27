@@ -45,12 +45,12 @@ class Song(models.Model):
     description = models.CharField(max_length=200, blank=False, null=True)
     # length = models.IntegerField
     creation_time = models.DateTimeField(auto_now_add=True)
-    songfile = models.FileField(blank=True, upload_to="community/songfiles")  #songfile name should be <username>_<songfilename>
-    songfile_content_type = models.CharField(max_length=50)
+    songfile = models.CharField(max_length=256, blank=False)  #songfile name should be <username>_<songfilename>
+    # songfile_content_type = models.CharField(max_length=50)
     workspace = models.OneToOneField(Workspace)
-
-    likes = models.IntegerField
-    edit_counts = models.IntegerField
+    #
+    # likes = models.IntegerField
+    # edit_counts = models.IntegerField
 
     cover = models.ImageField(blank=True, upload_to="community/song-covers", default=DEFAULT_COVER_URL)
     # cover_content_type = models.CharField(max_length=50)

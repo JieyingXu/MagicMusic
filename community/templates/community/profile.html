@@ -65,17 +65,42 @@
                         <button type="button" class="btn btn-default song-btn"><span class="glyphicon glyphicon-heart-empty button-icon"></span>{{ song.likes }}</button>
                         <button type="button" class="btn btn-default song-btn"><span class="glyphicon glyphicon-download-alt button-icon"></span>{{ song.edit_counts }}</button>
                     </div>
-                    <form role="form" action="#" method="POST">
-                        <div class="form-group">
-                            <div class="input-group">
-                                <label class="sr-only" for="user1">write a comment:</label>
-                                <input type="text" id="user1" class="form-control comment-textbox" placeholder="write a comment...">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-edit comment-icon"></span></button>
-                                </span>
+
+                    <div>
+                        <form role="form" action="{% url 'add-comment' song.id %}" method="POST">
+                            {% csrf_token %}
+                            <div class="form-group comment-form">
+                                <div class="input-group">
+                                    <label class="sr-only" for="user1">write a comment:</label>
+{#                                        <input type="text" id="user1" class="form-control comment-textbox" placeholder="write a comment...">#}
+                                    {% for field in comment_form.visible_fields %}
+                                        {{ field }}
+                                    {% endfor %}
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-send comment-icon"></span></button>
+                                    </span>
+                                </div>
                             </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
+
+                    <div>
+                        <table class="comment-block">
+                            {% for comment in comments %}
+                                {% if comment.parent_song == song %}
+                                    <tr class="single-comment-row">
+{#                                            <td class="avatar-cell"><img class="comment-user-avatar" src="{% url 'profile-avatar' comment.creator_profile.id %}"></td>#}
+                                        <td class="avatar-cell"><img class="comment-user-avatar" src="{{ comment.creator_profile.avatar.url }}"></td>
+                                        <td class="content-cell">
+                                            <a href="{% url 'profile' comment.creator_profile.id %}" class="comment-username">{{ comment.creator_profile.user.username }}:</a>
+                                            <span class="comment-content">{{ comment.text }}</span>
+                                        </td>
+                                        <td><span class="comment-time">{{ comment.creation_time }}</span></td>
+                                    </tr>
+                                {% endif %}
+                            {% endfor %}
+                        </table>
+                    </div>
                 </div>
 
             </div>

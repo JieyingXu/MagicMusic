@@ -21,33 +21,36 @@
 {% endblock %}
 
 {% block content %}
-    {% for error in form.non_field_errors %}
-        <p style="color: deepskyblue">
-            {{ error }}
-        </p>
-    {% endfor %}
-
-    <form class="form-horizontal text-center profile-setting-form" role="form"
-          enctype="multipart/form-data" method="POST" action="{% url 'profile-setting' %}">
-        {% csrf_token %}
-        {% for field in form.visible_fields %}
-        <div class="form-group">
-            <div class="col-md-3 col-md-offset-2 control-label my-form-label">
-                {{ field.label_tag }}
+    <form class="form-horizontal text-center profile-setting-form" role="form">
+        <div class="form-group my-form-group">
+            <div class="col-md-1 col-md-offset-3 control-label">
+                <label for="inputEmail3">Avatar:</label>
             </div>
             <div class="col-md-4">
-{#              <input type="submit" class="btn btn-default form-controls" id="inputPassword3" value="choose a header image">#}
-                {{ field }}
-            </div>
-            <div class="col-md-4">
-                {% for error in field.errors %} {{ error }} {% endfor %}
+              <input type="submit" class="btn btn-default form-controls" id="inputEmail3" value="choose an avatar image">
             </div>
         </div>
-        {% endfor %}
+        <div class="form-group">
+            <div class="col-md-1 col-md-offset-3 control-label">
+                <label for="inputPassword3">Header:</label>
+            </div>
+            <div class="col-md-4">
+              <input type="submit" class="btn btn-default form-controls" id="inputPassword3" value="choose a header image">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-1 col-md-offset-3 control-label">
+                <label>Desc:</label>
+            </div>
+            <div class="col-md-4">
+                <input type="text" class="form-controls" placeholder="Say something about you...">
+            </div>
+        </div>
         <div class="form-group">
             <div class="col-md-2 col-md-offset-5">
                 <input type="submit" class="btn btn-default form-controls" value="Update Profile">
             </div>
         </div>
     </form>
+
 {% endblock %}

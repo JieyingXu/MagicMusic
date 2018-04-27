@@ -199,3 +199,23 @@ div {
     margin: 10px;
     word-break: break-all;
 }
+
+.dropdown-menu>li>a {
+    font-family: SansSerif;
+    color: rgb(240, 240, 240);
+    font-size: 15px;
+}
+
+.big-head {
+    font-family: SansSerif;
+    color: #00a78e;;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+/*.small-head {*/
+    /*font-family: SansSerif;*/
+    /*color: #2299ee;*/
+    /*font-size: 30px;*/
+    /*font-style: italic;*/
+/*}*/

@@ -65,16 +65,19 @@ def addsong(request, id):
         context = {'form': SongForm(),  'workspaceID': id}
         return render(request, 'magicmusic/addsong.html', context)
     else:
-        newsong_form = SongForm(request.POST)
-        objects = Workspace.objects.filter(id__exact=id)
-        workspace = objects.all()[0]
-        newsong = Song(creator=request.user.profile,
-                        name=newsong_form.data['name'],
-                        description=newsong_form.data[
-                                     'description'],
-                        workspace=workspace,
-                        creation_time=timezone.now())
-        newsong.save()
+        context = {}
+        new_song = Song(creator=request.user.profile,
+                        )
+        # newsong_form = SongForm(request.POST)
+        # objects = Workspace.objects.filter(id__exact=id)
+        # workspace = objects.all()[0]
+        # newsong = Song(creator=request.user.profile,
+        #                 name=newsong_form.data['name'],
+        #                 description=newsong_form.data[
+        #                              'description'],
+        #                 workspace=workspace,
+        #                 creation_time=timezone.now())
+        # newsong.save()
         return redirect(reverse('mymusic'))
 
 @login_required
