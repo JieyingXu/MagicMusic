@@ -105,9 +105,7 @@ class MidiLib:
         for info in track_info_list:
             channel = int(info['channel'])
             instrument = str(info['instrument']).lower()
-            print("got instrument:", instrument)
             instrument_number = MidiLib.translate_instrument_number(instrument)
-            print("instrument number:", instrument_number)
             blob = info['blob']
 
             # add to track
