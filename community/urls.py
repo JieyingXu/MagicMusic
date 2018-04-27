@@ -14,7 +14,7 @@ urlpatterns = [
     url(r'^song/(?P<song_id>\d+)$', views.get_song, name='song'),
     url(r'^add-comment/(?P<song_id>\d+)$', views.add_comment, name='add-comment'),
     url(r'^logout$', auth_views.logout_then_login, name='logout'),
-    url(r'^follow$', views.follow, name='follow'),
-    url(r'^unfollow$', views.unfollow, name='unfollow'),
+    url(r'^follow/(?P<profile_id>\d+)$', views.follow, name='follow'),
+    url(r'^unfollow/(?P<profile_id>\d+)$', views.unfollow, name='unfollow'),
     # url(r'^workspace/(?P<id>\d+)$', views.workspace, name='workspace'),
 ]

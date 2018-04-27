@@ -96,6 +96,8 @@ def addsong(request, id):
                    "_song_" + str(new_song_id)
         new_song_path = MidiLib.save_all_track_to_wav(filename, global_metadata, track_info_list, True)
 
+        new_song_path = new_song_path.replace('media/', '', 1)
+
         new_song_update = Song.objects.filter(id__exact=new_song_id)
         new_song_update.update(songfile=new_song_path)
 
