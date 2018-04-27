@@ -51,8 +51,8 @@ def addworkspace(request):
             newworkspacegroup.save()
         newworkspace = Workspace(workspace_group=newworkspacegroup,
                                  name=newworkspace_form.data['name'],
-                                 description=newworkspace_form.data[
-                                     'description'])
+                                 description=newworkspace_form.data['description'],
+                                 )
         newworkspace.save()
         # print("newworkspace user: " + str(newworkspace.name))
         return redirect(reverse('mymusic'))
@@ -70,10 +70,10 @@ def addsong(request, id):
         workspace = objects.all()[0]
         newsong = Song(creator=request.user.profile,
                         name=newsong_form.data['name'],
-                        description=newsong_form.data[
-                                     'description'],
+                        description=newsong_form.data['description'],
                         workspace=workspace,
-                        creation_time=timezone.now())
+                        creation_time=timezone.now(),
+                        )
         newsong.save()
         return redirect(reverse('mymusic'))
 
