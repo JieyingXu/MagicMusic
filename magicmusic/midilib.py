@@ -105,7 +105,9 @@ class MidiLib:
         for info in track_info_list:
             channel = int(info['channel'])
             instrument = str(info['instrument']).lower()
-            instrument_number = MidiLib.get_instrument_number(instrument)
+            print("got instrument:", instrument)
+            instrument_number = MidiLib.translate_instrument_number(instrument)
+            print("instrument number:", instrument_number)
             blob = info['blob']
 
             # add to track
@@ -163,6 +165,10 @@ class MidiLib:
         if 'instrument' not in track_metadata:
             return 0
         instrument_name = str(track_metadata['instrument']).lower()
+        return MidiLib.translate_instrument_number(instrument_name)
+
+    @staticmethod
+    def translate_instrument_number(instrument_name):
         if instrument_name == 'guitar':
             return 24
         elif instrument_name == "drum":
