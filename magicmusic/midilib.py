@@ -104,7 +104,7 @@ class MidiLib:
         return wavFilePath
 
     @staticmethod
-    def save_all_track_to_wav(filename, global_metadata, track_info_list):
+    def save_all_track_to_wav(filename, global_metadata, track_info_list, is_publish):
         midFile = mido.MidiFile()
         for info in track_info_list:
             channel = int(info['channel'])
@@ -126,12 +126,17 @@ class MidiLib:
                     msg = mido.Message.from_str(line)
                     track.append(msg)
 
+        if is_publish:
+            path_prefix = "media/audio/published-wavs/"
+        else:
+            path_prefix = "media/audio/runtime-wavs/"
+
         # save to midi file
-        midFilePath = 'media/audio/runtime-wavs/' + filename + '.mid'
+        midFilePath = path_prefix + filename + '.mid'
         midFile.save(midFilePath)
 
         # generate wav
-        wavFilePath = 'media/audio/runtime-wavs/' + filename + '.wav'
+        wavFilePath = path_prefix + filename + '.wav'
         os.system('fluidsynth -g 2.5 -ni ' + soundfont_path + ' '
                   + midFilePath + ' -F ' + wavFilePath + ' -r 44100 > /dev/null')
 

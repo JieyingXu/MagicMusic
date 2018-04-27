@@ -66,18 +66,40 @@ def addsong(request, id):
         return render(request, 'magicmusic/addsong.html', context)
     else:
         context = {}
-        new_song = Song(creator=request.user.profile,
-                        )
-        # newsong_form = SongForm(request.POST)
-        # objects = Workspace.objects.filter(id__exact=id)
-        # workspace = objects.all()[0]
-        # newsong = Song(creator=request.user.profile,
-        #                 name=newsong_form.data['name'],
-        #                 description=newsong_form.data[
-        #                              'description'],
-        #                 workspace=workspace,
-        #                 creation_time=timezone.now())
-        # newsong.save()
+
+        with transaction.atomic():
+            objects = Workspace.objects.filter(id__exact=id)
+            workspace = objects.all()[0]
+            new_song = Song(songfile="",
+                            creator=request.user.profile,
+                            workspace=workspace)
+            new_song.save()
+            newsong_form = SongForm(request.POST, request.FILES, instance=new_song)
+            newsong_form.save()
+
+            new_song_id = new_song.id
+            print("new_song_id=", new_song_id)
+
+
+        # gen new wav and get url
+        all_tracks = Track.objects.filter(workspace__id=id)
+        track_info_list = []
+        for i, tk in enumerate(all_tracks):
+            info = {}
+            info['channel'] = i
+            info['instrument'] = tk.instrument
+            info['blob'] = tk.blob
+            track_info_list.append(info)
+
+        global_metadata = {}
+        filename = "usr_" + str(request.user.id) + \
+                   "_song_" + str(new_song_id)
+        new_song_path = MidiLib.save_all_track_to_wav(filename, global_metadata, track_info_list, True)
+
+        new_song_update = Song.objects.filter(id__exact=new_song_id)
+        new_song_update.update(songfile=new_song_path)
+
+
         return redirect(reverse('mymusic'))
 
 @login_required
@@ -226,7 +248,7 @@ def generate_workspace_music(request, workspace_id):
         global_metadata={}
         filename = "usr_" + str(request.user.id) + \
                    "_ws_" + str(workspace_id)
-        file_path = MidiLib.save_all_track_to_wav(filename, global_metadata, track_info_list)
+        file_path = MidiLib.save_all_track_to_wav(filename, global_metadata, track_info_list, False)
 
         res_obj = {
             'file_path': file_path
