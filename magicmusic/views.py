@@ -152,13 +152,13 @@ def generate_music(request, trackID):
             track = track_qs[0]
             workspace = track.workspace
             all_tracks = Track.objects.filter(workspace__id=workspace.id)
-            channel = 0
-            for i, potential_track in enumerate(all_tracks):
-                if potential_track.id == track.id:
-                    channel = i
+            # channel = 0
+            # for i, potential_track in enumerate(all_tracks):
+            #     if potential_track.id == track.id:
+            #         channel = i
 
             track_metadata["instrument"] = track.instrument
-            track_metadata["channel"] = channel
+            # track_metadata["channel"] = channel
 
             filename = "usr_"+ str(request.user.id) + \
                        "_ws_" + str(workspace.id) +"_trk_" + str(track.id)
@@ -177,3 +177,24 @@ def generate_music(request, trackID):
             res_str = json.dumps(res_obj)
 
             return HttpResponse(res_str, content_type='application/json')
+
+@login_required
+def generate_workspace_music(request, workspace_id):
+    if not request.POST:
+        raise Http404
+    else:
+        # TODO: no tracks in workspace
+
+        all_tracks = Track.objects.filter(workspace__id=workspace_id)
+        track_info_list = []
+        for i, tk in enumerate(all_tracks):
+            info = {}
+            info['channel'] = i
+            info['instrument'] = tk.instrument
+            info['blob'] = tk.blob
+            track_info_list.append(info)
+
+        global_metadata={}
+        filename = "usr_" + str(request.user.id) + \
+                   "_ws_" + str(workspace_id)
+        file_path = MidiLib.save_all_track_to_wav(filename, global_metadata, track_info_list)

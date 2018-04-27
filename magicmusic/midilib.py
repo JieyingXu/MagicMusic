@@ -2,6 +2,9 @@ from mido import *
 from mido.messages import *
 import mido
 import os
+import json
+
+soundfont_path = "media/audio/soundfonts/FluidR3_GM.sf2"
 
 class MidiLib:
 
@@ -82,11 +85,9 @@ class MidiLib:
 
         # save to midi file
         midFilePath = 'media/audio/runtime-wavs/'+filename+'.mid'
-        print("midFilePath=", midFilePath)
         midFile.save(midFilePath)
 
         # save to wav file
-        soundfont_path = "media/audio/soundfonts/FluidR3_GM.sf2"
         # fluid_synth = midi2audio.FluidSynth(soundfont_path)
         wavFilePath = 'media/audio/runtime-wavs/'+filename+'.wav'
         os.system('fluidsynth -g 2.5 -ni ' + soundfont_path + ' '
@@ -96,6 +97,38 @@ class MidiLib:
 
 
         return wavFilePath
+
+    @staticmethod
+    def save_all_track_to_wav(filename, global_metadata, track_info_list):
+        midFile = mido.MidiFile()
+        for info in track_info_list:
+            channel = int(info['channel'])
+            instrument = str(info['instrument']).lower()
+            instrument_number = MidiLib.get_instrument_number(instrument)
+            blob = info['blob']
+
+            # add to track
+            track = mido.MidiTrack()
+            midFile.tracks.append(track)
+
+            # change instrument
+            track.append(mido.Message(type='program_change', channel=channel,
+                                      program=instrument_number, time=0))
+            for line in json.load(blob)['blob'].strip().split("\n"):
+                msg = mido.Message.from_str(line)
+                track.append(msg)
+
+            # save to midi file
+            midFilePath = 'media/audio/runtime-wavs/' + filename + '.mid'
+            midFile.save(midFilePath)
+
+            # generate wav
+            wavFilePath = 'media/audio/runtime-wavs/' + filename + '.wav'
+            os.system('fluidsynth -g 2.5 -ni ' + soundfont_path + ' '
+                      + midFilePath + ' -F ' + wavFilePath + ' -r 44100 > /dev/null')
+
+        return wavFilePath
+
 
     # https://stackoverflow.com/questions/13926280/musical-note-string-c-4-f-3-etc-to-midi-note-value-in-python
     # Input is string in the form C#-4, Db-4, or F-3. If your implementation doesn't use the hyphen,
