@@ -26,6 +26,7 @@ def home(request):
     context = {}
     context['songs'] = Song.objects.all().order_by('-creation_time')
     context['comments'] = Comment.objects.all().order_by('creation_time')
+    context['comment-form'] = CommentForm()
     return render(request, 'community/globalStream.html', context)
 
 @login_required
@@ -35,7 +36,9 @@ def profile(request, profile_id):
     login_user_profile = get_object_or_404(Profile, user=request.user)
     result_profile = get_object_or_404(Profile, id=profile_id)
     context['result_profile'] = result_profile
-    context['songs'] = result_profile.song_set.all()
+    context['songs'] = result_profile.song_set.all().order_by('-creation_time')
+    context['comments'] = Comment.objects.all().order_by('creation_time')
+    context['comment-form'] = CommentForm()
     if login_user_profile == result_profile:
         followings = login_user_profile.followings.all()
         context['following_count'] = followings.count()
@@ -75,7 +78,9 @@ def profile_setting(request):
         context['form'] = form
         context['login_profile'] = Profile.objects.get(user=request.user)
         return render(request, 'community/profile-setting.html', context)
-    # return render(request, 'community/profile-setting-pure-template.html', {})
+    # context = {}
+    # context['login_profile'] = request.user.profile
+    # return render(request, 'community/profile-setting-pure-template.html', context)
 
 
 
@@ -124,7 +129,6 @@ def unfollow(request, profile_id):
 @transaction.atomic
 @login_required
 def add_comment(request, song_id):
-    context = {}
     related_song = get_object_or_404(Song, id=song_id)
     new_comment = Comment(creator_profile=request.user.profile, parent_song=related_song)
     comment_form = CommentForm(request.POST, instance=new_comment)

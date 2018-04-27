@@ -1,0 +1,11 @@
+.profile-setting-form {
+    background: aliceblue;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    height: 400px;
+}
+
+.my-form-group {
+    padding-top: 100px;
+}

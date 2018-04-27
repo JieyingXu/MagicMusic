@@ -29,7 +29,8 @@ class CommentForm(forms.ModelForm):
         )
         widgets = {
             'text' : TextInput(
-                attrs={'class':"form-control comment-textbox"}
+                attrs={'class':"form-control comment-textbox",
+                       'placeholder': "write a comment..."}
             )
         }
 

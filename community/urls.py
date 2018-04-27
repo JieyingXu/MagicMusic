@@ -12,6 +12,7 @@ urlpatterns = [
     # url(r'^profile-bg/(?P<profile_id>\d+)$', views.get_profile_bg, name='profile-bg'),
     # url(r'^song-cover/(?P<song_id>\d+)$', views.get_song_cover, name='song-cover'),
     url(r'^song/(?P<song_id>\d+)$', views.get_song, name='song'),
+    url(r'^add-comment/(?P<song_id>\d+)$', views.add_comment, name='add-comment'),
     url(r'^logout$', auth_views.logout_then_login, name='logout'),
     url(r'^follow$', views.follow, name='follow'),
     url(r'^unfollow$', views.unfollow, name='unfollow'),
