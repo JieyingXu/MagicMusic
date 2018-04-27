@@ -15,6 +15,7 @@ from community.models import *
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse, Http404
 from django.db import transaction
+from community.forms import *
 from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
@@ -50,7 +51,28 @@ def profile(request, profile_id):
 @login_required
 @transaction.atomic
 def profile_setting(request):
-    pass
+    context = {}
+    if request.method == "GET":
+        # profile = Profile.objects.get(user=request.user)
+        form = UpdateProfileForm()
+        context['form'] = form
+        context['login_profile'] = Profile.objects.get(user=request.user)
+        return render(request, 'community/profile-setting.html', context)
+
+    if request.method == "POST":
+        new_profile = Profile.objects.get(user=request.user)
+        form = UpdateProfileForm(request.POST, request.FILES, instance=new_profile)
+
+        if not form.is_valid():
+            print("form is not valid")
+            context['form'] = form
+        else:
+            new_profile.avatar_content_type = form.cleaned_data['avatar'].content_type
+            new_profile.header_image_content_type = form.cleaned_data['header_image'].content_type
+            form.save()
+            context['form'] = UpdateProfileForm()
+        context['login_profile'] = Profile.objects.get(user=request.user)
+        return render(request, 'community/profile-setting.html', context)
 
 @login_required
 def following_users(request, profile_id):

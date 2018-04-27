@@ -1,10 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "community/globalStream.html" %}
+{% block styleSheet %}
+    {% load staticfiles %}
+    <link href="{% static 'community/globalStream.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'community/profile.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
 
-</body>
-</html>
+{% block user-info %}
+{#    <div class="user-bg-pic">#}
+    <div style="
+            background: url({% url 'profile-bg' login_profile.id %});
+            min-height: 300px;
+            background-size: cover;
+            margin-bottom: 40px;">
+        <div><img class="user-avatar" src="{% url 'profile-avatar' login_profile.id %}" alt=""></div>
+        <div class="username-display">{{ login_profile.user.username }}</div>
+    </div>
+{% endblock %}

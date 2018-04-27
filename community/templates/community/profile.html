@@ -47,7 +47,7 @@
     <div class="container">
         {% for song in songs %}
             <div class="row">
-                <div class="col-md-1 song-number">1.</div>
+                <div class="col-md-1 song-number">{{ forloop.counter }}.</div>
                 <div class="col-md-2 song-left">
                     <img src="{% url "song-cover" song.id %}" class="img-responsive img-rounded profile-song-img">
                 </div>
