@@ -11,122 +11,154 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <style>
             body {
               position: relative;
+              padding: 140px;
             }
             div.col-8 div {
               height: 50px;
             }
+            th, td {
+                white-space: nowrap;
+            }
+            .first-col {
+                position: absolute;
+                width: 5em;
+                margin-left: -5em;
+            }
+            .table-wrapper {
+                overflow-x: scroll;
+                width: 600px;
+                margin: 0 auto;
+            }
+            .fixed-top-2 {
+                margin-top: 70px;
+            }
         </style>
     </head>
 
-    <body data-spy="scroll" data-target="#myScrollspy" data-offset="1">
-        <nav class="navbar sticky-top navbar-expand-sm bg-dark navbar-dark">
-          <!-- Brand/logo -->
-          <a class="navbar-brand" style="color: white" href="{% url 'profile' %}?username=' + '{{user.username}}' + '"">{{user.first_name}} {{user.last_name}}</a>
-          <!-- Links -->
-          <ul class="navbar-nav">
-            <li class="nav-item">
-                <form action="{% url 'logout' %}" method="get">
-                    <button type="submit" class="btn btn-primary btn-lg" value="Logout">Logout</button>
+    <body  class="backgroundimage">
+        <nav class="navbar fixed-top navbar-expand-lg bg-dark navbar-dark">
+          <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="navbar-brand" style="color: white;font-size: 30px" href="{% url 'profile' %}?username=' + '{{user.username}}' + '"">{{user.first_name}} {{user.last_name}}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="font-size: 20px;margin-top: 9px" href="{% url 'mymusic' %}?username=' + '{{user.username}}' + '"">Workspaces</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="font-size: 20px;margin-top: 9px" href="{% url 'follower' %}?username=' + '{{user.username}}' + '"">Community</a>
+                </li>
+            </ul>
+          </div>
+
+          <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <form action="{% url 'logout' %}" method="get">
+                    <button type="submit" class="btn bt-dark btn-sm bg-transparent" value="Logout">
+                        <i class="material-icons" style="font-size:40px;color:white;">exit_to_app</i>
+                    </button>
                 </form>
-            </li>
-          </ul>
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'mymusic' %}?username=' + '{{user.username}}' + '"">My Workspaces</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'follower' %}?username=' + '{{user.username}}' + '"">Friends Music</a>
-            </li>
-          </ul>
+                </li>
+                <li style="font-size:20px;color:white;margin-top: 10px">Log out</li>
+            </ul>
+          </div>
         </nav>
 
-        <div class="container-fluid">
-          <div class="card bg-light text-dark mx-auto">
-            <div class="card-header mx-auto">
-                <form method="post" action="{% url 'workspace' workspaceID %}">
-                    <div class="row" style="width:1000px">
-                        <div class="col-3">
-                            <div class="dropdown show">
-                              <button class="btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Instrument</button>
+        <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light fixed-top-2">
+            <a class="navbar-brand py-0" href="#">
+                <div class="card text-dark mx-auto">
+                    <div class="card-header mx-auto">
+                        <form method="post" action="{% url 'workspace' workspaceID %}">
+                            <div class="row" style="width:1000px">
+                                <div class="col-2">
+                                    <div class="dropdown show">
+                                      <button class="btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="material-icons" style="font-size:30px;color:white;">music_note</i></button>
 
-                              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <div class="dropdown-item form-check">
-                                  <input class="form-check-input" type="radio" name="instruments" id="Piano" value="Piano" checked>
-                                  <label class="form-check-label" for="Piano">Piano</label>
+                                      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                        <div class="dropdown-item form-check">
+                                          <input class="form-check-input" type="radio" name="instruments" id="Piano" value="Piano" checked>
+                                          <label class="form-check-label" for="Piano">Piano</label>
+                                        </div>
+                                        <div class="dropdown-item form-check">
+                                          <input class="form-check-input" type="radio" name="instruments" id="Drum" value="Drum" checked>
+                                          <label class="form-check-label" for="Drum">Drum</label>
+                                        </div>
+                                        <div class="dropdown-item form-check">
+                                          <input class="form-check-input" type="radio" name="instruments" id="Guitar" value="Guitar" checked>
+                                          <label class="form-check-label" for="Guitar">Guitar</label>
+                                        </div>
+                                      </div>
+                                    </div>             
                                 </div>
-                                <div class="dropdown-item form-check">
-                                  <input class="form-check-input" type="radio" name="instruments" id="Drum" value="Drum" checked>
-                                  <label class="form-check-label" for="Drum">Drum</label>
+
+                                <div class="col-3">
+                                    <input class="form-control form-control-sm" type="name" name="name" placeholder="track name">
                                 </div>
-                                <div class="dropdown-item form-check">
-                                  <input class="form-check-input" type="radio" name="instruments" id="Guitar" value="Guitar" checked>
-                                  <label class="form-check-label" for="Guitar">Guitar</label>
+
+                                <div class="col-3">
+                                    <input class="form-control form-control-sm" type="description" name="description" placeholder="track description">
                                 </div>
-                              </div>
-                            </div>             
-                        </div>
 
-                        <div class="col-3">
-                            <input type="name" id="name" placeholder="track name">
-                        </div>
-
-                        <div class="col-3">
-                            <input type="description" id="description" placeholder="track description">
-                        </div>
-
-                        <div class="col-3">
-                            <button type="submit" class="btn btn-primary btn-block" value="addtrack">Add Track</button>
-                        </div>
+                                <div class="col-3">
+                                    <button type="submit" class="btn btn-secondary btn-block" value="addtrack">Add Track</button>
+                                </div>
+                            </div>
+                            {% csrf_token %}
+                        </form>
                     </div>
-                    {% csrf_token %}
-                </form>
-            </div>
-          </div>
-        </div>
-
-        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-faded">
-            <a class="navbar-brand" href="#"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                  </div>
+            </a>
             <div id="navbarNavDropdown" class="navbar-collapse collapse">
+                <ul class="navbar-nav">
+                    <form method="post">
+                        <li class="nav-item">
+                            <button type="button" class="btn btn-light btn-sm play">
+                                <i class="material-icons" style="font-size:55px;color:grey;">play_circle_filled</i>
+                            </button>
+                        </li>
+                    </form>
+                </ul>
+
                 <ul class="navbar-nav mr-auto">
+                    <form method="post">
+                        <li class="nav-item">
+                            <button type="button" class="btn btn-light btn-sm publish">
+                                <i class="material-icons" style="font-size:55px;color:grey;">library_add</i>
+                            </button>
+                        </li>
+                    </form>
                 </ul>
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <button type="button" class="btn btn-success btn-lg">Play</button>
-                    </li>
+                    <form method="post">
+                        <li class="nav-item">
+                            <button type="button" class="btn btn-light btn-sm info">
+                                <i class="material-icons" style="font-size:40px;color:green;">info_outline</i>
+                            </button>
+                        </li>
+                    </form>
                 </ul>
             </div>
         </nav>
 
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-sm-1 col-8">
-              <div>
-                {% for track in tracks %}
-                    <div id="{{track.trackid}}" class="bg-secondary">
-                        <a style="color: white" href="#{{track.trackid}}">{{track.instrument}}</a>
-                        <p>     </p>
-                    </div>
-                    <p></p>
-                {% endfor %}
-              </div>
+        <div class="container-fluid offset" style="margin-top: 10px">
+            <div class="table-wrapper text-center">
+                <table class="table table-bordered table-striped table-hover">
+                    <tbody>
+                        {% for track in tracks %}
+                        <p></p>
+                        <tr>
+                            <td class="first-col bg-secondary" id="{{track.trackid}}" style="color: white">{{track.instrument}}</td>
+                            <td><a href="{% url 'track' track.trackid %}" class="mx-auto text-light">Click to Edit Track</a><cite class="text-success" style="font-size: 14px">   [Name: {{track.name}}]   [Description: {{track.description}}]</cite></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
             </div>
-            <div class="col-xl-11 col-8 flex-row flex-nowrap">
-                {% for track in tracks %}
-                    <div id="{{track.trackid}}" class="bg-secondary">
-                        <a href="{% url 'track' track.trackid %}" class="mx-auto" style="color: white">edit track</a>
-                        <p>track preview</p>
-                    </div>
-                    <p></p>
-                {% endfor %}
-            </div>
-          </div>
         </div>
-
     </body>
 </html>

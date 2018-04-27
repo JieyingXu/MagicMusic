@@ -12,12 +12,14 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     </head>
 
-    <body>
-        <div class="container-fluid" style="background-color:black;">
-          <h1 class="text-center" style="color: white">Web App Magic Music</h1>
-        </div>
+    <body class="backgroundimage">
+        <nav class="navbar fixed-top navbar-expand-lg bg-dark navbar-dark">
+            <ul class="navbar-nav mx-auto">
+                <li style="font-size:30px;color:white;margin-top: 10px">Welcome to Magic Music</li>
+            </ul>
+        </nav>
 
-        <div class="card bg-light text-dark mx-auto" style="width:400px">
+        <div class="card text-white mx-auto" style="width:400px;margin-top: 100px;background:rgba(0,0,0,0.1)">
             <div class="card-header mx-auto">Register for Magic Music</div>
             <div class="card-body">
                 <form method="post" action="{% url 'register' %}">
@@ -34,7 +36,7 @@
                     </table>
                     {% csrf_token %}
                     <p></p>
-                    <button type="submit" class="btn btn-lg btn-primary btn-block" value="Register">Register</button>
+                    <button type="submit" class="btn btn-lg btn-secondary btn-block" value="Register">Register</button>
                     <input type="hidden" name="next" value="{{ next }}" />
                 </form>
             </div>
