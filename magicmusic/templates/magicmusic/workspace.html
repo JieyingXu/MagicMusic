@@ -49,7 +49,7 @@
                     <a class="navbar-brand" style="color: white;font-size: 30px" href="{% url 'profile' user.profile.id %}">{{user.username}}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" style="font-size: 20px;margin-top: 9px" href="{% url 'mymusic' %}?username=' + '{{user.username}}' + '">Workspaces</a>
+                    <a class="nav-link" style="font-size: 20px;margin-top: 9px" href="{% url 'mymusic' %}">Workspaces</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" style="font-size: 20px;margin-top: 9px" href="{% url 'home' %}">Community</a>
@@ -99,15 +99,23 @@
                                 </div>
 
                                 <div class="col-3">
+<<<<<<< HEAD
                                     <input class="form-control form-control-sm" type="name" name="name" placeholder="track name">
                                 </div>
 
                                 <div class="col-3">
                                     <input class="form-control form-control-sm" type="description" name="description" placeholder="track description">
+=======
+                                    <input class="form-control form-control-sm" type="name" name="name" placeholder="track name" style="margin-top: 8px">
                                 </div>
 
                                 <div class="col-3">
-                                    <button type="submit" class="btn btn-secondary btn-block" value="addtrack">Add Track</button>
+                                    <input class="form-control form-control-sm" type="description" name="description" placeholder="track description" style="margin-top: 8px">
+>>>>>>> master
+                                </div>
+
+                                <div class="col-3">
+                                    <button type="submit" class="btn btn-secondary btn-block" value="addtrack" style="margin-top: 3px">Add Track</button>
                                 </div>
                             </div>
                             {% csrf_token %}
@@ -138,7 +146,7 @@
                 <ul class="navbar-nav">
                     <form method="post">
                         <li class="nav-item">
-                            <button type="button" class="btn btn-light btn-sm info">
+                            <button type="button" class="btn btn-light btn-sm info" data-toggle="modal" data-target="#exampleModalLong">
                                 <i class="material-icons" style="font-size:40px;color:green;">info_outline</i>
                             </button>
                         </li>
@@ -147,6 +155,32 @@
             </div>
         </nav>
 
+<<<<<<< HEAD
+=======
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">User Guide</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                Step 1:
+
+                <hr>
+                Step 2:
+
+              </div>
+              <div class="modal-footer mx-auto">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+>>>>>>> master
         <div class="container-fluid offset" style="margin-top: 10px">
             <div class="table-wrapper text-center">
                 <table class="table table-bordered table-striped table-hover">
