@@ -1,8 +1,7 @@
 {% extends "magicmusic/base.html" %}
 
 {% block albums %}
-    <p></p>
-    <div class="card bg-light text-center text-dark mx-auto" style="width:400px">
+    <div class="card bg-light text-center text-dark mx-auto" style="width:400px;margin-top: 100px">
         <div class="card-body">
             <form method="get" action="{% url 'addworkspace' %}">
                 <button type="submit" class="btn btn-lg btn-secondary btn-block" value="addworkspace">Add New Workspace</button>
@@ -12,15 +11,59 @@
     </div>
     <p></p>
 
-    <div>
-        {% for workspace in workspaces %}
-            <div class="card bg-light text-center mx-auto" style="width:400px">
-              <div class="card-body">
-                <h5 class="card-title"><i class="material-icons" style="font-size:50px;color:grey;">assignment</i></h5>
-                <p class="card-text"><a href="{% url 'workspace' workspace.id %}" style="font-size:30px;color:grey;">{{workspace.name}}</a></p>
-              </div>
-            </div>
-            <p></p> 
-        {% endfor %}
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner row w-100 mx-auto">
+      <div class="carousel-item col-md-4 active">
+        <div class="card text-center">
+          <img class="card-img-top img-fluid img-thumbnail" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/6-col/img%20(7).jpg" alt="rgba-red-light">
+          <div class="card-body">
+            <p class="card-text" style="font-size:30px;color:grey;">Wait For Your Innovation</p>
+          </div>
+        </div>
+      </div>
+      {% for workspace in workspaces %}
+      <div class="carousel-item col-md-4">
+        <div class="card text-center view overlay">
+          <img class="card-img-top img-fluid img-thumbnail rgba-red-light" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/6-col/img%20(7).jpg" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text"><a href="{% url 'workspace' workspace.id %}" style="font-size:30px;color:grey;">{{workspace.name}}</a></p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
     </div>
+  </div>
 {% endblock %}
+
+<script>
+$("#myCarousel").on("slide.bs.carousel", function(e) {
+  var $e = $(e.relatedTarget);
+  var idx = $e.index();
+  var itemsPerSlide = 3;
+  var totalItems = $(".carousel-item").length;
+
+  if (idx >= totalItems - (itemsPerSlide - 1)) {
+    var it = itemsPerSlide - (totalItems - idx);
+    for (var i = 0; i < it; i++) {
+      // append slides to end
+      if (e.direction == "left") {
+        $(".carousel-item")
+          .eq(i)
+          .appendTo(".carousel-inner");
+      } else {
+        $(".carousel-item")
+          .eq(0)
+          .appendTo($(this).find(".carousel-inner"));
+      }
+    }
+  }
+});
+</script>
