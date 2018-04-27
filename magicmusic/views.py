@@ -13,9 +13,10 @@ from django.http import HttpResponse, Http404
 from magicmusic.models import *
 from magicmusic.forms import *
 from magicmusic.midilib import MidiLib
+from community.models import *
+from community.forms import *
 
 import json
-
 
 @login_required
 def mymusic(request):
@@ -58,8 +59,27 @@ def addworkspace(request):
 
 
 @login_required
+def addsong(request, id):
+    print("enter addsong")
+    if request.method == 'GET':
+        context = {'form': SongForm(),  'workspaceID': id}
+        return render(request, 'magicmusic/addsong.html', context)
+    else:
+        newsong_form = SongForm(request.POST)
+        objects = Workspace.objects.filter(id__exact=id)
+        workspace = objects.all()[0]
+        newsong = Song(creator=request.user.profile,
+                        name=newsong_form.data['name'],
+                        description=newsong_form.data[
+                                     'description'],
+                        workspace=workspace,
+                        creation_time=timezone.now())
+        newsong.save()
+        return redirect(reverse('mymusic'))
+
+@login_required
 def workspace(request, id):
-    # print("workspace\n")
+    print("workspace\n")
     if request.method == 'GET':
         objects = Workspace.objects.filter(id__exact=id)
         workspace = objects.all()[0]

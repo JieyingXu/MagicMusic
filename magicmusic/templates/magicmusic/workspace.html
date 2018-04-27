@@ -116,23 +116,25 @@
             </a>
             <div id="navbarNavDropdown" class="navbar-collapse collapse">
                 <ul class="navbar-nav">
-                    <form method="post">
-                        <li class="nav-item">
+                    <li class="nav-item">
+                        <form method="post">
                             <button type="button" class="btn btn-light btn-sm play">
                                 <i class="material-icons" style="font-size:55px;color:grey;">play_circle_filled</i>
                             </button>
-                        </li>
-                    </form>
+                            {% csrf_token %}
+                        </form>
+                    </li>
                 </ul>
 
                 <ul class="navbar-nav mr-auto">
-                    <form method="post">
-                        <li class="nav-item">
-                            <button type="button" class="btn btn-light btn-sm publish">
-                                <i class="material-icons" style="font-size:55px;color:grey;">library_add</i>
-                            </button>
-                        </li>
-                    </form>
+                    <li class="nav-item">
+                        <p></p>
+                        <a href="{% url 'addsong' workspaceID %}">
+                        <button type="button" class="btn btn-light btn-sm publish">
+                            <i class="material-icons" style="font-size:55px;color:grey;">library_add</i>
+                        </button>
+                        </a>
+                    </li>
                 </ul>
                 <ul class="navbar-nav">
                     <form method="post">
@@ -150,13 +152,14 @@
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">User Guide</h5>
+                <h5 class="modal-title" id="exampleModalLongTitle">Workspace User Guide</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
               <div class="modal-body">
-                Step 1:
+                What is Workspace?
+                    Workspace is a page for user to edit it's song. It's composed 
 
                 <hr>
                 Step 2:
