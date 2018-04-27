@@ -59,7 +59,7 @@ def addworkspace(request):
 
 @login_required
 def workspace(request, id):
-    print("workspace\n")
+    # print("workspace\n")
     if request.method == 'GET':
         objects = Workspace.objects.filter(id__exact=id)
         workspace = objects.all()[0]
@@ -86,7 +86,7 @@ def workspace(request, id):
         tracks = []
         objects = Track.objects.filter(workspace__exact=workspace)
         for e in objects:
-            track = {'instrument': e.instrument, 'trackid': e.id}
+            track = {'instrument': e.instrument, 'trackid': e.id, 'name':e.name, 'description':e.description}
             tracks.append(track);
         context = {'tracks': tracks, 'workspaceID': id}
         return render(request, 'magicmusic/workspace.html', context)

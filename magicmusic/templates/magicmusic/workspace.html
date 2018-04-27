@@ -97,11 +97,11 @@
                                 </div>
 
                                 <div class="col-3">
-                                    <input class="form-control form-control-sm" type="name" id="name" placeholder="track name">
+                                    <input class="form-control form-control-sm" type="name" name="name" placeholder="track name">
                                 </div>
 
                                 <div class="col-3">
-                                    <input class="form-control form-control-sm" type="description" id="description" placeholder="track description">
+                                    <input class="form-control form-control-sm" type="description" name="description" placeholder="track description">
                                 </div>
 
                                 <div class="col-3">
@@ -123,15 +123,7 @@
                         </li>
                     </form>
                 </ul>
-                <!-- <ul class="navbar-nav mr-auto">
-                    <form method="post">
-                        <li class="nav-item">
-                            <button type="button" class="btn btn-light btn-sm publish">
-                                <i class="material-icons" style="font-size:55px;color:grey;">assignment_turned_in</i>
-                            </button>
-                        </li>
-                    </form>
-                </ul> -->
+
                 <ul class="navbar-nav mr-auto">
                     <form method="post">
                         <li class="nav-item">
@@ -153,15 +145,15 @@
             </div>
         </nav>
 
-        <div class="container-fluid offset">
-            <div class="table-wrapper">
+        <div class="container-fluid offset" style="margin-top: 10px">
+            <div class="table-wrapper text-center">
                 <table class="table table-bordered table-striped table-hover">
                     <tbody>
                         {% for track in tracks %}
-                            <p></p>
-                            <tr>
-                            <td class="first-col bg-secondary" id="{{track.trackid}}"><a style="color: white" href="#{{track.trackid}}">{{track.instrument}}</a></td>
-                            <td><a href="{% url 'track' track.trackid %}" class="mx-auto" style="color: white">click to edit track</a></td>
+                        <p></p>
+                        <tr>
+                            <td class="first-col bg-secondary" id="{{track.trackid}}" style="color: white">{{track.instrument}}</td>
+                            <td><a href="{% url 'track' track.trackid %}" class="mx-auto text-light">Click to Edit Track</a><cite class="text-success" style="font-size: 14px">   [Name: {{track.name}}]   [Description: {{track.description}}]</cite></td>
                         </tr>
                         {% endfor %}
                     </tbody>
