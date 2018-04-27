@@ -27,6 +27,7 @@
                     <li><a class="option" href="{% url 'profile' user.profile.id %}">Profile</a></li>
                     <li><a class="option" href="{% url 'following-users' user.profile.id %}">Following</a></li>
                     <li><a class="option" href="{% url 'profile-setting' %}">Setting</a></li>
+                    <li><a class="option" href="{% url 'mymusic' %}">Workspace</a></li>
                   </ul>
                 </li>
             </ul>
@@ -42,8 +43,8 @@
     <div class="songs">
         <div class="container">
             <div class="songs-head">
-                <h2>New Song Delivery</h2>
-                <p>Hear the lastest voice from the music world</p>
+                <h2 class="big-head">New Song Delivery</h2>
+{#                <p class="small-head">Hear the lastest voice from the music world</p>#}
             </div>
 
             {% for song in songs %}

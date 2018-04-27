@@ -75,6 +75,7 @@ def profile_setting(request):
         context['form'] = form
         context['login_profile'] = Profile.objects.get(user=request.user)
         return render(request, 'community/profile-setting.html', context)
+    # return render(request, 'community/profile-setting-pure-template.html', {})
 
 
 
@@ -95,31 +96,6 @@ def following_users(request, profile_id):
         else:
             context['followed'] = False
     return render(request, 'community/following.html', context)
-
-
-# @login_required
-# def get_profile_avatar(request, profile_id):
-#     profile = get_object_or_404(Profile, id=profile_id)
-#
-#     if not profile.avatar:
-#         raise Http404
-#     return HttpResponse(profile.avatar, content_type=profile.avatar_content_type)
-#
-# @login_required
-# def get_profile_bg(request, profile_id):
-#     profile = get_object_or_404(Profile, id=profile_id)
-#
-#     if not profile.header_image:
-#         raise Http404
-#     return HttpResponse(profile.header_image, content_type=profile.header_image_content_type)
-#
-# @login_required
-# def get_song_cover(request, song_id):
-#     song = get_object_or_404(Song, id=song_id)
-#
-#     if not song.cover:
-#         raise Http404
-#     return HttpResponse(song.cover, content_type=song.cover_content_type)
 
 @login_required
 def get_song(request, song_id):
@@ -144,3 +120,15 @@ def unfollow(request, profile_id):
     curr_profile = get_object_or_404(Profile, id=profile_id)
     login_profile.followings.remove(curr_profile)
     return redirect('profile', profile_id=profile_id)
+
+@transaction.atomic
+@login_required
+def add_comment(request, song_id):
+    context = {}
+    related_song = get_object_or_404(Song, id=song_id)
+    new_comment = Comment(creator_profile=request.user.profile, parent_song=related_song)
+    comment_form = CommentForm(request.POST, instance=new_comment)
+
+    if comment_form.is_valid():
+        comment_form.save()
+    return redirect('home')
