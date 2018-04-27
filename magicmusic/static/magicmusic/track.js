@@ -134,6 +134,9 @@ function setClickactions() {
                 var offset = tdid.split("-")[1];
                 var trid = $('#' + tdid).parent().attr('id');
 
+                // play the note song
+                playNoteAudio(trid);
+
                 leftMargin = $('#' + trid).find('th').outerWidth();
                 cellWidth = $('#' + tdid).outerWidth();
                 cellHeight = $('#' + tdid).outerHeight();
@@ -224,6 +227,12 @@ function playAudio(trackWavPath) {
     // audio.src = trackWavPath;
     // var audio = new Audio(cacheBustedPath);
     audio.load(); // !HUL|_O! PAY ATTENTI0N!
+    audio.play();
+}
+
+function playNoteAudio(noteStr) {
+    var noteNum = pitchtooctave(noteStr.replace("Sharp", "#"));
+    var audio = document.querySelector("#audio-note-" + noteNum);
     audio.play();
 }
 

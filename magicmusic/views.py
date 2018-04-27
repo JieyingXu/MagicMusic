@@ -119,6 +119,11 @@ def track(request, id):
         instrument_name = track.instrument
 
         unit_note_urls = MidiLib.generate_unit_notes_if_not_exists(instrument_name)
+        # # trim the url and no "media/" at begin"
+        unit_note_urls_trimmed = []
+        for uri in unit_note_urls:
+            trim = uri.replace('media/', '', 1)
+            unit_note_urls_trimmed.append(trim)
 
         json_blob = Track.objects.filter(id__exact=id).values('blob')[0]["blob"]
         if json_blob == None:
@@ -128,7 +133,7 @@ def track(request, id):
 
         context = {'trackID': id,
                    'notes_blob': blob_json,
-                   'unit_note_urls': unit_note_urls}
+                   'unit_note_urls': unit_note_urls_trimmed}
 
         return render(request, 'magicmusic/track.html', context)
     else:

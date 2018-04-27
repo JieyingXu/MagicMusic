@@ -119,6 +119,17 @@
 
     <input type="hidden" id="notes_blob_input" name="notes_blob_input" value="{{ notes_blob }}">
 
+    <div class="hidden-audio-notes">
+    {% for uri in unit_note_urls %}
+    <div class="d-none">
+        <audio controls id="audio-note-{{ forloop.counter0 }}">
+            <source src="{{ MEDIA_URL }}{{ uri }}" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    {% endfor %}
+    </div>
+
 </body>
 </html>
 
