@@ -210,9 +210,11 @@ function resetResizeDragMouseDown() {
 }
 
 function trackPlayButtonOnClick(trackID) {
-    var trackWavPath = generateTrackWav(trackID);
+    var trackWavPath = generateTrackWav(trackID, true);
+}
 
-
+function trackSaveButtonOnClick(trackID) {
+     var trackWavPath = generateTrackWav(trackID, false);
 }
 
 function playAudio(trackWavPath) {
@@ -225,7 +227,7 @@ function playAudio(trackWavPath) {
     audio.play();
 }
 
-function generateTrackWav(trackID) {
+function generateTrackWav(trackID, doPlayAudio) {
     // check if there are any notes yet
     if (Object.keys(trackNotes).length === 0) {
         alert("You have not put in any notes yet.");
@@ -248,9 +250,9 @@ function generateTrackWav(trackID) {
 
                 // var newPosts = JSON.parse(response.new_posts);
                 trackWavPath = '/' + response.file_path;
-                playAudio(trackWavPath);
-
-
+                if (doPlayAudio) {
+                    playAudio(trackWavPath);
+                }
             } else {
                 // error
                 alert("get error info");
